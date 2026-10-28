@@ -13,7 +13,7 @@ import subprocess
 import sys
 import time
 
-from tp8_dp2_protocol import (ARMS, MODEL, POLICIES, PROTOCOL, digest, jobs, read, report,
+from tp8_dp2_protocol import (ARMS, MODEL, POLICIES, PROTOCOL, build_package_id, digest, jobs, read, report,
                              require, sha, validate_rows, verify_package, write)
 
 
@@ -184,7 +184,8 @@ def execute(args,info):
     args.out=out
     require(not out.exists(),'Use a new run ID/output; partial runs are never overwritten or mixed')
     out.mkdir(parents=True)
-    build_root=(args.build_root or args.package/'build'/f'node{args.node_rank}-{info["package_id"][:12]}').resolve()
+    build_id=build_package_id(args.package,info)
+    build_root=(args.build_root or args.package/'build'/f'node{args.node_rank}-{build_id[:12]}').resolve()
     state=dict(status='starting',protocol=PROTOCOL,run_id=args.run_id,package_id=info['package_id'],node_rank=args.node_rank)
     write(out/'state.json',state)
     coordinator=None
@@ -197,7 +198,7 @@ def execute(args,info):
             comm_env.pop(key,None)
         os.environ.update(comm_env)
         comm=communication.capture('0')
-        agreement=dict(protocol=PROTOCOL,package_id=info['package_id'],model=MODEL,run_id=args.run_id,
+        agreement=dict(protocol=PROTOCOL,package_id=info['package_id'],build_package_id=build_id,model=MODEL,run_id=args.run_id,
                        trials=args.trials,blocks=args.blocks,worker_port=args.master_port,communication=comm['environment'],
                        nccl_config_hashes=sorted(v or 'absent' for v in comm['config_files'].values()))
         hello=coordinator.exchange('hello',agreement)
@@ -212,8 +213,9 @@ def execute(args,info):
         run_process(link_command,args.package,dict(os.environ),out/'link-launch.log',480,coordinator)
         linked=coordinator.exchange('link-finished',read(out/'link/state.json'))
         require(all(x['status']=='completed' for x in linked),'Both nodes must pass IB/TP8/DP2 communication tests')
-        print('BUILD native libraries (first run only)',flush=True)
-        built=tp8_dp2_build.build(args.package,build_root,args.cuda_home,args.jobs,info['package_id'])
+        print('VERIFY cached native libraries' if build_root.exists() else 'BUILD native libraries (first run only)',
+              build_root,flush=True)
+        built=tp8_dp2_build.build(args.package,build_root,args.cuda_home,args.jobs,build_id)
         coordinator.exchange('build-finished',dict(files=built['files'],environment=built['environment']))
         workers=prepare_workers(args,out,build_root,info['package_id'],comm)
         write(out/'plan.json',dict(agreement=agreement,jobs=jobs(args.trials,args.blocks),build_root=str(build_root),
@@ -224,7 +226,7 @@ def execute(args,info):
             coordinator.check()
             # Exact package manifest scope, never a repository-wide scan.
             verify_package(args.package)
-            tp8_dp2_build.verify(build_root,info['package_id'])
+            tp8_dp2_build.verify(build_root,build_id)
             scripts=workers[job['arm']]['root']
             for name,value in workers[job['arm']]['files'].items():
                 require(sha(scripts/name)==value,'Frozen worker changed: '+name)
@@ -299,7 +301,7 @@ def main(argv=None):
     args=parser(argv)
     info=verify_package(args.package)
     if not args.execute:
-        print(json.dumps(dict(execute=False,package_id=info['package_id'],node_rank=args.node_rank,
+        print(json.dumps(dict(execute=False,package_id=info['package_id'],build_package_id=build_package_id(args.package,info),node_rank=args.node_rank,
             model=MODEL,arms=ARMS,control_port=args.control_port,worker_port=args.master_port,
             jobs=jobs(args.trials,args.blocks),communication_preflight=True,
             compile_on_first_run=True),ensure_ascii=False,indent=2))

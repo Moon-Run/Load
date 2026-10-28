@@ -44,6 +44,36 @@ def digest(value):
     return hashlib.sha256(json.dumps(value, sort_keys=True, separators=(',', ':')).encode()).hexdigest()
 
 
+def build_inputs(info):
+    """Only inputs consumed by the unchanged native build recipe."""
+    def selected(name):
+        return name.startswith(('native/', 'deps/')) or name == 'app/tp8_dp2_build.py'
+    require('app/tp8_dp2_build.py' in info['files'] and
+            all(any(n.startswith(prefix) for n in info['files']) for prefix in ('native/', 'deps/')),
+            'Build input manifest is incomplete')
+    return dict(files={k:v for k,v in info['files'].items() if selected(k)},
+                symlinks={k:v for k,v in info['symlinks'].items() if selected(k)},
+                model=info['model'], arms=info['arms'], dependencies=info.get('dependencies'))
+
+
+def build_package_id(root, info):
+    """Reuse a prior build only with its full original manifest and exact inputs.
+
+    Worker/results identity still uses the new package ID. This does not allow
+    partial timing runs to resume, or caches from changed CUDA sources/recipes.
+    """
+    reference=info.get('build_reference')
+    if reference is None:
+        return info['package_id']
+    require(reference in info['files'] and sha(Path(root)/reference)==info['files'][reference],
+            'Original build package manifest changed')
+    original=read(Path(root)/reference)
+    require(original['package_id']==digest({k:v for k,v in original.items() if k!='package_id'}) and
+            original['protocol']==info['protocol'], 'Invalid original build package identity')
+    require(build_inputs(original)==build_inputs(info), 'Native build inputs differ from the referenced package')
+    return original['package_id']
+
+
 def verify_package(root):
     root = Path(root)
     info = read(root/'package.json')
@@ -57,6 +87,7 @@ def verify_package(root):
         require((root/name).is_symlink() and os.readlink(root/name) == target,
                 'Package dependency link changed: '+name)
         require((root/name).resolve().is_relative_to(root.resolve()), 'Package symlink escapes its root')
+    build_package_id(root,info)
     return info
 
 
@@ -75,6 +106,20 @@ def jobs(trials=1, blocks=12):
              for i,a in enumerate(ARMS)] + schedule(trials, blocks) +
             [dict(trial=0, block=-1, index=i, arm=a, mode='profile', directory='profile-'+a)
              for i,a in enumerate(ARMS)])
+
+
+def validate_projection_checks(row, mode):
+    require(mode in ('smoke','timing','profile'), 'Unknown projection validation mode')
+    checks=row['forward_checks']
+    if mode=='smoke':
+        require(isinstance(checks,dict) and len(checks)==64 and
+                set(checks)==set(row['target_modules']) and
+                all(v.get('passed') is True for v in checks.values()),
+                'Incomplete original projection numeric checks')
+    else:
+        # The frozen adapters deliberately run reference GEMMs/collectives only
+        # during smoke. Their absence is required in timing and profile workers.
+        require(checks=={}, 'Projection numeric audit leaked into timing/profile')
 
 
 def validate_rows(rows, job, package_id):
@@ -98,8 +143,7 @@ def validate_rows(rows, job, package_id):
         require(len(row['target_modules']) == 64 and set(row['target_modules']) == set(row['timed_calls']) and
                 all(v == count*MICROBATCHES for v in row['timed_calls'].values()) and
                 row['fallback_calls'] == 0, 'Missing projection calls or fallback')
-        require(all(v.get('passed') is True for v in row['forward_checks'].values()) and len(row['forward_checks']) == 64,
-                'Incomplete original projection numeric checks')
+        validate_projection_checks(row,job['mode'])
         for key in ('peak_allocated_gib','peak_reserved_gib'):
             require(math.isfinite(row[key]) and row[key] > 0, 'Missing peak GPU memory')
         if job['mode'] != 'profile':

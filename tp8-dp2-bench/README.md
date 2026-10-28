@@ -20,6 +20,57 @@ sha256sum -c SHA256SUMS > package-check.log
 
 目标目录应为新目录；若已经运行过旧包，先将旧目录改名保留，再解压本次包。只移动本包即可，74 不需要更新旧的 TempName 仓库。75 也使用同一个包执行，避免代码版本不一致。
 
+## 已有部署：2026-10-28 计时校验修复
+
+`tp8-dp2-02` 已通过 IB 通信预检、两端编译及三组 smoke，随后在 `compare1/block00-ma11` 完成 50 步后，控制器报 `Incomplete original projection numeric checks`。原因是控制器对所有模式都要求 64 份 `forward_checks`，而三个冻结 adapter 只在 `E2E_MODE=smoke` 时执行这些参考计算。计时与 profile 模式正确输出空字典，旧校验器却将其误判为失败。
+
+本次修复按模式校验：smoke 必须覆盖全部 64 个目标模块且全部通过；timing／profile 必须为空，防止参考计算污染计时或执行路径。训练算子、数据、native 构建配方和计时口径未改变。
+
+已有部署使用 `tp8-dp2-audit-fix.tar.gz` 覆盖升级。将补丁和对应 `.sha256` 文件放到**两个容器**的 `/workspace/`，确认旧任务已退出后，各执行：
+
+```bash
+cd /workspace
+sha256sum -c tp8-dp2-audit-fix.tar.gz.sha256
+tar -xzf tp8-dp2-audit-fix.tar.gz -C /workspace
+cd /workspace/tp8-dp2-bench
+sha256sum -c SHA256SUMS > package-check.log
+python3 -B app/test_tp8_dp2_validation.py
+```
+
+补丁只包含静态修复文件，保留 `build/`、`runs/`。新包使用新的完整包 ID 校验两端实现，同时通过 `app/build-package.json` 保存的原始清单核对 **native／依赖源码、依赖符号链接及构建脚本**完全相同，然后复用原来的 `build/node0-e9f5dbfbabdc`、`build/node1-e9f5dbfbabdc`。原有 Python／Torch／nvcc 身份及全部已记录构建产物的 SHA256 仍会核验；不接受不完整、损坏或构建输入不同的缓存。
+
+更新后用新编号 **`tp8-dp2-03`** 从三组 smoke 重新开始，不能混入上一轮未完成对比的样本。74：
+
+```bash
+cd /workspace/tp8-dp2-bench
+nohup bash run_training.sh --execute --node-rank 0 \
+  --python /opt/conda/envs/flux-h100/bin/python \
+  --run-id tp8-dp2-03 > tp8-dp2-03-node0.log 2>&1 &
+```
+
+75：
+
+```bash
+cd /workspace/tp8-dp2-bench
+nohup bash run_training.sh --execute --node-rank 1 \
+  --python /workspace/conda-envs/flux-h100-ablation3-20261017/bin/python \
+  --run-id tp8-dp2-03 > tp8-dp2-03-node1.log 2>&1 &
+```
+
+缓存存在时日志会出现 `VERIFY cached native libraries`。本地已通过 24 项 CPU 回归，回放三组共 48 份 smoke rank 记录，并检查 75 拉取的 8 份 MA11 首窗口计时记录与初始化身份；当前缺少该计时窗口的 74 rank 文件，尚未取得三组完整性能比较或 profile 结果。
+
+## 容器 IB 用户态依赖
+
+若出现 `Failed to open libibverbs.so[.1]`／`Error: network IB not found`，设备文件可见并不足以证明用户态库可用。Ubuntu 22.04 容器内需具备 `libibverbs1`、`ibverbs-providers`、`ibverbs-utils`，可在缺少依赖的容器中补装：
+
+```bash
+apt-get update
+apt-get install -y --no-install-recommends libibverbs1 ibverbs-providers ibverbs-utils
+ldconfig
+```
+
+使用各节点指定的训练 Python 验证 `ctypes.CDLL('libibverbs.so.1')` 能加载，并通过 `ibv_devinfo -d mlx5_1 -i 1` 等检查四个选定端口；通过后仍需执行本包的真实 collective 预检。74 第一轮因缺少 verbs 库失败，第二轮已通过通信预检。原生 IB 后端不要求额外的 `libnccl-net.so` 插件。
+
 ## 单独检测通信
 
 以下两条命令分别在对应容器运行，启动间隔不超过 3 分钟。默认控制网络 `bond0`、地址 `10.18.133.74`，数据网络使用两节点都 ACTIVE 的 `mlx5_1:1,mlx5_4:1,mlx5_6:1,mlx5_8:1`，关闭 NVLS。会在本进程提高 memlock，并检查 GPU 空闲；不终止其他用户的任务。
@@ -88,4 +139,4 @@ tail -f tp8-dp2-01-node0.log  # 74；75 改为 node1
 
 两端结果各位于 `runs/tp8-dp2-01/node0/`、`runs/tp8-dp2-01/node1/`。完成需 **两端 `state.json.status=completed`**，且有 `report.json`。`timing-progress.json` 只是未完成的计时进度，不能代替最终通过标记。`report.json` 汇总全部 16 rank；原始日志、trace 留在各自节点，分析时请拉取两端结果目录。
 
-包的本地生成与 CPU 验证不能证明双节点 CUDA/NCCL 已成功，也不预设性能收益。仍需在 74／75 上实际执行上述检测与训练。此测试沿用固定合成全局 batch，用于端到端性能比较，不代表真实语料收敛验证。
+本地生成与 CPU 验证不能代替双节点实测。第二轮日志已证明通信预检及三组 smoke 通过，但尚无完整性能结论；修复后的完整流程仍需在 74／75 实跑。此测试沿用固定合成全局 batch，用于端到端性能比较，不代表真实语料收敛验证。
