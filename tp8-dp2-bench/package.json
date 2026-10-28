@@ -44,7 +44,7 @@
     }
   },
   "files": {
-    "README.md": "02d87851c778ee2815a89965909d7510d851449eb9d666007caeac41ac27242e",
+    "README.md": "72d3d0f98fa105c6948ac8e99d5831027f27287882ad27fe3da979cd7f54aaa6",
     "app/baseline_codec_validation.py": "6b263cd75d6d1154e7434aba0b0857b14a2b834badce407457c0bdaeb370d47e",
     "app/basic_quant_validation.py": "a477fa813276bc77789ffc977056751cc2ec4f4667305cf329a2d8b34e0850ad",
     "app/check_tp8_dp2_link.py": "3de87c7ac87ba60aa3d8dd5045af316bae4de8869e7a497a40c1c2376c9cd095",
@@ -55,9 +55,9 @@
     "app/ma9_profile.py": "948fe84f1b7cf155b86a259ae74180913ded623fd009f5638999859ad69d30bd",
     "app/model-arguments.json": "fdb4f1475c819d185c76568ed0b86e4906d86646286ce7086368f848f1e80a11",
     "app/tp8_dp2_build.py": "63852d323c3174b0b14ff00b08fc9ec5ab2d9a708752fe91529e37127b9d5bf7",
-    "app/tp8_dp2_profile.py": "aa4ac9eb7d288505a9a9e4fdcc6e68a9a90422068992e7fd44fdcdd65abcac32",
-    "app/tp8_dp2_protocol.py": "c8e8f7896a3bae53b0326f03d72dfd882c5fc76a1cd6cf5d019640d11534cdcc",
-    "app/tp8_dp2_train.py": "836c20c7ddf5698e036c1d18cdeaa7795d621cea363ac1477cac6dd70dc0fd6a",
+    "app/tp8_dp2_profile.py": "1a117ba9ba69e123dbac3124073736b284688f75e6b09891ba0ac48c6ef88774",
+    "app/tp8_dp2_protocol.py": "2ba5fc0a9a0ea779b41680006992c15345c14861401348eee3eec0831b77d867",
+    "app/tp8_dp2_train.py": "ceb2715d105a7de1cef0b423fdf95c1f40b657ac67066853305472aa8b0a9388",
     "deps/Megatron-LM/.coveragerc": "3b2aa499e62921f9c16dff12e5f03e20e73f51b61a153d88a405c50ed447695b",
     "deps/Megatron-LM/.flake8": "f3f1a7d2a521d9c488b8893c6d59c48cff129ae8820ff9280abb9bd41563b9de",
     "deps/Megatron-LM/.github/ISSUE_TEMPLATE/bug.md": "91082aeb61f0b3c8b5b68f744ff1a4be01a23d6972696db27b30a75c82fbca08",
@@ -3260,7 +3260,9 @@
     "workers/megatron-cuda/taco_support.py": "30c5c162045dc96d3e6673de58f5383673cd844c1bdaf0dc5a32a3cc16103127",
     "workers/megatron-cuda/worker.py": "580c6129d979ffad94073ea02e7967efb52b7344059b00cecd0f37d4a8ddf65e",
     "app/test_tp8_dp2_validation.py": "08e0233637fb3ca1074e0b7133b972454b654e2b443f0cbf6423c0c5499f58c7",
-    "app/build-package.json": "040c420437a698e9b78cf15aa8195ab3cb26be2578a22db0069de4216e0c50e7"
+    "app/build-package.json": "040c420437a698e9b78cf15aa8195ab3cb26be2578a22db0069de4216e0c50e7",
+    "app/test_tp8_dp2_profile.py": "14ce99a5b0827d7b08aa9f34fedd7affcd834db997c9c253b9958c00c678f399",
+    "app/test_tp8_dp2_campaign.py": "3674b99d1e082bd694d1729554916980084c4cbb7f6e58c0ad6da2030f3d8419"
   },
   "symlinks": {
     "deps/nccl/pkg/debian/copyright": "../../LICENSE.txt",
@@ -3269,12 +3271,12 @@
   },
   "source_commit": "6dfe7387d1f62374e24230adccbb8a6f5b6dc799",
   "generator_sha256": {
-    "export_tp8_dp2.py": "2cbd6102a5a07a3f46213523ed31084bd3b7d5b2c7e21fdbc899e6a0559d39c8",
+    "export_tp8_dp2.py": "a14a0ad2e60410b4b1a1d6e605d3e7a13cec391e9e61b7afcf28b90c875dd247",
     "tp8_dp2_sources.py": "b0ecbba7a43192b30d5ce2996eb275038f341076fcf1aaa0dcee73a681ac7bb9"
   },
   "adaptation": "TP8 per node, DP2, global batch 4 split into two local microbatches; same native arithmetic. Profile call counts halved; global mask/mul totals not gated because DP adds gradient scaling.",
   "gpu_validated": false,
-  "package_id": "926f0d3f2609a2c15c569a196bfdea6b488c9b0d10688b2ff25b68a2520f8123",
+  "package_id": "d1045e6496b486df6cbc9cdb099a9e727658ca617d0b4850395d9f6ae14e9681",
   "build_reference": "app/build-package.json",
-  "revision": "projection-checks-smoke-only-20261028"
+  "revision": "dp-coalesced-profile-before-timing-20261028"
 }

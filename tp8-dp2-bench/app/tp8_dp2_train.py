@@ -224,6 +224,10 @@ def execute(args,info):
         samples=[];reference=None;profile_summary={};smoke_summary={}
         for number,job in enumerate(jobs(args.trials,args.blocks)):
             coordinator.check()
+            if job['mode']=='timing':
+                require(set(smoke_summary)==set(profile_summary)==set(ARMS) and
+                        all(set(profile_summary[arm])=={str(r) for r in range(16)} for arm in ARMS),
+                        'All three smoke and 16-rank profile checks must pass before timing')
             # Exact package manifest scope, never a repository-wide scan.
             verify_package(args.package)
             tp8_dp2_build.verify(build_root,build_id)

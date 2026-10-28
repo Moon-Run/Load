@@ -103,9 +103,9 @@ def schedule(trials=1, blocks=12):
 
 def jobs(trials=1, blocks=12):
     return ([dict(trial=0, block=-1, index=i, arm=a, mode='smoke', directory='smoke-'+a)
-             for i,a in enumerate(ARMS)] + schedule(trials, blocks) +
+             for i,a in enumerate(ARMS)] +
             [dict(trial=0, block=-1, index=i, arm=a, mode='profile', directory='profile-'+a)
-             for i,a in enumerate(ARMS)])
+             for i,a in enumerate(ARMS)] + schedule(trials, blocks))
 
 
 def validate_projection_checks(row, mode):
