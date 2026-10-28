@@ -1,0 +1,13 @@
+{
+  "protocol": "h100-tp8-dp2-link-check-v1",
+  "run_id": "tp8-dp2-02-link",
+  "node_rank": 1,
+  "status": "completed",
+  "training_started": false,
+  "collectives_passed": true,
+  "ib_transport_validated": true,
+  "stage": "done",
+  "expected_global_ranks": 16,
+  "global_collectives_validated": true,
+  "local_rank_logs_validated": 8
+}

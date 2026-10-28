@@ -1,0 +1,37 @@
+{
+  "hcas": [
+    {
+      "port": "mlx5_1:1",
+      "state": "4: ACTIVE",
+      "link_layer": "InfiniBand",
+      "rate": "400 Gb/sec (4X NDR)"
+    },
+    {
+      "port": "mlx5_4:1",
+      "state": "4: ACTIVE",
+      "link_layer": "InfiniBand",
+      "rate": "400 Gb/sec (4X NDR)"
+    },
+    {
+      "port": "mlx5_6:1",
+      "state": "4: ACTIVE",
+      "link_layer": "InfiniBand",
+      "rate": "400 Gb/sec (4X NDR)"
+    },
+    {
+      "port": "mlx5_8:1",
+      "state": "4: ACTIVE",
+      "link_layer": "InfiniBand",
+      "rate": "400 Gb/sec (4X NDR)"
+    }
+  ],
+  "memlock_before": [
+    65536,
+    65536
+  ],
+  "memlock_after": [
+    -1,
+    -1
+  ],
+  "gpu_compute_processes": []
+}

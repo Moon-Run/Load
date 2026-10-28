@@ -1,0 +1,14 @@
+nohup: ignoring input
+LINK PREFLIGHT
+Traceback (most recent call last):
+  File "/workspace/tp8-dp2-bench/app/tp8_dp2_train.py", line 316, in <module>
+    main()
+  File "/workspace/tp8-dp2-bench/app/tp8_dp2_train.py", line 312, in main
+    execute(args,info)
+  File "/workspace/tp8-dp2-bench/app/tp8_dp2_train.py", line 212, in execute
+    run_process(link_command,args.package,dict(os.environ),out/'link-launch.log',480,coordinator)
+  File "/workspace/tp8-dp2-bench/app/tp8_dp2_train.py", line 104, in run_process
+    require(process.returncode==0,f'Child exited {process.returncode}; see {log}')
+  File "/workspace/tp8-dp2-bench/app/tp8_dp2_protocol.py", line 24, in require
+    raise ValueError(message)
+ValueError: Child exited 1; see /workspace/tp8-dp2-bench/runs/tp8-dp2-01/node1/link-launch.log

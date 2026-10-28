@@ -1,0 +1,52 @@
+{
+  "protocol": "h100-tp8-dp2-link-check-v1",
+  "run_id": "tp8-dp2-01-link",
+  "worker_sha256": "3de87c7ac87ba60aa3d8dd5045af316bae4de8869e7a497a40c1c2376c9cd095",
+  "rank": 10,
+  "node_rank": 1,
+  "local_rank": 2,
+  "host": "gxn75",
+  "pid": 2273689,
+  "python": "/workspace/conda-envs/flux-h100-ablation3-20261017/bin/python",
+  "torch": "2.6.0+cu124",
+  "cuda": "12.4",
+  "nccl": [
+    2,
+    21,
+    5
+  ],
+  "device_count": 8,
+  "gpu_uuid": "aaa779c1-00d2-231c-584b-73505b36ca09",
+  "gpu_name": "NVIDIA H100 80GB HBM3",
+  "sm_count": 132,
+  "capability": [
+    9,
+    0
+  ],
+  "local_peer_access": true,
+  "tp_members": [
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "dp_members": [
+    2,
+    10
+  ],
+  "hca": "mlx5_1:1,mlx5_4:1,mlx5_6:1,mlx5_8:1",
+  "socket_ifname": "bond0",
+  "memlock": [
+    -1,
+    -1
+  ],
+  "large_elements": 4194304,
+  "large_iterations": 5,
+  "completed": false,
+  "checks": {},
+  "error": "DistBackendError: NCCL error in: /pytorch/torch/csrc/distributed/c10d/NCCLUtils.hpp:268, invalid usage (run with NCCL_DEBUG=WARN for details), NCCL version 2.21.5\nncclInvalidUsage: This usually reflects invalid usage of NCCL library.\nLast error:\nError: network IB not found."
+}

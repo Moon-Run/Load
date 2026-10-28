@@ -1,0 +1,10 @@
+{
+  "protocol": "h100-tp8-dp2-link-check-v1",
+  "run_id": "tp8-dp2-01-link",
+  "node_rank": 1,
+  "status": "failed",
+  "training_started": false,
+  "collectives_passed": false,
+  "ib_transport_validated": false,
+  "error": "ValueError: torchrun exited 1; inspect process.log and nccl.*.log"
+}

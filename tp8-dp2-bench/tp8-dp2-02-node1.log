@@ -1,0 +1,34 @@
+nohup: ignoring input
+LINK PREFLIGHT
+BUILD native libraries (first run only)
+BUILD make -C /workspace/tp8-dp2-bench/build/node1-e9f5dbfbabdc/megatron/megatron/core/datasets
+BUILD make -j2 src.build NVCC_GENCODE=-gencode=arch=compute_90,code=sm_90
+BUILD cmake -S /workspace/tp8-dp2-bench/build/node1-e9f5dbfbabdc/ma11 -B /workspace/tp8-dp2-bench/build/node1-e9f5dbfbabdc/ma11/build -DCUDAARCHS=90 -DGPU_SM_CORES=132 -DENABLE_NVSHMEM=OFF -DWITH_PROTOBUF=OFF -DBUILD_TEST=OFF -DCMAKE_BUILD_TYPE=Release -DPYTHON_EXECUTABLE=/workspace/conda-envs/flux-h100-ablation3-20261017/bin/python -DPython_EXECUTABLE=/workspace/conda-envs/flux-h100-ablation3-20261017/bin/python -DCMAKE_CXX_FLAGS=-I/workspace/tp8-dp2-bench/build/node1-e9f5dbfbabdc/nccl/build/include -DCMAKE_CUDA_FLAGS=-I/workspace/tp8-dp2-bench/build/node1-e9f5dbfbabdc/nccl/build/include -DCMAKE_INSTALL_PREFIX=/workspace/tp8-dp2-bench/build/node1-e9f5dbfbabdc/ma11/python/flux
+BUILD cmake --build /workspace/tp8-dp2-bench/build/node1-e9f5dbfbabdc/ma11/build --parallel 2
+BUILD cmake --install /workspace/tp8-dp2-bench/build/node1-e9f5dbfbabdc/ma11/build
+BUILD /workspace/conda-envs/flux-h100-ablation3-20261017/bin/python setup.py build_ext --inplace
+BUILD cmake -S /workspace/tp8-dp2-bench/build/node1-e9f5dbfbabdc/flux-basic -B /workspace/tp8-dp2-bench/build/node1-e9f5dbfbabdc/flux-basic/build -DCUDAARCHS=90 -DGPU_SM_CORES=132 -DENABLE_NVSHMEM=OFF -DWITH_PROTOBUF=OFF -DBUILD_TEST=OFF -DCMAKE_BUILD_TYPE=Release -DPYTHON_EXECUTABLE=/workspace/conda-envs/flux-h100-ablation3-20261017/bin/python -DPython_EXECUTABLE=/workspace/conda-envs/flux-h100-ablation3-20261017/bin/python -DCMAKE_CXX_FLAGS=-I/workspace/tp8-dp2-bench/build/node1-e9f5dbfbabdc/nccl/build/include -DCMAKE_CUDA_FLAGS=-I/workspace/tp8-dp2-bench/build/node1-e9f5dbfbabdc/nccl/build/include -DCMAKE_INSTALL_PREFIX=/workspace/tp8-dp2-bench/build/node1-e9f5dbfbabdc/flux-basic/python/flux
+BUILD cmake --build /workspace/tp8-dp2-bench/build/node1-e9f5dbfbabdc/flux-basic/build --parallel 2
+BUILD cmake --install /workspace/tp8-dp2-bench/build/node1-e9f5dbfbabdc/flux-basic/build
+BUILD /workspace/conda-envs/flux-h100-ablation3-20261017/bin/python setup.py build_ext --inplace
+BUILD /usr/local/cuda-12.8/bin/nvcc -std=c++17 -O3 -shared -Xcompiler=-fPIC -lineinfo -gencode=arch=compute_90,code=sm_90 --cudart=shared /workspace/tp8-dp2-bench/build/node1-e9f5dbfbabdc/codec-basic/basic_quant.cu -o /workspace/tp8-dp2-bench/build/node1-e9f5dbfbabdc/codec-basic/libbasic_quant.so
+BUILD /usr/local/cuda-12.8/bin/nvcc -std=c++17 -O3 -shared -Xcompiler=-fPIC -lineinfo -gencode=arch=compute_90,code=sm_90 --cudart=shared /workspace/tp8-dp2-bench/build/node1-e9f5dbfbabdc/codec-cuda/baseline_codec.cu -o /workspace/tp8-dp2-bench/build/node1-e9f5dbfbabdc/codec-cuda/libbaseline_taco.so
+START smoke-ma11
+PASS smoke-ma11
+START smoke-flux-basic
+PASS smoke-flux-basic
+START smoke-megatron-cuda
+PASS smoke-megatron-cuda
+START compare1/block00-ma11
+Traceback (most recent call last):
+  File "/workspace/tp8-dp2-bench/app/tp8_dp2_train.py", line 316, in <module>
+    main()
+  File "/workspace/tp8-dp2-bench/app/tp8_dp2_train.py", line 312, in main
+    execute(args,info)
+  File "/workspace/tp8-dp2-bench/app/tp8_dp2_train.py", line 258, in execute
+    rows=validate_rows(node_rows[0]+node_rows[1],job,info['package_id'])
+  File "/workspace/tp8-dp2-bench/app/tp8_dp2_protocol.py", line 101, in validate_rows
+    require(all(v.get('passed') is True for v in row['forward_checks'].values()) and len(row['forward_checks']) == 64,
+  File "/workspace/tp8-dp2-bench/app/tp8_dp2_protocol.py", line 24, in require
+    raise ValueError(message)
+ValueError: Incomplete original projection numeric checks

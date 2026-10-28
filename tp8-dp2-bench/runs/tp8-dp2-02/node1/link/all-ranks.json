@@ -1,0 +1,898 @@
+[
+  {
+    "protocol": "h100-tp8-dp2-link-check-v1",
+    "run_id": "tp8-dp2-02-link",
+    "worker_sha256": "3de87c7ac87ba60aa3d8dd5045af316bae4de8869e7a497a40c1c2376c9cd095",
+    "rank": 0,
+    "node_rank": 0,
+    "local_rank": 0,
+    "host": "gxn74",
+    "pid": 3213153,
+    "python": "/opt/conda/envs/flux-h100/bin/python",
+    "torch": "2.6.0+cu124",
+    "cuda": "12.4",
+    "nccl": [
+      2,
+      21,
+      5
+    ],
+    "device_count": 8,
+    "gpu_uuid": "bc561ab8-87a1-aaa1-6b5d-f379fc7571b7",
+    "gpu_name": "NVIDIA H100 80GB HBM3",
+    "sm_count": 132,
+    "capability": [
+      9,
+      0
+    ],
+    "local_peer_access": true,
+    "tp_members": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "dp_members": [
+      0,
+      8
+    ],
+    "hca": "mlx5_1:1,mlx5_4:1,mlx5_6:1,mlx5_8:1",
+    "socket_ifname": "bond0",
+    "memlock": [
+      -1,
+      -1
+    ],
+    "large_elements": 4194304,
+    "large_iterations": 5,
+    "completed": true,
+    "checks": {
+      "tp_allgather": true,
+      "tp_reduce_scatter": true,
+      "dp_allreduce_small": true,
+      "dp_allreduce_large": true
+    }
+  },
+  {
+    "protocol": "h100-tp8-dp2-link-check-v1",
+    "run_id": "tp8-dp2-02-link",
+    "worker_sha256": "3de87c7ac87ba60aa3d8dd5045af316bae4de8869e7a497a40c1c2376c9cd095",
+    "rank": 1,
+    "node_rank": 0,
+    "local_rank": 1,
+    "host": "gxn74",
+    "pid": 3213154,
+    "python": "/opt/conda/envs/flux-h100/bin/python",
+    "torch": "2.6.0+cu124",
+    "cuda": "12.4",
+    "nccl": [
+      2,
+      21,
+      5
+    ],
+    "device_count": 8,
+    "gpu_uuid": "bd6c7a45-7290-f263-a277-e3afefe2484e",
+    "gpu_name": "NVIDIA H100 80GB HBM3",
+    "sm_count": 132,
+    "capability": [
+      9,
+      0
+    ],
+    "local_peer_access": true,
+    "tp_members": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "dp_members": [
+      1,
+      9
+    ],
+    "hca": "mlx5_1:1,mlx5_4:1,mlx5_6:1,mlx5_8:1",
+    "socket_ifname": "bond0",
+    "memlock": [
+      -1,
+      -1
+    ],
+    "large_elements": 4194304,
+    "large_iterations": 5,
+    "completed": true,
+    "checks": {
+      "tp_allgather": true,
+      "tp_reduce_scatter": true,
+      "dp_allreduce_small": true,
+      "dp_allreduce_large": true
+    }
+  },
+  {
+    "protocol": "h100-tp8-dp2-link-check-v1",
+    "run_id": "tp8-dp2-02-link",
+    "worker_sha256": "3de87c7ac87ba60aa3d8dd5045af316bae4de8869e7a497a40c1c2376c9cd095",
+    "rank": 2,
+    "node_rank": 0,
+    "local_rank": 2,
+    "host": "gxn74",
+    "pid": 3213155,
+    "python": "/opt/conda/envs/flux-h100/bin/python",
+    "torch": "2.6.0+cu124",
+    "cuda": "12.4",
+    "nccl": [
+      2,
+      21,
+      5
+    ],
+    "device_count": 8,
+    "gpu_uuid": "571bb6d9-c967-403e-3be3-38113e2cc7b3",
+    "gpu_name": "NVIDIA H100 80GB HBM3",
+    "sm_count": 132,
+    "capability": [
+      9,
+      0
+    ],
+    "local_peer_access": true,
+    "tp_members": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "dp_members": [
+      2,
+      10
+    ],
+    "hca": "mlx5_1:1,mlx5_4:1,mlx5_6:1,mlx5_8:1",
+    "socket_ifname": "bond0",
+    "memlock": [
+      -1,
+      -1
+    ],
+    "large_elements": 4194304,
+    "large_iterations": 5,
+    "completed": true,
+    "checks": {
+      "tp_allgather": true,
+      "tp_reduce_scatter": true,
+      "dp_allreduce_small": true,
+      "dp_allreduce_large": true
+    }
+  },
+  {
+    "protocol": "h100-tp8-dp2-link-check-v1",
+    "run_id": "tp8-dp2-02-link",
+    "worker_sha256": "3de87c7ac87ba60aa3d8dd5045af316bae4de8869e7a497a40c1c2376c9cd095",
+    "rank": 3,
+    "node_rank": 0,
+    "local_rank": 3,
+    "host": "gxn74",
+    "pid": 3213156,
+    "python": "/opt/conda/envs/flux-h100/bin/python",
+    "torch": "2.6.0+cu124",
+    "cuda": "12.4",
+    "nccl": [
+      2,
+      21,
+      5
+    ],
+    "device_count": 8,
+    "gpu_uuid": "e69c65ae-0527-2a67-1b3b-3b20f31465a2",
+    "gpu_name": "NVIDIA H100 80GB HBM3",
+    "sm_count": 132,
+    "capability": [
+      9,
+      0
+    ],
+    "local_peer_access": true,
+    "tp_members": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "dp_members": [
+      3,
+      11
+    ],
+    "hca": "mlx5_1:1,mlx5_4:1,mlx5_6:1,mlx5_8:1",
+    "socket_ifname": "bond0",
+    "memlock": [
+      -1,
+      -1
+    ],
+    "large_elements": 4194304,
+    "large_iterations": 5,
+    "completed": true,
+    "checks": {
+      "tp_allgather": true,
+      "tp_reduce_scatter": true,
+      "dp_allreduce_small": true,
+      "dp_allreduce_large": true
+    }
+  },
+  {
+    "protocol": "h100-tp8-dp2-link-check-v1",
+    "run_id": "tp8-dp2-02-link",
+    "worker_sha256": "3de87c7ac87ba60aa3d8dd5045af316bae4de8869e7a497a40c1c2376c9cd095",
+    "rank": 4,
+    "node_rank": 0,
+    "local_rank": 4,
+    "host": "gxn74",
+    "pid": 3213157,
+    "python": "/opt/conda/envs/flux-h100/bin/python",
+    "torch": "2.6.0+cu124",
+    "cuda": "12.4",
+    "nccl": [
+      2,
+      21,
+      5
+    ],
+    "device_count": 8,
+    "gpu_uuid": "85309d21-1193-de40-5836-af3211e41112",
+    "gpu_name": "NVIDIA H100 80GB HBM3",
+    "sm_count": 132,
+    "capability": [
+      9,
+      0
+    ],
+    "local_peer_access": true,
+    "tp_members": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "dp_members": [
+      4,
+      12
+    ],
+    "hca": "mlx5_1:1,mlx5_4:1,mlx5_6:1,mlx5_8:1",
+    "socket_ifname": "bond0",
+    "memlock": [
+      -1,
+      -1
+    ],
+    "large_elements": 4194304,
+    "large_iterations": 5,
+    "completed": true,
+    "checks": {
+      "tp_allgather": true,
+      "tp_reduce_scatter": true,
+      "dp_allreduce_small": true,
+      "dp_allreduce_large": true
+    }
+  },
+  {
+    "protocol": "h100-tp8-dp2-link-check-v1",
+    "run_id": "tp8-dp2-02-link",
+    "worker_sha256": "3de87c7ac87ba60aa3d8dd5045af316bae4de8869e7a497a40c1c2376c9cd095",
+    "rank": 5,
+    "node_rank": 0,
+    "local_rank": 5,
+    "host": "gxn74",
+    "pid": 3213158,
+    "python": "/opt/conda/envs/flux-h100/bin/python",
+    "torch": "2.6.0+cu124",
+    "cuda": "12.4",
+    "nccl": [
+      2,
+      21,
+      5
+    ],
+    "device_count": 8,
+    "gpu_uuid": "9df7bad7-654c-d1af-e88c-ded6cc7467fd",
+    "gpu_name": "NVIDIA H100 80GB HBM3",
+    "sm_count": 132,
+    "capability": [
+      9,
+      0
+    ],
+    "local_peer_access": true,
+    "tp_members": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "dp_members": [
+      5,
+      13
+    ],
+    "hca": "mlx5_1:1,mlx5_4:1,mlx5_6:1,mlx5_8:1",
+    "socket_ifname": "bond0",
+    "memlock": [
+      -1,
+      -1
+    ],
+    "large_elements": 4194304,
+    "large_iterations": 5,
+    "completed": true,
+    "checks": {
+      "tp_allgather": true,
+      "tp_reduce_scatter": true,
+      "dp_allreduce_small": true,
+      "dp_allreduce_large": true
+    }
+  },
+  {
+    "protocol": "h100-tp8-dp2-link-check-v1",
+    "run_id": "tp8-dp2-02-link",
+    "worker_sha256": "3de87c7ac87ba60aa3d8dd5045af316bae4de8869e7a497a40c1c2376c9cd095",
+    "rank": 6,
+    "node_rank": 0,
+    "local_rank": 6,
+    "host": "gxn74",
+    "pid": 3213159,
+    "python": "/opt/conda/envs/flux-h100/bin/python",
+    "torch": "2.6.0+cu124",
+    "cuda": "12.4",
+    "nccl": [
+      2,
+      21,
+      5
+    ],
+    "device_count": 8,
+    "gpu_uuid": "ad6311ce-0286-7a7d-241a-a4913459728c",
+    "gpu_name": "NVIDIA H100 80GB HBM3",
+    "sm_count": 132,
+    "capability": [
+      9,
+      0
+    ],
+    "local_peer_access": true,
+    "tp_members": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "dp_members": [
+      6,
+      14
+    ],
+    "hca": "mlx5_1:1,mlx5_4:1,mlx5_6:1,mlx5_8:1",
+    "socket_ifname": "bond0",
+    "memlock": [
+      -1,
+      -1
+    ],
+    "large_elements": 4194304,
+    "large_iterations": 5,
+    "completed": true,
+    "checks": {
+      "tp_allgather": true,
+      "tp_reduce_scatter": true,
+      "dp_allreduce_small": true,
+      "dp_allreduce_large": true
+    }
+  },
+  {
+    "protocol": "h100-tp8-dp2-link-check-v1",
+    "run_id": "tp8-dp2-02-link",
+    "worker_sha256": "3de87c7ac87ba60aa3d8dd5045af316bae4de8869e7a497a40c1c2376c9cd095",
+    "rank": 7,
+    "node_rank": 0,
+    "local_rank": 7,
+    "host": "gxn74",
+    "pid": 3213160,
+    "python": "/opt/conda/envs/flux-h100/bin/python",
+    "torch": "2.6.0+cu124",
+    "cuda": "12.4",
+    "nccl": [
+      2,
+      21,
+      5
+    ],
+    "device_count": 8,
+    "gpu_uuid": "98d8b4b3-eab2-35a9-2aca-138b9c44766e",
+    "gpu_name": "NVIDIA H100 80GB HBM3",
+    "sm_count": 132,
+    "capability": [
+      9,
+      0
+    ],
+    "local_peer_access": true,
+    "tp_members": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "dp_members": [
+      7,
+      15
+    ],
+    "hca": "mlx5_1:1,mlx5_4:1,mlx5_6:1,mlx5_8:1",
+    "socket_ifname": "bond0",
+    "memlock": [
+      -1,
+      -1
+    ],
+    "large_elements": 4194304,
+    "large_iterations": 5,
+    "completed": true,
+    "checks": {
+      "tp_allgather": true,
+      "tp_reduce_scatter": true,
+      "dp_allreduce_small": true,
+      "dp_allreduce_large": true
+    }
+  },
+  {
+    "protocol": "h100-tp8-dp2-link-check-v1",
+    "run_id": "tp8-dp2-02-link",
+    "worker_sha256": "3de87c7ac87ba60aa3d8dd5045af316bae4de8869e7a497a40c1c2376c9cd095",
+    "rank": 8,
+    "node_rank": 1,
+    "local_rank": 0,
+    "host": "gxn75",
+    "pid": 2287316,
+    "python": "/workspace/conda-envs/flux-h100-ablation3-20261017/bin/python",
+    "torch": "2.6.0+cu124",
+    "cuda": "12.4",
+    "nccl": [
+      2,
+      21,
+      5
+    ],
+    "device_count": 8,
+    "gpu_uuid": "1706d57e-5c35-8a8e-3e54-162cd2813cd1",
+    "gpu_name": "NVIDIA H100 80GB HBM3",
+    "sm_count": 132,
+    "capability": [
+      9,
+      0
+    ],
+    "local_peer_access": true,
+    "tp_members": [
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "dp_members": [
+      0,
+      8
+    ],
+    "hca": "mlx5_1:1,mlx5_4:1,mlx5_6:1,mlx5_8:1",
+    "socket_ifname": "bond0",
+    "memlock": [
+      -1,
+      -1
+    ],
+    "large_elements": 4194304,
+    "large_iterations": 5,
+    "completed": true,
+    "checks": {
+      "tp_allgather": true,
+      "tp_reduce_scatter": true,
+      "dp_allreduce_small": true,
+      "dp_allreduce_large": true
+    }
+  },
+  {
+    "protocol": "h100-tp8-dp2-link-check-v1",
+    "run_id": "tp8-dp2-02-link",
+    "worker_sha256": "3de87c7ac87ba60aa3d8dd5045af316bae4de8869e7a497a40c1c2376c9cd095",
+    "rank": 9,
+    "node_rank": 1,
+    "local_rank": 1,
+    "host": "gxn75",
+    "pid": 2287317,
+    "python": "/workspace/conda-envs/flux-h100-ablation3-20261017/bin/python",
+    "torch": "2.6.0+cu124",
+    "cuda": "12.4",
+    "nccl": [
+      2,
+      21,
+      5
+    ],
+    "device_count": 8,
+    "gpu_uuid": "f5a032d7-653f-36c5-d45f-6b7fee264e5a",
+    "gpu_name": "NVIDIA H100 80GB HBM3",
+    "sm_count": 132,
+    "capability": [
+      9,
+      0
+    ],
+    "local_peer_access": true,
+    "tp_members": [
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "dp_members": [
+      1,
+      9
+    ],
+    "hca": "mlx5_1:1,mlx5_4:1,mlx5_6:1,mlx5_8:1",
+    "socket_ifname": "bond0",
+    "memlock": [
+      -1,
+      -1
+    ],
+    "large_elements": 4194304,
+    "large_iterations": 5,
+    "completed": true,
+    "checks": {
+      "tp_allgather": true,
+      "tp_reduce_scatter": true,
+      "dp_allreduce_small": true,
+      "dp_allreduce_large": true
+    }
+  },
+  {
+    "protocol": "h100-tp8-dp2-link-check-v1",
+    "run_id": "tp8-dp2-02-link",
+    "worker_sha256": "3de87c7ac87ba60aa3d8dd5045af316bae4de8869e7a497a40c1c2376c9cd095",
+    "rank": 10,
+    "node_rank": 1,
+    "local_rank": 2,
+    "host": "gxn75",
+    "pid": 2287318,
+    "python": "/workspace/conda-envs/flux-h100-ablation3-20261017/bin/python",
+    "torch": "2.6.0+cu124",
+    "cuda": "12.4",
+    "nccl": [
+      2,
+      21,
+      5
+    ],
+    "device_count": 8,
+    "gpu_uuid": "aaa779c1-00d2-231c-584b-73505b36ca09",
+    "gpu_name": "NVIDIA H100 80GB HBM3",
+    "sm_count": 132,
+    "capability": [
+      9,
+      0
+    ],
+    "local_peer_access": true,
+    "tp_members": [
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "dp_members": [
+      2,
+      10
+    ],
+    "hca": "mlx5_1:1,mlx5_4:1,mlx5_6:1,mlx5_8:1",
+    "socket_ifname": "bond0",
+    "memlock": [
+      -1,
+      -1
+    ],
+    "large_elements": 4194304,
+    "large_iterations": 5,
+    "completed": true,
+    "checks": {
+      "tp_allgather": true,
+      "tp_reduce_scatter": true,
+      "dp_allreduce_small": true,
+      "dp_allreduce_large": true
+    }
+  },
+  {
+    "protocol": "h100-tp8-dp2-link-check-v1",
+    "run_id": "tp8-dp2-02-link",
+    "worker_sha256": "3de87c7ac87ba60aa3d8dd5045af316bae4de8869e7a497a40c1c2376c9cd095",
+    "rank": 11,
+    "node_rank": 1,
+    "local_rank": 3,
+    "host": "gxn75",
+    "pid": 2287319,
+    "python": "/workspace/conda-envs/flux-h100-ablation3-20261017/bin/python",
+    "torch": "2.6.0+cu124",
+    "cuda": "12.4",
+    "nccl": [
+      2,
+      21,
+      5
+    ],
+    "device_count": 8,
+    "gpu_uuid": "3d4c9ce1-d3f4-deb1-2583-54edf8a7828a",
+    "gpu_name": "NVIDIA H100 80GB HBM3",
+    "sm_count": 132,
+    "capability": [
+      9,
+      0
+    ],
+    "local_peer_access": true,
+    "tp_members": [
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "dp_members": [
+      3,
+      11
+    ],
+    "hca": "mlx5_1:1,mlx5_4:1,mlx5_6:1,mlx5_8:1",
+    "socket_ifname": "bond0",
+    "memlock": [
+      -1,
+      -1
+    ],
+    "large_elements": 4194304,
+    "large_iterations": 5,
+    "completed": true,
+    "checks": {
+      "tp_allgather": true,
+      "tp_reduce_scatter": true,
+      "dp_allreduce_small": true,
+      "dp_allreduce_large": true
+    }
+  },
+  {
+    "protocol": "h100-tp8-dp2-link-check-v1",
+    "run_id": "tp8-dp2-02-link",
+    "worker_sha256": "3de87c7ac87ba60aa3d8dd5045af316bae4de8869e7a497a40c1c2376c9cd095",
+    "rank": 12,
+    "node_rank": 1,
+    "local_rank": 4,
+    "host": "gxn75",
+    "pid": 2287320,
+    "python": "/workspace/conda-envs/flux-h100-ablation3-20261017/bin/python",
+    "torch": "2.6.0+cu124",
+    "cuda": "12.4",
+    "nccl": [
+      2,
+      21,
+      5
+    ],
+    "device_count": 8,
+    "gpu_uuid": "47f842a7-68bd-1e86-5dc3-65c9db5ec042",
+    "gpu_name": "NVIDIA H100 80GB HBM3",
+    "sm_count": 132,
+    "capability": [
+      9,
+      0
+    ],
+    "local_peer_access": true,
+    "tp_members": [
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "dp_members": [
+      4,
+      12
+    ],
+    "hca": "mlx5_1:1,mlx5_4:1,mlx5_6:1,mlx5_8:1",
+    "socket_ifname": "bond0",
+    "memlock": [
+      -1,
+      -1
+    ],
+    "large_elements": 4194304,
+    "large_iterations": 5,
+    "completed": true,
+    "checks": {
+      "tp_allgather": true,
+      "tp_reduce_scatter": true,
+      "dp_allreduce_small": true,
+      "dp_allreduce_large": true
+    }
+  },
+  {
+    "protocol": "h100-tp8-dp2-link-check-v1",
+    "run_id": "tp8-dp2-02-link",
+    "worker_sha256": "3de87c7ac87ba60aa3d8dd5045af316bae4de8869e7a497a40c1c2376c9cd095",
+    "rank": 13,
+    "node_rank": 1,
+    "local_rank": 5,
+    "host": "gxn75",
+    "pid": 2287321,
+    "python": "/workspace/conda-envs/flux-h100-ablation3-20261017/bin/python",
+    "torch": "2.6.0+cu124",
+    "cuda": "12.4",
+    "nccl": [
+      2,
+      21,
+      5
+    ],
+    "device_count": 8,
+    "gpu_uuid": "0f4d8136-f3b3-6fb0-e8f4-9491251b829e",
+    "gpu_name": "NVIDIA H100 80GB HBM3",
+    "sm_count": 132,
+    "capability": [
+      9,
+      0
+    ],
+    "local_peer_access": true,
+    "tp_members": [
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "dp_members": [
+      5,
+      13
+    ],
+    "hca": "mlx5_1:1,mlx5_4:1,mlx5_6:1,mlx5_8:1",
+    "socket_ifname": "bond0",
+    "memlock": [
+      -1,
+      -1
+    ],
+    "large_elements": 4194304,
+    "large_iterations": 5,
+    "completed": true,
+    "checks": {
+      "tp_allgather": true,
+      "tp_reduce_scatter": true,
+      "dp_allreduce_small": true,
+      "dp_allreduce_large": true
+    }
+  },
+  {
+    "protocol": "h100-tp8-dp2-link-check-v1",
+    "run_id": "tp8-dp2-02-link",
+    "worker_sha256": "3de87c7ac87ba60aa3d8dd5045af316bae4de8869e7a497a40c1c2376c9cd095",
+    "rank": 14,
+    "node_rank": 1,
+    "local_rank": 6,
+    "host": "gxn75",
+    "pid": 2287322,
+    "python": "/workspace/conda-envs/flux-h100-ablation3-20261017/bin/python",
+    "torch": "2.6.0+cu124",
+    "cuda": "12.4",
+    "nccl": [
+      2,
+      21,
+      5
+    ],
+    "device_count": 8,
+    "gpu_uuid": "93b43235-1c0c-7b47-4c95-f3f677600bd8",
+    "gpu_name": "NVIDIA H100 80GB HBM3",
+    "sm_count": 132,
+    "capability": [
+      9,
+      0
+    ],
+    "local_peer_access": true,
+    "tp_members": [
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "dp_members": [
+      6,
+      14
+    ],
+    "hca": "mlx5_1:1,mlx5_4:1,mlx5_6:1,mlx5_8:1",
+    "socket_ifname": "bond0",
+    "memlock": [
+      -1,
+      -1
+    ],
+    "large_elements": 4194304,
+    "large_iterations": 5,
+    "completed": true,
+    "checks": {
+      "tp_allgather": true,
+      "tp_reduce_scatter": true,
+      "dp_allreduce_small": true,
+      "dp_allreduce_large": true
+    }
+  },
+  {
+    "protocol": "h100-tp8-dp2-link-check-v1",
+    "run_id": "tp8-dp2-02-link",
+    "worker_sha256": "3de87c7ac87ba60aa3d8dd5045af316bae4de8869e7a497a40c1c2376c9cd095",
+    "rank": 15,
+    "node_rank": 1,
+    "local_rank": 7,
+    "host": "gxn75",
+    "pid": 2287323,
+    "python": "/workspace/conda-envs/flux-h100-ablation3-20261017/bin/python",
+    "torch": "2.6.0+cu124",
+    "cuda": "12.4",
+    "nccl": [
+      2,
+      21,
+      5
+    ],
+    "device_count": 8,
+    "gpu_uuid": "d45e5e56-238c-7cf7-c09f-45e539028049",
+    "gpu_name": "NVIDIA H100 80GB HBM3",
+    "sm_count": 132,
+    "capability": [
+      9,
+      0
+    ],
+    "local_peer_access": true,
+    "tp_members": [
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "dp_members": [
+      7,
+      15
+    ],
+    "hca": "mlx5_1:1,mlx5_4:1,mlx5_6:1,mlx5_8:1",
+    "socket_ifname": "bond0",
+    "memlock": [
+      -1,
+      -1
+    ],
+    "large_elements": 4194304,
+    "large_iterations": 5,
+    "completed": true,
+    "checks": {
+      "tp_allgather": true,
+      "tp_reduce_scatter": true,
+      "dp_allreduce_small": true,
+      "dp_allreduce_large": true
+    }
+  }
+]

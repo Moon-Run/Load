@@ -1,0 +1,39 @@
+{
+  "protocol": "h100-tp8-dp2-three-arm-v1",
+  "package_id": "e9f5dbfbabdc687a3b9ad78bc80473aa8f6a5e20dc93392e00e112ad833315e7",
+  "model": {
+    "layers": 32,
+    "hidden": 4096,
+    "ffn": 16384,
+    "heads": 32,
+    "sequence": 2048,
+    "micro_batch": 1,
+    "global_batch": 4,
+    "tp": 8,
+    "dp": 2,
+    "sm_count": 132,
+    "seed": 1234,
+    "token_seed": 4321,
+    "vocab": 32768
+  },
+  "run_id": "tp8-dp2-02",
+  "trials": 1,
+  "blocks": 12,
+  "worker_port": 29581,
+  "communication": {
+    "NCCL_VERSION": "2.21.5-1",
+    "NCCL_NET": "IB",
+    "NCCL_IB_DISABLE": "0",
+    "NCCL_IB_HCA": "=mlx5_1:1,mlx5_4:1,mlx5_6:1,mlx5_8:1",
+    "NCCL_SOCKET_IFNAME": "=bond0",
+    "GLOO_SOCKET_IFNAME": "bond0",
+    "NCCL_SOCKET_FAMILY": "AF_INET",
+    "NCCL_DEBUG": "WARN",
+    "TORCH_NCCL_ASYNC_ERROR_HANDLING": "1",
+    "NCCL_NVLS_ENABLE": "0"
+  },
+  "nccl_config_hashes": [
+    "absent",
+    "absent"
+  ]
+}

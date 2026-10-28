@@ -1,0 +1,434 @@
+{
+  "agreement": {
+    "protocol": "h100-tp8-dp2-three-arm-v1",
+    "package_id": "e9f5dbfbabdc687a3b9ad78bc80473aa8f6a5e20dc93392e00e112ad833315e7",
+    "model": {
+      "layers": 32,
+      "hidden": 4096,
+      "ffn": 16384,
+      "heads": 32,
+      "sequence": 2048,
+      "micro_batch": 1,
+      "global_batch": 4,
+      "tp": 8,
+      "dp": 2,
+      "sm_count": 132,
+      "seed": 1234,
+      "token_seed": 4321,
+      "vocab": 32768
+    },
+    "run_id": "tp8-dp2-02",
+    "trials": 1,
+    "blocks": 12,
+    "worker_port": 29581,
+    "communication": {
+      "NCCL_VERSION": "2.21.5-1",
+      "NCCL_NET": "IB",
+      "NCCL_IB_DISABLE": "0",
+      "NCCL_IB_HCA": "=mlx5_1:1,mlx5_4:1,mlx5_6:1,mlx5_8:1",
+      "NCCL_SOCKET_IFNAME": "=bond0",
+      "GLOO_SOCKET_IFNAME": "bond0",
+      "NCCL_SOCKET_FAMILY": "AF_INET",
+      "NCCL_DEBUG": "WARN",
+      "TORCH_NCCL_ASYNC_ERROR_HANDLING": "1",
+      "NCCL_NVLS_ENABLE": "0"
+    },
+    "nccl_config_hashes": [
+      "absent",
+      "absent"
+    ]
+  },
+  "jobs": [
+    {
+      "trial": 0,
+      "block": -1,
+      "index": 0,
+      "arm": "ma11",
+      "mode": "smoke",
+      "directory": "smoke-ma11"
+    },
+    {
+      "trial": 0,
+      "block": -1,
+      "index": 1,
+      "arm": "flux-basic",
+      "mode": "smoke",
+      "directory": "smoke-flux-basic"
+    },
+    {
+      "trial": 0,
+      "block": -1,
+      "index": 2,
+      "arm": "megatron-cuda",
+      "mode": "smoke",
+      "directory": "smoke-megatron-cuda"
+    },
+    {
+      "trial": 1,
+      "block": 0,
+      "index": 0,
+      "arm": "ma11",
+      "mode": "timing",
+      "directory": "compare1/block00-ma11"
+    },
+    {
+      "trial": 1,
+      "block": 0,
+      "index": 1,
+      "arm": "megatron-cuda",
+      "mode": "timing",
+      "directory": "compare1/block00-megatron-cuda"
+    },
+    {
+      "trial": 1,
+      "block": 0,
+      "index": 2,
+      "arm": "flux-basic",
+      "mode": "timing",
+      "directory": "compare1/block00-flux-basic"
+    },
+    {
+      "trial": 1,
+      "block": 1,
+      "index": 3,
+      "arm": "flux-basic",
+      "mode": "timing",
+      "directory": "compare1/block01-flux-basic"
+    },
+    {
+      "trial": 1,
+      "block": 1,
+      "index": 4,
+      "arm": "megatron-cuda",
+      "mode": "timing",
+      "directory": "compare1/block01-megatron-cuda"
+    },
+    {
+      "trial": 1,
+      "block": 1,
+      "index": 5,
+      "arm": "ma11",
+      "mode": "timing",
+      "directory": "compare1/block01-ma11"
+    },
+    {
+      "trial": 1,
+      "block": 2,
+      "index": 6,
+      "arm": "flux-basic",
+      "mode": "timing",
+      "directory": "compare1/block02-flux-basic"
+    },
+    {
+      "trial": 1,
+      "block": 2,
+      "index": 7,
+      "arm": "ma11",
+      "mode": "timing",
+      "directory": "compare1/block02-ma11"
+    },
+    {
+      "trial": 1,
+      "block": 2,
+      "index": 8,
+      "arm": "megatron-cuda",
+      "mode": "timing",
+      "directory": "compare1/block02-megatron-cuda"
+    },
+    {
+      "trial": 1,
+      "block": 3,
+      "index": 9,
+      "arm": "ma11",
+      "mode": "timing",
+      "directory": "compare1/block03-ma11"
+    },
+    {
+      "trial": 1,
+      "block": 3,
+      "index": 10,
+      "arm": "flux-basic",
+      "mode": "timing",
+      "directory": "compare1/block03-flux-basic"
+    },
+    {
+      "trial": 1,
+      "block": 3,
+      "index": 11,
+      "arm": "megatron-cuda",
+      "mode": "timing",
+      "directory": "compare1/block03-megatron-cuda"
+    },
+    {
+      "trial": 1,
+      "block": 4,
+      "index": 12,
+      "arm": "megatron-cuda",
+      "mode": "timing",
+      "directory": "compare1/block04-megatron-cuda"
+    },
+    {
+      "trial": 1,
+      "block": 4,
+      "index": 13,
+      "arm": "flux-basic",
+      "mode": "timing",
+      "directory": "compare1/block04-flux-basic"
+    },
+    {
+      "trial": 1,
+      "block": 4,
+      "index": 14,
+      "arm": "ma11",
+      "mode": "timing",
+      "directory": "compare1/block04-ma11"
+    },
+    {
+      "trial": 1,
+      "block": 5,
+      "index": 15,
+      "arm": "megatron-cuda",
+      "mode": "timing",
+      "directory": "compare1/block05-megatron-cuda"
+    },
+    {
+      "trial": 1,
+      "block": 5,
+      "index": 16,
+      "arm": "ma11",
+      "mode": "timing",
+      "directory": "compare1/block05-ma11"
+    },
+    {
+      "trial": 1,
+      "block": 5,
+      "index": 17,
+      "arm": "flux-basic",
+      "mode": "timing",
+      "directory": "compare1/block05-flux-basic"
+    },
+    {
+      "trial": 1,
+      "block": 6,
+      "index": 18,
+      "arm": "ma11",
+      "mode": "timing",
+      "directory": "compare1/block06-ma11"
+    },
+    {
+      "trial": 1,
+      "block": 6,
+      "index": 19,
+      "arm": "megatron-cuda",
+      "mode": "timing",
+      "directory": "compare1/block06-megatron-cuda"
+    },
+    {
+      "trial": 1,
+      "block": 6,
+      "index": 20,
+      "arm": "flux-basic",
+      "mode": "timing",
+      "directory": "compare1/block06-flux-basic"
+    },
+    {
+      "trial": 1,
+      "block": 7,
+      "index": 21,
+      "arm": "flux-basic",
+      "mode": "timing",
+      "directory": "compare1/block07-flux-basic"
+    },
+    {
+      "trial": 1,
+      "block": 7,
+      "index": 22,
+      "arm": "megatron-cuda",
+      "mode": "timing",
+      "directory": "compare1/block07-megatron-cuda"
+    },
+    {
+      "trial": 1,
+      "block": 7,
+      "index": 23,
+      "arm": "ma11",
+      "mode": "timing",
+      "directory": "compare1/block07-ma11"
+    },
+    {
+      "trial": 1,
+      "block": 8,
+      "index": 24,
+      "arm": "flux-basic",
+      "mode": "timing",
+      "directory": "compare1/block08-flux-basic"
+    },
+    {
+      "trial": 1,
+      "block": 8,
+      "index": 25,
+      "arm": "ma11",
+      "mode": "timing",
+      "directory": "compare1/block08-ma11"
+    },
+    {
+      "trial": 1,
+      "block": 8,
+      "index": 26,
+      "arm": "megatron-cuda",
+      "mode": "timing",
+      "directory": "compare1/block08-megatron-cuda"
+    },
+    {
+      "trial": 1,
+      "block": 9,
+      "index": 27,
+      "arm": "ma11",
+      "mode": "timing",
+      "directory": "compare1/block09-ma11"
+    },
+    {
+      "trial": 1,
+      "block": 9,
+      "index": 28,
+      "arm": "flux-basic",
+      "mode": "timing",
+      "directory": "compare1/block09-flux-basic"
+    },
+    {
+      "trial": 1,
+      "block": 9,
+      "index": 29,
+      "arm": "megatron-cuda",
+      "mode": "timing",
+      "directory": "compare1/block09-megatron-cuda"
+    },
+    {
+      "trial": 1,
+      "block": 10,
+      "index": 30,
+      "arm": "megatron-cuda",
+      "mode": "timing",
+      "directory": "compare1/block10-megatron-cuda"
+    },
+    {
+      "trial": 1,
+      "block": 10,
+      "index": 31,
+      "arm": "flux-basic",
+      "mode": "timing",
+      "directory": "compare1/block10-flux-basic"
+    },
+    {
+      "trial": 1,
+      "block": 10,
+      "index": 32,
+      "arm": "ma11",
+      "mode": "timing",
+      "directory": "compare1/block10-ma11"
+    },
+    {
+      "trial": 1,
+      "block": 11,
+      "index": 33,
+      "arm": "megatron-cuda",
+      "mode": "timing",
+      "directory": "compare1/block11-megatron-cuda"
+    },
+    {
+      "trial": 1,
+      "block": 11,
+      "index": 34,
+      "arm": "ma11",
+      "mode": "timing",
+      "directory": "compare1/block11-ma11"
+    },
+    {
+      "trial": 1,
+      "block": 11,
+      "index": 35,
+      "arm": "flux-basic",
+      "mode": "timing",
+      "directory": "compare1/block11-flux-basic"
+    },
+    {
+      "trial": 0,
+      "block": -1,
+      "index": 0,
+      "arm": "ma11",
+      "mode": "profile",
+      "directory": "profile-ma11"
+    },
+    {
+      "trial": 0,
+      "block": -1,
+      "index": 1,
+      "arm": "flux-basic",
+      "mode": "profile",
+      "directory": "profile-flux-basic"
+    },
+    {
+      "trial": 0,
+      "block": -1,
+      "index": 2,
+      "arm": "megatron-cuda",
+      "mode": "profile",
+      "directory": "profile-megatron-cuda"
+    }
+  ],
+  "build_root": "/workspace/tp8-dp2-bench/build/node1-e9f5dbfbabdc",
+  "build_sha256": "28b89fea77966c876b1f9f5d16626887094345573958058b63d12765e991b281",
+  "worker_files": {
+    "ma11": {
+      "ablation4_protocol.py": "49096ce304742939908eb7ada80b37f75179b59478e14ddb4119b4055833e473",
+      "routing.py": "49096ce304742939908eb7ada80b37f75179b59478e14ddb4119b4055833e473",
+      "runtime.py": "88dae92616bb4689f979e0ff3414abe7ea37ae28c9203fe5e4e80a85d33766d2",
+      "config.json": "381679ac03a426d40dd69660f77d2aa9c8a79ef39b95d8d601af79047ca05a7e",
+      "selection-plan.json": "2d8f0dc9a77a037282e8ff9355f0b40cc3354b973b1a8c677bb7d6872af5c57c",
+      "communication.py": "b9fa09b17f66fe89fbe7d894959a90ccff9dc4a9e04eb1364f35509d069ab330",
+      "common.py": "771470ca6047ea7b84814e6cc23c2357b927e95ad29ed2fbd7b34f2969c68de4",
+      "adapter.py": "a66c0124e514bc222a6b48eb2cd3da47263205ce393fb0ca6d1a0625073597c9",
+      "ma11_adapter.py": "dee6c61c6fdd99a74c4ba6e55ea9369fc4ff539f96dd3a26e15484778587ccca",
+      "reference.py": "1a6f8e4ef7a7a20b1709d2a91eeed55832c0cf7d73f351b4dc6e8f152be60b5b",
+      "worker.py": "aa063ff99cb8c9c3b95da599d9c83f366acd4a33fd444c18ec90ad6d603a6fdd",
+      "ma9_adapter.py": "ab89d89761dde299a024d8da5956345723fab8fdcbcac725b1ec0419a293bb14",
+      "megatron_taco.py": "7e6499c25618ec7b5c2265a25e7b353f2f1581cd9f4e8ee0595bb09c1f7b8fd0",
+      "taco_support.py": "d994d174d2a367d2171f45f5c6dd977c84f697e20ee0728fb018b07728f66755",
+      "ma8_adapter.py": "de4486ec321176383a1fa84cb59aad6401402e8a824e2a89e28e9138d78ca40e"
+    },
+    "flux-basic": {
+      "ablation4_protocol.py": "49096ce304742939908eb7ada80b37f75179b59478e14ddb4119b4055833e473",
+      "routing.py": "fee849a24503b78d0ba668139763e51c58e9884b4f5a0ba02c1128e62aece723",
+      "runtime.py": "88dae92616bb4689f979e0ff3414abe7ea37ae28c9203fe5e4e80a85d33766d2",
+      "baseline_codec_validation.py": "6b263cd75d6d1154e7434aba0b0857b14a2b834badce407457c0bdaeb370d47e",
+      "basic_quant_validation.py": "a477fa813276bc77789ffc977056751cc2ec4f4667305cf329a2d8b34e0850ad",
+      "config.json": "a34f9db464a610d9abb1b3aadfd0bf08e718fa17aaa02283534a2c33e1a451df",
+      "selection-plan.json": "49f9723f20493b5adb7dcce84b9ccf41a9589204eb2a4a042c8706ff0bfe72a4",
+      "communication.py": "b9fa09b17f66fe89fbe7d894959a90ccff9dc4a9e04eb1364f35509d069ab330",
+      "common.py": "771470ca6047ea7b84814e6cc23c2357b927e95ad29ed2fbd7b34f2969c68de4",
+      "adapter.py": "44509f6aca62cd67afc5a3f0a84ed4df47ca751eddd1d6b0e8539ec744e0b5db",
+      "flux_tensor_taco.py": "13c60ba8459eff6a98d411b5f5df78574b900345240819cb8ab1676de7ace4fb",
+      "reference.py": "1a6f8e4ef7a7a20b1709d2a91eeed55832c0cf7d73f351b4dc6e8f152be60b5b",
+      "worker.py": "95dc4591458bf07341966dc9688311e2f96618df73adccd15f8ec05fb2ee2264",
+      "megatron_taco.py": "d51f82006f0bcb6bfbab71eb289d680cc097227048669e1cdc17c0d65a324546",
+      "taco_support.py": "30c5c162045dc96d3e6673de58f5383673cd844c1bdaf0dc5a32a3cc16103127"
+    },
+    "megatron-cuda": {
+      "ablation4_protocol.py": "49096ce304742939908eb7ada80b37f75179b59478e14ddb4119b4055833e473",
+      "routing.py": "89ed21d251f9a5dcd34f2d5c0d8fc56ed62cea806a3ca87dfcb01c3135371452",
+      "runtime.py": "88dae92616bb4689f979e0ff3414abe7ea37ae28c9203fe5e4e80a85d33766d2",
+      "baseline_codec_validation.py": "6b263cd75d6d1154e7434aba0b0857b14a2b834badce407457c0bdaeb370d47e",
+      "basic_quant_validation.py": "a477fa813276bc77789ffc977056751cc2ec4f4667305cf329a2d8b34e0850ad",
+      "config.json": "edb8150deb12e0cc3ab57ddc38aee3bd923a5b6690ca5ca5ebbdc35488ac30d7",
+      "selection-plan.json": "2d8f0dc9a77a037282e8ff9355f0b40cc3354b973b1a8c677bb7d6872af5c57c",
+      "communication.py": "b9fa09b17f66fe89fbe7d894959a90ccff9dc4a9e04eb1364f35509d069ab330",
+      "common.py": "771470ca6047ea7b84814e6cc23c2357b927e95ad29ed2fbd7b34f2969c68de4",
+      "adapter.py": "d4a8d900a14e43385776fedbb6c6db6b41cf4ee945b62882587e9babd20f82d2",
+      "flux_tensor_taco.py": "13c60ba8459eff6a98d411b5f5df78574b900345240819cb8ab1676de7ace4fb",
+      "reference.py": "1a6f8e4ef7a7a20b1709d2a91eeed55832c0cf7d73f351b4dc6e8f152be60b5b",
+      "worker.py": "580c6129d979ffad94073ea02e7967efb52b7344059b00cecd0f37d4a8ddf65e",
+      "megatron_taco.py": "d6213c093274600210a3594d87efeb7346bafab4cdf77709ce8b294378112178",
+      "taco_support.py": "30c5c162045dc96d3e6673de58f5383673cd844c1bdaf0dc5a32a3cc16103127"
+    }
+  }
+}

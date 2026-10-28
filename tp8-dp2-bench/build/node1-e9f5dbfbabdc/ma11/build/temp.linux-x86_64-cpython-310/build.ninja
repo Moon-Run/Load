@@ -1,0 +1,25 @@
+ninja_required_version = 1.3
+cxx = c++
+
+cflags = -pthread -B /workspace/conda-envs/flux-h100-ablation3-20261017/compiler_compat -Wno-unused-result -Wsign-compare -DNDEBUG -fwrapv -O2 -Wall -fPIC -fno-merge-constants -O2 -isystem /workspace/conda-envs/flux-h100-ablation3-20261017/include -fPIC -fno-merge-constants -O2 -isystem /workspace/conda-envs/flux-h100-ablation3-20261017/include -fPIC -I/workspace/tp8-dp2-bench/build/node1-e9f5dbfbabdc/nccl/build/include -I/workspace/tp8-dp2-bench/build/node1-e9f5dbfbabdc/nccl/build/include/nccl/detail/include -I/workspace/tp8-dp2-bench/build/node1-e9f5dbfbabdc/ma11/3rdparty/cutlass/include -I/workspace/tp8-dp2-bench/build/node1-e9f5dbfbabdc/ma11/3rdparty/cutlass/tools/util/include -I/workspace/tp8-dp2-bench/build/node1-e9f5dbfbabdc/ma11/3rdparty/cutlass/tools/library/include -I/workspace/tp8-dp2-bench/build/node1-e9f5dbfbabdc/ma11/3rdparty/cutlass/tools/profiler/include -I/workspace/tp8-dp2-bench/build/node1-e9f5dbfbabdc/ma11/include -I/workspace/tp8-dp2-bench/build/node1-e9f5dbfbabdc/ma11/src -I/usr/local/cuda-12.8/include -I/workspace/conda-envs/flux-h100-ablation3-20261017/lib/python3.10/site-packages/torch/include -I/workspace/conda-envs/flux-h100-ablation3-20261017/lib/python3.10/site-packages/torch/include/torch/csrc/api/include -I/workspace/conda-envs/flux-h100-ablation3-20261017/lib/python3.10/site-packages/torch/include/TH -I/workspace/conda-envs/flux-h100-ablation3-20261017/lib/python3.10/site-packages/torch/include/THC -I/workspace/conda-envs/flux-h100-ablation3-20261017/include/python3.10 -c
+post_cflags = -O3 -DTORCH_CUDA=1 -fvisibility=hidden -Wno-deprecated-declarations -fdiagnostics-color=always -DTORCH_API_INCLUDE_EXTENSION_H '-DPYBIND11_COMPILER_TYPE="_gcc"' '-DPYBIND11_STDLIB="_libstdcpp"' '-DPYBIND11_BUILD_ABI="_cxxabi1011"' -DTORCH_EXTENSION_NAME=flux_ths_pybind -D_GLIBCXX_USE_CXX11_ABI=0 -std=c++17
+cuda_dlink_post_cflags = 
+ldflags = 
+
+rule compile
+  command = $cxx -MMD -MF $out.d $cflags -c $in -o $out $post_cflags
+  depfile = $out.d
+  deps = gcc
+
+
+
+
+
+build /workspace/tp8-dp2-bench/build/node1-e9f5dbfbabdc/ma11/build/temp.linux-x86_64-cpython-310/src/pybind/gemm_rs.o: compile /workspace/tp8-dp2-bench/build/node1-e9f5dbfbabdc/ma11/src/pybind/gemm_rs.cc
+build /workspace/tp8-dp2-bench/build/node1-e9f5dbfbabdc/ma11/build/temp.linux-x86_64-cpython-310/src/pybind/ths_op.o: compile /workspace/tp8-dp2-bench/build/node1-e9f5dbfbabdc/ma11/src/pybind/ths_op.cc
+
+
+
+
+
+

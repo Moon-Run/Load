@@ -1,0 +1,56 @@
+{
+  "protocol": "h100-tp8-dp2-link-check-v1",
+  "run_id": "tp8-dp2-02-link",
+  "worker_sha256": "3de87c7ac87ba60aa3d8dd5045af316bae4de8869e7a497a40c1c2376c9cd095",
+  "rank": 14,
+  "node_rank": 1,
+  "local_rank": 6,
+  "host": "gxn75",
+  "pid": 2287322,
+  "python": "/workspace/conda-envs/flux-h100-ablation3-20261017/bin/python",
+  "torch": "2.6.0+cu124",
+  "cuda": "12.4",
+  "nccl": [
+    2,
+    21,
+    5
+  ],
+  "device_count": 8,
+  "gpu_uuid": "93b43235-1c0c-7b47-4c95-f3f677600bd8",
+  "gpu_name": "NVIDIA H100 80GB HBM3",
+  "sm_count": 132,
+  "capability": [
+    9,
+    0
+  ],
+  "local_peer_access": true,
+  "tp_members": [
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "dp_members": [
+    6,
+    14
+  ],
+  "hca": "mlx5_1:1,mlx5_4:1,mlx5_6:1,mlx5_8:1",
+  "socket_ifname": "bond0",
+  "memlock": [
+    -1,
+    -1
+  ],
+  "large_elements": 4194304,
+  "large_iterations": 5,
+  "completed": true,
+  "checks": {
+    "tp_allgather": true,
+    "tp_reduce_scatter": true,
+    "dp_allreduce_small": true,
+    "dp_allreduce_large": true
+  }
+}

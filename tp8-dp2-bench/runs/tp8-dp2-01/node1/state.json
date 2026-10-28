@@ -1,0 +1,8 @@
+{
+  "status": "failed",
+  "protocol": "h100-tp8-dp2-three-arm-v1",
+  "run_id": "tp8-dp2-01",
+  "package_id": "e9f5dbfbabdc687a3b9ad78bc80473aa8f6a5e20dc93392e00e112ad833315e7",
+  "node_rank": 1,
+  "error": "ValueError: Child exited 1; see /workspace/tp8-dp2-bench/runs/tp8-dp2-01/node1/link-launch.log"
+}

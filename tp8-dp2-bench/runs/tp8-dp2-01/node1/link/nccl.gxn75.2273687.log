@@ -1,0 +1,15 @@
+gxn75:2273687:2273687 [0] NCCL INFO NCCL_SOCKET_IFNAME set to =bond0
+gxn75:2273687:2273687 [0] NCCL INFO Bootstrap : Using bond0:10.18.133.75<0>
+gxn75:2273687:2273687 [0] NCCL INFO NET/Plugin: No plugin found (libnccl-net.so)
+gxn75:2273687:2273687 [0] NCCL INFO NET/Plugin: Using internal network plugin.
+gxn75:2273687:2273687 [0] NCCL INFO cudaDriverVersion 13000
+gxn75:2273687:2273687 [0] NCCL INFO NCCL version 2.21.5+cuda12.4
+gxn75:2273687:2273892 [0] NCCL INFO Failed to open libibverbs.so[.1]
+gxn75:2273687:2273892 [0] NCCL INFO NET/Socket : Using [0]bond0:10.18.133.75<0>
+
+gxn75:2273687:2273892 [0] net.cc:579 NCCL WARN Error: network IB not found.
+gxn75:2273687:2273892 [0] NCCL INFO init.cc:321 -> 5
+gxn75:2273687:2273892 [0] NCCL INFO init.cc:1533 -> 5
+gxn75:2273687:2273892 [0] NCCL INFO group.cc:64 -> 5 [Async thread]
+gxn75:2273687:2273687 [0] NCCL INFO group.cc:418 -> 5
+gxn75:2273687:2273687 [0] NCCL INFO init.cc:1929 -> 5

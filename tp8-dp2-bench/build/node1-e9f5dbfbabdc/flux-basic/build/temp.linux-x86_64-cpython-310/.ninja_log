@@ -1,0 +1,3 @@
+# ninja log v5
+0	13499	1793123022428202103	/workspace/tp8-dp2-bench/build/node1-e9f5dbfbabdc/flux-basic/build/temp.linux-x86_64-cpython-310/src/pybind/gemm_only.o	a38c823ffc8137d8
+0	15157	1793123024088176825	/workspace/tp8-dp2-bench/build/node1-e9f5dbfbabdc/flux-basic/build/temp.linux-x86_64-cpython-310/src/pybind/ths_op.o	73a05c8d61abdd81

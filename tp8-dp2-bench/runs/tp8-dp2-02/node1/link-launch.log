@@ -1,0 +1,17 @@
+COMMAND ['/workspace/conda-envs/flux-h100-ablation3-20261017/bin/python', '/workspace/tp8-dp2-bench/tools/h100/phase6/check_tp8_dp2_link.py', '--execute', '--python', '/workspace/conda-envs/flux-h100-ablation3-20261017/bin/python', '--node-rank', '1', '--master-addr', '10.18.133.74', '--master-port', '29581', '--socket-ifname', 'bond0', '--hca', 'mlx5_1:1,mlx5_4:1,mlx5_6:1,mlx5_8:1', '--run-id', 'tp8-dp2-02-link', '--out', '/workspace/tp8-dp2-bench/runs/tp8-dp2-02/node1/link']
+Output: /workspace/tp8-dp2-bench/runs/tp8-dp2-02/node1/link
+Started communication preflight; launch the other node now. Log: /workspace/tp8-dp2-bench/runs/tp8-dp2-02/node1/link/process.log
+{
+  "protocol": "h100-tp8-dp2-link-check-v1",
+  "run_id": "tp8-dp2-02-link",
+  "node_rank": 1,
+  "status": "completed",
+  "training_started": false,
+  "collectives_passed": true,
+  "ib_transport_validated": true,
+  "stage": "done",
+  "expected_global_ranks": 16,
+  "global_collectives_validated": true,
+  "local_rank_logs_validated": 8
+}
+本节点日志验证通过；两台 state.json 都 completed 后，才完成双节点通信预检。

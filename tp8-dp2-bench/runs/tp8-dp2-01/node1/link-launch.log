@@ -1,0 +1,13 @@
+COMMAND ['/workspace/conda-envs/flux-h100-ablation3-20261017/bin/python', '/workspace/tp8-dp2-bench/tools/h100/phase6/check_tp8_dp2_link.py', '--execute', '--python', '/workspace/conda-envs/flux-h100-ablation3-20261017/bin/python', '--node-rank', '1', '--master-addr', '10.18.133.74', '--master-port', '29581', '--socket-ifname', 'bond0', '--hca', 'mlx5_1:1,mlx5_4:1,mlx5_6:1,mlx5_8:1', '--run-id', 'tp8-dp2-01-link', '--out', '/workspace/tp8-dp2-bench/runs/tp8-dp2-01/node1/link']
+Output: /workspace/tp8-dp2-bench/runs/tp8-dp2-01/node1/link
+Started communication preflight; launch the other node now. Log: /workspace/tp8-dp2-bench/runs/tp8-dp2-01/node1/link/process.log
+Traceback (most recent call last):
+  File "/workspace/tp8-dp2-bench/tools/h100/phase6/check_tp8_dp2_link.py", line 355, in <module>
+    main()
+  File "/workspace/tp8-dp2-bench/tools/h100/phase6/check_tp8_dp2_link.py", line 351, in main
+    return execute(args)
+  File "/workspace/tp8-dp2-bench/tools/h100/phase6/check_tp8_dp2_link.py", line 275, in execute
+    require(result == 0, f'torchrun exited {result}; inspect process.log and nccl.*.log')
+  File "/workspace/tp8-dp2-bench/tools/h100/phase6/check_tp8_dp2_link.py", line 33, in require
+    raise ValueError(message)
+ValueError: torchrun exited 1; inspect process.log and nccl.*.log

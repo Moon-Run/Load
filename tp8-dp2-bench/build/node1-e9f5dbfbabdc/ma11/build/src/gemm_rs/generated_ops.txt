@@ -1,0 +1,2 @@
+/workspace/tp8-dp2-bench/build/node1-e9f5dbfbabdc/ma11/build/src/gemm_rs/registers/flux_bf16_bf16_void_bf16_fp32_fp32_sm80_a100_reducescatter_rcr_gemmv2_false_false_intranode.cu
+/workspace/tp8-dp2-bench/build/node1-e9f5dbfbabdc/ma11/build/src/gemm_rs/registers/flux_bf16_bf16_void_bf16_fp32_fp32_sm90_h800_reducescatter_rcr_gemmv3_false_false_false_intranode.cu
