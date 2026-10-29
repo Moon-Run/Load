@@ -1,0 +1,34 @@
+{
+  "attn": {
+    "mean_us": {
+      "F4-cache-zcount-csoftmax": 123.76408092677593,
+      "F4-cache-zcount-csoftmax-epoch": 193.59155092388391
+    },
+    "comparisons": {
+      "F4-cache-zcount-csoftmax-epoch/F4-cache-zcount-csoftmax": {
+        "percent": -15.599028706049367,
+        "ci95": [
+          -80.51978165890527,
+          9.82853067884405
+        ],
+        "paired_blocks": 8
+      }
+    }
+  },
+  "mlp": {
+    "mean_us": {
+      "F4-cache-zcount-csoftmax": 170.62182654626667,
+      "F4-cache-zcount-csoftmax-epoch": 169.32751866988838
+    },
+    "comparisons": {
+      "F4-cache-zcount-csoftmax-epoch/F4-cache-zcount-csoftmax": {
+        "percent": 0.831548189229403,
+        "ci95": [
+          -1.5935786513092687,
+          3.0039079153945214
+        ],
+        "paired_blocks": 8
+      }
+    }
+  }
+}

@@ -1,0 +1,2724 @@
+{
+  "protocol": "h100-ma14-epoch-reuse-v1-operator",
+  "run_id": "3db0a9c56e1f4dd2832dd4fd0c6a0d51",
+  "plan_sha256": "15e4e5d42993c28b2163fac9169133e8ad0c1b05585db712cb657f640b1e528d",
+  "job": {
+    "arm": "F4-cache-zcount-csoftmax-epoch",
+    "block": 4,
+    "directory": "block04-F4-cache-zcount-csoftmax-epoch",
+    "index": 9
+  },
+  "rank": 3,
+  "completed": true,
+  "preflight": false,
+  "profiling": false,
+  "roles": {
+    "attn": {
+      "epoch_state": [
+        {
+          "slot": 0,
+          "protocol_version": 14,
+          "initializations": 1,
+          "epoch": 187,
+          "local_ready_ptr": 43883431936,
+          "failed": false
+        },
+        {
+          "slot": 1,
+          "protocol_version": 14,
+          "initializations": 1,
+          "epoch": 187,
+          "local_ready_ptr": 43884613632,
+          "failed": false
+        }
+      ],
+      "native_tuning": {
+        "attn": {
+          "decoder_threads": 128,
+          "decoder_blocks": 2048,
+          "decoder_rows": 1,
+          "receiver_variant": 0,
+          "native_protocol": 1,
+          "packed_mask_bound": false
+        },
+        "mlp": {
+          "decoder_threads": 128,
+          "decoder_blocks": 2048,
+          "decoder_rows": 1,
+          "receiver_variant": 0,
+          "native_protocol": 1,
+          "packed_mask_bound": false
+        }
+      },
+      "shape": [
+        2048,
+        4096,
+        512
+      ],
+      "checks": [
+        {
+          "seed": 817,
+          "case": "zero",
+          "correctness": {
+            "max_abs": 0.0,
+            "relative_l2": 0.0,
+            "protocol_relative_l2": 0.0,
+            "budget_vs_bf16": 0.05,
+            "budget_vs_codec": 0.01,
+            "passed": true
+          },
+          "inputs": [
+            "5647f05ec18958947d32874eeb788fa396a05d0bab7c1b71f112ceb7e9b31eee",
+            "1e0aae86d4d56273bdc3573c5204fcfbd904baa7ee13e36b7ffaf57c7a19fcb4",
+            "6a5e4657a9325df7db31053fceaf1c4577f0812ac78c2d1f86b0cef04b5ef4f4",
+            "f7c33926561c7f82fbe66eb8388839985c51d14e207e20eb1bd9c41ba7c69689"
+          ],
+          "output": "f5df5cfc18f45c6d9d0476ce293e10a22bfb84caccce157c76436e3900cee7eb"
+        },
+        {
+          "seed": 817,
+          "case": "small",
+          "correctness": {
+            "max_abs": 1.4901161193847656e-07,
+            "relative_l2": 0.002983842189424031,
+            "protocol_relative_l2": 0.0,
+            "budget_vs_bf16": 0.05,
+            "budget_vs_codec": 0.01,
+            "passed": true
+          },
+          "inputs": [
+            "6355a9a330ff501ac056d8a35a36679c43e454dee67b56d38ebf25163b1df065",
+            "1e0aae86d4d56273bdc3573c5204fcfbd904baa7ee13e36b7ffaf57c7a19fcb4",
+            "6a5e4657a9325df7db31053fceaf1c4577f0812ac78c2d1f86b0cef04b5ef4f4",
+            "f7c33926561c7f82fbe66eb8388839985c51d14e207e20eb1bd9c41ba7c69689"
+          ],
+          "output": "7f1d265ed48affbb5b61acc5bd72a3c93eb838853049d62464ef3fbe8a10e46d"
+        },
+        {
+          "seed": 817,
+          "case": "outlier",
+          "correctness": {
+            "max_abs": 0.008544921875,
+            "relative_l2": 0.0029231444112846946,
+            "protocol_relative_l2": 1.7774566506095677e-06,
+            "budget_vs_bf16": 0.05,
+            "budget_vs_codec": 0.01,
+            "passed": true
+          },
+          "inputs": [
+            "b075e5148280b907f68dc8080c2f2a57324ed92d44217e31d7a3931980154eee",
+            "f42684aecc69de46428e0445e4985899de749b90ab4c8d1933acfa6de7364e22",
+            "6a5e4657a9325df7db31053fceaf1c4577f0812ac78c2d1f86b0cef04b5ef4f4",
+            "f7c33926561c7f82fbe66eb8388839985c51d14e207e20eb1bd9c41ba7c69689"
+          ],
+          "output": "0885dc046d531a2eab063dcf893fbd3fab5c12d86f35717550ccc4d5429a169a"
+        },
+        {
+          "seed": 817,
+          "case": "random",
+          "correctness": {
+            "max_abs": 0.00146484375,
+            "relative_l2": 0.0029686487488419077,
+            "protocol_relative_l2": 0.0,
+            "budget_vs_bf16": 0.05,
+            "budget_vs_codec": 0.01,
+            "passed": true
+          },
+          "inputs": [
+            "d3ff939470de6a7f8260395f2845ba9309710fe2a063dc17a7a225cbdb6a7e86",
+            "1e0aae86d4d56273bdc3573c5204fcfbd904baa7ee13e36b7ffaf57c7a19fcb4",
+            "6a5e4657a9325df7db31053fceaf1c4577f0812ac78c2d1f86b0cef04b5ef4f4",
+            "f7c33926561c7f82fbe66eb8388839985c51d14e207e20eb1bd9c41ba7c69689"
+          ],
+          "output": "83b01284a496609f2f9cacbe6eaad0011e584d668c02d3cbd7444f56800150ed"
+        },
+        {
+          "seed": 919,
+          "case": "zero",
+          "correctness": {
+            "max_abs": 0.0,
+            "relative_l2": 0.0,
+            "protocol_relative_l2": 0.0,
+            "budget_vs_bf16": 0.05,
+            "budget_vs_codec": 0.01,
+            "passed": true
+          },
+          "inputs": [
+            "5647f05ec18958947d32874eeb788fa396a05d0bab7c1b71f112ceb7e9b31eee",
+            "5378caa13219b31ab6a86727589c59b3e98904cf171f6c98307ec897724bd00c",
+            "805441fa4a265c9e4e3001ddb4d75f32f8f49044807aedddf38c6079e1c68480",
+            "8ff6f01cf9810dca849e539830dd37cc1d6dacb607e66e83316444924f3a5281"
+          ],
+          "output": "cc802a033a8804257e063165be66362bc84d23c9baf78cdaf382324a63ab3779"
+        },
+        {
+          "seed": 919,
+          "case": "small",
+          "correctness": {
+            "max_abs": 1.4901161193847656e-07,
+            "relative_l2": 0.0029663470353309936,
+            "protocol_relative_l2": 2.846755503823682e-06,
+            "budget_vs_bf16": 0.05,
+            "budget_vs_codec": 0.01,
+            "passed": true
+          },
+          "inputs": [
+            "2549422bb394b964ac7a6077abf72b8a0a1a46ed43e2c5665520b537f4a8e0a4",
+            "5378caa13219b31ab6a86727589c59b3e98904cf171f6c98307ec897724bd00c",
+            "805441fa4a265c9e4e3001ddb4d75f32f8f49044807aedddf38c6079e1c68480",
+            "8ff6f01cf9810dca849e539830dd37cc1d6dacb607e66e83316444924f3a5281"
+          ],
+          "output": "72503b16663c5c48357161fb5009799e6e089b89f8a87ea55199c058f155d375"
+        },
+        {
+          "seed": 919,
+          "case": "outlier",
+          "correctness": {
+            "max_abs": 0.0078125,
+            "relative_l2": 0.0028108051441448306,
+            "protocol_relative_l2": 3.534595388509966e-05,
+            "budget_vs_bf16": 0.05,
+            "budget_vs_codec": 0.01,
+            "passed": true
+          },
+          "inputs": [
+            "471200dc646a0081bba0f8f595b4324c5ee2c822a618651d7f965ca5ddfb0964",
+            "6fe97ba4e4777b0f72a41f2ce976f6960ca09b0bd62fe5b9149089f7b09e143c",
+            "805441fa4a265c9e4e3001ddb4d75f32f8f49044807aedddf38c6079e1c68480",
+            "8ff6f01cf9810dca849e539830dd37cc1d6dacb607e66e83316444924f3a5281"
+          ],
+          "output": "acc8aca4dac2aa2a98a1c652f383e83f8b36a92600c745674bdae508fd1b6449"
+        },
+        {
+          "seed": 919,
+          "case": "random",
+          "correctness": {
+            "max_abs": 0.00146484375,
+            "relative_l2": 0.0029654338653360315,
+            "protocol_relative_l2": 0.0,
+            "budget_vs_bf16": 0.05,
+            "budget_vs_codec": 0.01,
+            "passed": true
+          },
+          "inputs": [
+            "16714ced26c2a9afa5d7243204e341787c154ffe53da5d4ef68f77a07956d277",
+            "5378caa13219b31ab6a86727589c59b3e98904cf171f6c98307ec897724bd00c",
+            "805441fa4a265c9e4e3001ddb4d75f32f8f49044807aedddf38c6079e1c68480",
+            "8ff6f01cf9810dca849e539830dd37cc1d6dacb607e66e83316444924f3a5281"
+          ],
+          "output": "45a5ece89ba6ef67806ec95e7f5083601de859f2f6004c8aa41851dd9738ca42"
+        },
+        {
+          "seed": 0,
+          "case": "rounding_witness",
+          "correctness": {
+            "max_abs": 0.0,
+            "relative_l2": 0.0,
+            "protocol_relative_l2": 0.0,
+            "budget_vs_bf16": 0.05,
+            "budget_vs_codec": 0.01,
+            "passed": true
+          },
+          "inputs": [
+            "90dfdeb72db6a3dc48064b3b1adec5c30d92f374092f5637f04293827ae9ac9f",
+            "7b779ecbf2c2e685798dafd79ba9f559afc2f8c49991cf79a9334ed1141435e6",
+            "5aeab0803ac16f01fff8f93ca7d6da6da54d8a5920ed2b7e082e570adb9ab298",
+            "6ce7766fd5ecf33ce20de5b4672350529bee6df14d37b595b83ab91b19f3e190"
+          ],
+          "output": "5647f05ec18958947d32874eeb788fa396a05d0bab7c1b71f112ceb7e9b31eee"
+        },
+        {
+          "seed": 0,
+          "case": "tiny",
+          "correctness": {
+            "max_abs": 0.0,
+            "relative_l2": 0.0,
+            "protocol_relative_l2": 0.0,
+            "budget_vs_bf16": 0.05,
+            "budget_vs_codec": 0.01,
+            "passed": true
+          },
+          "inputs": [
+            "5647f05ec18958947d32874eeb788fa396a05d0bab7c1b71f112ceb7e9b31eee",
+            "bb9f8df61474d25e71fa00722318cd387396ca1736605e1248821cc0de3d3af8",
+            "c8bfe5e05da1ab03bc491e9fbeab93c25c34a8dd3684443e7a0b7b364bf606be",
+            "ea2e1f5d984fe089ec3990ea8cc9102c29cb9f0b4248b0c1bffbf403865e6681"
+          ],
+          "output": "773680060b8b33c754f779a994d7416377d13ade801457ebbb346b9e6fad70fc"
+        }
+      ],
+      "retained": [
+        {
+          "inputs": [
+            "44706b6821adda1527d603838ef3d5ef156da201e639459ef738669cd362ecd4",
+            "06578764c132d0c1baa529fe804d2ac4f0925c63d1f870aef721019272b6f56a",
+            "97a5690056e1e613aec53b83198ed324544d73e62f32ade03bd7600603589a43",
+            "bf925568c7b5140584908882758ddfd544ba9eee5f449252aec81d5cf94040c3"
+          ],
+          "output": "b5ff375ab90e1898e73944c5703d6ef2e86cbe9bb0c4627959ce0a6c9dbb659c",
+          "pointers": [
+            140516605820928,
+            140516614209536,
+            140519516702720,
+            140516603723776,
+            140516618403840
+          ]
+        },
+        {
+          "inputs": [
+            "952f57690746165a978ca4130fc080431389c57d28d0dbb81d0b82c4f5461a46",
+            "46d534f0812086ca4712b7943e4fbde362f5bc981ff9a44da74876535a7e68e0",
+            "37f9972d66f69ef5aae288d8695af27d5473dc86ea9a2dee8df189bb39a948a6",
+            "af300b8ffa8df13e0a73071ab10dc1891741da733ef7f6058c71d596751354d6"
+          ],
+          "output": "53974010e2cf58f680881c95b0097384bda3c8a6c6b7d8d1507fb139a40fff9f",
+          "pointers": [
+            140516599529472,
+            140516607918080,
+            140519516974080,
+            140516612112384,
+            140516263985152
+          ]
+        },
+        {
+          "inputs": [
+            "050b720e083dcb7f73d009b804831012cc6de665896681d79e04600925e57027",
+            "751db1bc8017482449c9587e9bc41b3b64ea83652126a5fb953a74c171120884",
+            "f3d8a0da642c1f96f1041f116e5dc1fa3980d2c4239b10e9149bef3d368641f1",
+            "423b36cd23360c72eca7d7d571575b8edd6703eb96ca9b21aeef10e117fc1a8a"
+          ],
+          "output": "b0b12f0a27e3ed1707405bba1e1dab10b828b8d983f0034d5c37a42da2eea57a",
+          "pointers": [
+            140516266082304,
+            140516274470912,
+            140519517245440,
+            140516272373760,
+            140516278665216
+          ]
+        },
+        {
+          "inputs": [
+            "9fec1e2bacce4e5334bb1d7f9a83b5eef3d64303f4e9d4960bc65d1405d1e338",
+            "79fc5eae0328be548f7ac3a4edca02906663228e62ce720f7d7e3c851566aeeb",
+            "4fbbb3d7ada08247590ef12b64491c30a3f31a8fe96b36b678355a5637c7e6cd",
+            "b8c71e2617565fee7aadfc4609e741eafdd1ea075ea0a8a7556e3560ecfc653b"
+          ],
+          "output": "289cac0776d0ab58d7eb2492332aa3a8db22eda6faf711494981c84567e72176",
+          "pointers": [
+            140516268179456,
+            140516305928192,
+            140519517253632,
+            140516270276608,
+            140516310122496
+          ]
+        },
+        {
+          "inputs": [
+            "d88f56b39c8e92adb4cd67a42b2e6dbdeb2a72fea05bca72aaf6a7a05236d78f",
+            "cb434b27fba05520eb1bb9776a2ecf9aff573db326fe4669fc0475e6090e13d7",
+            "474554d5199f8764b5481526409140fa4b37e752288d6c1540377ddc4dfd8722",
+            "17c036d5bf45ef48807a7afeec341cfa5c4c4a6a06f1ee36f493a28b98b53ed2"
+          ],
+          "output": "252c7a07bc9e500fae77f8bceaf5246a184351db2c13a4b836a48f5b1b2ff30b",
+          "pointers": [
+            140516312219648,
+            140516297539584,
+            140519517261824,
+            140516280762368,
+            140516301733888
+          ]
+        },
+        {
+          "inputs": [
+            "41742a1e5526552aabc4200bbfe99c4b6f9ef9c55a3cdd16de654e98378dfba1",
+            "dcae363422d452598f510b76343b8230793c7d59ec7096415f379c1ff0c74401",
+            "1c5bebd482f9445b86f4eea4997024d64f6ed6151b690edfeb09501f991fdf97",
+            "9eb3fd825e554ba1b70d9c096a8fdab9b5e5f0fca8b0bc5244f56101ce12c39c"
+          ],
+          "output": "0cebbbe8d3a85ebe20d0e3e94b535190e4904b698bb5a8158e49ae4ec16a45bc",
+          "pointers": [
+            140516303831040,
+            140516282859520,
+            140519517270016,
+            140516291248128,
+            140516287053824
+          ]
+        },
+        {
+          "inputs": [
+            "869131c87755fbcd187df0bed714ad346221573bef2d9a4a950e98685bcee2ec",
+            "78e4f7a562dd3b39fb746966fcb15a0c1fcdd1cf5912adf485c5f3d70f7dce7a",
+            "b5c0582c4f1b7fce7ddd596653359984d575d7ca123a4c1552f137ddf25866f6",
+            "770b00da315b71f971d763f6fcd79647edf1d3158416cb0d62800fea6f364fe1"
+          ],
+          "output": "dea671dab3b3affa7f2e04f2799a0f629178fab511701c4d15db4d49f79c38a0",
+          "pointers": [
+            140516289150976,
+            140516293345280,
+            140519517278208,
+            140516318511104,
+            140516314316800
+          ]
+        },
+        {
+          "inputs": [
+            "1a95fa17c6ca08c92cfddd8842adb8ed3e326ce353199f9c3b1ff51c8b652064",
+            "ce2d67d98f4b17628b4c14b0b222b95180291db127ccc4438c7e5cc0eb9ed3cc",
+            "764ce03b8455e59714964ce1dd1cf7f87f4ad68faccbe7593935a903c5c04a0f",
+            "46fcbb4c0c0001ef36fc55eeea1f53daa4900535267562c17edad7513c99b76c"
+          ],
+          "output": "c6dc53922709b63e1016c7a0f17a28837c5845ab2601297243041174ae53d3cc",
+          "pointers": [
+            140516316413952,
+            140516320608256,
+            140519517286400,
+            140516328996864,
+            140516324802560
+          ]
+        },
+        {
+          "inputs": [
+            "9ccffe7a469cf6636f2000876d96f6df8c2e147613b926a0ebc59947b2d999e9",
+            "9cee98c84a82a4a232bff9141d254c1b1fd2308ca194b9e3fc2c749947abd3ea",
+            "6344b56a74405dab9d5466049ee8514c14aaa0b7af3e09fdacbbdc8acc79e396",
+            "e69762f4a97e5476561d5406522a66ef8767116f6fdef78055ecaee5a5f498a6"
+          ],
+          "output": "d92925b297d7a1505be8eb65bca581cc58de2e9d189a8c92b674e8e33d4331c5",
+          "pointers": [
+            140516326899712,
+            140516331094016,
+            140519517294592,
+            140516339482624,
+            140516335288320
+          ]
+        },
+        {
+          "inputs": [
+            "a93b968e20692aee6da9d33edefa4378637ab4edbbc9c4f3485607e8252be9ea",
+            "8b91eeee6dfb2882396b588b1648adb978868f7ae0fbfe48a7e528d2bcf44416",
+            "963640d4b770228d66f69a282c9619e5c8e7623eb911dd8cf7ca34aaef19ec31",
+            "38f54f568a3a3d6aabb8faf94fb5103956df739577145f47a44eefd4703fdd16"
+          ],
+          "output": "ad543b91f430ed4df1ff1ea11ca382ca9afc5124fd6669c49bd3ed722fd66ab6",
+          "pointers": [
+            140516337385472,
+            140516341579776,
+            140519517302784,
+            140516345774080,
+            140516347871232
+          ]
+        },
+        {
+          "inputs": [
+            "5a7161d735c072320f03a4cba083c7d93c89e935a9b2cc0a116120ad7b9a71b0",
+            "f7cb152dbe93a72466d2b5bbaa47529bfb91cd86114e5ed0d845b0ee5ea806c8",
+            "25736ef27e31ea187c471455ee0ef696a5f69573bd8979628109c2d91bf6d972",
+            "4b8385613be1d38738be567f49d1708249c0a9df6f87b4dba60311c62a5e655e"
+          ],
+          "output": "a9a12a16174883ef8e9b91d3de9cb1f4aac36b31438b27be6d9fd4032eafa04a",
+          "pointers": [
+            140516349968384,
+            140516358356992,
+            140519517310976,
+            140516356259840,
+            140516362551296
+          ]
+        },
+        {
+          "inputs": [
+            "4d68d82316229d6df01f55add841b6706b5bb6fd36ff56bd19ed102ce6db4868",
+            "ad0a865ef291a59bc2c3b41c915a081f10fbaa597b9eaabe66ff9d79ff7d9d59",
+            "2832e55a752c86cd6a4443f47730bc40206d923588f68df43a91d4171cb4d029",
+            "46d7add569e89f807349f17243b8332d39cf8305d5daf53f892910d747b5635e"
+          ],
+          "output": "aee306cb7c53c69379d15ebe54a90c8058c257059dbdf814ce81ec4dfcec11ac",
+          "pointers": [
+            140516352065536,
+            140516389814272,
+            140519517319168,
+            140516354162688,
+            140516394008576
+          ]
+        },
+        {
+          "inputs": [
+            "492777ff97537a67b493225865080e1e97a16285cd436035553fe3e8e0149c69",
+            "e8e19a154cd570e5281726bab4ac795a5f1634aaaf613d2e9ba31136a84caa4e",
+            "a031c5a03a6ff94b5b731d25b0d5a39af9486066c556534ff2d9ae6e7b608626",
+            "09e4be68e2b62c4dd4cebe25c63e60cc563fd1001f4ce5424c7c05c118428dea"
+          ],
+          "output": "e8efa504cdad2dbe58976b527a8be47fc609039db317335b2987d40d36e56371",
+          "pointers": [
+            140516396105728,
+            140516381425664,
+            140519517327360,
+            140516364648448,
+            140516385619968
+          ]
+        },
+        {
+          "inputs": [
+            "da7ceb64c7a15fe7f0a13905cd5c3ec0ce9db87e614abf416f561928854d516c",
+            "a69f46a4cd14cd7a7801a379299250956bbd2cbf901ef3a4c8cb9de96e9e9e3a",
+            "b69f93c5a41f08ea213d6d70154428dc96b6a4dddb49294e864a1c025922e845",
+            "05ac334f28be85ab72b6c95b7b409335a71111cc336545f32cfb74c6c88cb962"
+          ],
+          "output": "4d9723581ec73a805dd7210e13c10b7b1d4f5cff23ecdf6b491155a85ca62276",
+          "pointers": [
+            140516387717120,
+            140516366745600,
+            140519517335552,
+            140516375134208,
+            140516370939904
+          ]
+        },
+        {
+          "inputs": [
+            "519654532b47bfa27e09444836eac954672baaa30e78811dc7e5d75d5d9e28f7",
+            "89c4d3315e4a880a14a4a95d14f4a3706125f89b3c6248403d1ad7766f31ca2c",
+            "f7f41b26527bb5529200ae38426cf0f6afae9fd49d19a16d199829ceaa81c146",
+            "e31c24100e2b2f268ec685cdbd197353692f7140e6820dc71a651cb4bd8d2308"
+          ],
+          "output": "a7f67e75246ea579ebd6f8d04918694dd149d646fb3a07f1ed9644e506dd0f25",
+          "pointers": [
+            140516373037056,
+            140516377231360,
+            140519517343744,
+            140516637278208,
+            140516633083904
+          ]
+        },
+        {
+          "inputs": [
+            "aa56e4b8e0b293d6d57dd899b4f3a351beb8609baecbb8a4da10954ff04a2144",
+            "bea011b327fa96521f0494745c99a2df624bbb4b72545fff88e7755c627a9df3",
+            "f53a4c6acb31b14962329615e2e5eeda71f817bf9171ba95ba22fcbd50e91632",
+            "0c1781c8b3616945a8a4c34b919129eb500aedd92a85db85279d242f16abb6b9"
+          ],
+          "output": "bbca39919e6111a56023c025a5e7ae56496ced2ad363077a404032448d3d93a9",
+          "pointers": [
+            140516635181056,
+            140516639375360,
+            140519517351936,
+            140516647763968,
+            140516643569664
+          ]
+        },
+        {
+          "inputs": [
+            "5b92108a404b5e2c29ca3cf0e2761fc335d001ea8a892b2fa4f41eb0b96c32c5",
+            "a6e0d0b3e6a55d277ea15107fe730d34ec822cc3654bce0e119f38c0214c30c3",
+            "c1edae6296775e8081567290e7b57c57bd3dfca815941d4e408587508e43bb2d",
+            "3f039d94db99a9e4c6f88da5a34ff891c3362544042699ad777963bb82d21cfc"
+          ],
+          "output": "e9a4198ce6fa0709b2c1d935808928ebaac614abd1af7f04cfc1347bdedb33f6",
+          "pointers": [
+            140516645666816,
+            140516649861120,
+            140519517360128,
+            140515899080704,
+            140515894886400
+          ]
+        },
+        {
+          "inputs": [
+            "1e51305f0fb44e0b322f4adee5ff06a2c5c5502b13a34091f1b1ec9915405b41",
+            "d0ce708ef6d218378582119ed0278f7ef73ac72d857834b0f48a267cede5932c",
+            "7fb4aa173a1728fd23155d9b06dfb726f427885f2fa72ad1edace953db620606",
+            "90a8de1cd023ce5aedb5d6d313a4c6faff04f3c84a5fea6d54f61255b0697f68"
+          ],
+          "output": "35cdb79648389617819fffc9815917d7d7d456b9c2387e729cffad103f6872da",
+          "pointers": [
+            140515896983552,
+            140515901177856,
+            140519517368320,
+            140515909566464,
+            140515905372160
+          ]
+        },
+        {
+          "inputs": [
+            "6ff61dc8ef887b325b683a4650f1969e200960528f552d880e8572e89f339270",
+            "70a4a633b8cdd3cceaa35ee83a98496790b40d9e9599be67d7301551a9d6850f",
+            "c6e98c86cec6023701234fd31cd18a92a56998edd26a00ac7a15b979cd5792ac",
+            "b4e0362858ca4cc06c6023400e227ce11cf5a358aeddbcb9ebadb77fa936c9aa"
+          ],
+          "output": "37ba8c04e2c835f2cb4bb97069cb8e614114fa55d29b4c2efe019264748b25a8",
+          "pointers": [
+            140515907469312,
+            140515911663616,
+            140519517376512,
+            140515920052224,
+            140515915857920
+          ]
+        },
+        {
+          "inputs": [
+            "5b0ea6810b9d469d3b4802eec98d06fa3b824f2f4ce1fff4e1ca2b88b71b2821",
+            "c1451a5acac7a8de7adee5b103301661c6d0983fda208c570f20d50c964b54b9",
+            "e1d84751728ea0ef36486918a5887a525d994ec9449a0609de4a427d70f09c76",
+            "f4f6cc05f38cdae2115e8840cd6923864c1baf9d0ebdac3f5a24fa99801378c5"
+          ],
+          "output": "fdf8dc1635b76bca26d38207a9867509103b4a0586f2da5365792abdb64302ec",
+          "pointers": [
+            140515917955072,
+            140515922149376,
+            140519517384704,
+            140515930537984,
+            140515926343680
+          ]
+        },
+        {
+          "inputs": [
+            "fe08d5976653baa3b5a490724d3ce9ff884aee182b0479241f4ab31cd93eeeb5",
+            "8dfdd709ca396ab8c8741cac497365f88d38d2ae19634bbd2d484f35321776d3",
+            "c98fc7259d30f0f29c1856e2c1f3b765c57b210bcaa6e2c0484fe5bfd51a7608",
+            "1b7c85cea55da41e1646ca455cbdbfe5e796054a7b428e766e4857f917154691"
+          ],
+          "output": "3ca99d3a265e968d645b73117318db9623230911c60e51722e4fd407da0ee7f2",
+          "pointers": [
+            140515928440832,
+            140515932635136,
+            140519517392896,
+            140515941023744,
+            140515936829440
+          ]
+        },
+        {
+          "inputs": [
+            "ccf7c60fbc90964ea8f2666c732410f4affa3a988c3f8985514544ca29a964f1",
+            "6199425da8155a018c10383f7dec00ee4cbd12b4413644180fa2c4ef4dea44dd",
+            "906f2438483996f640ef221401ce672c14a7f83699949d53a47a38cb1bac00e8",
+            "ea74506632d3c6939b45c2d6c0bdd84f0c58ac545b61ed58f7177574a8b81447"
+          ],
+          "output": "6935186333c1bd6c42ddf9cf7f4cbea764a97f0b3b0a0bff9db387e3e94d19ae",
+          "pointers": [
+            140515938926592,
+            140515943120896,
+            140519517401088,
+            140515951509504,
+            140515947315200
+          ]
+        },
+        {
+          "inputs": [
+            "2a0a86bb85dc3ea304cf5762e2d99894511c8f9530fa306e8edc99da89f00c91",
+            "b00941f6455db6dea83a5ee1ec8334bcde84b064b85846e33ef7e5244f756664",
+            "73d3b0a6c025325d0f69ee3e8406676f64b77dcc4cde1ca7fa09af4ba6ff6521",
+            "fb5107ecf37f0313e83cd923ac63ea0f5c68c6db756f83b735c82ac3165819be"
+          ],
+          "output": "ac73cd63f106e2a8941d5cb3d4788b0f86326a0681c0949d7b3dae32591997a7",
+          "pointers": [
+            140515949412352,
+            140515953606656,
+            140519517409280,
+            140515961995264,
+            140515957800960
+          ]
+        },
+        {
+          "inputs": [
+            "fd2403a828a29a8a6fcfae89a2feb368530fc6d4ac0d1d9d38b84181ec076f09",
+            "cc9121de12ae1944d123ff29cd176c69af78d1e59028f9f3d83b7692915a8c91",
+            "4f4e8c0e1259f37ed9dc71c7c24be908816a5dec59af07e87135b3bac84b3b2d",
+            "e3f6c256e1a6df926ee53038174269502be36b7280bf2c06cec6adaca2d568b1"
+          ],
+          "output": "30ec3fd431b1bd972989bd0a3809535fd1fccf31599d925c557ce935c1b5410c",
+          "pointers": [
+            140515959898112,
+            140515964092416,
+            140519517417472,
+            140515972481024,
+            140515968286720
+          ]
+        },
+        {
+          "inputs": [
+            "e1c5cb5aab82a5a4184f06a98a4677bcf2f5d64b1ac51b6cc412216dff2d1dbd",
+            "bf12234bd0ce486632b0c1080957641e2b7e59b36c2d10dd1da532ac3570a3a2",
+            "a926f5385e71a36431953e8143446e545e5a2ef06e64dc5b26935f87f41838a9",
+            "7abbbeda9c01fbf7742fb3acacc3ca0e015869b31ded0b3a41b674f67393be51"
+          ],
+          "output": "a7c7bbd2ff6e8e29c7810db66af5ee240b066884c28805f7ac9115aa5a308217",
+          "pointers": [
+            140515970383872,
+            140515974578176,
+            140519517425664,
+            140515982966784,
+            140515978772480
+          ]
+        },
+        {
+          "inputs": [
+            "2c862f825e78bca1cc2ee48368f08d5b535a4a5a02a6a4ba2cf8a6711b5bf5df",
+            "76d7af8fdd4e85f1e95fd953eab5546a1ac8ea83ecc7e01c90b016883190134c",
+            "3781627f7a723504e98c3850e090d5a85da071e792466f7041da7f969a9664aa",
+            "84be6e688394a915d2e224f1d5e852a804d8ebbe24facfda76e7bb64c90562fe"
+          ],
+          "output": "29f6429a44d181754fab506ac5a402b723d8e959a0eb0bf44d6a0a0b36e6aae0",
+          "pointers": [
+            140515980869632,
+            140515985063936,
+            140519517433856,
+            140515993452544,
+            140515989258240
+          ]
+        },
+        {
+          "inputs": [
+            "58a08e8a60a9935698d9ca478bd957e6d4f682e3390fc83e97fd0c769db759fb",
+            "0d4d1d50567ad24c7d36ef177ceaf3f62c5645d4b782a1f733026978e3598025",
+            "792ebfa88b775fabc42b365ce9323e7cb01a7a6cd28bb05c0b1767a4db76b8e8",
+            "de7ffd3fd8d8a7cf91f9b4f24662822c294ffbcd20944c1a88f02206e430a42e"
+          ],
+          "output": "36f164d6e7fca7489f9f1d14f21bbff0f9ec1a28ff56287fc347267470e6ce3c",
+          "pointers": [
+            140515991355392,
+            140515995549696,
+            140519517442048,
+            140516003938304,
+            140515999744000
+          ]
+        },
+        {
+          "inputs": [
+            "d7b2883711dd633333b631b73cdde16b24e7089f78d7bb188ecf322827d3afc8",
+            "a1c3a0328f8c1027b7e2ff865d522f29edfce40ae8a66082fad20172e8ce8fb2",
+            "2c28fc3183a4f59108bb1d048417ff9c349e47032a398d55cb154b358461abec",
+            "ab40fea870ae06da2eed5c96c07d00d880b1c3bb5dc6e51ae9c757065d254a07"
+          ],
+          "output": "663539f45cb5a0b886bc808e547633ad7324980e24e7d8cb3d736c54b774460d",
+          "pointers": [
+            140516001841152,
+            140516006035456,
+            140519517450240,
+            140516014424064,
+            140516010229760
+          ]
+        },
+        {
+          "inputs": [
+            "58865ecf50cf40845eadc51ce8f3959631ea92ccbb2a79b5dd1afbe0155d104e",
+            "d8f8f7f8748e42305755703ffd8bfbed1157c1bbb69cbc50b314a392efaeb872",
+            "c67776a1d91ac51bf5d50cf9a943bfc0548deec54f3e5758383677c179a80c59",
+            "df40420c08ac964f6015251f38a3abc29dac0ff55a79f35b8e6416bf5c6d4e0b"
+          ],
+          "output": "d6eed55efb496c5d04cedc7e9c69aa62a02c2a53d8fc3c28666bf4460131c76c",
+          "pointers": [
+            140516012326912,
+            140516016521216,
+            140519517458432,
+            140516024909824,
+            140516027006976
+          ]
+        },
+        {
+          "inputs": [
+            "6bea33f179b8cc903e75b719cc52e7919a627587586c2bb8b8643c822431a0fc",
+            "ba68fdc84640db51599e5fd6986e34ffb653697ed0c6b67b0440a88ebdc0598f",
+            "602c453b440e69439e9ea393296e96ad006028e4d4a16d2947db9bb6c9d3b39c",
+            "792143f1e3b0797ab80fdade59f8f3a8531bfbc9ea8d7cf45c21a3bcbd1b3a72"
+          ],
+          "output": "d1d99a3c2c20ca104047edc5babc64f2604ee15097b394b0026cdeee64ed24bb",
+          "pointers": [
+            140516020715520,
+            140516133961728,
+            140519517466624,
+            140516022812672,
+            140516129767424
+          ]
+        },
+        {
+          "inputs": [
+            "02fd7b9e14b8e15ed342bdc5d310e990d91fe4383f1648fabff79c30188b9fe6",
+            "d25ac2d5b55dce51c7d3b29008ee73a81d08312872e2e8058c6ea5be12285689",
+            "ee593630da1ca79cb833a47d27bee090ebf55b1bce9950669f83735957beb4db",
+            "a9326fb6b1e1b637713dbbf7e883c4615679193243333dc6366898da4ec73484"
+          ],
+          "output": "e1ab38504caf37b1e1246b4d71ce2378867c216eed4bbdba38de6bb808fca870",
+          "pointers": [
+            140516131864576,
+            140516138156032,
+            140519517474816,
+            140516146544640,
+            140516142350336
+          ]
+        },
+        {
+          "inputs": [
+            "c99763edf62203e868210e6dd8b49ba47fcdceeccc0754193701d856577b2a64",
+            "9cb4a1c0d5ea939b8597d793c506b8f241cdfd82c7087d5e98e893225729433e",
+            "dadd76629f9742f038604f94395cafbf79ebe3cd4084bb304d964727e2a6cfe0",
+            "78630869f104e4e6f3b158754fdcefe27b82b4d95d454a403351d2d5666cb76a"
+          ],
+          "output": "4e66a80fa1fe25586977bbfa98fe9d76843269eff04efa3856b810cb564895ec",
+          "pointers": [
+            140516144447488,
+            140516148641792,
+            140519517483008,
+            140516157030400,
+            140516152836096
+          ]
+        },
+        {
+          "inputs": [
+            "3c2e7f0e128cda0eeee4aaf17efa53961f91238e92dce14042796117f01373f7",
+            "86b88d881e19f2bee9cdb0512ebe63865d5744a056aadaf2d40aa6da338997e1",
+            "778c778ceb4bb5a195f2ced2f2095328ea3908e2f92515564b89a35fc91c7dc0",
+            "d70208226fc0696938f960a0ead1f1439fb52a301744e18f76a4cb14b1bf14d3"
+          ],
+          "output": "eb217c82895a3863b3a9bf4b6a81bd8068c89ce8d57cfe550b8ea464507bd05e",
+          "pointers": [
+            140516154933248,
+            140516159127552,
+            140519517491200,
+            140516167516160,
+            140516163321856
+          ]
+        },
+        {
+          "inputs": [
+            "99f103e393b080ee69e85177e7b6911a6514ecfd35320007f483d14b1958d0bd",
+            "de42139b53990f6f2e8fd77a25bb39d17fe824ae2b5642b04e7739188e20e486",
+            "d9a45032d6fc71381b1288ead0a348ba23f5e83a6c4fcdf23858d378fba33706",
+            "9541cb2878bb46b74babbb894d52c7d03a2176d7de619f395c6c2eb06b5cda53"
+          ],
+          "output": "306627bbb0917b62b4a2ba670706162727651e6ce1e7931dbc87d56c312e6121",
+          "pointers": [
+            140516165419008,
+            140516169613312,
+            140519517499392,
+            140516178001920,
+            140516173807616
+          ]
+        },
+        {
+          "inputs": [
+            "de3ab3b90ec713dec8e310ece73dec67bd7f8533059b8ea27787c49604c89b46",
+            "31c7211cfe0b20f1d002d14175a3e3a47e6903693a9034708604a96c5342530f",
+            "70320f6df4dde4eaed2733a09b54d8133b254cdfe839a6022974991409281cc9",
+            "abb8009cc9cea6528b3427ea1979ff761ee802d52c24384e7864e235540dc6e9"
+          ],
+          "output": "ea2a59cc0d33b7b421841ef53796cded9328b947b372b0c1258b0f802401b189",
+          "pointers": [
+            140516175904768,
+            140516180099072,
+            140519517507584,
+            140516188487680,
+            140516184293376
+          ]
+        },
+        {
+          "inputs": [
+            "3f2184d7100b62a075c68b3e546994774fefce45c32925fba77e26284bc3dbe7",
+            "c5ed3cdd6eb37b7df0893be71d02c61327009a33a2d15e0d78256d567d4c5a92",
+            "8a41290cecd6a8a2c00ee90eca623da60a44162c1a0d46aa555d5c0f9098e2ba",
+            "212a86990f7185e4d1a24642a4d9e6af30265e7a9d40d5b9ce38801d0a92d9f1"
+          ],
+          "output": "37707588db02bdc0f9e4fd5474ce4fdaec1f7a5e5ec27992a5218d4b908cce9f",
+          "pointers": [
+            140516186390528,
+            140516190584832,
+            140519517515776,
+            140516198973440,
+            140516194779136
+          ]
+        },
+        {
+          "inputs": [
+            "292ed4d4cc561e6ee68a7897154dae4ae5b0aae3b7a9d1120daaaaa957d1cf6d",
+            "bea130e5e357d9ce7ec7bc0fe6979969a233675e0f1bc99d44ab2224d7b42c15",
+            "9a91ac5eec122f5915be0363e61e47d8ea440aeddaebe5c7193c97ea0fa536a0",
+            "1f29789cb39485ec94d0f24a8181f57453645239f64a8ba60df3dcb01ada46d3"
+          ],
+          "output": "c944971b061f74d1fb7a8d63c2bb2b68f8fe5dfce958bc2a9e019b0a48a14c82",
+          "pointers": [
+            140516196876288,
+            140516201070592,
+            140519517523968,
+            140516209459200,
+            140516205264896
+          ]
+        },
+        {
+          "inputs": [
+            "aede5e078f9bf0c8d508efe9959e7c792efda29a402c6fa92e934b7408d6d0ee",
+            "67c7a7d7eb7d31ee8954457372f104bc107f61af9a943dded4583cd0cb4dd58d",
+            "80ed8d897e0bd87bfedf4a656ef3d2134823a841511c2d96ccd5568e4bfa086d",
+            "778073c13c494193c1909702c9a99a4d6ddf213cf07e56415a0083fc7c969e8b"
+          ],
+          "output": "1573589fecab444f163418f19154ba738f8d015a045ffe307e5e1996d5a3ce12",
+          "pointers": [
+            140516207362048,
+            140516211556352,
+            140519517532160,
+            140516219944960,
+            140516215750656
+          ]
+        },
+        {
+          "inputs": [
+            "d106a444983523a745483b2d43974e17455edc81b37295b18d949133c0661bc4",
+            "00dc587fee91ab3d11efd54381a8ef5baae863de99fccaa9f21a4d5c114f4962",
+            "cacc8e1511f5684e7277f06d81b538f3a7feac6dbd81bf997b9137c4b6facd47",
+            "8561d862e9e688392c7f81e43c7df7525bd093fc57351d7abf44fce651addee8"
+          ],
+          "output": "5c11c8e1081cae46c080315546d87f85ad759ffe2768dae67646023a0e5646d4",
+          "pointers": [
+            140516217847808,
+            140516222042112,
+            140519517540352,
+            140516230430720,
+            140516226236416
+          ]
+        },
+        {
+          "inputs": [
+            "18fc0168a7bba4d7d538cc6cc9a38d70b81bd699d7ccfb4969e9610d70684fbb",
+            "07fe302364cfa72ae03b5dd1c40019c8c370825344cfaace8e3f1629aed87b71",
+            "bab1291ce0dea7a398775600c5b87fd8e9f636b9427d65dd2af6347bb877522b",
+            "1b45d0bde33186ebf122e7be3c2814375400533bbfa2602def31d7be5bd39f54"
+          ],
+          "output": "5dd016b2c7c072a9916fd5a0eac431fa6128d94430ca118ab3ed44c348e47973",
+          "pointers": [
+            140516228333568,
+            140516232527872,
+            140519517548544,
+            140516240916480,
+            140516236722176
+          ]
+        },
+        {
+          "inputs": [
+            "581adbe169d7de33e9c72cfab45681cb12131e036bd72d89b20cca09641fca69",
+            "190246528bc88c5124e74a1749ae0a43f11140bc1756ffe90806bbe40d8c1292",
+            "7141d433b150d24ae7922dc0be9f880b386d632f28706e5e7f64bff6f07bfb40",
+            "220cb5fb6680761c64cfe3d55e40d1cd4bf95061fdfc838a05822367c3c5b05b"
+          ],
+          "output": "cd9ff095abbb827b2d07cd79c6fa437b1081236d7cf8bb51a103cf026d468452",
+          "pointers": [
+            140516238819328,
+            140516243013632,
+            140519517556736,
+            140516251402240,
+            140516247207936
+          ]
+        },
+        {
+          "inputs": [
+            "1a5bf073db05eb61e8c8408334c2766d679210b090f7c7d34a42c6c1a6fa9925",
+            "8a67a568214bd5ad578fa3283b6d51ac6471f2a2774f793c94e8a0898624d022",
+            "c26aed469ce8c660e907b2a57c748b191be79ae740388d6bd1d66ba12557b6ee",
+            "dfb965964c8235e8a0302ad0c03aba39da36f8ac3bbcba2bb5e61e938fc3a26b"
+          ],
+          "output": "34864c8a467ca6d77b9145ca743f813225d04f732cf779c7ec63852f3e217376",
+          "pointers": [
+            140516249305088,
+            140515878109184,
+            140519517564928,
+            140516257693696,
+            140516253499392
+          ]
+        },
+        {
+          "inputs": [
+            "1b1d9bfdf9d4c3017c09df6b4457faaa0422117d1639128bdd1d0cfc068a6968",
+            "13707adc75d7f873694460b5485f7a917fafc1da0e160c7c96787cc4621b129c",
+            "2e32d4340979c9842e13d6d58eb0637d485d18a2c23630d4d7a18e35dedb6fcf",
+            "f6926922b215701ff83e89d395245de6863f1bff6ffcd2a2c2ee32486cd9571c"
+          ],
+          "output": "634076ffd4b192279b502e52ca090f8c9fd4d97b5b27cc1e0b69a55083dd337b",
+          "pointers": [
+            140516255596544,
+            140516259790848,
+            140519517573120,
+            140515865526272,
+            140515861331968
+          ]
+        },
+        {
+          "inputs": [
+            "6c716f49ee6da8934cde400844cded1cd7d6d7ba224391f40c01690aec4c5c15",
+            "617a93b080a76ab09de7e3e20486ca5b0882cc1bac1606d254f42a6fd2e599ad",
+            "24a3c546d31ce6517e8ca37d399bfada4302df271673242d6e5dc8d38124f12a",
+            "d7ba35c800da4031cc51cd790c70f8846cbe6a2d88f935aab8d1d7897622640e"
+          ],
+          "output": "5e7b13ebd7ffe148e9d69156138dcac23e65f983d5a2047a063c121968552421",
+          "pointers": [
+            140515863429120,
+            140515844554752,
+            140519517581312,
+            140515871817728,
+            140515867623424
+          ]
+        },
+        {
+          "inputs": [
+            "2ed24c0119a5a1f5fe4454278b63b32cdfd8eb0709acc20535099625aff2cf0a",
+            "4125d6277d58caf08280351e7cb1adb024175242200feffcaf3914ff312eee00",
+            "4839dd67d27a70a7477da7900db715cb7fb67abd257cba8b6e36b4644ef60e3d",
+            "21e00143566834e1e14c92357fde18268664ead7ef269c50043dfdd40e683460"
+          ],
+          "output": "07bc167c8411ea02044158c3773bd2c1f3f18cc6afd2987c5b964208848e4aa7",
+          "pointers": [
+            140515869720576,
+            140515873914880,
+            140519517589504,
+            140515831971840,
+            140515827777536
+          ]
+        },
+        {
+          "inputs": [
+            "186d78045b83d1d61b047313c60172f4e2ae450ecd19d960edeecd54fd3074c2",
+            "5629fc107a5dca5a3a5e757e5e7900c8ffee9126d94cdfa1e8779a5839c1c042",
+            "0fcf0515648af93374937ac99b91c37dcab9319d7c61d52a8ee14dc9aebfd192",
+            "b6c7a3cb756160a379b16d660ac8e2fb3bc6a1ea35c1d97998978273ac933d88"
+          ],
+          "output": "16d10ccdcef5e9513646a1c95c17eb68d0b3b4230355e00cad495e457fb22c96",
+          "pointers": [
+            140515829874688,
+            140515811000320,
+            140519517597696,
+            140515838263296,
+            140515834068992
+          ]
+        },
+        {
+          "inputs": [
+            "62c07f610c0a8b1d01e275185c9620f035ea97763e66e01721c28d713f996240",
+            "07e2105a0ac6df269018a93013072046161f606e24da4bd0896615d4baae8e42",
+            "01456cd562906a172082e510115a0e04c37529e6a86a295c2a56e0e9f3b1cc42",
+            "a27c03d25e437e70ba4102509897d032512d46fdc980e4bc4073796ff88c5ce8"
+          ],
+          "output": "8f0520865e754aa56cc93f3ca9c77498f502aa3d7a0e717eeba4294fac7f3a1b",
+          "pointers": [
+            140515836166144,
+            140515840360448,
+            140519517605888,
+            140515798417408,
+            140515794223104
+          ]
+        },
+        {
+          "inputs": [
+            "cf65f0f26dd1569dbc96fe2c0c406c938eb451620e332f4e8196821677d39885",
+            "a45c5bde7ff3bec871127cb20e282e6347aad9add4461094fb40b1b0dfe7fe7c",
+            "2b6f27d499bb638c73c9830929e19b3f92b45db44dd50ecbb95095b652ba60a8",
+            "65e0655db02aff0af6c9fb494f001239c8d8e6cc885e85524f67201a46ab2603"
+          ],
+          "output": "f271bba7cae384cae57cbbf451b31279d60c356804e2387cf9d2b6302797327e",
+          "pointers": [
+            140515796320256,
+            140515777445888,
+            140519517614080,
+            140515804708864,
+            140515800514560
+          ]
+        },
+        {
+          "inputs": [
+            "3fbcde6d944e53ac4a0afb7520f15d959a8c62d6237248c0f2d9400da8754e4c",
+            "0db6f75cc37449e8c3d210be601d6696ea9337bafffb63ea542d58a437fbb914",
+            "fd56891bc87b2d07158ca8d76b36ebb957f3db75e4eeba4830cd2a14f01acd97",
+            "a1c692925839a1b9b68175908ecc11e23d24503459994382aba362c9ae1ee722"
+          ],
+          "output": "d1b6794608341589d77c27d15a87b5d865dc629762c72f8ae15cad555de2c822",
+          "pointers": [
+            140515802611712,
+            140515806806016,
+            140519517622272,
+            140515764862976,
+            140515760668672
+          ]
+        },
+        {
+          "inputs": [
+            "6ffe0f6715be803db0835e29104d316034664ce506355ade1209af7c565452d0",
+            "fe4e78df7e705d823eba4000f26d9df42e0179bb8b2047adb724c54b6517f99c",
+            "2adf6d81e21c0cc2010d83b36e3a9f100afdc1f19dbf8c067fc3cbf7e985058a",
+            "60c3e9938727dd90345b3bea9cad317b228073598c37ac40dd47cbe5d8487d76"
+          ],
+          "output": "d7461f33b377a830e06f6db995e67d93bf715090589a6173dd9e974485098bb9",
+          "pointers": [
+            140515762765824,
+            140515743891456,
+            140519517630464,
+            140515771154432,
+            140515766960128
+          ]
+        },
+        {
+          "inputs": [
+            "1496a4911446e0aa829f08cef7470bbcfa50cde3a69034bc62ac404e760b3a0b",
+            "60aca323d23d1199557c0e057de43c9419706e86023e135ffb869818cfb9206b",
+            "a6ed3008acdcfe8f5f431ad89f5174e51bc01c449b97bc341379a9e628dcfa2d",
+            "acf454e941c0180a761170f794b99e28a2177b68cc4c93dc557334738ccf2249"
+          ],
+          "output": "adbfd30716fd2187d4f9c81c2087bb9da54097f908ca6cc5aa9c036479a134c9",
+          "pointers": [
+            140515769057280,
+            140515773251584,
+            140519517638656,
+            140515731308544,
+            140515727114240
+          ]
+        },
+        {
+          "inputs": [
+            "64dcbccf5ca07522c45109b2cf7a063ab43db98933694865601d583e19360612",
+            "3c566e411526d1584ac8e5202e16999be972755a9ddef997529d61959624b817",
+            "04bf15ebf656a75c1e74e1cfc777ad152b0b2fc6b5c6d973072722e9822ae637",
+            "7463752736ba34343e22a56630575a169e7aa0a8c6ebd9a2ef3dbf780b69301a"
+          ],
+          "output": "ad3467cee6d9745ca14f5cc7e003a48acfe7915947ea566040178891c9726bc1",
+          "pointers": [
+            140515729211392,
+            140515710337024,
+            140519517646848,
+            140515737600000,
+            140515733405696
+          ]
+        },
+        {
+          "inputs": [
+            "2edf73c59527cd3e6fc45cd812b6e0ab8a51dd5bbd52deae1baee5cfdd6e6b6c",
+            "bf99d0eca7ab1383768f9acc5fc4cb168ea136e4ff05d1a5c52eafb85e485451",
+            "5d54977b2302175d7ee7fc269bfaef5c42a15b3d170dbcae6a74993f501f9c7b",
+            "c0addcbd014a408e330f4d58627bef789bc52d4ee4529b30c5a7a3b96157f15e"
+          ],
+          "output": "0e1c1020887350fca725bf4f5eb7884378c6a84c0dd561dda4a307599457c135",
+          "pointers": [
+            140515735502848,
+            140515739697152,
+            140519517655040,
+            140515697754112,
+            140515693559808
+          ]
+        },
+        {
+          "inputs": [
+            "2e8780c6141fbc05c9038e5ce65b481470b07d9b2946694411b5b38f9102cc8e",
+            "0788723e1dde59d30a2a40c24952e9fccd542cb23bf1c7c5611b8fc47431cb2f",
+            "b4398e5642066d070b42da43f05feac32decb614938beff231aa30f3e0a365b9",
+            "972bedd4098ae350ed8581106d7aafb8f0a36aa7ab6df57a603951e68130a813"
+          ],
+          "output": "0738f2f21749dbe12b8460adcde78af6edfeeebe055253bdc12ef338cd805c73",
+          "pointers": [
+            140515695656960,
+            140515676782592,
+            140519517663232,
+            140515704045568,
+            140515699851264
+          ]
+        },
+        {
+          "inputs": [
+            "4e9840336ff4374920c0eb32dcd504220fb0e2047c6b68e254562e3e4f27ed9d",
+            "d95ad539fc8f23aa99b17ea728a607153d60ad76667f49a9c7ff0e24cfe23ccd",
+            "c75bd1ea4ff0b57cdf21c119f9350e28b9ebded9bca8dfcc8d14b29cf9092b1a",
+            "20f1f936489d6bad57284e36f935e719ad9d68dccd11f3c8568face78cc68a3e"
+          ],
+          "output": "e96af3be3a238cdd30b4bbfa8e9c619e363bd6592be2120ec6a170af212e11ff",
+          "pointers": [
+            140515701948416,
+            140515706142720,
+            140519517671424,
+            140515664199680,
+            140515660005376
+          ]
+        },
+        {
+          "inputs": [
+            "bad32d4913ba7e642fdb80b3222d4d9c232bf9695d7d0cf3f620cc8d58f2f948",
+            "88197d42dd2b1dcdd255dbdad5beb787dce8ae42657df5462849e0013a6b03c1",
+            "778fcbfd22e4fda43cc7530b941aa65555fe0d34d4a57eb52785043eb77ba67f",
+            "cb63b7526cf01867c4f5bde04366ba4d488b3e31c174eb71be08814370fb0d66"
+          ],
+          "output": "347acfb47322b231866630b3c5f30eaeac962061b5b47db11d22a92fe1fbd1e5",
+          "pointers": [
+            140515662102528,
+            140515643228160,
+            140519517679616,
+            140515670491136,
+            140515666296832
+          ]
+        },
+        {
+          "inputs": [
+            "69a0b9911638a9f71d11d7b5feb436de8ca2337bc6439ea7854fcb95333f2712",
+            "b6444fd07274bbf3bf0f0e4b98c0edf7ec94b87a3e8f774a973c0e2179182ee6",
+            "207cbf754c7cea3be0567747a885bb90b21674a69ed89573c2382d6302815b35",
+            "294a33877283508c9724f60a43e84c0d904547dd1fcd05dfc6bd56bb1a5a4990"
+          ],
+          "output": "621f769c832a626f71b4dfe21746c8c7965e421e4b4241d4c2fce58420c3881c",
+          "pointers": [
+            140515668393984,
+            140515672588288,
+            140519517687808,
+            140515630645248,
+            140515626450944
+          ]
+        },
+        {
+          "inputs": [
+            "de6bd4e6cea7ebd10b57a1b23407f7d6609203732d2fbe8cf25490100d7315db",
+            "d6bc8ae06d58736a7ce50094e4a675cbe76d7c3ce5126d0053ced309d549899b",
+            "71eca7a7011e7b690838fc567331ebe67b3c655545ddfaa79dd417ad0644ec29",
+            "daefd4df6e5d9f2a8216135701d3f34412dcd2977816e9cbcb5a8613e304323f"
+          ],
+          "output": "b4a45772331af9d52c81973186e3f9204ab2146dad4a4ed6fab95e48a1b3d580",
+          "pointers": [
+            140515628548096,
+            140515609673728,
+            140519517696000,
+            140515636936704,
+            140515632742400
+          ]
+        },
+        {
+          "inputs": [
+            "6435ba7bc0362378bfb79d8ba88508ad184b3ae51c15154d25b83b5650c83edf",
+            "cfc53068a4a747254b6d4f7731e9fa8c1703dbbb8e9501ca1ee1cef20afd64f3",
+            "d867b2968fa867f77e9db53a59eae4b02eecb5ae9a11b82ce917b6412a5c74ba",
+            "b2e7a76486e1c412cef8310d7ff44d87388f34f857b482514ac708727337d1e0"
+          ],
+          "output": "5c6b0f34b47485e2d2b4791c03eb30754be5620dd7b2484caaafcdd6abd550b7",
+          "pointers": [
+            140515634839552,
+            140515639033856,
+            140519517704192,
+            140515597090816,
+            140515592896512
+          ]
+        },
+        {
+          "inputs": [
+            "e4329f26ce8f23256b4abbe8ee624d5e98ccfcb4c4bfa9880edce64d14a36a54",
+            "ddc6d0fc5c9839af04e1575869cd5f6e3f664868d28dd3f96ba3efb912d861a7",
+            "7a78050f271abd0fc9d6f864281e6703115f04bc01c8998387b0ca1e29c2d61d",
+            "fce569e80287ac433dca3cb73d48b423b0d225a13adabc8c861d8a8dcd0f34fe"
+          ],
+          "output": "a3d73919ecdfdabad004097eab7728b2423fe29c92a1f2bbc24ce44d53796d04",
+          "pointers": [
+            140515594993664,
+            140515576119296,
+            140519517712384,
+            140515603382272,
+            140515599187968
+          ]
+        },
+        {
+          "inputs": [
+            "af19886ab2585b80b0c2f556916364e8d23d767ecc5de8a937f80dd1d3f5887b",
+            "c5d1f73d2f27030ec937955f5ea6b7a2aef251edd2cce932d5740b6a40c9ccf3",
+            "1f0c60d3f74a162c72a216755ccf9df51b347f4701380704ca377a4adb3a5216",
+            "f4885d631d57227a6c50cf6ff0e861795cf1c144d9a399f5270ff7f575e1ef91"
+          ],
+          "output": "0ed85f24bafdbd4a8e8b1765289c73e8393554d97e5e107fe60ba3d0ff469081",
+          "pointers": [
+            140515601285120,
+            140515605479424,
+            140519517720576,
+            140515563536384,
+            140515559342080
+          ]
+        },
+        {
+          "inputs": [
+            "d9f38596b823b32386e76bb9e317dc1fa3aff3fe4beae88dabe5792f9016a6ea",
+            "6425ebe201234bd38200d3f22c3ea1ae00603d183b070af56986b0f0fc097c5f",
+            "3a3274416696cdb69f5a5527145f6bb16346dcb0d20e9a346295a0c05b881a63",
+            "ace9af67939e00a6bc2bbf1f40e470c7b372d372732106a3a8b3c3fc49502427"
+          ],
+          "output": "7249fc7c0861302cf34e1d3c73aac884798c60c88cdd3f67cf2808b19c0ec07c",
+          "pointers": [
+            140515561439232,
+            140515542564864,
+            140519517728768,
+            140515569827840,
+            140515565633536
+          ]
+        },
+        {
+          "inputs": [
+            "8ae8b14fa5fba76bfb763fb8b11947c93e4d83ee2c9cb4b103edbae39fdde24b",
+            "a5eca01703c768f1dd718c623b3bbd8b0914add5379282c35e2350ee3ed7b91c",
+            "9cb738faaa1b68761948eea20e3ac2cf71318bd9d456fcefb197eaa480c99d58",
+            "1a18674dedff2dccb881aac686f059e866cf2be4aeb90cdf62ce72f5e9c5c148"
+          ],
+          "output": "609ca25d480c8d462f56d9231128fe5ddbcc514128583f4def3380c2a7c8dc6d",
+          "pointers": [
+            140515567730688,
+            140515571924992,
+            140519517736960,
+            140515529981952,
+            140515525787648
+          ]
+        },
+        {
+          "inputs": [
+            "bab185eb783f02ded06d5f35af08e84ce23473c5c9ac82c4a3c5e244c91ca128",
+            "3e2551c3a4769f3b7750dfdb1e76c404f4349d5eed354a2abeac1e7e277364c7",
+            "29e7c77d37734ce444930aee908cdf840649ec6338e671dcb6010b4ea356f224",
+            "0af98beac6f9ad32b5fdb4a45b64a2ceb74b02c4bd21fac32225497dc4f12541"
+          ],
+          "output": "805011fa5acd06c1b8487fb77043bded540bbcf516a12a7bdf55170b2c9da70c",
+          "pointers": [
+            140515527884800,
+            140515509010432,
+            140519517745152,
+            140515536273408,
+            140515532079104
+          ]
+        }
+      ],
+      "gradients": [],
+      "expected_calls": 374,
+      "submission": [
+        {
+          "slot": 0,
+          "protocol_version": 1,
+          "initializations": 1,
+          "successful_calls": 187,
+          "bound_k": 512,
+          "local_packet_ptr": 140518243696640,
+          "failed": false
+        },
+        {
+          "slot": 1,
+          "protocol_version": 1,
+          "initializations": 1,
+          "successful_calls": 187,
+          "bound_k": 512,
+          "local_packet_ptr": 140518461800448,
+          "failed": false
+        }
+      ],
+      "consumer": [
+        {
+          "slot": 0,
+          "protocol_version": 1,
+          "initializations": 1,
+          "successful_calls": 187,
+          "bias_residual_calls": 187,
+          "bound_k": 512,
+          "local_packet_ptr": 140518243696640,
+          "failed": false
+        },
+        {
+          "slot": 1,
+          "protocol_version": 1,
+          "initializations": 1,
+          "successful_calls": 187,
+          "bias_residual_calls": 187,
+          "bound_k": 512,
+          "local_packet_ptr": 140518461800448,
+          "failed": false
+        }
+      ],
+      "packet_pointers": [
+        140518243696640,
+        140518461800448
+      ],
+      "mask_sha256": "696a0a4644b4281a9d113a06385213b7796fead12bfdddbc058e405f25eea4c7",
+      "timing": {
+        "wall_us": 111.09720915555954
+      },
+      "final_output_check": {
+        "passed": true,
+        "output": "2254d4b38bb4589ef33edbe3a53dfedfac3e27420a2aad03d74f9fe096265488",
+        "reference": "2254d4b38bb4589ef33edbe3a53dfedfac3e27420a2aad03d74f9fe096265488",
+        "inputs": [
+          "53cc5fe17862e4e300116eb821c0991a94202789e14ebec7b2db0ae59f5c9e53",
+          "9616b7911e1cb892dddabb54de16881f7789cf49b5cd1f7ca9ce823b627ab032",
+          "956c31002e6962c8f4bd97e65335ce81ce7a88896a3ae589b8ecc9a41c32182a",
+          "6843e2b710ee8c89c85a4c42ab5c99a9e6adea9e5f8c27c622c3a15517f00be1"
+        ]
+      }
+    },
+    "mlp": {
+      "epoch_state": [
+        {
+          "slot": 0,
+          "protocol_version": 14,
+          "initializations": 1,
+          "epoch": 187,
+          "local_ready_ptr": 43884615680,
+          "failed": false
+        },
+        {
+          "slot": 1,
+          "protocol_version": 14,
+          "initializations": 1,
+          "epoch": 187,
+          "local_ready_ptr": 43883956224,
+          "failed": false
+        }
+      ],
+      "native_tuning": {
+        "attn": {
+          "decoder_threads": 128,
+          "decoder_blocks": 2048,
+          "decoder_rows": 1,
+          "receiver_variant": 0,
+          "native_protocol": 1,
+          "packed_mask_bound": false
+        },
+        "mlp": {
+          "decoder_threads": 128,
+          "decoder_blocks": 2048,
+          "decoder_rows": 1,
+          "receiver_variant": 0,
+          "native_protocol": 1,
+          "packed_mask_bound": false
+        }
+      },
+      "shape": [
+        2048,
+        4096,
+        2048
+      ],
+      "checks": [
+        {
+          "seed": 817,
+          "case": "zero",
+          "correctness": {
+            "max_abs": 0.0,
+            "relative_l2": 0.0,
+            "protocol_relative_l2": 0.0,
+            "budget_vs_bf16": 0.05,
+            "budget_vs_codec": 0.01,
+            "passed": true
+          },
+          "inputs": [
+            "2daeb1f36095b44b318410b3f4e8b5d989dcc7bb023d1426c492dab0a3053e74",
+            "e4d996dcad0e4ba6deebeb1a64f2ba552acb9e3476908e0f54aff47c3fae9f7b",
+            "6a5e4657a9325df7db31053fceaf1c4577f0812ac78c2d1f86b0cef04b5ef4f4",
+            "f7c33926561c7f82fbe66eb8388839985c51d14e207e20eb1bd9c41ba7c69689"
+          ],
+          "output": "f5df5cfc18f45c6d9d0476ce293e10a22bfb84caccce157c76436e3900cee7eb"
+        },
+        {
+          "seed": 817,
+          "case": "small",
+          "correctness": {
+            "max_abs": 2.5331974029541016e-07,
+            "relative_l2": 0.003433852409888685,
+            "protocol_relative_l2": 4.1870528542450154e-05,
+            "budget_vs_bf16": 0.05,
+            "budget_vs_codec": 0.01,
+            "passed": true
+          },
+          "inputs": [
+            "f6caec18e8e8fd7afb5281d4c46fdfd50ba073f8f5be2e6b7bff4b5ca46b9bba",
+            "e4d996dcad0e4ba6deebeb1a64f2ba552acb9e3476908e0f54aff47c3fae9f7b",
+            "6a5e4657a9325df7db31053fceaf1c4577f0812ac78c2d1f86b0cef04b5ef4f4",
+            "f7c33926561c7f82fbe66eb8388839985c51d14e207e20eb1bd9c41ba7c69689"
+          ],
+          "output": "31454256e725fd93f09cb8649dd8fd9a269900bb7b5749dbe1e2dab775853186"
+        },
+        {
+          "seed": 817,
+          "case": "outlier",
+          "correctness": {
+            "max_abs": 0.03125,
+            "relative_l2": 0.003392550881446562,
+            "protocol_relative_l2": 3.5021684989574483e-06,
+            "budget_vs_bf16": 0.05,
+            "budget_vs_codec": 0.01,
+            "passed": true
+          },
+          "inputs": [
+            "6fc964872a79332892415a9eb4d637b7f55de71972177ba7ae696e024371616b",
+            "7df2e68eb09e8be38ecc67949150b47ea5092504e072db815bdb8e1ef57e83bd",
+            "6a5e4657a9325df7db31053fceaf1c4577f0812ac78c2d1f86b0cef04b5ef4f4",
+            "f7c33926561c7f82fbe66eb8388839985c51d14e207e20eb1bd9c41ba7c69689"
+          ],
+          "output": "932a9e495dc91c007983fefdeb5fa7c473be281572e0b8e317ce5c9a7831a338"
+        },
+        {
+          "seed": 817,
+          "case": "random",
+          "correctness": {
+            "max_abs": 0.0029296875,
+            "relative_l2": 0.0034313038231356327,
+            "protocol_relative_l2": 9.303111883657026e-06,
+            "budget_vs_bf16": 0.05,
+            "budget_vs_codec": 0.01,
+            "passed": true
+          },
+          "inputs": [
+            "b23490ec6f8fb99c96491c759299419390610f413e07c7a491719848fbb6582b",
+            "e4d996dcad0e4ba6deebeb1a64f2ba552acb9e3476908e0f54aff47c3fae9f7b",
+            "6a5e4657a9325df7db31053fceaf1c4577f0812ac78c2d1f86b0cef04b5ef4f4",
+            "f7c33926561c7f82fbe66eb8388839985c51d14e207e20eb1bd9c41ba7c69689"
+          ],
+          "output": "c4533a0095d1c0b79ea8a220b25494ae2bd4f9e4d5ce5d8175af40273d69f55d"
+        },
+        {
+          "seed": 919,
+          "case": "zero",
+          "correctness": {
+            "max_abs": 0.0,
+            "relative_l2": 0.0,
+            "protocol_relative_l2": 0.0,
+            "budget_vs_bf16": 0.05,
+            "budget_vs_codec": 0.01,
+            "passed": true
+          },
+          "inputs": [
+            "2daeb1f36095b44b318410b3f4e8b5d989dcc7bb023d1426c492dab0a3053e74",
+            "ec654db31cf408713dbc90d10ca6b1f043c43b7519a56da38573f6446b44a7cc",
+            "805441fa4a265c9e4e3001ddb4d75f32f8f49044807aedddf38c6079e1c68480",
+            "8ff6f01cf9810dca849e539830dd37cc1d6dacb607e66e83316444924f3a5281"
+          ],
+          "output": "cc802a033a8804257e063165be66362bc84d23c9baf78cdaf382324a63ab3779"
+        },
+        {
+          "seed": 919,
+          "case": "small",
+          "correctness": {
+            "max_abs": 2.980232238769531e-07,
+            "relative_l2": 0.003457034318555227,
+            "protocol_relative_l2": 0.0,
+            "budget_vs_bf16": 0.05,
+            "budget_vs_codec": 0.01,
+            "passed": true
+          },
+          "inputs": [
+            "d703d88eb5a3d9fcc6ce9a080f6125c6230a060c4d89a48df19383019b9c72a1",
+            "ec654db31cf408713dbc90d10ca6b1f043c43b7519a56da38573f6446b44a7cc",
+            "805441fa4a265c9e4e3001ddb4d75f32f8f49044807aedddf38c6079e1c68480",
+            "8ff6f01cf9810dca849e539830dd37cc1d6dacb607e66e83316444924f3a5281"
+          ],
+          "output": "0b1ee73d7b07acd5c9b0e3848a52d64114db4019aaffa754aea632a52471e2ea"
+        },
+        {
+          "seed": 919,
+          "case": "outlier",
+          "correctness": {
+            "max_abs": 0.015625,
+            "relative_l2": 0.003455773132824532,
+            "protocol_relative_l2": 1.7529515047061818e-06,
+            "budget_vs_bf16": 0.05,
+            "budget_vs_codec": 0.01,
+            "passed": true
+          },
+          "inputs": [
+            "bce00bfb0be25b9e84ec5670226a55fd3f88d4be88b02fe41af0973f0ff9f0e0",
+            "9f5e87b67fcdbcdadc50159429a2edf5c4ae2e035b4fe89711bc8d7d86753da2",
+            "805441fa4a265c9e4e3001ddb4d75f32f8f49044807aedddf38c6079e1c68480",
+            "8ff6f01cf9810dca849e539830dd37cc1d6dacb607e66e83316444924f3a5281"
+          ],
+          "output": "cd2b52d57c8a03c3c696776cffc9183e2d867ebd8424629c19da9f6fd6c339dd"
+        },
+        {
+          "seed": 919,
+          "case": "random",
+          "correctness": {
+            "max_abs": 0.0029296875,
+            "relative_l2": 0.003462358819578027,
+            "protocol_relative_l2": 1.3007543886139753e-06,
+            "budget_vs_bf16": 0.05,
+            "budget_vs_codec": 0.01,
+            "passed": true
+          },
+          "inputs": [
+            "ae4329780ba54c68003f79fdb03cc25c4a0c8c89258f78b9880587192bc66f86",
+            "ec654db31cf408713dbc90d10ca6b1f043c43b7519a56da38573f6446b44a7cc",
+            "805441fa4a265c9e4e3001ddb4d75f32f8f49044807aedddf38c6079e1c68480",
+            "8ff6f01cf9810dca849e539830dd37cc1d6dacb607e66e83316444924f3a5281"
+          ],
+          "output": "accb9579722ab95b119486e6dc7a83cbe431292f16b436ec4d03c70742a117c3"
+        },
+        {
+          "seed": 0,
+          "case": "rounding_witness",
+          "correctness": {
+            "max_abs": 0.0,
+            "relative_l2": 0.0,
+            "protocol_relative_l2": 0.0,
+            "budget_vs_bf16": 0.05,
+            "budget_vs_codec": 0.01,
+            "passed": true
+          },
+          "inputs": [
+            "24d202f4a4db0f6501a593ffb22e94f72402ed338a230aacccb3d3926dee0746",
+            "ff67f1a6bf99c1399c9f0eca7b09e9545c163d2e46b03f4b6aff50976797bd4b",
+            "5aeab0803ac16f01fff8f93ca7d6da6da54d8a5920ed2b7e082e570adb9ab298",
+            "6ce7766fd5ecf33ce20de5b4672350529bee6df14d37b595b83ab91b19f3e190"
+          ],
+          "output": "5647f05ec18958947d32874eeb788fa396a05d0bab7c1b71f112ceb7e9b31eee"
+        },
+        {
+          "seed": 0,
+          "case": "tiny",
+          "correctness": {
+            "max_abs": 0.0,
+            "relative_l2": 0.0,
+            "protocol_relative_l2": 0.0,
+            "budget_vs_bf16": 0.05,
+            "budget_vs_codec": 0.01,
+            "passed": true
+          },
+          "inputs": [
+            "2daeb1f36095b44b318410b3f4e8b5d989dcc7bb023d1426c492dab0a3053e74",
+            "080acf35a507ac9849cfcba47dc2ad83e01b75663a516279c8b9d243b719643e",
+            "c8bfe5e05da1ab03bc491e9fbeab93c25c34a8dd3684443e7a0b7b364bf606be",
+            "ea2e1f5d984fe089ec3990ea8cc9102c29cb9f0b4248b0c1bffbf403865e6681"
+          ],
+          "output": "773680060b8b33c754f779a994d7416377d13ade801457ebbb346b9e6fad70fc"
+        }
+      ],
+      "retained": [
+        {
+          "inputs": [
+            "b239f6380dddab01baf60548ec2593ed07e6f125a1b60d43728d38abcc262ecc",
+            "6fc45a13995a962223a82b96e763b0b748a6535c77e0e56e86fea0522c53d231",
+            "97a5690056e1e613aec53b83198ed324544d73e62f32ade03bd7600603589a43",
+            "bf925568c7b5140584908882758ddfd544ba9eee5f449252aec81d5cf94040c3"
+          ],
+          "output": "a6c594984d803514480f12fdfe0bf0093c9051d5361670217d45a0e23d57e86c",
+          "pointers": [
+            140516272373760,
+            140516280762368,
+            140519516710912,
+            140515544662016,
+            140515540467712
+          ]
+        },
+        {
+          "inputs": [
+            "77e187da2e05da9de24873e1ec8cce4df9d7f75e4338ebe5bb257398e393eca5",
+            "72132559c7a07cf0f46ecbb5332cb01ced4751b546400ab75884ce9d3e1c54d0",
+            "37f9972d66f69ef5aae288d8695af27d5473dc86ea9a2dee8df189bb39a948a6",
+            "af300b8ffa8df13e0a73071ab10dc1891741da733ef7f6058c71d596751354d6"
+          ],
+          "output": "4e0dfe862456048d7b29ea35ff68ad07b9326bb49cf277e5508c0fb416c34adf",
+          "pointers": [
+            140516263985152,
+            140516297539584,
+            140519516702720,
+            140515542564864,
+            140515525787648
+          ]
+        },
+        {
+          "inputs": [
+            "fe17f2ff51fd5e41b49719feccc4f24eb9e8db11e40e7b30fca68af4ca29066b",
+            "e48558412e51c95cfc894b2d9a8acdb53bc64e8822a02bcf8cbc43496c0c7da5",
+            "f3d8a0da642c1f96f1041f116e5dc1fa3980d2c4239b10e9149bef3d368641f1",
+            "423b36cd23360c72eca7d7d571575b8edd6703eb96ca9b21aeef10e117fc1a8a"
+          ],
+          "output": "b5fdeec6136717d285b132905123b794752f5aad7be852f4eb23bed7d4130b0b",
+          "pointers": [
+            140515527884800,
+            140516314316800,
+            140519516850688,
+            140516335288320,
+            140516331094016
+          ]
+        },
+        {
+          "inputs": [
+            "ff8f1ec219c8230f6a7f1991e63c930b930dbb8b008619c4cfadf9f46b2bd23d",
+            "0f07bffc00eeeed7492b2769b68126cf8c3f8fe6f6fec297b10926be7c12667b",
+            "4fbbb3d7ada08247590ef12b64491c30a3f31a8fe96b36b678355a5637c7e6cd",
+            "b8c71e2617565fee7aadfc4609e741eafdd1ea075ea0a8a7556e3560ecfc653b"
+          ],
+          "output": "0e23bdb9f548e62db27a78c19d21631b4ff3d9ed3733f83f542afa8ccff30022",
+          "pointers": [
+            140516337385472,
+            140516347871232,
+            140519516858880,
+            140516333191168,
+            140516345774080
+          ]
+        },
+        {
+          "inputs": [
+            "654ec0d1ed99b45525559cee97eae32a146dc016f4ce69ce4d78ad830ae2f846",
+            "9ff2021470e120d16f497511e043cb042e34d0b66c1959fbd7d9a19b8e184ba4",
+            "474554d5199f8764b5481526409140fa4b37e752288d6c1540377ddc4dfd8722",
+            "17c036d5bf45ef48807a7afeec341cfa5c4c4a6a06f1ee36f493a28b98b53ed2"
+          ],
+          "output": "ba33b0a075b4e88f1f62de77a34f792d21cad936664f3bede68cb6c5d6717c6f",
+          "pointers": [
+            140516364648448,
+            140515492233216,
+            140519516867072,
+            140516373037056,
+            140515509010432
+          ]
+        },
+        {
+          "inputs": [
+            "1fac37d4ea0fe69eae4a6f0caee7bc81e47dd150e6439c1b9edcf8a73ed8e57f",
+            "2fec0a47da217e3137f75249cdfede753beaec5a036dcf8efc881f55a5365641",
+            "1c5bebd482f9445b86f4eea4997024d64f6ed6151b690edfeb09501f991fdf97",
+            "9eb3fd825e554ba1b70d9c096a8fdab9b5e5f0fca8b0bc5244f56101ce12c39c"
+          ],
+          "output": "75f1bdb9dc0138d8ec912fa635adcf7aabd1e449989dfbe1a3a7c2323196a623",
+          "pointers": [
+            140516381425664,
+            140515592896512,
+            140519516875264,
+            140515511107584,
+            140515609673728
+          ]
+        },
+        {
+          "inputs": [
+            "995b28babc9a2b67782dc4a9b0f25593a39d5650188eaabdb3d79baa2467080a",
+            "4c2e56dbfb496886c2521b23ae7418512eaf58b770d39cf25379813215a608d9",
+            "b5c0582c4f1b7fce7ddd596653359984d575d7ca123a4c1552f137ddf25866f6",
+            "770b00da315b71f971d763f6fcd79647edf1d3158416cb0d62800fea6f364fe1"
+          ],
+          "output": "59b57d4674f01d79722832f982ff090b23e21f0db157ce7f169a89c21c610f46",
+          "pointers": [
+            140516389814272,
+            140515559342080,
+            140519516883456,
+            140515611770880,
+            140515576119296
+          ]
+        },
+        {
+          "inputs": [
+            "06a440bdbe4e1158f26ca17d56eb3d2d7a7c8e9a0b34f1b804f824c896f5c360",
+            "d98779774e3624132b343340c2108cd12f16002aa54349a4e75d940e38ce27e8",
+            "764ce03b8455e59714964ce1dd1cf7f87f4ad68faccbe7593935a903c5c04a0f",
+            "46fcbb4c0c0001ef36fc55eeea1f53daa4900535267562c17edad7513c99b76c"
+          ],
+          "output": "b4bc97646faba4f0d2bb33a7d38154f612af2db5a743f17416aa4b90a8af4e3f",
+          "pointers": [
+            140515626450944,
+            140515693559808,
+            140519516891648,
+            140515578216448,
+            140515710337024
+          ]
+        },
+        {
+          "inputs": [
+            "1b5a9564d1c4cde3b0022f3423ae8cb00fa911ab741faac57cb57b47ab25f320",
+            "7955bb5014e0bc8f339d0d46a85ee9e614d3e0ab64a4ac4f9f474fa716d4c19e",
+            "6344b56a74405dab9d5466049ee8514c14aaa0b7af3e09fdacbbdc8acc79e396",
+            "e69762f4a97e5476561d5406522a66ef8767116f6fdef78055ecaee5a5f498a6"
+          ],
+          "output": "bfb52eb600b0f8a933d91103d04ae5a56cd5210ad0aa7ebaa4176a18b25e31ce",
+          "pointers": [
+            140515634839552,
+            140515660005376,
+            140519516899840,
+            140515712434176,
+            140515643228160
+          ]
+        },
+        {
+          "inputs": [
+            "5680506b5d2751b60f2eeec42fcee2836b34212d93f1fee608b9af4ffa4357fe",
+            "88ca39af8f64d2d35497da2098672007d6a0cd4f48480a50c834f4ced2c26a24",
+            "963640d4b770228d66f69a282c9619e5c8e7623eb911dd8cf7ca34aaef19ec31",
+            "38f54f568a3a3d6aabb8faf94fb5103956df739577145f47a44eefd4703fdd16"
+          ],
+          "output": "150b8629c166617fc4ee73c6df4c08611f932a103fc0d955afecfea211574eb8",
+          "pointers": [
+            140515727114240,
+            140515794223104,
+            140519516908032,
+            140515645325312,
+            140515676782592
+          ]
+        },
+        {
+          "inputs": [
+            "1039fd27f33886080eab01487d9c6223abe93ba14558a913b7a7856621c9ae69",
+            "635e03878992596bcbf2d6c6783e4ac30d6e1ea1e33ccd3b9ad37714d5a09d35",
+            "25736ef27e31ea187c471455ee0ef696a5f69573bd8979628109c2d91bf6d972",
+            "4b8385613be1d38738be567f49d1708249c0a9df6f87b4dba60311c62a5e655e"
+          ],
+          "output": "eea778dbc3cf056291f6093885cd7e76e0cf43582db111c3d6fef6883f9c0ad0",
+          "pointers": [
+            140515735502848,
+            140515760668672,
+            140519516916224,
+            140515678879744,
+            140515743891456
+          ]
+        },
+        {
+          "inputs": [
+            "974d9b5a176e988c4af344c3a86d809185ad08635fd610b02ebab8affa0f5f07",
+            "f01e567de9faa138c5a2eb51492772caca4427727aa84f553f32ab502550c62a",
+            "2832e55a752c86cd6a4443f47730bc40206d923588f68df43a91d4171cb4d029",
+            "46d7add569e89f807349f17243b8332d39cf8305d5daf53f892910d747b5635e"
+          ],
+          "output": "fc4e09a017e7d94b0618a3c5f77570da3b172a9b7079ed4694f577f833cdda30",
+          "pointers": [
+            140515827777536,
+            140516599529472,
+            140519516924416,
+            140515745988608,
+            140515777445888
+          ]
+        },
+        {
+          "inputs": [
+            "a1712d2eb18bf186a7a8ff5687f2a2fc9a8ef32e9cb1cf3c918e47e36b2e9ae9",
+            "4afc13668cdf8b6c3d0b0977f63d3d4331219f0158707c4757edc30325e8068e",
+            "a031c5a03a6ff94b5b731d25b0d5a39af9486066c556534ff2d9ae6e7b608626",
+            "09e4be68e2b62c4dd4cebe25c63e60cc563fd1001f4ce5424c7c05c118428dea"
+          ],
+          "output": "fc36e6dd0e1a5be414ecff77b8d5f5594663ac2ca9a660b8ef3e18a08bae54cb",
+          "pointers": [
+            140515836166144,
+            140515861331968,
+            140519516932608,
+            140515779543040,
+            140515811000320
+          ]
+        },
+        {
+          "inputs": [
+            "30236e103b01c2a179fd6378aa844ab634edc8d8eef5058a320f59855b4071bc",
+            "cf8ad553b5a291b0df3948a544a345a7352c39b7ecd40cbf0e6baf75e1a9f88f",
+            "b69f93c5a41f08ea213d6d70154428dc96b6a4dddb49294e864a1c025922e845",
+            "05ac334f28be85ab72b6c95b7b409335a71111cc336545f32cfb74c6c88cb962"
+          ],
+          "output": "0f9a14f1d910ec9898f673c5d36bdc3ce89be5b46a7d0f7d7c554014178b3f59",
+          "pointers": [
+            140516633083904,
+            140515911663616,
+            140519516940800,
+            140515813097472,
+            140515844554752
+          ]
+        },
+        {
+          "inputs": [
+            "06e2ec2b3ff79fec42816599ad0d0aded5273e2dc68a5772d8d1c5e7a8ff6247",
+            "b8ec090818b77deb0985d2503bad5500cfc048dc31e3cfbf6bc76935c5c8ea2a",
+            "f7f41b26527bb5529200ae38426cf0f6afae9fd49d19a16d199829ceaa81c146",
+            "e31c24100e2b2f268ec685cdbd197353692f7140e6820dc71a651cb4bd8d2308"
+          ],
+          "output": "677de7aa336c24a3a84512161961e2a7ba9c6f9a348317454db4f3c9a6e616dd",
+          "pointers": [
+            140516641472512,
+            140515894886400,
+            140519516948992,
+            140515846651904,
+            140515878109184
+          ]
+        },
+        {
+          "inputs": [
+            "8889ad056a6606f44b557650f41122350f4eaf584a5c3ebd863801f105a3ca09",
+            "476397411f474e26655488a7ff1464bf5309cb33a90dbe2927641148c00680ef",
+            "f53a4c6acb31b14962329615e2e5eeda71f817bf9171ba95ba22fcbd50e91632",
+            "0c1781c8b3616945a8a4c34b919129eb500aedd92a85db85279d242f16abb6b9"
+          ],
+          "output": "73404619156b9f7763ccb29954f7a6c0d46152b0381b849df1271c6e0f88999e",
+          "pointers": [
+            140515928440832,
+            140515961995264,
+            140519516957184,
+            140515880206336,
+            140516616306688
+          ]
+        },
+        {
+          "inputs": [
+            "2345cef0a3aeb099c061844e07ca39fbbfc4b28a64406e40886fafafd079bd2f",
+            "307f7c916e3ecbd4fa8188d2c4a148cea5c51b9f05af43f272292cf7e6f711b0",
+            "c1edae6296775e8081567290e7b57c57bd3dfca815941d4e408587508e43bb2d",
+            "3f039d94db99a9e4c6f88da5a34ff891c3362544042699ad777963bb82d21cfc"
+          ],
+          "output": "e8021dac57d5ad599a38445fba5f9c67b3d572b5f83cb021082b7dc78d52ca2f",
+          "pointers": [
+            140515936829440,
+            140515945218048,
+            140519516965376,
+            140516618403840,
+            140516649861120
+          ]
+        },
+        {
+          "inputs": [
+            "0be86e7ca1cd12dcc3ac155e93fc15a53537bf377ea58989f1b8abbdc6b3836d",
+            "f672dde1f44ab55cc42aaa3c1f34ad6510d9c6f6887e95a58e8f1ddc9bf7d78a",
+            "7fb4aa173a1728fd23155d9b06dfb726f427885f2fa72ad1edace953db620606",
+            "90a8de1cd023ce5aedb5d6d313a4c6faff04f3c84a5fea6d54f61255b0697f68"
+          ],
+          "output": "3790e469b5dd0d8c46325d0ea62867b9b4011d81011628a2605a288540044f9d",
+          "pointers": [
+            140515978772480,
+            140516012326912,
+            140519517369344,
+            140516379328512,
+            140516651958272
+          ]
+        },
+        {
+          "inputs": [
+            "adf039370d82aec5f44fbc47861731f421140eeb2aa219d2e51a97b8d0795c1a",
+            "2f51ab85dccbd808f493e09beb02c39f4838766320a8cd29a58911df2404a7bc",
+            "c6e98c86cec6023701234fd31cd18a92a56998edd26a00ac7a15b979cd5792ac",
+            "b4e0362858ca4cc06c6023400e227ce11cf5a358aeddbcb9ebadb77fa936c9aa"
+          ],
+          "output": "c5ab1ade85e48468867617a081c195a2b7cea6923ef7cd6077b908da9bd1b492",
+          "pointers": [
+            140515987161088,
+            140515995549696,
+            140519517377536,
+            140516129767424,
+            140516375134208
+          ]
+        },
+        {
+          "inputs": [
+            "8a17a6aa04f19e968eed428035a0559d56389dc8a762a56dea33aa965817fa28",
+            "3d3f3437ae3cf49504fe8fb6fe658606aeb3d69150829cc3a0994847e0b097b0",
+            "e1d84751728ea0ef36486918a5887a525d994ec9449a0609de4a427d70f09c76",
+            "f4f6cc05f38cdae2115e8840cd6923864c1baf9d0ebdac3f5a24fa99801378c5"
+          ],
+          "output": "4c83fa5a407ef46326768fb36c5e6ee847e67f5f3a5f11aadd560ab68c75b658",
+          "pointers": [
+            140516131864576,
+            140516232527872,
+            140519517385728,
+            140516377231360,
+            140516249305088
+          ]
+        },
+        {
+          "inputs": [
+            "99b87cf0f76430d3a8fb23604ad7992457b33adf259e43ab5a4bc2c3d847c650",
+            "2b517a43863ade5de0bc0479e5b81a82e1a4b45b07cfe3e7b6eb0560fc519456",
+            "c98fc7259d30f0f29c1856e2c1f3b765c57b210bcaa6e2c0484fe5bfd51a7608",
+            "1b7c85cea55da41e1646ca455cbdbfe5e796054a7b428e766e4857f917154691"
+          ],
+          "output": "a7397c686cb6b28668432d0198369ddc63beb31215bc2d9ab95b8a083d915437",
+          "pointers": [
+            140516251402240,
+            140516140253184,
+            140519517393920,
+            140516767301632,
+            140516259790848
+          ]
+        },
+        {
+          "inputs": [
+            "1cc95bcf3f988a509bec201b381eb88ce2a9790986464e9b09b43d5fa2967035",
+            "50d6528c4cd931e7c367e110735062bd71e0692281656bcbcba049a307450137",
+            "906f2438483996f640ef221401ce672c14a7f83699949d53a47a38cb1bac00e8",
+            "ea74506632d3c6939b45c2d6c0bdd84f0c58ac545b61ed58f7177574a8b81447"
+          ],
+          "output": "48d1eb16138952d6a84c57b251080a1e15df7738a303f67ed7edc1b7fc3e6389",
+          "pointers": [
+            140516769398784,
+            140516777787392,
+            140519517402112,
+            140516261888000,
+            140516794564608
+          ]
+        },
+        {
+          "inputs": [
+            "1e78848445d607da84059ba54b5439046528d8a7e6febf6f8c1bea6f7300fd1c",
+            "e4325f9bc9e847d69b68f1c0a847c0edeb21f22b9b554b79cd205e7092cec03d",
+            "73d3b0a6c025325d0f69ee3e8406676f64b77dcc4cde1ca7fa09af4ba6ff6521",
+            "fb5107ecf37f0313e83cd923ac63ea0f5c68c6db756f83b735c82ac3165819be"
+          ],
+          "output": "e391bab753a2cf6fefb5d834f461926137d7816dc7acda0961e4c44d291a8653",
+          "pointers": [
+            140516224139264,
+            140516733747200,
+            140519517410304,
+            140516750524416,
+            140516796661760
+          ]
+        },
+        {
+          "inputs": [
+            "a05c796fca282441240b64b7350b2427ec79557a191b3703caac85dd96d024d8",
+            "8f5c850d4bf2f19be1ffacd141c65a058887e1b5dcf9337bb66493e23af5287a",
+            "4f4e8c0e1259f37ed9dc71c7c24be908816a5dec59af07e87135b3bac84b3b2d",
+            "e3f6c256e1a6df926ee53038174269502be36b7280bf2c06cec6adaca2d568b1"
+          ],
+          "output": "b310a95a56f066fe3aac36757876d419c42d4b0a0a323d322cd06f302ce9ffbd",
+          "pointers": [
+            140516752621568,
+            140516157030400,
+            140519517418496,
+            140516765204480,
+            140516798758912
+          ]
+        },
+        {
+          "inputs": [
+            "e82e1f395aeb6a0a0f5d9b47ad07fc24e134f2274c589ffe9362e205b98a0a56",
+            "a1e5e2b4da7c2efda6989730d7e1766be50b0bc0cd26df85bbf242e5af1bd8cd",
+            "a926f5385e71a36431953e8143446e545e5a2ef06e64dc5b26935f87f41838a9",
+            "7abbbeda9c01fbf7742fb3acacc3ca0e015869b31ded0b3a41b674f67393be51"
+          ],
+          "output": "adf73eb64221b45f6f352397e1f5ad7db1eb5b5b317b5b3542050414abc6afba",
+          "pointers": [
+            140516700192768,
+            140516173807616,
+            140519517426688,
+            140516708581376,
+            140516761010176
+          ]
+        },
+        {
+          "inputs": [
+            "ec33d0f7b7e4c9b7fe1bd61d045e7f07b4eaede66c4622ec575a7dfa55351938",
+            "c7c59c2ddf9e399d7a8ed8bc86c023eca028be525fe5e5f0b1b033d05e6c741a",
+            "3781627f7a723504e98c3850e090d5a85da071e792466f7041da7f969a9664aa",
+            "84be6e688394a915d2e224f1d5e852a804d8ebbe24facfda76e7bb64c90562fe"
+          ],
+          "output": "51a5fba44466a658dcd676f560f9f9f82fd98cdffc609ce0fb00d70646cf57da",
+          "pointers": [
+            140515475456000,
+            140516710678528,
+            140519517434880,
+            140516763107328,
+            140516727455744
+          ]
+        },
+        {
+          "inputs": [
+            "99ce367c41a5056060acc2318c65d2bfac6519e9854566d3c293c4ccf690ca3a",
+            "619bd71584fc61c876e67593220a7202ca53dd50b45f2244f9a85eaadccda281",
+            "792ebfa88b775fabc42b365ce9323e7cb01a7a6cd28bb05c0b1767a4db76b8e8",
+            "de7ffd3fd8d8a7cf91f9b4f24662822c294ffbcd20944c1a88f02206e430a42e"
+          ],
+          "output": "28bc4d92613092c50ae81ffd1c5a0efd159411aa079b8473d6756dbdf9ce8fb5",
+          "pointers": [
+            140515483844608,
+            140515441901568,
+            140519517443072,
+            140515425124352,
+            140516729552896
+          ]
+        },
+        {
+          "inputs": [
+            "6e2cb49714a6408f0241d05d778557cfada739536baf0885691562a388fc6991",
+            "5019b66e7e0d8b644c73e3f431a747aea5188110c42ef89f55bc80866972a393",
+            "2c28fc3183a4f59108bb1d048417ff9c349e47032a398d55cb154b358461abec",
+            "ab40fea870ae06da2eed5c96c07d00d880b1c3bb5dc6e51ae9c757065d254a07"
+          ],
+          "output": "80a78467a0f11c081775c0323b43d80ab2289021495ac80365227c71f24c193b",
+          "pointers": [
+            140515427221504,
+            140515408347136,
+            140519517451264,
+            140515439804416,
+            140516731650048
+          ]
+        },
+        {
+          "inputs": [
+            "63a08c8acd67c607d1b1187b0a3f2f7b034f48ec0673b29cad1c985bf0bd93a6",
+            "89ad0c2bc6aa447736d6bc668e8b7f8c733d0daff19ddad5359f644925576412",
+            "c67776a1d91ac51bf5d50cf9a943bfc0548deec54f3e5758383677c179a80c59",
+            "df40420c08ac964f6015251f38a3abc29dac0ff55a79f35b8e6416bf5c6d4e0b"
+          ],
+          "output": "d1640a880202f2770c4d9d2daefe8859f1ccae12b7c08d4e64ed7152583f7683",
+          "pointers": [
+            140515391569920,
+            140515358015488,
+            140519517459456,
+            140515399958528,
+            140515435610112
+          ]
+        },
+        {
+          "inputs": [
+            "e273ac2e149ff58ac3542bbb6e902c6d103a2ba6057df47b4e5b0aa14ede8e2d",
+            "62c8cfd8bef5073e788ab0ced44e74e27943f2e05a6e6394a69d5573a1e37707",
+            "602c453b440e69439e9ea393296e96ad006028e4d4a16d2947db9bb6c9d3b39c",
+            "792143f1e3b0797ab80fdade59f8f3a8531bfbc9ea8d7cf45c21a3bcbd1b3a72"
+          ],
+          "output": "6d9d4828e43cfe3c3b6688028e8f00865c1c0868e08b913e26e167fd91ad592f",
+          "pointers": [
+            140515374792704,
+            140516190584832,
+            140519517467648,
+            140515437707264,
+            140515402055680
+          ]
+        },
+        {
+          "inputs": [
+            "99aa4bf03768ddacebc5c316a4a2d140fefd967adee2d00094f526993401883a",
+            "64f71ea67449f499585fa11b0cdfcb558339a05b5fe9bce268b366b94d586cc1",
+            "ee593630da1ca79cb833a47d27bee090ebf55b1bce9950669f83735957beb4db",
+            "a9326fb6b1e1b637713dbbf7e883c4615679193243333dc6366898da4ec73484"
+          ],
+          "output": "d02afcd2769565acb8fb5425f6e428ec02a287df5963eb60940f529faab061f9",
+          "pointers": [
+            140515383181312,
+            140515458678784,
+            140519517475840,
+            140516207362048,
+            140515404152832
+          ]
+        },
+        {
+          "inputs": [
+            "3e6b8744c31395ad7ac9ce99403a747a4ff8164a00b4155aa7bbe25f69c6e431",
+            "cb09cc98cc47c8aa9b3da62ff39abb8aad52a3fa9b3d5371ef3942729992f6ee",
+            "dadd76629f9742f038604f94395cafbf79ebe3cd4084bb304d964727e2a6cfe0",
+            "78630869f104e4e6f3b158754fdcefe27b82b4d95d454a403351d2d5666cb76a"
+          ],
+          "output": "bfc8ec92170b9bf53411f5b19043b89c15dca0ecc7ade9e8075eb1cb6f7109be",
+          "pointers": [
+            140516209459200,
+            140515290906624,
+            140519517484032,
+            140515406249984,
+            140516217847808
+          ]
+        },
+        {
+          "inputs": [
+            "e389b91071b0d5ebd2558a6cd655d7f96dcdb1ffe586244cc28831b29d29b3c2",
+            "2c31e66c7781dbd026d55e520f991efceb1ca2fb6145bb00f4c33b422767c96b",
+            "778c778ceb4bb5a195f2ced2f2095328ea3908e2f92515564b89a35fc91c7dc0",
+            "d70208226fc0696938f960a0ead1f1439fb52a301744e18f76a4cb14b1bf14d3"
+          ],
+          "output": "e98734261a10eda29eda7a2665a6c936eee9143d7b8c575e121ec1dc2d373376",
+          "pointers": [
+            140515274129408,
+            140515307683840,
+            140519517492224,
+            140515282518016,
+            140516219944960
+          ]
+        },
+        {
+          "inputs": [
+            "1f9bd3cf2ff4cc8e02176bdb019ced86233c80880f655d04e4bb2596cf85d9d0",
+            "0cfd6728e128eab20a4e4692e06191a458df09f9d4c7a6cd16144f950a217914",
+            "d9a45032d6fc71381b1288ead0a348ba23f5e83a6c4fcdf23858d378fba33706",
+            "9541cb2878bb46b74babbb894d52c7d03a2176d7de619f395c6c2eb06b5cda53"
+          ],
+          "output": "51fd10515ce9d86e252ff9f88ba7f3de0bc86c9654616ac8c87684df21508607",
+          "pointers": [
+            140515240574976,
+            140515257352192,
+            140519517500416,
+            140516222042112,
+            140515284615168
+          ]
+        },
+        {
+          "inputs": [
+            "97df05e5cfe89eaa8e186959d2fc1bff56aecb072e177d10ad273a503c5f9fe7",
+            "8243ace337b6b72a0424d8f8bb56ef7ff6859ac9fb669c77e187f711b6474b28",
+            "70320f6df4dde4eaed2733a09b54d8133b254cdfe839a6022974991409281cc9",
+            "abb8009cc9cea6528b3427ea1979ff761ee802d52c24384e7864e235540dc6e9"
+          ],
+          "output": "cd8d745de6f84ecf19a95b95fe4bd7712eec664ef12c54cd44c544bf763ba10a",
+          "pointers": [
+            140515248963584,
+            140515207020544,
+            140519517508608,
+            140515190243328,
+            140515286712320
+          ]
+        },
+        {
+          "inputs": [
+            "4c2bb479f116973e48daa4e76bb6b60d046ff7dea258a3313890fc70a94b3542",
+            "1cbea6a513bfc4bb6e343a24e10b5c4f2811f9a4d9d1f8ef97b3c8663b5a1152",
+            "8a41290cecd6a8a2c00ee90eca623da60a44162c1a0d46aa555d5c0f9098e2ba",
+            "212a86990f7185e4d1a24642a4d9e6af30265e7a9d40d5b9ce38801d0a92d9f1"
+          ],
+          "output": "4de5d99570c03daa3eb9930a6939826e4795599137e7db3f379b5769fbb9db00",
+          "pointers": [
+            140515192340480,
+            140515173466112,
+            140519517516800,
+            140515204923392,
+            140515288809472
+          ]
+        },
+        {
+          "inputs": [
+            "b0a258a779e4db2a6333f9e63b3bae9ae74f0b0eee15b9304afe7ae8ed77f337",
+            "70df0f688781fd3d62c5dbb4db524a8931b26d9d1b14fd1e40d6661afe24c556",
+            "9a91ac5eec122f5915be0363e61e47d8ea440aeddaebe5c7193c97ea0fa536a0",
+            "1f29789cb39485ec94d0f24a8181f57453645239f64a8ba60df3dcb01ada46d3"
+          ],
+          "output": "2dd26c31f4662af0762b53cf4a5bf13bc0668390c612998e52b371b6eaba1c9c",
+          "pointers": [
+            140515156688896,
+            140515123134464,
+            140519517524992,
+            140515165077504,
+            140515200729088
+          ]
+        },
+        {
+          "inputs": [
+            "c76f4dc329bfff41f1ca7149eb2e5e86a0e75284452fde988f4dab57a937dcd7",
+            "01305ca419e8590b687d775a0a2110953104cf5ae6977d4b64c9351f11973326",
+            "80ed8d897e0bd87bfedf4a656ef3d2134823a841511c2d96ccd5568e4bfa086d",
+            "778073c13c494193c1909702c9a99a4d6ddf213cf07e56415a0083fc7c969e8b"
+          ],
+          "output": "ab8b96a1b34b1c315e34fc1a97f629c86032d4efa438219341e44c7154ec3968",
+          "pointers": [
+            140515139911680,
+            140515324461056,
+            140519517533184,
+            140515202826240,
+            140515167174656
+          ]
+        },
+        {
+          "inputs": [
+            "5b88b2e22f4618328b9f919803f67a49491d89799e7f507317cfba863a25dc7b",
+            "b0fb3dac284494a26dc6f10cfeaa0ccf3afccebd8fc094a73a94fa6c7556f8fa",
+            "cacc8e1511f5684e7277f06d81b538f3a7feac6dbd81bf997b9137c4b6facd47",
+            "8561d862e9e688392c7f81e43c7df7525bd093fc57351d7abf44fce651addee8"
+          ],
+          "output": "46091fac806c055de4cdf43459936679fe2166d0c5c197877022d2f16a5d2c62",
+          "pointers": [
+            140515148300288,
+            140515223797760,
+            140519517541376,
+            140515341238272,
+            140515169271808
+          ]
+        },
+        {
+          "inputs": [
+            "ac9a551d34dfe6266c96223098508c7185f0a9480bcedbfd57ed59de16bc4aaf",
+            "9e4a57de5f0a3ee56b78d6ac2dee8154b6263c123b5837545a14bdca9dfafc0f",
+            "bab1291ce0dea7a398775600c5b87fd8e9f636b9427d65dd2af6347bb877522b",
+            "1b45d0bde33186ebf122e7be3c2814375400533bbfa2602def31d7be5bd39f54"
+          ],
+          "output": "14374084ed1e1c6b4ecab9b857306e9a05b717d138256cd8546d008954ffd19e",
+          "pointers": [
+            140515343335424,
+            140515056025600,
+            140519517549568,
+            140515171368960,
+            140515351724032
+          ]
+        },
+        {
+          "inputs": [
+            "5dac7009bfa001e1d87e2ad346ae651bd5e5d37e8c2b010f8bf7aed138d6a31e",
+            "2648be5091e1760eec90e6a9531bcae1e15fb1384d84c6f4a027ee062e96f682",
+            "7141d433b150d24ae7922dc0be9f880b386d632f28706e5e7f64bff6f07bfb40",
+            "220cb5fb6680761c64cfe3d55e40d1cd4bf95061fdfc838a05822367c3c5b05b"
+          ],
+          "output": "58f49df527fd0e57cf66e1192c624ef304a15ea01fcef87209342b662530b2e7",
+          "pointers": [
+            140515039248384,
+            140515072802816,
+            140519517557760,
+            140515047636992,
+            140515353821184
+          ]
+        },
+        {
+          "inputs": [
+            "f37dba9f2f7a693f7b36c773af94da62ef788cb50242e9ca1a576fdb212ec5e0",
+            "5c25a5e2fb052a22826d5e148b488eb1583acf570a86d3ed4cf14296eb8ec78a",
+            "c26aed469ce8c660e907b2a57c748b191be79ae740388d6bd1d66ba12557b6ee",
+            "dfb965964c8235e8a0302ad0c03aba39da36f8ac3bbcba2bb5e61e938fc3a26b"
+          ],
+          "output": "3daae44f7dd5a8dd712a2f45f913955e5e160472dfb55f1c4dfad87f74cf0957",
+          "pointers": [
+            140515005693952,
+            140515022471168,
+            140519517565952,
+            140515355918336,
+            140515049734144
+          ]
+        },
+        {
+          "inputs": [
+            "cf43dc599aaaa8e89fd8c00fdc5eadbc9d0bdd8ceb6a477bdfe4a149858ba69b",
+            "58386f898ae8b76193d6e6b1845f633adb00ac4a4e1ace3c8f7783cbe050d4db",
+            "2e32d4340979c9842e13d6d58eb0637d485d18a2c23630d4d7a18e35dedb6fcf",
+            "f6926922b215701ff83e89d395245de6863f1bff6ffcd2a2c2ee32486cd9571c"
+          ],
+          "output": "618a67ffb274c4376cd29bfa9e81ebb5cac2a9504e3c8297b0a0a3a8e222bf13",
+          "pointers": [
+            140515014082560,
+            140514972139520,
+            140519517574144,
+            140514955362304,
+            140515051831296
+          ]
+        },
+        {
+          "inputs": [
+            "fdff7af4710d77baa282337abd578d304aa5679f6295d014f8aae82487c688ba",
+            "d730f4de320a2fa347821d4101e7e033a67fb1664d0ffa713ae33ed5e16a33cf",
+            "24a3c546d31ce6517e8ca37d399bfada4302df271673242d6e5dc8d38124f12a",
+            "d7ba35c800da4031cc51cd790c70f8846cbe6a2d88f935aab8d1d7897622640e"
+          ],
+          "output": "72e34576a460b7c6603acf20bd7e8391f8784a859fe4dd84b97621bac82ca29e",
+          "pointers": [
+            140514957459456,
+            140514938585088,
+            140519517582336,
+            140514970042368,
+            140515053928448
+          ]
+        },
+        {
+          "inputs": [
+            "ceea87bf26f0ce962621c3e375f367703af57499e778a90f7510c116e16fb121",
+            "76d50bd11c907e7805e3576f5822c0ccd22253ee29c33c69ada524ce3cd947c1",
+            "4839dd67d27a70a7477da7900db715cb7fb67abd257cba8b6e36b4644ef60e3d",
+            "21e00143566834e1e14c92357fde18268664ead7ef269c50043dfdd40e683460"
+          ],
+          "output": "5abfdbebae739423be3dfe3c61a8ab480e61c511c2288a1a4f57c768be716174",
+          "pointers": [
+            140514921807872,
+            140514888253440,
+            140519517590528,
+            140514930196480,
+            140514965848064
+          ]
+        },
+        {
+          "inputs": [
+            "016f57fc84d6a5a68b2934b49e5718f511e69029e30e3d50ac576be1722c8b04",
+            "b38a2fb77c10e83e13316e1c15ec5b4855cc10c9151f626aaf3a44314fdcc0a1",
+            "0fcf0515648af93374937ac99b91c37dcab9319d7c61d52a8ee14dc9aebfd192",
+            "b6c7a3cb756160a379b16d660ac8e2fb3bc6a1ea35c1d97998978273ac933d88"
+          ],
+          "output": "6adc18c8ad80cc12c2e5765888b0e069dd6995bc75066f8eb71bfeaaa8a449f9",
+          "pointers": [
+            140514905030656,
+            140515089580032,
+            140519517598720,
+            140514967945216,
+            140514932293632
+          ]
+        },
+        {
+          "inputs": [
+            "9481dd566f5e16ada45e941fe6a4e9ef66953ddf9ae2ebe887e3823a355bab9c",
+            "9cc283f91ad40734f66c3a6c5f3b0d8ff94d62425aa2e8318e8afe567c5db8f6",
+            "01456cd562906a172082e510115a0e04c37529e6a86a295c2a56e0e9f3b1cc42",
+            "a27c03d25e437e70ba4102509897d032512d46fdc980e4bc4073796ff88c5ce8"
+          ],
+          "output": "856697b7ac902a6dfcf00e051141d708dc34035c1da4afef28a70972d784df2d",
+          "pointers": [
+            140514913419264,
+            140514988916736,
+            140519517606912,
+            140515106357248,
+            140514934390784
+          ]
+        },
+        {
+          "inputs": [
+            "48d7e2b2be69c64648eaac002feb25f33a9bb1978e37f8e7b9808ea5ce011f9e",
+            "1d038363ccea31034cb3dba7f7fbbdee25b30f8489d8f7802e9301b65523ec0f",
+            "2b6f27d499bb638c73c9830929e19b3f92b45db44dd50ecbb95095b652ba60a8",
+            "65e0655db02aff0af6c9fb494f001239c8d8e6cc885e85524f67201a46ab2603"
+          ],
+          "output": "3cfaf21f9a1265100336ea4837062ca43c91818b594a208bcc3296f6413138b6",
+          "pointers": [
+            140515108454400,
+            140514821144576,
+            140519517615104,
+            140514936487936,
+            140515116843008
+          ]
+        },
+        {
+          "inputs": [
+            "bf992907454f172b369b033701db3b382f71e3a506f526e667ff228591973bc3",
+            "3b6012b87a66407e8695f33cc0a4888589a4429c74de7bf90d8d0cee9c460756",
+            "fd56891bc87b2d07158ca8d76b36ebb957f3db75e4eeba4830cd2a14f01acd97",
+            "a1c692925839a1b9b68175908ecc11e23d24503459994382aba362c9ae1ee722"
+          ],
+          "output": "39fd83de7d922e89cdd380021ee6507614924fddb376d059b2d4e5b31037aa42",
+          "pointers": [
+            140514804367360,
+            140514837921792,
+            140519517623296,
+            140514812755968,
+            140515118940160
+          ]
+        },
+        {
+          "inputs": [
+            "641cf73e39178d5898c50c3d1d06645987492ba46722a51e7f1594cf25411eee",
+            "d35c329bd3e7cac7bf14d7f974d26dd2706818312a20dc63743cf19e9f4f6da5",
+            "2adf6d81e21c0cc2010d83b36e3a9f100afdc1f19dbf8c067fc3cbf7e985058a",
+            "60c3e9938727dd90345b3bea9cad317b228073598c37ac40dd47cbe5d8487d76"
+          ],
+          "output": "ff6a85fee5d6cca08132b0a9b7804eefe69f53d1d38cb9bb1895e94cd22ab995",
+          "pointers": [
+            140514770812928,
+            140514787590144,
+            140519517631488,
+            140515121037312,
+            140514814853120
+          ]
+        },
+        {
+          "inputs": [
+            "4a3edecab02552c758f2afb8d370e3a30fe8215d8209349095eed287acb1c7d2",
+            "c9571d936a3231a22f4d64a6449ecbe0494f77cdc88b469d0c80632ee12ee2b3",
+            "a6ed3008acdcfe8f5f431ad89f5174e51bc01c449b97bc341379a9e628dcfa2d",
+            "acf454e941c0180a761170f794b99e28a2177b68cc4c93dc557334738ccf2249"
+          ],
+          "output": "b73d0a67f88a1bf8d384de90f8ceb4cce45a5f2e3dee6cef63492fb805ddd7f1",
+          "pointers": [
+            140514779201536,
+            140514737258496,
+            140519517639680,
+            140514720481280,
+            140514816950272
+          ]
+        },
+        {
+          "inputs": [
+            "8c6534eda554564d21e9b4cf6b64d4a2e094d2c5e2e99f907c5dc399aa7a65f1",
+            "0d85dfb4e92b0ed38837c77e30f2951c450e6bf61e902f15efefaa27cdc324e1",
+            "04bf15ebf656a75c1e74e1cfc777ad152b0b2fc6b5c6d973072722e9822ae637",
+            "7463752736ba34343e22a56630575a169e7aa0a8c6ebd9a2ef3dbf780b69301a"
+          ],
+          "output": "863800402677c0315b6f19a65a86351c847c3aefdf8cbdbd1ea265cd4c22d72e",
+          "pointers": [
+            140514722578432,
+            140514703704064,
+            140519517647872,
+            140514735161344,
+            140514819047424
+          ]
+        },
+        {
+          "inputs": [
+            "3fadcfcfae2e5100341ae5e3efd9e55f55ad1a83e342194704f8de4656d16388",
+            "5d43b5d8019f5bbac4489d0e681731a156b57d3bbdd6e28ca213341c25660f21",
+            "5d54977b2302175d7ee7fc269bfaef5c42a15b3d170dbcae6a74993f501f9c7b",
+            "c0addcbd014a408e330f4d58627bef789bc52d4ee4529b30c5a7a3b96157f15e"
+          ],
+          "output": "451392bff14ca4333075730b02c40f8d0f88b7d65ff1fde34e5e601a436a6fb9",
+          "pointers": [
+            140514686926848,
+            140514653372416,
+            140519517656064,
+            140514695315456,
+            140514730967040
+          ]
+        },
+        {
+          "inputs": [
+            "51842bbe2a4e5ed161cd979ac61b974c6ef515fdf6f527145d63cce99b6fdae3",
+            "8815f21aec4ec7193b2527dd1872ae42a45b0b41f0eb5bfcf91ff3d9c9f3ab92",
+            "b4398e5642066d070b42da43f05feac32decb614938beff231aa30f3e0a365b9",
+            "972bedd4098ae350ed8581106d7aafb8f0a36aa7ab6df57a603951e68130a813"
+          ],
+          "output": "5ba5a145002c2ba70c65fb0052ed94d78477198ee6defb01de5c6c494ea33fbe",
+          "pointers": [
+            140514670149632,
+            140514854699008,
+            140519517664256,
+            140514733064192,
+            140514697412608
+          ]
+        },
+        {
+          "inputs": [
+            "61e505b45d5392584cebb88d0bed57b56e83b41967fe78d3e99132ffccb2462a",
+            "ff78ccefd1322ac35fb7b0b8b904baa5b6709e409409a4c5a1cccd73f28200ef",
+            "c75bd1ea4ff0b57cdf21c119f9350e28b9ebded9bca8dfcc8d14b29cf9092b1a",
+            "20f1f936489d6bad57284e36f935e719ad9d68dccd11f3c8568face78cc68a3e"
+          ],
+          "output": "3d4af28df500bb2421d41ddf81826c0f3f65e7019e48c1fd40ebd2be1a9ce193",
+          "pointers": [
+            140514678538240,
+            140514754035712,
+            140519517672448,
+            140514871476224,
+            140514699509760
+          ]
+        },
+        {
+          "inputs": [
+            "f2b7bae8c1b4227c9a62254bd85a5d311ae920fc8796e1187bb4b42120369cce",
+            "b907a73d967e3077341c582966c9af21e6cb227340772dc8d48816a33816fe6b",
+            "778fcbfd22e4fda43cc7530b941aa65555fe0d34d4a57eb52785043eb77ba67f",
+            "cb63b7526cf01867c4f5bde04366ba4d488b3e31c174eb71be08814370fb0d66"
+          ],
+          "output": "0cf5e1ca7e0f163d4910e8d71330ada6916822c20b14ca05cde2afba9be041a7",
+          "pointers": [
+            140514873573376,
+            140514586263552,
+            140519517680640,
+            140514701606912,
+            140514881961984
+          ]
+        },
+        {
+          "inputs": [
+            "3f524926c1a8587bb278613adf262d788a3731fc8dfc44c3217c3f9f5a19cbba",
+            "d2db3e7a4d9674608716202647462f5d252720690038cbd4ad7deeda80bda8cb",
+            "207cbf754c7cea3be0567747a885bb90b21674a69ed89573c2382d6302815b35",
+            "294a33877283508c9724f60a43e84c0d904547dd1fcd05dfc6bd56bb1a5a4990"
+          ],
+          "output": "f8ba4928f4a707d67d8a82cb1e83a5076e7a70d5eed2ccde7c9998483f8e4ff2",
+          "pointers": [
+            140514569486336,
+            140514603040768,
+            140519517688832,
+            140514577874944,
+            140514884059136
+          ]
+        },
+        {
+          "inputs": [
+            "600cd31c3dd297092dea708e80696e6ba4a122f2ec96ff5e2e1201e0ee1953f7",
+            "7a79550e28720066046559eaa56a3db3b997fdbae5711539562e73685fb6f405",
+            "71eca7a7011e7b690838fc567331ebe67b3c655545ddfaa79dd417ad0644ec29",
+            "daefd4df6e5d9f2a8216135701d3f34412dcd2977816e9cbcb5a8613e304323f"
+          ],
+          "output": "e4d742a9a142b82d1bed8d5886925d8f7e2720436a40c1310227b38782cde5b6",
+          "pointers": [
+            140514535931904,
+            140514552709120,
+            140519517697024,
+            140514886156288,
+            140514579972096
+          ]
+        },
+        {
+          "inputs": [
+            "d9f2edfd7295e119491891516aca75c2093c9d474949e330f3b1384f359f140a",
+            "447fd55227b8d3c24286370037d31c9a60c6f34c75d630c72e3335fda37863ea",
+            "d867b2968fa867f77e9db53a59eae4b02eecb5ae9a11b82ce917b6412a5c74ba",
+            "b2e7a76486e1c412cef8310d7ff44d87388f34f857b482514ac708727337d1e0"
+          ],
+          "output": "ed6e66b90529238cc0df9795337a168aa26a00c1990ffdaeeb403bea1d60776c",
+          "pointers": [
+            140514544320512,
+            140514502377472,
+            140519517705216,
+            140514485600256,
+            140514582069248
+          ]
+        },
+        {
+          "inputs": [
+            "59840779aabe64e1b4b417a204ee38dbb9345120549e3b46edeb43412acbe9d4",
+            "521d9aacdd7a08e60ec768f5d4c35fb8f9a1315c9a737ff741578f5fc8b421cb",
+            "7a78050f271abd0fc9d6f864281e6703115f04bc01c8998387b0ca1e29c2d61d",
+            "fce569e80287ac433dca3cb73d48b423b0d225a13adabc8c861d8a8dcd0f34fe"
+          ],
+          "output": "219f0c895ff72dd7f8ba914561653923282d4ddbb24b4247ddde04bad885fc45",
+          "pointers": [
+            140514487697408,
+            140514468823040,
+            140519517713408,
+            140514500280320,
+            140514584166400
+          ]
+        },
+        {
+          "inputs": [
+            "2ae096ff24fd634eadcb0d422389d102ff0e81a730701386b0953438f1153266",
+            "39b26a39bc715ef379d406b56023fef3aae7500b5c294739bc44a787a26cb77c",
+            "1f0c60d3f74a162c72a216755ccf9df51b347f4701380704ca377a4adb3a5216",
+            "f4885d631d57227a6c50cf6ff0e861795cf1c144d9a399f5270ff7f575e1ef91"
+          ],
+          "output": "01c656bc5484ae351a40c4ea363ad65648c838da09fffff206ef2917b85a8028",
+          "pointers": [
+            140514452045824,
+            140514418491392,
+            140519517721600,
+            140514460434432,
+            140514496086016
+          ]
+        },
+        {
+          "inputs": [
+            "4546a954978bd2413777f3d48561dd6a5310599e5c74489c432cc66b12c07ec4",
+            "bfe3b41ce04cbe19c6c75bffade15b212995b2818e3f7154947553e7c6ac1f09",
+            "3a3274416696cdb69f5a5527145f6bb16346dcb0d20e9a346295a0c05b881a63",
+            "ace9af67939e00a6bc2bbf1f40e470c7b372d372732106a3a8b3c3fc49502427"
+          ],
+          "output": "9bd4464489f2ab54ab45e7fa2e392ab348adadfe06efe0a1c6e083cb8ef4ebba",
+          "pointers": [
+            140514435268608,
+            140514619817984,
+            140519517729792,
+            140514498183168,
+            140514462531584
+          ]
+        },
+        {
+          "inputs": [
+            "1ad18ecf0db0c29c8bf7d97b93292bf0d9f4f45986168fd51fc227cf70e41b30",
+            "7840bedc2f983f0f42a9bffee0da6446780bf16d0b65827bdc10ddda395d863c",
+            "9cb738faaa1b68761948eea20e3ac2cf71318bd9d456fcefb197eaa480c99d58",
+            "1a18674dedff2dccb881aac686f059e866cf2be4aeb90cdf62ce72f5e9c5c148"
+          ],
+          "output": "56c9321d41d12bc4f2d84f41992e4c819362b22d31dad74ae1e8a849ff400de6",
+          "pointers": [
+            140514443657216,
+            140514519154688,
+            140519517737984,
+            140514636595200,
+            140514464628736
+          ]
+        },
+        {
+          "inputs": [
+            "998d375efc4c7fbe08cd3720fc2681e79bac59d01f29e686e37127c07e4fa97f",
+            "f4779a92e4ad07cfbf7f170ebe254362aa8dcd2b06c7ee1ff45c362db536c297",
+            "29e7c77d37734ce444930aee908cdf840649ec6338e671dcb6010b4ea356f224",
+            "0af98beac6f9ad32b5fdb4a45b64a2ceb74b02c4bd21fac32225497dc4f12541"
+          ],
+          "output": "998cc793478ffcd2f6f0d648aea99c53e13e71419e0fa6c62a64fa8e71ab4cd6",
+          "pointers": [
+            140514638692352,
+            140514351382528,
+            140519517746176,
+            140514466725888,
+            140514647080960
+          ]
+        }
+      ],
+      "gradients": [],
+      "expected_calls": 374,
+      "submission": [
+        {
+          "slot": 0,
+          "protocol_version": 1,
+          "initializations": 1,
+          "successful_calls": 187,
+          "bound_k": 2048,
+          "local_packet_ptr": 140515513204736,
+          "failed": false
+        },
+        {
+          "slot": 1,
+          "protocol_version": 1,
+          "initializations": 1,
+          "successful_calls": 187,
+          "bound_k": 2048,
+          "local_packet_ptr": 140515781640192,
+          "failed": false
+        }
+      ],
+      "consumer": [
+        {
+          "slot": 0,
+          "protocol_version": 1,
+          "initializations": 1,
+          "successful_calls": 187,
+          "bias_residual_calls": 187,
+          "bound_k": 2048,
+          "local_packet_ptr": 140515513204736,
+          "failed": false
+        },
+        {
+          "slot": 1,
+          "protocol_version": 1,
+          "initializations": 1,
+          "successful_calls": 187,
+          "bias_residual_calls": 187,
+          "bound_k": 2048,
+          "local_packet_ptr": 140515781640192,
+          "failed": false
+        }
+      ],
+      "packet_pointers": [
+        140515513204736,
+        140515781640192
+      ],
+      "mask_sha256": "c65bf4568a620e6f1261e6cbfc5dd3ea8feee430189829b671729f1a48efc3c4",
+      "timing": {
+        "wall_us": 165.1955209672451
+      },
+      "final_output_check": {
+        "passed": true,
+        "output": "d609d935eca28973b4847f826f430d6dd3cd2bb9e059b73126eb85c9acb4fe26",
+        "reference": "d609d935eca28973b4847f826f430d6dd3cd2bb9e059b73126eb85c9acb4fe26",
+        "inputs": [
+          "1cadee17fcfaaff39840a44dcda7acf1cf7594d5f03e8a6c506a64bb2e8639c5",
+          "e57a38840634fde61db414f9e12336764ea4ac40feb8dc863f639d19b28c3a27",
+          "956c31002e6962c8f4bd97e65335ce81ce7a88896a3ae589b8ecc9a41c32182a",
+          "6843e2b710ee8c89c85a4c42ab5c99a9e6adea9e5f8c27c622c3a15517f00be1"
+        ]
+      }
+    }
+  },
+  "loaded_libraries": {
+    "/workspace/TempName-New/logs/h100/phase6/ma14-v1-epoch-reuse-1x-50steps-20261029-115134-460881/build/F4-cache-zcount-csoftmax-epoch/python/flux/lib/libflux_cuda.so": "1aadce63f46327bf55237b74fd94ca7bb542e5a16d9ab14b291d6c4075f78bb4",
+    "/workspace/TempName-New/logs/h100/phase6/ma14-v1-epoch-reuse-1x-50steps-20261029-115134-460881/build/F4-cache-zcount-csoftmax-epoch/python/flux/lib/libflux_cuda_ths_op.so": "ebdfa2e55140b02ff0250f9ac86881db6c656de18cd358056f42bca1fb170837",
+    "/workspace/TempName-New/logs/h100/phase6/ma14-v1-epoch-reuse-1x-50steps-20261029-115134-460881/build/F4-cache-zcount-csoftmax-epoch/python/flux_ths_pybind.cpython-310-x86_64-linux-gnu.so": "46e4e670720c17779a5ce848ed9d6b57a39fdb43d82a27a9768f32e248fb9ce2"
+  },
+  "hardware": {
+    "host": "10-118-122-131",
+    "devices": [
+      {
+        "name": "NVIDIA H100 80GB HBM3",
+        "uuid": "26e67438-f877-3123-29e0-d33d473c8141",
+        "sm_count": 132
+      },
+      {
+        "name": "NVIDIA H100 80GB HBM3",
+        "uuid": "7f7217aa-30c6-c324-7a2a-47b3da64ed90",
+        "sm_count": 132
+      },
+      {
+        "name": "NVIDIA H100 80GB HBM3",
+        "uuid": "aea7e493-405c-304c-b5c5-28cd9624699e",
+        "sm_count": 132
+      },
+      {
+        "name": "NVIDIA H100 80GB HBM3",
+        "uuid": "3e7023fb-d34e-400f-6e3e-666145b657cf",
+        "sm_count": 132
+      },
+      {
+        "name": "NVIDIA H100 80GB HBM3",
+        "uuid": "00c0a7d8-cbb2-4acb-3fa0-5a7d4e0f899d",
+        "sm_count": 132
+      },
+      {
+        "name": "NVIDIA H100 80GB HBM3",
+        "uuid": "7f399bc6-8077-f309-92c7-538dccc06f42",
+        "sm_count": 132
+      },
+      {
+        "name": "NVIDIA H100 80GB HBM3",
+        "uuid": "0d74eef5-ceef-e92e-242e-36ee582fac83",
+        "sm_count": 132
+      },
+      {
+        "name": "NVIDIA H100 80GB HBM3",
+        "uuid": "9da6bcea-1b20-252e-4819-eb5699a9b1a1",
+        "sm_count": 132
+      }
+    ]
+  },
+  "software": {
+    "torch": "2.6.0+cu124",
+    "cuda": "12.4",
+    "nccl": [
+      2,
+      21,
+      5
+    ]
+  }
+}

@@ -1,0 +1,95 @@
+START smoke-F4-cache-zcount-csoftmax
+START smoke-F4-cache-zcount-csoftmax-epoch
+START compare1/block00-F4-cache-zcount-csoftmax
+START compare1/block00-F4-cache-zcount-csoftmax-epoch
+START compare1/block01-F4-cache-zcount-csoftmax-epoch
+START compare1/block01-F4-cache-zcount-csoftmax
+START compare1/block02-F4-cache-zcount-csoftmax
+START compare1/block02-F4-cache-zcount-csoftmax-epoch
+START compare1/block03-F4-cache-zcount-csoftmax-epoch
+START compare1/block03-F4-cache-zcount-csoftmax
+START compare1/block04-F4-cache-zcount-csoftmax
+START compare1/block04-F4-cache-zcount-csoftmax-epoch
+START compare1/block05-F4-cache-zcount-csoftmax-epoch
+START compare1/block05-F4-cache-zcount-csoftmax
+START compare1/block06-F4-cache-zcount-csoftmax
+START compare1/block06-F4-cache-zcount-csoftmax-epoch
+START compare1/block07-F4-cache-zcount-csoftmax-epoch
+START compare1/block07-F4-cache-zcount-csoftmax
+{
+  "comparisons": {
+    "compare1": {
+      "run_id": "4d38132af8e541518930d6bea8e98860",
+      "rounds": {
+        "round1": {
+          "mean_ms": {
+            "F4-cache-zcount-csoftmax": 584.2111723870039,
+            "F4-cache-zcount-csoftmax-epoch": 598.4240190126002
+          },
+          "median_ms": {
+            "F4-cache-zcount-csoftmax": 584.6887776628137,
+            "F4-cache-zcount-csoftmax-epoch": 594.9908568896353
+          },
+          "comparisons": {
+            "F4-cache-zcount-csoftmax-epoch/F4-cache-zcount-csoftmax": {
+              "percent": -2.422619555042771,
+              "ci95": [
+                -4.58573154591051,
+                -0.6416396684408188
+              ],
+              "paired_blocks": 4
+            }
+          }
+        },
+        "round2": {
+          "mean_ms": {
+            "F4-cache-zcount-csoftmax": 581.2669134046882,
+            "F4-cache-zcount-csoftmax-epoch": 595.7592783402652
+          },
+          "median_ms": {
+            "F4-cache-zcount-csoftmax": 581.2641480192542,
+            "F4-cache-zcount-csoftmax-epoch": 597.2691238485277
+          },
+          "comparisons": {
+            "F4-cache-zcount-csoftmax-epoch/F4-cache-zcount-csoftmax": {
+              "percent": -2.491449498808884,
+              "ci95": [
+                -3.0004043753280696,
+                -1.7249479645511157
+              ],
+              "paired_blocks": 4
+            }
+          }
+        },
+        "combined": {
+          "mean_ms": {
+            "F4-cache-zcount-csoftmax": 582.7390428958461,
+            "F4-cache-zcount-csoftmax-epoch": 597.0916486764327
+          },
+          "median_ms": {
+            "F4-cache-zcount-csoftmax": 581.5327993035316,
+            "F4-cache-zcount-csoftmax-epoch": 597.1679934300482
+          },
+          "comparisons": {
+            "F4-cache-zcount-csoftmax-epoch/F4-cache-zcount-csoftmax": {
+              "percent": -2.4570287469892538,
+              "ci95": [
+                -3.5939094669846794,
+                -1.439341394014959
+              ],
+              "paired_blocks": 8
+            }
+          }
+        }
+      },
+      "increment_over_MA11_validated": {
+        "F4-cache-zcount-csoftmax-epoch": false
+      },
+      "target_point_observed": false,
+      "target_validated": false
+    }
+  },
+  "increment_over_MA11_validated": {
+    "F4-cache-zcount-csoftmax-epoch": false
+  }
+}

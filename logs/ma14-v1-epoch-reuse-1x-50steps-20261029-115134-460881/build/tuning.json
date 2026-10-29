@@ -1,0 +1,12 @@
+{
+  "attn": {
+    "decoder_threads": 128,
+    "decoder_blocks": 2048,
+    "decoder_rows": 1
+  },
+  "mlp": {
+    "decoder_threads": 128,
+    "decoder_blocks": 2048,
+    "decoder_rows": 1
+  }
+}

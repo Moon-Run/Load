@@ -1,0 +1,1 @@
+/usr/bin/g++-11  -O3 CMakeFiles/gen_gemm_rs.dir/gen_gemm_rs.cc.o -o gen_gemm_rs
