@@ -1,0 +1,18 @@
+START smoke-basic
+START smoke-mav2
+START smoke-d8
+START profile-basic
+START profile-mav2
+START profile-d8
+Traceback (most recent call last):
+  File "/workspace/TempName-New/tools/h100/phase6/mav2.py", line 149, in <module>
+    main()
+  File "/workspace/TempName-New/tools/h100/phase6/mav2.py", line 143, in main
+    return run(args.root, args.stage, args.execute, args.python, args.cuda_home, args.worker_timeout)
+  File "/workspace/TempName-New/tools/h100/phase6/mav2.py", line 58, in run
+    gate = reporter.preflight(root) if stage == 'all' else read(root/'preflight.json')
+  File "/workspace/TempName-New/tools/h100/phase6/mav2_report.py", line 317, in preflight
+    require(passed, 'MAV2 preflight training-quality budget failed; diagnostics saved in preflight.json')
+  File "/workspace/TempName-New/tools/h100/phase6/common.py", line 18, in require
+    raise ValueError(message)
+ValueError: MAV2 preflight training-quality budget failed; diagnostics saved in preflight.json

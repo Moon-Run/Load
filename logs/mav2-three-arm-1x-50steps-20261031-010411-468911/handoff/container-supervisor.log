@@ -1,0 +1,20 @@
+/workspace/conda-envs/tempname-h100/bin/python /workspace/TempName-New/tools/h100/phase6/mav2.py codec-prepare /workspace/TempName-New/logs/h100/phase6/mav2-three-arm-1x-50steps-20261031-010411-468911/codec-build
+Log: /workspace/TempName-New/logs/h100/phase6/mav2-three-arm-1x-50steps-20261031-010411-468911/codec-prepare.log
+/workspace/conda-envs/tempname-h100/bin/python /workspace/TempName-New/tools/h100/phase6/mav2.py codec-compile /workspace/TempName-New/logs/h100/phase6/mav2-three-arm-1x-50steps-20261031-010411-468911/codec-build --cuda-home /usr/local/cuda-12.8
+Log: /workspace/TempName-New/logs/h100/phase6/mav2-three-arm-1x-50steps-20261031-010411-468911/codec-compile.log
+/workspace/conda-envs/tempname-h100/bin/python /workspace/TempName-New/tools/h100/phase6/mav2.py prepare /workspace/TempName-New/logs/h100/phase6/mav2-three-arm-1x-50steps-20261031-010411-468911/compare1 --flux-build /workspace/TempName-New/logs/h100/phase6/mav2-three-arm-1x-50steps-20261030-215237-552847/flux-build --codec-build /workspace/TempName-New/logs/h100/phase6/mav2-three-arm-1x-50steps-20261031-010411-468911/codec-build --megatron /workspace/Megatron-LM --blocks 6 --rounds 2 --nvls-enable 0
+Log: /workspace/TempName-New/logs/h100/phase6/mav2-three-arm-1x-50steps-20261031-010411-468911/compare1-prepare.log
+/workspace/conda-envs/tempname-h100/bin/python /workspace/TempName-New/tools/h100/phase6/mav2.py run /workspace/TempName-New/logs/h100/phase6/mav2-three-arm-1x-50steps-20261031-010411-468911/compare1 --python /workspace/conda-envs/tempname-h100/bin/python --cuda-home /usr/local/cuda-12.4 --worker-timeout 1800
+Log: /workspace/TempName-New/logs/h100/phase6/mav2-three-arm-1x-50steps-20261031-010411-468911/compare1-dry-run.log
+/workspace/conda-envs/tempname-h100/bin/python /workspace/TempName-New/tools/h100/phase6/mav2.py run /workspace/TempName-New/logs/h100/phase6/mav2-three-arm-1x-50steps-20261031-010411-468911/compare1 --python /workspace/conda-envs/tempname-h100/bin/python --cuda-home /usr/local/cuda-12.4 --worker-timeout 1800 --stage all --execute
+Log: /workspace/TempName-New/logs/h100/phase6/mav2-three-arm-1x-50steps-20261031-010411-468911/compare1-controller.log
+Traceback (most recent call last):
+  File "/workspace/TempName-New/tools/h100/phase6/detach_ablation5_run_two.py", line 164, in detach
+    (supervisor or supervise)(args)
+  File "/workspace/TempName-New/tools/h100/phase6/detach_mav2.py", line 176, in supervise
+    launcher.invoke(cmd, args.out / (label + '.log'), env)
+  File "/workspace/TempName-New/tools/h100/phase6/detach_ablation5_run_two.py", line 67, in invoke
+    subprocess.run(cmd, cwd=REPO, env=env, stdout=f, stderr=subprocess.STDOUT, check=True)
+  File "/workspace/conda-envs/tempname-h100/lib/python3.10/subprocess.py", line 526, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/workspace/conda-envs/tempname-h100/bin/python', '/workspace/TempName-New/tools/h100/phase6/mav2.py', 'run', '/workspace/TempName-New/logs/h100/phase6/mav2-three-arm-1x-50steps-20261031-010411-468911/compare1', '--python', '/workspace/conda-envs/tempname-h100/bin/python', '--cuda-home', '/usr/local/cuda-12.4', '--worker-timeout', '1800', '--stage', 'all', '--execute']' returned non-zero exit status 1.

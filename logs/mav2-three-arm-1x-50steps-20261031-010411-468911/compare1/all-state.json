@@ -1,0 +1,5 @@
+{
+  "status": "failed",
+  "run_id": "e8ff1772a06442ca93e6967003515032",
+  "error": "ValueError: MAV2 preflight training-quality budget failed; diagnostics saved in preflight.json"
+}

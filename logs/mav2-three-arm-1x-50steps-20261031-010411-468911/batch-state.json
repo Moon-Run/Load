@@ -1,0 +1,25 @@
+{
+  "status": "failed",
+  "protocol": "h100-mav2-selective-transform-three-arm-v2",
+  "trials": 1,
+  "expected_timing_windows": 36,
+  "expected_formal_optimizer_steps": 1800,
+  "execution_timing": {
+    "warmup_steps": 10,
+    "timed_steps": 50
+  },
+  "comparisons": {
+    "compare1": {
+      "status": "prepared",
+      "run_id": "e8ff1772a06442ca93e6967003515032"
+    }
+  },
+  "comparisons_to_evaluate": [
+    "mav2/basic",
+    "d8/basic",
+    "d8/mav2"
+  ],
+  "performance_order": "Measured outcome; no required ordering among the three arms",
+  "stage": "compare1-controller",
+  "error": "CalledProcessError: Command '['/workspace/conda-envs/tempname-h100/bin/python', '/workspace/TempName-New/tools/h100/phase6/mav2.py', 'run', '/workspace/TempName-New/logs/h100/phase6/mav2-three-arm-1x-50steps-20261031-010411-468911/compare1', '--python', '/workspace/conda-envs/tempname-h100/bin/python', '--cuda-home', '/usr/local/cuda-12.4', '--worker-timeout', '1800', '--stage', 'all', '--execute']' returned non-zero exit status 1."
+}
