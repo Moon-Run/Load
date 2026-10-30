@@ -1,0 +1,10 @@
+{
+  "ready": true,
+  "pid": 1146126,
+  "ppid": 1,
+  "sid": 1146125,
+  "pgid": 1146125,
+  "cgroup": "0::/\n",
+  "repo": "/workspace/TempName-New",
+  "batch": "/workspace/TempName-New/logs/h100/phase6/mav2-three-arm-1x-50steps-20261030-215237-552847"
+}

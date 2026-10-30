@@ -1,0 +1,3 @@
+# ninja log v5
+4	59518	1793369397169284191	/workspace/TempName-New/logs/h100/phase6/mav2-three-arm-1x-50steps-20261030-215237-552847/flux-build/flux-gemm-only/build/temp.linux-x86_64-cpython-310/src/pybind/gemm_only.o	ddce74ac9ee16a6c
+4	62910	1793369400496611917	/workspace/TempName-New/logs/h100/phase6/mav2-three-arm-1x-50steps-20261030-215237-552847/flux-build/flux-gemm-only/build/temp.linux-x86_64-cpython-310/src/pybind/ths_op.o	2e09fc9fa79f0186

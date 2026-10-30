@@ -1,0 +1,10 @@
+{
+  "run_id": "beb1c2e8e65543c789781cf41cdb1134",
+  "monitoring": "before_each_suite_only",
+  "passed": true,
+  "checked_at": "2026-10-30T22:10:32.002689+08:00",
+  "host": "10-118-122-131",
+  "visible_devices": "0,1,2,3,4,5,6,7",
+  "gpu_csv": "0, GPU-26e67438-f877-3123-29e0-d33d473c8141, NVIDIA H100 80GB HBM3, 0, 0\n1, GPU-7f7217aa-30c6-c324-7a2a-47b3da64ed90, NVIDIA H100 80GB HBM3, 0, 0\n2, GPU-aea7e493-405c-304c-b5c5-28cd9624699e, NVIDIA H100 80GB HBM3, 0, 0\n3, GPU-3e7023fb-d34e-400f-6e3e-666145b657cf, NVIDIA H100 80GB HBM3, 0, 0\n4, GPU-00c0a7d8-cbb2-4acb-3fa0-5a7d4e0f899d, NVIDIA H100 80GB HBM3, 0, 0\n5, GPU-7f399bc6-8077-f309-92c7-538dccc06f42, NVIDIA H100 80GB HBM3, 0, 0\n6, GPU-0d74eef5-ceef-e92e-242e-36ee582fac83, NVIDIA H100 80GB HBM3, 0, 0\n7, GPU-9da6bcea-1b20-252e-4819-eb5699a9b1a1, NVIDIA H100 80GB HBM3, 0, 0\n",
+  "apps_csv": ""
+}

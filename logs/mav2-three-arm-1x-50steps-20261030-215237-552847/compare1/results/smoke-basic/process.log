@@ -1,0 +1,47 @@
+Traceback (most recent call last):
+  File "/workspace/TempName-New/logs/h100/phase6/mav2-three-arm-1x-50steps-20261030-215237-552847/compare1/scripts/worker.py", line 41, in <module>
+    codec_validation = validate_codec(standalone_codec, codec_reference, local_rank)
+  File "/workspace/TempName-New/logs/h100/phase6/mav2-three-arm-1x-50steps-20261030-215237-552847/compare1/scripts/mav2_validation.py", line 133, in validate
+    if not direct_passed: raise RuntimeError('Formal D8 preflight failed: '+repr(direct_row))
+RuntimeError: Formal D8 preflight failed: {'case': 'small', 'shape': [8, 128], 'passed': False, 'finite': True, 'relative_l2': 0.025445995559938418, 'protocol_relative_l2': 0.005138692005978244, 'packet_relative_l2': 0.0, 'ordered_bf16_fold_equal': True, 'formal_equals_diagnostic': True, 'diagnostics': {'total': 56, 'd8': 56, 'h8': 0, 'nonfinite': 0, 'invalid_tags': 0, 'bytes_per_group': 136, 'selector': {'relative_l2': 0.025, 'max_abs_over_amax': 0.0625}, 'd8_fraction': 1.0}, 'policy': 'd8', 'quality_selection': False, 'h8_fallback_allowed': False}
+W1030 14:11:03.066000 1168909 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 1169051 closing signal SIGTERM
+W1030 14:11:03.068000 1168909 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 1169052 closing signal SIGTERM
+W1030 14:11:03.068000 1168909 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 1169053 closing signal SIGTERM
+W1030 14:11:03.068000 1168909 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 1169055 closing signal SIGTERM
+W1030 14:11:03.069000 1168909 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 1169056 closing signal SIGTERM
+W1030 14:11:03.069000 1168909 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 1169057 closing signal SIGTERM
+W1030 14:11:03.069000 1168909 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 1169058 closing signal SIGTERM
+E1030 14:11:03.689000 1168909 site-packages/torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: 1) local_rank: 3 (pid: 1169054) of binary: /workspace/conda-envs/tempname-h100/bin/python
+Traceback (most recent call last):
+  File "/workspace/conda-envs/tempname-h100/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/workspace/conda-envs/tempname-h100/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/workspace/conda-envs/tempname-h100/lib/python3.10/site-packages/torch/distributed/run.py", line 922, in <module>
+    main()
+  File "/workspace/conda-envs/tempname-h100/lib/python3.10/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+  File "/workspace/conda-envs/tempname-h100/lib/python3.10/site-packages/torch/distributed/run.py", line 918, in main
+    run(args)
+  File "/workspace/conda-envs/tempname-h100/lib/python3.10/site-packages/torch/distributed/run.py", line 909, in run
+    elastic_launch(
+  File "/workspace/conda-envs/tempname-h100/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/workspace/conda-envs/tempname-h100/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+/workspace/TempName-New/logs/h100/phase6/mav2-three-arm-1x-50steps-20261030-215237-552847/compare1/scripts/worker.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2026-10-30_14:11:03
+  host      : 10-118-122-131
+  rank      : 3 (local_rank: 3)
+  exitcode  : 1 (pid: 1169054)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
