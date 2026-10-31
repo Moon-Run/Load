@@ -1,0 +1,907 @@
+{
+  "schema_version": 1,
+  "as_of_date": "2026-10-31",
+  "purpose": "Readonly source and frozen execution evidence comparison; diagnostic artifact only.",
+  "scope": {
+    "old_ma11": "TempName/logs/h100/phase6/ma11-v1-causal-softmax-1x-50steps-20261027-202038-900556/fullstep",
+    "new_ma11_in_ma14": "Load/logs/ma14-v2-epoch-reuse-1x-50steps-20261031-030311-454459/fullstep",
+    "old_basic": "TempName/logs/h100/phase6/basic-quant-receiver-1x-50steps-20261025-090410-798870/compare1",
+    "new_basic_in_mav2": "Load/logs/mav2-then-ma14-ma18-20261031-014137-056456/mav2/compare1"
+  },
+  "conclusion": "No source or timed-training-path regression found that establishes repository migration as the cause. Host/runtime/CPU-affinity hypotheses require a same-host experiment. Source equality does not establish binary or environment equality.",
+  "repository_common_files": [
+    {
+      "old_root": "TempName/tools/h100/phase6",
+      "new_root": "TempName-New/tools/h100/phase6",
+      "scope": "all old files and matching new paths",
+      "excluded": [
+        "__pycache__"
+      ],
+      "old_count": 503,
+      "new_count": 503,
+      "shared_count": 503,
+      "identical_shared_count": 503,
+      "changed": [],
+      "old_only": [],
+      "new_only": [],
+      "equal": true,
+      "old_normalized_map_sha256": "a8b4aa12c8902a4eea682accf5581946a5d7b442e6acf9c3dd8c9f9cdcc5b730",
+      "new_normalized_map_sha256": "a8b4aa12c8902a4eea682accf5581946a5d7b442e6acf9c3dd8c9f9cdcc5b730"
+    },
+    {
+      "old_root": "TempName/src",
+      "new_root": "TempName-New/src",
+      "scope": "all old files and matching new paths",
+      "excluded": [
+        "__pycache__"
+      ],
+      "old_count": 259,
+      "new_count": 259,
+      "shared_count": 259,
+      "identical_shared_count": 259,
+      "changed": [],
+      "old_only": [],
+      "new_only": [],
+      "equal": true,
+      "old_normalized_map_sha256": "5823ebeab9095816f0281358b8276ece0493fe802305370d2ee53e69f7305706",
+      "new_normalized_map_sha256": "5823ebeab9095816f0281358b8276ece0493fe802305370d2ee53e69f7305706"
+    },
+    {
+      "old_root": "TempName/include",
+      "new_root": "TempName-New/include",
+      "scope": "all old files and matching new paths",
+      "excluded": [
+        "__pycache__"
+      ],
+      "old_count": 40,
+      "new_count": 40,
+      "shared_count": 40,
+      "identical_shared_count": 40,
+      "changed": [],
+      "old_only": [],
+      "new_only": [],
+      "equal": true,
+      "old_normalized_map_sha256": "a936dded1f03ba8d263faec81c818f9b9ee9b26678c6f4d6c141158097369407",
+      "new_normalized_map_sha256": "a936dded1f03ba8d263faec81c818f9b9ee9b26678c6f4d6c141158097369407"
+    },
+    {
+      "old_root": "TempName/python",
+      "new_root": "TempName-New/python",
+      "scope": "all old files and matching new paths",
+      "excluded": [
+        "__pycache__"
+      ],
+      "old_count": 44,
+      "new_count": 44,
+      "shared_count": 44,
+      "identical_shared_count": 44,
+      "changed": [],
+      "old_only": [],
+      "new_only": [],
+      "equal": true,
+      "old_normalized_map_sha256": "86ffd02601de56a6357baa19b15d3cfe1252242d6de85ace2540463b258035ba",
+      "new_normalized_map_sha256": "86ffd02601de56a6357baa19b15d3cfe1252242d6de85ace2540463b258035ba"
+    }
+  ],
+  "repository_build_entrypoints": {
+    "CMakeLists.txt": {
+      "old_sha256": "5ae86f61eaee4000486ef053a1dde3f03f3976f46cf63522b8a5cd042bdefae5",
+      "new_sha256": "5ae86f61eaee4000486ef053a1dde3f03f3976f46cf63522b8a5cd042bdefae5",
+      "equal": true
+    },
+    "setup.py": {
+      "old_sha256": "8d3d9e668fcb6798fdaccca74f8a48a4edb4b4fa07e1b0a1823785e0943c859c",
+      "new_sha256": "8d3d9e668fcb6798fdaccca74f8a48a4edb4b4fa07e1b0a1823785e0943c859c",
+      "equal": true
+    },
+    "build.sh": {
+      "old_sha256": "47d1a7a336935e094177571bec01047a459b61a80d33a95ae01fa7f728adde07",
+      "new_sha256": "47d1a7a336935e094177571bec01047a459b61a80d33a95ae01fa7f728adde07",
+      "equal": true
+    }
+  },
+  "ma11_native_build_sources": {
+    "old_manifest": "TempName/logs/h100/phase6/ma11-v1-causal-softmax-1x-50steps-20261027-202038-900556/fullstep/plan.json",
+    "new_manifest": "Load/logs/ma14-v2-epoch-reuse-1x-50steps-20261031-030311-454459/fullstep/plan.json",
+    "field": "build_identity.source_files",
+    "normalization": "Relative paths after /build/F4-cache-zcount-csoftmax/",
+    "old_count": 358,
+    "new_count": 358,
+    "shared_count": 358,
+    "identical_shared_count": 358,
+    "changed": [],
+    "old_only": [],
+    "new_only": [],
+    "equal": true,
+    "old_normalized_map_sha256": "a004548d5359c93e1a5fcf73a4a6730996dc6fd86f119adbf511fc4b45af9e7b",
+    "new_normalized_map_sha256": "a004548d5359c93e1a5fcf73a4a6730996dc6fd86f119adbf511fc4b45af9e7b"
+  },
+  "ma11_builder_inputs": {
+    "normalization": "Unique filename basename",
+    "old_count": 31,
+    "new_count": 34,
+    "shared_count": 30,
+    "identical_shared_count": 30,
+    "changed": [],
+    "old_only": [
+      "ma11_build.py"
+    ],
+    "new_only": [
+      "ma14_build.py",
+      "ma14_epoch.cuh",
+      "ma14_pair.h",
+      "ma14_sources.py"
+    ],
+    "equal": false,
+    "old_normalized_map_sha256": "fb9b055e52c624993fdfdf805472b8a40de34402373a0bbc6fd2d28c07568c75",
+    "new_normalized_map_sha256": "01028bae87f4a4053c7cd6906ee90592520954f8d1a8318ee5f318e3a0d9ab07"
+  },
+  "frozen_ma11_scripts": {
+    "old_root": "TempName/logs/h100/phase6/ma11-v1-causal-softmax-1x-50steps-20261027-202038-900556/fullstep/scripts",
+    "new_root": "Load/logs/ma14-v2-epoch-reuse-1x-50steps-20261031-030311-454459/fullstep/scripts",
+    "scope": "all files",
+    "excluded": [
+      "__pycache__"
+    ],
+    "old_count": 32,
+    "new_count": 34,
+    "shared_count": 27,
+    "identical_shared_count": 23,
+    "changed": [
+      "config.json",
+      "fullstep-controller.py",
+      "operator-controller.py",
+      "worker.py"
+    ],
+    "old_only": [
+      "ma11_bench.py",
+      "ma11_bench_base.py",
+      "ma11_bench_driver.py",
+      "ma11_fullstep_base.py",
+      "ma11_fullstep_f4.py"
+    ],
+    "new_only": [
+      "ma14_bench.py",
+      "ma14_bench_base.py",
+      "ma14_bench_driver.py",
+      "ma14_fullstep_base.py",
+      "ma14_fullstep_f4.py",
+      "ma14_profile.py",
+      "ma14_sources.py"
+    ],
+    "equal": false,
+    "old_normalized_map_sha256": "ee56864535120924c85a187a9be8f04b9e3137ed9303d9e2871185fabc896b24",
+    "new_normalized_map_sha256": "64b8c9a7ea2a1a07759771bd6dbf6fa3cc9c962fba2224aa445895842a43025e"
+  },
+  "frozen_ma11_megatron": {
+    "old_root": "TempName/logs/h100/phase6/ma11-v1-causal-softmax-1x-50steps-20261027-202038-900556/fullstep/megatron",
+    "new_root": "Load/logs/ma14-v2-epoch-reuse-1x-50steps-20261031-030311-454459/fullstep/megatron",
+    "scope": "all old files and matching new paths",
+    "excluded": [
+      "__pycache__"
+    ],
+    "old_count": 1383,
+    "new_count": 1383,
+    "shared_count": 1383,
+    "identical_shared_count": 1383,
+    "changed": [],
+    "old_only": [],
+    "new_only": [],
+    "equal": true,
+    "old_normalized_map_sha256": "b2b3b906959c133a26766cf559938ea8c83effe05b0b6867c854cb61619527c9",
+    "new_normalized_map_sha256": "b2b3b906959c133a26766cf559938ea8c83effe05b0b6867c854cb61619527c9",
+    "recorded_file_hashes_equal": true,
+    "old_commit": "3ea68ad6042cc1204386ae9364358f7c4de1bc37",
+    "new_commit": "3ea68ad6042cc1204386ae9364358f7c4de1bc37",
+    "old_archive_sha256": "75ca25f98a14d78263c115f0417c7e62d167669901de69ec55666b08c98fe841",
+    "new_archive_sha256": "75ca25f98a14d78263c115f0417c7e62d167669901de69ec55666b08c98fe841"
+  },
+  "ma11_worker_execution_ast": {
+    "old_path": "TempName/logs/h100/phase6/ma11-v1-causal-softmax-1x-50steps-20261027-202038-900556/fullstep/scripts/worker.py",
+    "new_path": "Load/logs/ma14-v2-epoch-reuse-1x-50steps-20261031-030311-454459/fullstep/scripts/worker.py",
+    "functions": {
+      "old_count": 8,
+      "new_count": 8,
+      "shared_count": 8,
+      "identical_shared_count": 8,
+      "changed": [],
+      "old_only": [],
+      "new_only": [],
+      "equal": true,
+      "old_normalized_map_sha256": "55b7e0c430d9b4db02b8c007fdd7cbcb263decf1117ca30a49bd26527841b110",
+      "new_normalized_map_sha256": "55b7e0c430d9b4db02b8c007fdd7cbcb263decf1117ca30a49bd26527841b110"
+    },
+    "old_function_hashes": {
+      "fingerprint": "88753042ebba0fddfb21d236df4da461f2e83eb4187fffa9621abf33509d0dc5",
+      "forward_step": "9f92bfcb7794bf834689382a75e261487a71a44c0ba79226c6a88154b1c12313",
+      "forward_backward_step": "79d6a48241f0c523c830c44ea1c5a282fa06c65180bf01852629ee8f0bbc5931",
+      "update": "fc167ce4b4dbda996b701b32865b0e9e81fa19f0cd8cf8a6edbd3bf9a039e092",
+      "parameter_fingerprints": "385008369c6d0b3fb3a824205ca7e08c83c32a63e7deb7a0812abda7637b88ef",
+      "step": "922ca58b6095784e9205e22804232fc1a01333d69534a12a0c083ba3800bfd33",
+      "clear_gradients": "bc7d91287017387363c32220e94dee782bc65d2b09126ba803925e94bb1b4f29",
+      "loss_number": "f03bda81a85e5cbf9e21bf5a697cc8b0d2d1da189016a942afe62ad8d002d4ed"
+    },
+    "new_function_hashes": {
+      "fingerprint": "88753042ebba0fddfb21d236df4da461f2e83eb4187fffa9621abf33509d0dc5",
+      "forward_step": "9f92bfcb7794bf834689382a75e261487a71a44c0ba79226c6a88154b1c12313",
+      "forward_backward_step": "79d6a48241f0c523c830c44ea1c5a282fa06c65180bf01852629ee8f0bbc5931",
+      "update": "fc167ce4b4dbda996b701b32865b0e9e81fa19f0cd8cf8a6edbd3bf9a039e092",
+      "parameter_fingerprints": "385008369c6d0b3fb3a824205ca7e08c83c32a63e7deb7a0812abda7637b88ef",
+      "step": "922ca58b6095784e9205e22804232fc1a01333d69534a12a0c083ba3800bfd33",
+      "clear_gradients": "bc7d91287017387363c32220e94dee782bc65d2b09126ba803925e94bb1b4f29",
+      "loss_number": "f03bda81a85e5cbf9e21bf5a697cc8b0d2d1da189016a942afe62ad8d002d4ed"
+    },
+    "old_timing_ast_hashes": [
+      "8fa72ca9d33e273f626ae082901facace07355fcfe6ddb4f87d85350699117b3"
+    ],
+    "new_timing_ast_hashes": [
+      "8fa72ca9d33e273f626ae082901facace07355fcfe6ddb4f87d85350699117b3"
+    ],
+    "timing_ast_equal": true
+  },
+  "basic_worker_execution_ast": {
+    "old_path": "TempName/logs/h100/phase6/basic-quant-receiver-1x-50steps-20261025-090410-798870/compare1/scripts/worker.py",
+    "new_path": "Load/logs/mav2-then-ma14-ma18-20261031-014137-056456/mav2/compare1/scripts/worker.py",
+    "functions": {
+      "old_count": 7,
+      "new_count": 7,
+      "shared_count": 7,
+      "identical_shared_count": 7,
+      "changed": [],
+      "old_only": [],
+      "new_only": [],
+      "equal": true,
+      "old_normalized_map_sha256": "4b6d58fe40633129e2049e2f1a88d6bd2e542edd65b170a652f6ed526165954e",
+      "new_normalized_map_sha256": "4b6d58fe40633129e2049e2f1a88d6bd2e542edd65b170a652f6ed526165954e"
+    },
+    "old_function_hashes": {
+      "fingerprint": "88753042ebba0fddfb21d236df4da461f2e83eb4187fffa9621abf33509d0dc5",
+      "forward_step": "9f92bfcb7794bf834689382a75e261487a71a44c0ba79226c6a88154b1c12313",
+      "forward_backward_step": "79d6a48241f0c523c830c44ea1c5a282fa06c65180bf01852629ee8f0bbc5931",
+      "update": "fc167ce4b4dbda996b701b32865b0e9e81fa19f0cd8cf8a6edbd3bf9a039e092",
+      "step": "9ba7720847ad5318006a1ae0324561ed7ad31543a3ddc82c485ec733535d493e",
+      "clear_gradients": "bc7d91287017387363c32220e94dee782bc65d2b09126ba803925e94bb1b4f29",
+      "loss_number": "f03bda81a85e5cbf9e21bf5a697cc8b0d2d1da189016a942afe62ad8d002d4ed"
+    },
+    "new_function_hashes": {
+      "fingerprint": "88753042ebba0fddfb21d236df4da461f2e83eb4187fffa9621abf33509d0dc5",
+      "forward_step": "9f92bfcb7794bf834689382a75e261487a71a44c0ba79226c6a88154b1c12313",
+      "forward_backward_step": "79d6a48241f0c523c830c44ea1c5a282fa06c65180bf01852629ee8f0bbc5931",
+      "update": "fc167ce4b4dbda996b701b32865b0e9e81fa19f0cd8cf8a6edbd3bf9a039e092",
+      "step": "9ba7720847ad5318006a1ae0324561ed7ad31543a3ddc82c485ec733535d493e",
+      "clear_gradients": "bc7d91287017387363c32220e94dee782bc65d2b09126ba803925e94bb1b4f29",
+      "loss_number": "f03bda81a85e5cbf9e21bf5a697cc8b0d2d1da189016a942afe62ad8d002d4ed"
+    },
+    "old_timing_ast_hashes": [
+      "8fa72ca9d33e273f626ae082901facace07355fcfe6ddb4f87d85350699117b3"
+    ],
+    "new_timing_ast_hashes": [
+      "8fa72ca9d33e273f626ae082901facace07355fcfe6ddb4f87d85350699117b3"
+    ],
+    "timing_ast_equal": true
+  },
+  "ma11_model_and_timing": {
+    "model": {
+      "old": {
+        "layers": 32,
+        "hidden": 4096,
+        "ffn": 16384,
+        "heads": 32,
+        "sequence": 2048,
+        "micro_batch": 1,
+        "global_batch": 4,
+        "tp": 8,
+        "sm_count": 132,
+        "seed": 1234,
+        "token_seed": 4321,
+        "vocab": 32768
+      },
+      "new": {
+        "layers": 32,
+        "hidden": 4096,
+        "ffn": 16384,
+        "heads": 32,
+        "sequence": 2048,
+        "micro_batch": 1,
+        "global_batch": 4,
+        "tp": 8,
+        "sm_count": 132,
+        "seed": 1234,
+        "token_seed": 4321,
+        "vocab": 32768
+      },
+      "equal": true
+    },
+    "tuning": {
+      "old": {
+        "attn": {
+          "decoder_threads": 128,
+          "decoder_blocks": 2048,
+          "decoder_rows": 1
+        },
+        "mlp": {
+          "decoder_threads": 128,
+          "decoder_blocks": 2048,
+          "decoder_rows": 1
+        }
+      },
+      "new": {
+        "attn": {
+          "decoder_threads": 128,
+          "decoder_blocks": 2048,
+          "decoder_rows": 1
+        },
+        "mlp": {
+          "decoder_threads": 128,
+          "decoder_blocks": 2048,
+          "decoder_rows": 1
+        }
+      },
+      "equal": true
+    },
+    "warmup_steps": {
+      "old": 10,
+      "new": 10,
+      "equal": true
+    },
+    "timed_steps": {
+      "old": 50,
+      "new": 50,
+      "equal": true
+    },
+    "shared_environment": {
+      "old": {
+        "CUDA_DEVICE_MAX_CONNECTIONS": "1",
+        "FLUX_GEMM_RS_GEMM_ONLY": "1"
+      },
+      "new": {
+        "CUDA_DEVICE_MAX_CONNECTIONS": "1",
+        "FLUX_GEMM_RS_GEMM_ONLY": "1"
+      },
+      "equal": true
+    },
+    "communication": {
+      "old": {
+        "NCCL_VERSION": "2.21.5-1",
+        "NCCL_NVLS_ENABLE": "0",
+        "NCCL_DEBUG": "WARN",
+        "TORCH_NCCL_ASYNC_ERROR_HANDLING": "1"
+      },
+      "new": {
+        "NCCL_VERSION": "2.25.1-1",
+        "NCCL_NVLS_ENABLE": "0",
+        "NCCL_DEBUG": "WARN",
+        "TORCH_NCCL_ASYNC_ERROR_HANDLING": "1"
+      },
+      "equal": false
+    }
+  },
+  "ma11_binary_hashes": {
+    "old_count": 3,
+    "new_count": 3,
+    "shared_count": 3,
+    "identical_shared_count": 0,
+    "changed": [
+      "flux_ths_pybind.cpython-310-x86_64-linux-gnu.so",
+      "libflux_cuda.so",
+      "libflux_cuda_ths_op.so"
+    ],
+    "old_only": [],
+    "new_only": [],
+    "equal": false,
+    "old_normalized_map_sha256": "ca8da97677bdf52776ab3956069e41ef9d072cf58e38f4c8d1492f42f1bcbb08",
+    "new_normalized_map_sha256": "45038054334a6ada903690e00bc163774b2164902659ac20e71bf3f814232d8a",
+    "old": {
+      "libflux_cuda.so": "839852542a25e218d2d4126c2ede1579b5ab648c8359b86e6b192d3deae40f3d",
+      "libflux_cuda_ths_op.so": "37a0ae520c982cddfae0e7dfa8e7f27d58e5b6a53604769fb6aac901c94092a0",
+      "flux_ths_pybind.cpython-310-x86_64-linux-gnu.so": "96e40ce2bb0f11d67549f947b5c559f6d8f194ffb714925ab2611ed6dbe4fec2"
+    },
+    "new": {
+      "libflux_cuda.so": "75a2173eb755e3c9a1f370b767fd9c3094518d2b35426987854f0dfaf2503662",
+      "libflux_cuda_ths_op.so": "ef535939ecfee7a6dc9a09b00edd5d340f1ac4f84aebc1e92987cfca5d5ea7fb",
+      "flux_ths_pybind.cpython-310-x86_64-linux-gnu.so": "d1009a204ae72a0871a8e1974e761a921752e59e25dfa9c862519639d6f0111f"
+    },
+    "caution": "Rebuilds, embedded paths and toolchains can change hashes. Different hashes alone are not proof of performance regression; identical source does not prove identical machine code."
+  },
+  "basic_flux_gemm_sources": {
+    "old_manifest": "TempName/logs/h100/phase6/basic-quant-receiver-1x-50steps-20261025-090410-798870/compare1/provenance/gemm-only-manifest.json",
+    "new_manifest": "Load/logs/mav2-then-ma14-ma18-20261031-014137-056456/mav2/compare1/provenance/gemm-only-manifest.json",
+    "old_count": 349,
+    "new_count": 349,
+    "shared_count": 349,
+    "identical_shared_count": 349,
+    "changed": [],
+    "old_only": [],
+    "new_only": [],
+    "equal": true,
+    "old_normalized_map_sha256": "29451a62c8f2d601b6dd5c7f6d857df32666bd807d3d630b16e433d4d2ee3d28",
+    "new_normalized_map_sha256": "29451a62c8f2d601b6dd5c7f6d857df32666bd807d3d630b16e433d4d2ee3d28",
+    "submodules_equal": true,
+    "submodules": {
+      "cutlass": "df8a550d3917b0e97f416b2ed8c2d786f7f686a3",
+      "nccl": "8c6c5951854a57ba90c4424fa040497f6defac46"
+    }
+  },
+  "basic_codec_sources": {
+    "old_manifest": "TempName/logs/h100/phase6/basic-quant-receiver-1x-50steps-20261025-090410-798870/compare1/provenance/codec-manifest.json",
+    "new_manifest": "Load/logs/mav2-then-ma14-ma18-20261031-014137-056456/mav2/compare1/provenance/codec-manifest.json",
+    "old_count": 6,
+    "new_count": 11,
+    "shared_count": 6,
+    "identical_shared_count": 6,
+    "changed": [],
+    "old_only": [],
+    "new_only": [
+      "mav2_build.py",
+      "mav2_codec.cuh",
+      "mav2_codec.py",
+      "mav2_reference.py",
+      "mav2_validation.py"
+    ],
+    "equal": false,
+    "old_normalized_map_sha256": "f13aa8c7bdc27f5560261ec3c1d072b53b9d014a45df41120332a12ec6a4ada1",
+    "new_normalized_map_sha256": "528890aa314f78d12e794dfb1f19f5713aba6a39f449ff25c623b00d7052630f",
+    "all_old_sources_retained_identically": true,
+    "old_cuda_home": "/usr/local/cuda-12.8",
+    "new_cuda_home": "/usr/local/cuda-12.8",
+    "compiler_sha256_equal": true,
+    "compiler_sha256": "59e4e55f9a38b78c590df1e28a69dad91052958f18a03868ca4a547c043fbba7",
+    "old_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-std=c++17",
+      "-O3",
+      "-shared",
+      "-Xcompiler=-fPIC",
+      "-lineinfo",
+      "-gencode=arch=compute_90,code=sm_90",
+      "--cudart=shared",
+      "/workspace/TempName/logs/h100/phase6/basic-quant-receiver-1x-50steps-20261025-090410-798870/codec-build/basic_quant.cu",
+      "-o",
+      "/workspace/TempName/logs/h100/phase6/basic-quant-receiver-1x-50steps-20261025-090410-798870/codec-build/libbasic_quant.so"
+    ],
+    "new_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-std=c++17",
+      "-O3",
+      "-shared",
+      "-Xcompiler=-fPIC",
+      "-lineinfo",
+      "--ftz=false",
+      "-gencode=arch=compute_90,code=sm_90",
+      "--cudart=shared",
+      "/workspace/TempName-New/logs/h100/phase6/mav2-then-ma14-ma18-20261031-014137-056456/mav2/codec-build/mav2_quant.cu",
+      "-o",
+      "/workspace/TempName-New/logs/h100/phase6/mav2-then-ma14-ma18-20261031-014137-056456/mav2/codec-build/libmav2_quant.so",
+      "-ccbin",
+      "/usr/bin/g++-11"
+    ],
+    "nonpath_command_changes": [
+      "New codec adds --ftz=false",
+      "New codec explicitly chooses -ccbin /usr/bin/g++-11",
+      "New translation unit adds MAV2/D8 alongside basic kernels"
+    ]
+  },
+  "basic_wrapper": {
+    "statement": "Adds policy dispatch and diagnostic bookkeeping; basic still calls original encoder/receiver/all_to_all_single. Diagnostics disabled in timing. Wrapper is not byte-identical.",
+    "evidence": [
+      {
+        "path": "TempName-New/tools/h100/phase6/mav2_codec.py",
+        "lines": [
+          81
+        ],
+        "needle": "if policy == 'basic':"
+      },
+      {
+        "path": "TempName-New/tools/h100/phase6/mav2_codec.py",
+        "lines": [
+          118
+        ],
+        "needle": "fn = lib.basic_quant_decode_reduce"
+      },
+      {
+        "path": "TempName-New/tools/h100/phase6/mav2_codec.py",
+        "lines": [
+          138
+        ],
+        "needle": "self._diagnostic_enabled ="
+      },
+      {
+        "path": "TempName-New/tools/h100/phase6/mav2_codec.py",
+        "lines": [
+          162
+        ],
+        "needle": "dist.all_to_all_single"
+      }
+    ]
+  },
+  "python_runtime": {
+    "representative_rank_records": {
+      "old_ma11": {
+        "path": "TempName/logs/h100/phase6/ma11-v1-causal-softmax-1x-50steps-20261027-202038-900556/fullstep/results/compare1/block00-F4-cache-zcount-csoftmax/rank0.json",
+        "recorded": {
+          "torch": "2.6.0+cu124",
+          "cuda": "12.4",
+          "nccl": [
+            2,
+            21,
+            5
+          ],
+          "python": "/workspace/conda-envs/flux-h100-ablation3-20261017/bin/python"
+        },
+        "python_version_record_present": false
+      },
+      "new_ma11_in_ma14": {
+        "path": "Load/logs/ma14-v2-epoch-reuse-1x-50steps-20261031-030311-454459/fullstep/results/compare1/block00-F4-cache-zcount-csoftmax/rank0.json",
+        "recorded": {
+          "torch": "2.6.0+cu124",
+          "cuda": "12.4",
+          "nccl": [
+            2,
+            21,
+            5
+          ],
+          "python": "/workspace/conda-envs/tempname-h100/bin/python"
+        },
+        "python_version_record_present": false
+      },
+      "old_basic": {
+        "path": "TempName/logs/h100/phase6/basic-quant-receiver-1x-50steps-20261025-090410-798870/compare1/results/round1/window-000-basic/rank0.json",
+        "recorded": {
+          "torch": "2.6.0+cu124",
+          "cuda": "12.4",
+          "nccl": [
+            2,
+            21,
+            5
+          ],
+          "python": "/workspace/conda-envs/flux-h100-ablation3-20261017/bin/python"
+        },
+        "python_version_record_present": false
+      },
+      "new_basic_in_mav2": {
+        "path": "Load/logs/mav2-then-ma14-ma18-20261031-014137-056456/mav2/compare1/results/round1/window-002-basic/rank0.json",
+        "recorded": {
+          "torch": "2.6.0+cu124",
+          "cuda": "12.4",
+          "nccl": [
+            2,
+            21,
+            5
+          ],
+          "python": "/workspace/conda-envs/tempname-h100/bin/python"
+        },
+        "python_version_record_present": false
+      }
+    },
+    "python_field_semantics": "sys.executable only, not sys.version. Paths differ. Exact minor/patch version not recorded by these workers. Both plans list cpython-310 extension ABI names, supporting CPython 3.10 ABI, not patch-version equality.",
+    "evidence": [
+      {
+        "path": "TempName/logs/h100/phase6/ma11-v1-causal-softmax-1x-50steps-20261027-202038-900556/fullstep/scripts/worker.py",
+        "lines": [
+          86
+        ],
+        "needle": "python=sys.executable"
+      },
+      {
+        "path": "Load/logs/ma14-v2-epoch-reuse-1x-50steps-20261031-030311-454459/fullstep/scripts/worker.py",
+        "lines": [
+          84
+        ],
+        "needle": "python=sys.executable"
+      },
+      {
+        "path": "TempName/logs/h100/phase6/basic-quant-receiver-1x-50steps-20261025-090410-798870/compare1/scripts/worker.py",
+        "lines": [
+          83
+        ],
+        "needle": "python=sys.executable"
+      },
+      {
+        "path": "Load/logs/mav2-then-ma14-ma18-20261031-014137-056456/mav2/compare1/scripts/worker.py",
+        "lines": [
+          83
+        ],
+        "needle": "python=sys.executable"
+      }
+    ],
+    "torch_cuda_nccl_recorded_equal": true,
+    "nccl_environment_note": "NCCL_VERSION environment labels differ (2.21.5-1 / 2.25.1-1); torch.cuda.nccl.version records 2.21.5 both times. Environment label is not proof of changed loaded NCCL."
+  },
+  "cpu_affinity": {
+    "same_singleton_assignment_in_four_workers": true,
+    "execution_order": [
+      {
+        "worker": "TempName/logs/h100/phase6/ma11-v1-causal-softmax-1x-50steps-20261027-202038-900556/fullstep/scripts/worker.py",
+        "affinity": {
+          "path": "TempName/logs/h100/phase6/ma11-v1-causal-softmax-1x-50steps-20261027-202038-900556/fullstep/scripts/worker.py",
+          "lines": [
+            18
+          ],
+          "needle": "os.sched_setaffinity"
+        },
+        "torch_import": {
+          "path": "TempName/logs/h100/phase6/ma11-v1-causal-softmax-1x-50steps-20261027-202038-900556/fullstep/scripts/worker.py",
+          "lines": [
+            19,
+            20
+          ],
+          "needle": "import torch"
+        },
+        "initialize_megatron": {
+          "path": "TempName/logs/h100/phase6/ma11-v1-causal-softmax-1x-50steps-20261027-202038-900556/fullstep/scripts/worker.py",
+          "lines": [
+            56
+          ],
+          "needle": "initialize_megatron()"
+        },
+        "cuda_set_device": {
+          "path": "TempName/logs/h100/phase6/ma11-v1-causal-softmax-1x-50steps-20261027-202038-900556/fullstep/scripts/worker.py",
+          "lines": [
+            34
+          ],
+          "needle": "torch.cuda.set_device"
+        }
+      },
+      {
+        "worker": "Load/logs/ma14-v2-epoch-reuse-1x-50steps-20261031-030311-454459/fullstep/scripts/worker.py",
+        "affinity": {
+          "path": "Load/logs/ma14-v2-epoch-reuse-1x-50steps-20261031-030311-454459/fullstep/scripts/worker.py",
+          "lines": [
+            18
+          ],
+          "needle": "os.sched_setaffinity"
+        },
+        "torch_import": {
+          "path": "Load/logs/ma14-v2-epoch-reuse-1x-50steps-20261031-030311-454459/fullstep/scripts/worker.py",
+          "lines": [
+            19,
+            20
+          ],
+          "needle": "import torch"
+        },
+        "initialize_megatron": {
+          "path": "Load/logs/ma14-v2-epoch-reuse-1x-50steps-20261031-030311-454459/fullstep/scripts/worker.py",
+          "lines": [
+            56
+          ],
+          "needle": "initialize_megatron()"
+        },
+        "cuda_set_device": {
+          "path": "Load/logs/ma14-v2-epoch-reuse-1x-50steps-20261031-030311-454459/fullstep/scripts/worker.py",
+          "lines": [
+            34
+          ],
+          "needle": "torch.cuda.set_device"
+        }
+      },
+      {
+        "worker": "TempName/logs/h100/phase6/basic-quant-receiver-1x-50steps-20261025-090410-798870/compare1/scripts/worker.py",
+        "affinity": {
+          "path": "TempName/logs/h100/phase6/basic-quant-receiver-1x-50steps-20261025-090410-798870/compare1/scripts/worker.py",
+          "lines": [
+            18
+          ],
+          "needle": "os.sched_setaffinity"
+        },
+        "torch_import": {
+          "path": "TempName/logs/h100/phase6/basic-quant-receiver-1x-50steps-20261025-090410-798870/compare1/scripts/worker.py",
+          "lines": [
+            19,
+            20
+          ],
+          "needle": "import torch"
+        },
+        "initialize_megatron": {
+          "path": "TempName/logs/h100/phase6/basic-quant-receiver-1x-50steps-20261025-090410-798870/compare1/scripts/worker.py",
+          "lines": [
+            64
+          ],
+          "needle": "initialize_megatron()"
+        },
+        "cuda_set_device": {
+          "path": "TempName/logs/h100/phase6/basic-quant-receiver-1x-50steps-20261025-090410-798870/compare1/scripts/worker.py",
+          "lines": [
+            34
+          ],
+          "needle": "torch.cuda.set_device"
+        }
+      },
+      {
+        "worker": "Load/logs/mav2-then-ma14-ma18-20261031-014137-056456/mav2/compare1/scripts/worker.py",
+        "affinity": {
+          "path": "Load/logs/mav2-then-ma14-ma18-20261031-014137-056456/mav2/compare1/scripts/worker.py",
+          "lines": [
+            18
+          ],
+          "needle": "os.sched_setaffinity"
+        },
+        "torch_import": {
+          "path": "Load/logs/mav2-then-ma14-ma18-20261031-014137-056456/mav2/compare1/scripts/worker.py",
+          "lines": [
+            19,
+            20
+          ],
+          "needle": "import torch"
+        },
+        "initialize_megatron": {
+          "path": "Load/logs/mav2-then-ma14-ma18-20261031-014137-056456/mav2/compare1/scripts/worker.py",
+          "lines": [
+            64
+          ],
+          "needle": "initialize_megatron()"
+        },
+        "cuda_set_device": {
+          "path": "Load/logs/mav2-then-ma14-ma18-20261031-014137-056456/mav2/compare1/scripts/worker.py",
+          "lines": [
+            34
+          ],
+          "needle": "torch.cuda.set_device"
+        }
+      }
+    ],
+    "semantics": "sched_setaffinity(0, ...) changes the calling thread only (worker main thread here), not all already-existing threads. Subsequently created pthreads inherit their creator CPU affinity by default; libraries can change it explicitly. The assignment precedes torch import and CUDA/distributed initialization, so it can constrain later helper threads as well as Python launch execution.",
+    "nccl_semantics": "NCCL defaults to inherited affinity intersected with GPU-local affinity. A singleton mask can remain singleton; an empty intersection leaves inherited affinity unchanged. NCCL_IGNORE_CPU_AFFINITY=1 is a separate setting, not equivalent to widening main-worker affinity.",
+    "local_nccl_evidence": [
+      {
+        "path": "TempName-New/3rdparty/nccl/src/graph/topo.cc",
+        "lines": [
+          788
+        ],
+        "needle": "NCCL_PARAM(IgnoreCpuAffinity"
+      },
+      {
+        "path": "TempName-New/3rdparty/nccl/src/graph/topo.cc",
+        "lines": [
+          814
+        ],
+        "needle": "sched_getaffinity"
+      },
+      {
+        "path": "TempName-New/3rdparty/nccl/src/graph/topo.cc",
+        "lines": [
+          841
+        ],
+        "needle": "CPU_AND"
+      },
+      {
+        "path": "TempName-New/3rdparty/nccl/src/init.cc",
+        "lines": [
+          898,
+          1265
+        ],
+        "needle": "sched_setaffinity"
+      }
+    ],
+    "local_nccl_limitation": "Vendored NCCL is 2.19.3, recorded PyTorch NCCL 2.21.5. Local source corroborates a mechanism, not loaded PyTorch implementation or live thread-mask identity.",
+    "hypothetical_mappings": [
+      {
+        "allowed_cpus": "0-127",
+        "world_size": 8,
+        "logical_cpus_by_local_rank": [
+          0,
+          16,
+          32,
+          48,
+          64,
+          80,
+          96,
+          112
+        ]
+      },
+      {
+        "allowed_cpus": "0-255",
+        "world_size": 8,
+        "logical_cpus_by_local_rank": [
+          0,
+          32,
+          64,
+          96,
+          128,
+          160,
+          192,
+          224
+        ]
+      }
+    ],
+    "physical_core_conflict_claimed": false,
+    "unknowns": [
+      "Historical allowed CPU sets",
+      "Selected logical CPUs actual socket/core/SMT sibling mapping",
+      "CUDA/NCCL thread masks after initialization",
+      "CPU frequency, cgroup throttling, contention and NUMA locality"
+    ],
+    "ab_recommendation": "Create fresh diagnostic runs on new server using same binaries/model/environment/timing. A preserves singleton mask. B replaces early assignment with non-overlapping GPU-local masks spanning 2-4 physical cores per rank, one logical CPU per core and intersected with cpuset. Apply before library initialization. Keep OMP_NUM_THREADS, MKL_NUM_THREADS and all other variables fixed. Measure balanced A/B, reverse order when noise warrants. Record each /proc/PID/task/TID/status mask after distributed initialization. Improvement is an experimental question.",
+    "taskset_caution": "Only taskset/numactl around launcher is insufficient: existing worker line 18 immediately narrows the inherited set to one logical CPU again. Change policy only in a fresh diagnostic worker/generator, retaining frozen evidence.",
+    "verification_commands": [
+      "lscpu -e=CPU,CORE,SOCKET,NODE,ONLINE",
+      "nvidia-smi topo -m",
+      "cat /proc/PID/status",
+      "cat /proc/PID/task/TID/status"
+    ],
+    "primary_sources": [
+      {
+        "title": "Linux sched_setaffinity(2)",
+        "url": "https://man7.org/linux/man-pages/man2/sched_setaffinity.2.html",
+        "supports": "Per-thread attribute; pid 0 targets caller."
+      },
+      {
+        "title": "Linux pthread_create(3)",
+        "url": "https://man7.org/linux/man-pages/man3/pthread_create.3.html",
+        "supports": "New Linux pthread inherits creator CPU affinity."
+      },
+      {
+        "title": "NVIDIA NCCL NCCL_IGNORE_CPU_AFFINITY",
+        "url": "https://docs.nvidia.com/deeplearning/nccl/user-guide/docs/env.html#nccl-ignore-cpu-affinity",
+        "supports": "Default inherited/GPU-local intersection and handling of empty intersection; explicit ignore switch; cpuset restrictions remain."
+      }
+    ]
+  },
+  "key_evidence": [
+    {
+      "path": "TempName-New/tools/h100/phase6/ma14_sources.py",
+      "lines": [
+        228
+      ],
+      "needle": "result = baseline.sources"
+    },
+    {
+      "path": "TempName-New/tools/h100/phase6/ma14_sources.py",
+      "lines": [
+        229
+      ],
+      "needle": "if arm == VARIANTS[0]"
+    },
+    {
+      "path": "TempName/logs/h100/phase6/ma11-v1-causal-softmax-1x-50steps-20261027-202038-900556/fullstep/plan.json",
+      "lines": [
+        231524,
+        233799
+      ],
+      "needle": "\"source_files\": {"
+    },
+    {
+      "path": "Load/logs/ma14-v2-epoch-reuse-1x-50steps-20261031-030311-454459/fullstep/plan.json",
+      "lines": [
+        231527,
+        233807
+      ],
+      "needle": "\"source_files\": {"
+    },
+    {
+      "path": "TempName/logs/h100/phase6/basic-quant-receiver-1x-50steps-20261025-090410-798870/compare1/provenance/gemm-only-manifest.json",
+      "lines": [
+        43
+      ],
+      "needle": "\"source_sha256\": {"
+    },
+    {
+      "path": "Load/logs/mav2-then-ma14-ma18-20261031-014137-056456/mav2/compare1/provenance/gemm-only-manifest.json",
+      "lines": [
+        43
+      ],
+      "needle": "\"source_sha256\": {"
+    },
+    {
+      "path": "TempName/logs/h100/phase6/basic-quant-receiver-1x-50steps-20261025-090410-798870/compare1/provenance/codec-manifest.json",
+      "lines": [
+        45
+      ],
+      "needle": "\"compiler_sha256\""
+    },
+    {
+      "path": "Load/logs/mav2-then-ma14-ma18-20261031-014137-056456/mav2/compare1/provenance/codec-manifest.json",
+      "lines": [
+        83
+      ],
+      "needle": "\"compiler_sha256\""
+    }
+  ],
+  "limitations": [
+    "No GPU load executed in code audit.",
+    "Not a same-host old/new performance A/B.",
+    "Source identity does not establish runtime dependency, binary, OS, CPU/GPU clock, power, topology or load identity.",
+    "Old native build directory is not present locally; native comparison uses recorded historical source hashes.",
+    "Frozen execution evidence checked separately from current worktrees.",
+    "Exact Python patch versions absent from inspected records."
+  ]
+}

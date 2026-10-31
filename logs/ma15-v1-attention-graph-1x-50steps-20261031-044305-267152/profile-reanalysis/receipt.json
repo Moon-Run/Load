@@ -1,0 +1,224 @@
+{
+  "protocol": "ma15-offline-profile-reanalysis-v1",
+  "completed_at_utc": "2026-10-31T02:50:01.692709+00:00",
+  "operator": {
+    "timing_verified": true,
+    "profile_verified": true,
+    "report_sha256": "ff8077b6a1fcec855991629d5b507607d32b28283919612b6ab9c51f5632bcb1",
+    "profile_sha256": "50cf5593e43c674bd9e879bfaacd44ee1378a35b4b4072a6f30d650c59ec8f97"
+  },
+  "fullstep_execution_validated": true,
+  "formal_optimizer_steps": 800,
+  "timing_windows": 16,
+  "profile_rank_records": 16,
+  "changed_reader_functions": [
+    "_same_stream_order",
+    "trace_attention_graph_records"
+  ],
+  "original_reader_sha256": "e4db2924b04452edced70c835be6e96d6faa5b9888a5b336810a424e38e8fafc",
+  "corrected_reader_sha256": "7f77a3b82190bfaa6242aa561e87a3c63e016564b94dd54b6e59255a29c84324",
+  "reanalysis_tool_sha256": "2f32c3de27ee714119ab6e97cecd6f71a8e5195b81c65323a7fc3e159b88ba26",
+  "input_sha256": {
+    "/data/run01/scyb672/hjr/Load/logs/ma15-v1-attention-graph-1x-50steps-20261031-044305-267152/batch-state.json": "482069bef46ca29bf2c644a5ca1074092ebe07edd3381fe45ac4874ee235f899",
+    "/data/run01/scyb672/hjr/Load/logs/ma15-v1-attention-graph-1x-50steps-20261031-044305-267152/fullstep/plan.json": "5d2b87997357f8bef911abe0cefcc5b0d8bc40a3a5cc0d4405e75f2ec3d6860a",
+    "/data/run01/scyb672/hjr/Load/logs/ma15-v1-attention-graph-1x-50steps-20261031-044305-267152/operator/plan.json": "3b53522ba895faea789d878f91ea779c0f5b12cdce4e4683d448268338f041a4",
+    "/data/run01/scyb672/hjr/Load/logs/ma15-v1-attention-graph-1x-50steps-20261031-044305-267152/fullstep/report.json": "b0bc20ebbe2f692cc72fe15ae136be53ee3945f78eca96982080f7afdadfa5c4",
+    "/data/run01/scyb672/hjr/Load/logs/ma15-v1-attention-graph-1x-50steps-20261031-044305-267152/operator/report.json": "ff8077b6a1fcec855991629d5b507607d32b28283919612b6ab9c51f5632bcb1",
+    "/data/run01/scyb672/hjr/Load/logs/ma15-v1-attention-graph-1x-50steps-20261031-044305-267152/operator/profile-summary.json": "50cf5593e43c674bd9e879bfaacd44ee1378a35b4b4072a6f30d650c59ec8f97",
+    "/data/run01/scyb672/hjr/TempName-New/tools/h100/phase6/ma15_profile.py": "7f77a3b82190bfaa6242aa561e87a3c63e016564b94dd54b6e59255a29c84324",
+    "/data/run01/scyb672/hjr/TempName-New/tools/h100/phase6/reanalyze_ma15_profile.py": "2f32c3de27ee714119ab6e97cecd6f71a8e5195b81c65323a7fc3e159b88ba26",
+    "/data/run01/scyb672/hjr/Load/logs/ma15-v1-attention-graph-1x-50steps-20261031-044305-267152/fullstep/results/profile-F4-cache-zcount-csoftmax/rank0-profile.json.gz": "30be084b59d26fa13dafe8af61578268f8accc3de56149ee4b10429410172a51",
+    "/data/run01/scyb672/hjr/Load/logs/ma15-v1-attention-graph-1x-50steps-20261031-044305-267152/fullstep/results/profile-F4-cache-zcount-csoftmax/rank0.json": "8cdedfa5fcf759a9ffd96a53a1cac19d673168885ceaa6309ed1534b5633b95f",
+    "/data/run01/scyb672/hjr/Load/logs/ma15-v1-attention-graph-1x-50steps-20261031-044305-267152/fullstep/results/profile-F4-cache-zcount-csoftmax/rank1-profile.json.gz": "dd5ba129d0fa6ccd34bd682397cd72bedd49caa2281dd7bb2a00589da58d974e",
+    "/data/run01/scyb672/hjr/Load/logs/ma15-v1-attention-graph-1x-50steps-20261031-044305-267152/fullstep/results/profile-F4-cache-zcount-csoftmax/rank1.json": "d801b12ebe5700dc5539509967b7c6ee45d4a311f1a3c9f322ad761db9861b35",
+    "/data/run01/scyb672/hjr/Load/logs/ma15-v1-attention-graph-1x-50steps-20261031-044305-267152/fullstep/results/profile-F4-cache-zcount-csoftmax/rank2-profile.json.gz": "228a33c634d6d0770a8ef328ec5e9bb31a93789a0107a6d2d3db459ff7beb172",
+    "/data/run01/scyb672/hjr/Load/logs/ma15-v1-attention-graph-1x-50steps-20261031-044305-267152/fullstep/results/profile-F4-cache-zcount-csoftmax/rank2.json": "364bac3d4b96274d7b348e35a9614bd0388bf5800ada0b0d1e9f343e7f90e9db",
+    "/data/run01/scyb672/hjr/Load/logs/ma15-v1-attention-graph-1x-50steps-20261031-044305-267152/fullstep/results/profile-F4-cache-zcount-csoftmax/rank3-profile.json.gz": "b0611f248a099f0eeb200a023647f89b5b8c146e274550fcaea4433083678de6",
+    "/data/run01/scyb672/hjr/Load/logs/ma15-v1-attention-graph-1x-50steps-20261031-044305-267152/fullstep/results/profile-F4-cache-zcount-csoftmax/rank3.json": "d32465cadb7b874c98d854a585872791ee1ac7b84be2c348b10802b7f744e8aa",
+    "/data/run01/scyb672/hjr/Load/logs/ma15-v1-attention-graph-1x-50steps-20261031-044305-267152/fullstep/results/profile-F4-cache-zcount-csoftmax/rank4-profile.json.gz": "0acccf69a22632f7306895c4789d20c4b50244027e6debb9a4059a43374932d9",
+    "/data/run01/scyb672/hjr/Load/logs/ma15-v1-attention-graph-1x-50steps-20261031-044305-267152/fullstep/results/profile-F4-cache-zcount-csoftmax/rank4.json": "e32b8728e914e7574993aea305e77eb21f4dec06c8e61f39703a8c9c646ce7f7",
+    "/data/run01/scyb672/hjr/Load/logs/ma15-v1-attention-graph-1x-50steps-20261031-044305-267152/fullstep/results/profile-F4-cache-zcount-csoftmax/rank5-profile.json.gz": "170708cf3b4bbdf773aa67fdc2bc5e9093ca500073b744962b033c09567e93a1",
+    "/data/run01/scyb672/hjr/Load/logs/ma15-v1-attention-graph-1x-50steps-20261031-044305-267152/fullstep/results/profile-F4-cache-zcount-csoftmax/rank5.json": "1d78e4caa7fe79a49b5d9dbebbe13938ba1772a4a8846ef83b42788629d6f942",
+    "/data/run01/scyb672/hjr/Load/logs/ma15-v1-attention-graph-1x-50steps-20261031-044305-267152/fullstep/results/profile-F4-cache-zcount-csoftmax/rank6-profile.json.gz": "bb960d65484b6d59f48575e9b5e5539880cf6774c412e55c9c6d2e8f1039a7f2",
+    "/data/run01/scyb672/hjr/Load/logs/ma15-v1-attention-graph-1x-50steps-20261031-044305-267152/fullstep/results/profile-F4-cache-zcount-csoftmax/rank6.json": "c62eb89a3ab7ac9ab6a5fb4a5926aa08368a812465f8d114ab4317e5887667ea",
+    "/data/run01/scyb672/hjr/Load/logs/ma15-v1-attention-graph-1x-50steps-20261031-044305-267152/fullstep/results/profile-F4-cache-zcount-csoftmax/rank7-profile.json.gz": "db45a62ef2d9364522604f3e6bff7ea5f8ffa146eb3ba4db66baad00fd3a872a",
+    "/data/run01/scyb672/hjr/Load/logs/ma15-v1-attention-graph-1x-50steps-20261031-044305-267152/fullstep/results/profile-F4-cache-zcount-csoftmax/rank7.json": "48cfcbc1a521319b371ccdad91b7cd117c6bf5b0f2feec9a151ed1c74c74d0e9",
+    "/data/run01/scyb672/hjr/Load/logs/ma15-v1-attention-graph-1x-50steps-20261031-044305-267152/fullstep/results/profile-F4-cache-zcount-csoftmax-agraph/rank0-profile.json.gz": "b1109da3e47a61abb9e289d1b5b83559ed3f62470a94fa120de53ac95f0283cb",
+    "/data/run01/scyb672/hjr/Load/logs/ma15-v1-attention-graph-1x-50steps-20261031-044305-267152/fullstep/results/profile-F4-cache-zcount-csoftmax-agraph/rank0.json": "09a7d367568881627c73afa01c392a780ae0cbe817256d02498ddb3337d4ca09",
+    "/data/run01/scyb672/hjr/Load/logs/ma15-v1-attention-graph-1x-50steps-20261031-044305-267152/fullstep/results/profile-F4-cache-zcount-csoftmax-agraph/rank1-profile.json.gz": "f4305cd58fabb9f0d64ce3c45411aa37ec8d3fdc14331693731751bd1e33132c",
+    "/data/run01/scyb672/hjr/Load/logs/ma15-v1-attention-graph-1x-50steps-20261031-044305-267152/fullstep/results/profile-F4-cache-zcount-csoftmax-agraph/rank1.json": "5ae0e91903f632fb1af4e4ca19e2c27aed8c1f905363a9f8d9ba76ad58f98f2e",
+    "/data/run01/scyb672/hjr/Load/logs/ma15-v1-attention-graph-1x-50steps-20261031-044305-267152/fullstep/results/profile-F4-cache-zcount-csoftmax-agraph/rank2-profile.json.gz": "04b2bbcb4f87e8d75c5238dc1134fef756fbb1df86fa8da3e71b615608aaf543",
+    "/data/run01/scyb672/hjr/Load/logs/ma15-v1-attention-graph-1x-50steps-20261031-044305-267152/fullstep/results/profile-F4-cache-zcount-csoftmax-agraph/rank2.json": "7b7600e15fb6454cf3f82335ea00f851d075b45908c4b1ff26d793b3d052af74",
+    "/data/run01/scyb672/hjr/Load/logs/ma15-v1-attention-graph-1x-50steps-20261031-044305-267152/fullstep/results/profile-F4-cache-zcount-csoftmax-agraph/rank3-profile.json.gz": "511d0057000319782a669d998b8bf3aa35bb79f4884d26de9fe902f33a270e4b",
+    "/data/run01/scyb672/hjr/Load/logs/ma15-v1-attention-graph-1x-50steps-20261031-044305-267152/fullstep/results/profile-F4-cache-zcount-csoftmax-agraph/rank3.json": "6a02d180650275ca0cbd63ae8e81dd87ea4fc279afbf4d26c3cacb534d950cc5",
+    "/data/run01/scyb672/hjr/Load/logs/ma15-v1-attention-graph-1x-50steps-20261031-044305-267152/fullstep/results/profile-F4-cache-zcount-csoftmax-agraph/rank4-profile.json.gz": "722e2eae251e3afa6ee03886e4ed80f3e9f1fed3ccd5fccd9fd017b87101190e",
+    "/data/run01/scyb672/hjr/Load/logs/ma15-v1-attention-graph-1x-50steps-20261031-044305-267152/fullstep/results/profile-F4-cache-zcount-csoftmax-agraph/rank4.json": "60b42815be224138f01d542324b3714f15144e4eaf947e1291396501098e0e1a",
+    "/data/run01/scyb672/hjr/Load/logs/ma15-v1-attention-graph-1x-50steps-20261031-044305-267152/fullstep/results/profile-F4-cache-zcount-csoftmax-agraph/rank5-profile.json.gz": "950617946e91594c31c3f513bcb0689d66ae699084bd3f057393baae5108ea9c",
+    "/data/run01/scyb672/hjr/Load/logs/ma15-v1-attention-graph-1x-50steps-20261031-044305-267152/fullstep/results/profile-F4-cache-zcount-csoftmax-agraph/rank5.json": "731a9b0f5ea38e0a57200da85698a8f2faba42ecf3d00e6adaa3e5458dfe0a88",
+    "/data/run01/scyb672/hjr/Load/logs/ma15-v1-attention-graph-1x-50steps-20261031-044305-267152/fullstep/results/profile-F4-cache-zcount-csoftmax-agraph/rank6-profile.json.gz": "fd553950f09a3dea393d53027110f7e047e98540ccb9772efff3c00fdfe14c0d",
+    "/data/run01/scyb672/hjr/Load/logs/ma15-v1-attention-graph-1x-50steps-20261031-044305-267152/fullstep/results/profile-F4-cache-zcount-csoftmax-agraph/rank6.json": "c47919dd4d2ec116cd05a205111f58c20e70d25c5aff004b168d7c78ac723931",
+    "/data/run01/scyb672/hjr/Load/logs/ma15-v1-attention-graph-1x-50steps-20261031-044305-267152/fullstep/results/profile-F4-cache-zcount-csoftmax-agraph/rank7-profile.json.gz": "6a2b5510c18ade39c3bf7f882479236daaed6feacee6e915fda9f403e48d79aa",
+    "/data/run01/scyb672/hjr/Load/logs/ma15-v1-attention-graph-1x-50steps-20261031-044305-267152/fullstep/results/profile-F4-cache-zcount-csoftmax-agraph/rank7.json": "721ea186883be6edc39bc675ccd6972860ac665e754d9772bbe3142cac800d16"
+  },
+  "timestamp_order_checks": {
+    "F4-cache-zcount-csoftmax-agraph/rank0": {
+      "strict_boundary_tolerance_us": 0.01,
+      "graph_kernel_tolerance_us": 0.5,
+      "max_fraction_of_shorter_kernel": 0.05,
+      "tolerated_overlap_count": 0,
+      "max_observed_overlap_us": 0,
+      "tolerated_overlaps": [],
+      "note": "Bounded CUPTI timestamp overlap within one correlated graph launch; not evidence of physical kernel concurrency. Staging/RNG/replay boundaries remain strict."
+    },
+    "F4-cache-zcount-csoftmax-agraph/rank1": {
+      "strict_boundary_tolerance_us": 0.01,
+      "graph_kernel_tolerance_us": 0.5,
+      "max_fraction_of_shorter_kernel": 0.05,
+      "tolerated_overlap_count": 0,
+      "max_observed_overlap_us": 0,
+      "tolerated_overlaps": [],
+      "note": "Bounded CUPTI timestamp overlap within one correlated graph launch; not evidence of physical kernel concurrency. Staging/RNG/replay boundaries remain strict."
+    },
+    "F4-cache-zcount-csoftmax-agraph/rank2": {
+      "strict_boundary_tolerance_us": 0.01,
+      "graph_kernel_tolerance_us": 0.5,
+      "max_fraction_of_shorter_kernel": 0.05,
+      "tolerated_overlap_count": 1,
+      "max_observed_overlap_us": 0.0947265625,
+      "tolerated_overlaps": [
+        {
+          "correlation": 2098006,
+          "device": 2,
+          "context": 1,
+          "stream": 7,
+          "predecessor": "sm90_xmma_gemm_bf16bf16_bf16f32_f32_nn_n_tilesize128x128x64_warpgroupsize1x1x1_execute_segment_k_off_kernel__5x_cublas",
+          "successor": "void at::native::vectorized_elementwise_kernel<4, at::native::AUnaryFunctor<c10::BFloat16, c10::BFloat16, c10::BFloat16, at::native::binary_internal::MulFunctor<float> >, std::array<char*, 2ul> >(int, at::native::AUnaryFunctor<c10::BFloat16, c10::BFloat16, c10::BFloat16, at::native::binary_internal::MulFunctor<float> >, std::array<char*, 2ul>)",
+          "predecessor_ts_us": 2541618653578.321,
+          "successor_ts_us": 2541618653597.266,
+          "observed_overlap_us": 0.0947265625,
+          "allowed_overlap_us": 0.12960000000000002,
+          "phase": "backward"
+        }
+      ],
+      "note": "Bounded CUPTI timestamp overlap within one correlated graph launch; not evidence of physical kernel concurrency. Staging/RNG/replay boundaries remain strict."
+    },
+    "F4-cache-zcount-csoftmax-agraph/rank3": {
+      "strict_boundary_tolerance_us": 0.01,
+      "graph_kernel_tolerance_us": 0.5,
+      "max_fraction_of_shorter_kernel": 0.05,
+      "tolerated_overlap_count": 0,
+      "max_observed_overlap_us": 0,
+      "tolerated_overlaps": [],
+      "note": "Bounded CUPTI timestamp overlap within one correlated graph launch; not evidence of physical kernel concurrency. Staging/RNG/replay boundaries remain strict."
+    },
+    "F4-cache-zcount-csoftmax-agraph/rank4": {
+      "strict_boundary_tolerance_us": 0.01,
+      "graph_kernel_tolerance_us": 0.5,
+      "max_fraction_of_shorter_kernel": 0.05,
+      "tolerated_overlap_count": 0,
+      "max_observed_overlap_us": 0,
+      "tolerated_overlaps": [],
+      "note": "Bounded CUPTI timestamp overlap within one correlated graph launch; not evidence of physical kernel concurrency. Staging/RNG/replay boundaries remain strict."
+    },
+    "F4-cache-zcount-csoftmax-agraph/rank5": {
+      "strict_boundary_tolerance_us": 0.01,
+      "graph_kernel_tolerance_us": 0.5,
+      "max_fraction_of_shorter_kernel": 0.05,
+      "tolerated_overlap_count": 0,
+      "max_observed_overlap_us": 0,
+      "tolerated_overlaps": [],
+      "note": "Bounded CUPTI timestamp overlap within one correlated graph launch; not evidence of physical kernel concurrency. Staging/RNG/replay boundaries remain strict."
+    },
+    "F4-cache-zcount-csoftmax-agraph/rank6": {
+      "strict_boundary_tolerance_us": 0.01,
+      "graph_kernel_tolerance_us": 0.5,
+      "max_fraction_of_shorter_kernel": 0.05,
+      "tolerated_overlap_count": 0,
+      "max_observed_overlap_us": 0,
+      "tolerated_overlaps": [],
+      "note": "Bounded CUPTI timestamp overlap within one correlated graph launch; not evidence of physical kernel concurrency. Staging/RNG/replay boundaries remain strict."
+    },
+    "F4-cache-zcount-csoftmax-agraph/rank7": {
+      "strict_boundary_tolerance_us": 0.01,
+      "graph_kernel_tolerance_us": 0.5,
+      "max_fraction_of_shorter_kernel": 0.05,
+      "tolerated_overlap_count": 0,
+      "max_observed_overlap_us": 0,
+      "tolerated_overlaps": [],
+      "note": "Bounded CUPTI timestamp overlap within one correlated graph launch; not evidence of physical kernel concurrency. Staging/RNG/replay boundaries remain strict."
+    }
+  },
+  "comparisons": {
+    "compare1": {
+      "run_id": "2968e55ff773421f8fbd84ce2158a32b",
+      "rounds": {
+        "round1": {
+          "mean_ms": {
+            "F4-cache-zcount-csoftmax": 596.8047943618149,
+            "F4-cache-zcount-csoftmax-agraph": 542.7802253235132
+          },
+          "median_ms": {
+            "F4-cache-zcount-csoftmax": 592.3301051743329,
+            "F4-cache-zcount-csoftmax-agraph": 541.0134311020374
+          },
+          "comparisons": {
+            "F4-cache-zcount-csoftmax-agraph/F4-cache-zcount-csoftmax": {
+              "percent": 9.041753135312847,
+              "ci95": [
+                8.060247780545527,
+                10.012780402656817
+              ],
+              "paired_blocks": 4
+            }
+          }
+        },
+        "round2": {
+          "mean_ms": {
+            "F4-cache-zcount-csoftmax": 597.5351313780993,
+            "F4-cache-zcount-csoftmax-agraph": 548.5296687204391
+          },
+          "median_ms": {
+            "F4-cache-zcount-csoftmax": 599.5169454813004,
+            "F4-cache-zcount-csoftmax-agraph": 550.0663511641324
+          },
+          "comparisons": {
+            "F4-cache-zcount-csoftmax-agraph/F4-cache-zcount-csoftmax": {
+              "percent": 8.199402663101306,
+              "ci95": [
+                7.989330696164032,
+                8.36331555385087
+              ],
+              "paired_blocks": 4
+            }
+          }
+        },
+        "combined": {
+          "mean_ms": {
+            "F4-cache-zcount-csoftmax": 597.1699628699571,
+            "F4-cache-zcount-csoftmax-agraph": 545.6549470219761
+          },
+          "median_ms": {
+            "F4-cache-zcount-csoftmax": 596.787276007235,
+            "F4-cache-zcount-csoftmax-agraph": 546.1477698758245
+          },
+          "comparisons": {
+            "F4-cache-zcount-csoftmax-agraph/F4-cache-zcount-csoftmax": {
+              "percent": 8.621548519930734,
+              "ci95": [
+                8.069993076760573,
+                9.252088285722893
+              ],
+              "paired_blocks": 8
+            }
+          }
+        }
+      },
+      "increment_over_MA11_validated": {
+        "F4-cache-zcount-csoftmax-agraph": true
+      },
+      "target_point_observed": true,
+      "target_validated": true
+    }
+  },
+  "limitation": "Offline validation of archived rank records and traces. No new GPU run, library rebuild, host-state measurement, or affinity retest."
+}
