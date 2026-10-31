@@ -1,0 +1,95 @@
+START smoke-F4-cache-zcount-csoftmax
+START smoke-F4-cache-zcount-csoftmax-epoch
+START compare1/block00-F4-cache-zcount-csoftmax
+START compare1/block00-F4-cache-zcount-csoftmax-epoch
+START compare1/block01-F4-cache-zcount-csoftmax-epoch
+START compare1/block01-F4-cache-zcount-csoftmax
+START compare1/block02-F4-cache-zcount-csoftmax
+START compare1/block02-F4-cache-zcount-csoftmax-epoch
+START compare1/block03-F4-cache-zcount-csoftmax-epoch
+START compare1/block03-F4-cache-zcount-csoftmax
+START compare1/block04-F4-cache-zcount-csoftmax
+START compare1/block04-F4-cache-zcount-csoftmax-epoch
+START compare1/block05-F4-cache-zcount-csoftmax-epoch
+START compare1/block05-F4-cache-zcount-csoftmax
+START compare1/block06-F4-cache-zcount-csoftmax
+START compare1/block06-F4-cache-zcount-csoftmax-epoch
+START compare1/block07-F4-cache-zcount-csoftmax-epoch
+START compare1/block07-F4-cache-zcount-csoftmax
+{
+  "comparisons": {
+    "compare1": {
+      "run_id": "c9d351edf2d04f23a23109845528002c",
+      "rounds": {
+        "round1": {
+          "mean_ms": {
+            "F4-cache-zcount-csoftmax": 334.2174692917615,
+            "F4-cache-zcount-csoftmax-epoch": 340.80195686779916
+          },
+          "median_ms": {
+            "F4-cache-zcount-csoftmax": 333.4409604407847,
+            "F4-cache-zcount-csoftmax-epoch": 344.2293705791235
+          },
+          "comparisons": {
+            "F4-cache-zcount-csoftmax-epoch/F4-cache-zcount-csoftmax": {
+              "percent": -1.9745607978207458,
+              "ci95": [
+                -6.701657534435834,
+                2.5431161033985794
+              ],
+              "paired_blocks": 4
+            }
+          }
+        },
+        "round2": {
+          "mean_ms": {
+            "F4-cache-zcount-csoftmax": 342.837573075667,
+            "F4-cache-zcount-csoftmax-epoch": 354.40080747008324
+          },
+          "median_ms": {
+            "F4-cache-zcount-csoftmax": 342.6335408166051,
+            "F4-cache-zcount-csoftmax-epoch": 356.28984678536654
+          },
+          "comparisons": {
+            "F4-cache-zcount-csoftmax-epoch/F4-cache-zcount-csoftmax": {
+              "percent": -3.355764559287522,
+              "ci95": [
+                -6.342249649297083,
+                -1.1648550079945696
+              ],
+              "paired_blocks": 4
+            }
+          }
+        },
+        "combined": {
+          "mean_ms": {
+            "F4-cache-zcount-csoftmax": 338.52752118371427,
+            "F4-cache-zcount-csoftmax-epoch": 347.6013821689412
+          },
+          "median_ms": {
+            "F4-cache-zcount-csoftmax": 338.45341654494405,
+            "F4-cache-zcount-csoftmax-epoch": 351.8363968655467
+          },
+          "comparisons": {
+            "F4-cache-zcount-csoftmax-epoch/F4-cache-zcount-csoftmax": {
+              "percent": -2.6628399025485416,
+              "ci95": [
+                -5.359255645141281,
+                0.21025576842348404
+              ],
+              "paired_blocks": 8
+            }
+          }
+        }
+      },
+      "increment_over_MA11_validated": {
+        "F4-cache-zcount-csoftmax-epoch": false
+      },
+      "target_point_observed": false,
+      "target_validated": false
+    }
+  },
+  "increment_over_MA11_validated": {
+    "F4-cache-zcount-csoftmax-epoch": false
+  }
+}

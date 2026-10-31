@@ -1,0 +1,1468 @@
+{
+  "protocol": "h100-ma14-epoch-reuse-v2-operator",
+  "run_id": "1315dd27774c411bb48c221b3e5ab20f",
+  "completed": true,
+  "execution_path_validated": true,
+  "target_validated": false,
+  "profiles": {
+    "F4-cache-zcount-csoftmax/rank0/attn": {
+      "calls": 4,
+      "execution_path_validated": true,
+      "consumer_add_kernels_per_call": 0,
+      "fused_consumer": true,
+      "launch": {
+        "gemm_grid": [
+          512,
+          1,
+          1
+        ],
+        "gemm_block": [
+          128,
+          1,
+          1
+        ],
+        "decoder_grid": [
+          2048,
+          1,
+          1
+        ],
+        "decoder_block": [
+          128,
+          1,
+          1
+        ],
+        "decoder_rows": 1,
+        "receiver_variant": 0,
+        "decoder_kernel": "taco_ma4f_decode_consumer_kernel"
+      },
+      "submission_attribution": "CPU intervals use correlated launch API timestamps inside the existing projection scope; they include profiler overhead and other host submission work. They neither isolate guard cost nor measure GPU execution time or unprofiled training savings.",
+      "sum_us": {
+        "cpu_marker_to_gemm_launch_us": 521.078125,
+        "gemm_to_barrier_api_gap_us": 9.92041015625
+      },
+      "median_us": {
+        "cpu_marker_to_gemm_launch_us": 23.652587890625,
+        "gemm_to_barrier_api_gap_us": 1.63671875,
+        "cpu_us": 61.2945,
+        "barrier_us": 113.8895,
+        "decoder_us": 11.008500000000002,
+        "chain_us": 190.962158203125
+      }
+    },
+    "F4-cache-zcount-csoftmax/rank0/mlp": {
+      "calls": 4,
+      "execution_path_validated": true,
+      "consumer_add_kernels_per_call": 0,
+      "fused_consumer": true,
+      "launch": {
+        "gemm_grid": [
+          512,
+          1,
+          1
+        ],
+        "gemm_block": [
+          128,
+          1,
+          1
+        ],
+        "decoder_grid": [
+          2048,
+          1,
+          1
+        ],
+        "decoder_block": [
+          128,
+          1,
+          1
+        ],
+        "decoder_rows": 1,
+        "receiver_variant": 0,
+        "decoder_kernel": "taco_ma4f_decode_consumer_kernel"
+      },
+      "submission_attribution": "CPU intervals use correlated launch API timestamps inside the existing projection scope; they include profiler overhead and other host submission work. They neither isolate guard cost nor measure GPU execution time or unprofiled training savings.",
+      "sum_us": {
+        "cpu_marker_to_gemm_launch_us": 1623.0869140625,
+        "gemm_to_barrier_api_gap_us": 8.9853515625
+      },
+      "median_us": {
+        "cpu_marker_to_gemm_launch_us": 27.14453125,
+        "gemm_to_barrier_api_gap_us": 1.613037109375,
+        "cpu_us": 65.163,
+        "barrier_us": 7.7285,
+        "decoder_us": 12.192499999999999,
+        "chain_us": 137.345703125
+      }
+    },
+    "F4-cache-zcount-csoftmax/rank1/attn": {
+      "calls": 4,
+      "execution_path_validated": true,
+      "consumer_add_kernels_per_call": 0,
+      "fused_consumer": true,
+      "launch": {
+        "gemm_grid": [
+          512,
+          1,
+          1
+        ],
+        "gemm_block": [
+          128,
+          1,
+          1
+        ],
+        "decoder_grid": [
+          2048,
+          1,
+          1
+        ],
+        "decoder_block": [
+          128,
+          1,
+          1
+        ],
+        "decoder_rows": 1,
+        "receiver_variant": 0,
+        "decoder_kernel": "taco_ma4f_decode_consumer_kernel"
+      },
+      "submission_attribution": "CPU intervals use correlated launch API timestamps inside the existing projection scope; they include profiler overhead and other host submission work. They neither isolate guard cost nor measure GPU execution time or unprofiled training savings.",
+      "sum_us": {
+        "cpu_marker_to_gemm_launch_us": 574.32177734375,
+        "gemm_to_barrier_api_gap_us": 13.107421875
+      },
+      "median_us": {
+        "cpu_marker_to_gemm_launch_us": 31.583984375,
+        "gemm_to_barrier_api_gap_us": 2.106689453125,
+        "cpu_us": 73.5125,
+        "barrier_us": 244.435,
+        "decoder_us": 11.216,
+        "chain_us": 323.6513671875
+      }
+    },
+    "F4-cache-zcount-csoftmax/rank1/mlp": {
+      "calls": 4,
+      "execution_path_validated": true,
+      "consumer_add_kernels_per_call": 0,
+      "fused_consumer": true,
+      "launch": {
+        "gemm_grid": [
+          512,
+          1,
+          1
+        ],
+        "gemm_block": [
+          128,
+          1,
+          1
+        ],
+        "decoder_grid": [
+          2048,
+          1,
+          1
+        ],
+        "decoder_block": [
+          128,
+          1,
+          1
+        ],
+        "decoder_rows": 1,
+        "receiver_variant": 0,
+        "decoder_kernel": "taco_ma4f_decode_consumer_kernel"
+      },
+      "submission_attribution": "CPU intervals use correlated launch API timestamps inside the existing projection scope; they include profiler overhead and other host submission work. They neither isolate guard cost nor measure GPU execution time or unprofiled training savings.",
+      "sum_us": {
+        "cpu_marker_to_gemm_launch_us": 1052.36181640625,
+        "gemm_to_barrier_api_gap_us": 8.712890625
+      },
+      "median_us": {
+        "cpu_marker_to_gemm_launch_us": 24.052001953125,
+        "gemm_to_barrier_api_gap_us": 1.6376953125,
+        "cpu_us": 57.521499999999996,
+        "barrier_us": 68.7855,
+        "decoder_us": 11.4555,
+        "chain_us": 197.714111328125
+      }
+    },
+    "F4-cache-zcount-csoftmax/rank2/attn": {
+      "calls": 4,
+      "execution_path_validated": true,
+      "consumer_add_kernels_per_call": 0,
+      "fused_consumer": true,
+      "launch": {
+        "gemm_grid": [
+          512,
+          1,
+          1
+        ],
+        "gemm_block": [
+          128,
+          1,
+          1
+        ],
+        "decoder_grid": [
+          2048,
+          1,
+          1
+        ],
+        "decoder_block": [
+          128,
+          1,
+          1
+        ],
+        "decoder_rows": 1,
+        "receiver_variant": 0,
+        "decoder_kernel": "taco_ma4f_decode_consumer_kernel"
+      },
+      "submission_attribution": "CPU intervals use correlated launch API timestamps inside the existing projection scope; they include profiler overhead and other host submission work. They neither isolate guard cost nor measure GPU execution time or unprofiled training savings.",
+      "sum_us": {
+        "cpu_marker_to_gemm_launch_us": 515.9638671875,
+        "gemm_to_barrier_api_gap_us": 9.330078125
+      },
+      "median_us": {
+        "cpu_marker_to_gemm_launch_us": 24.077880859375,
+        "gemm_to_barrier_api_gap_us": 1.655029296875,
+        "cpu_us": 63.3275,
+        "barrier_us": 205.3465,
+        "decoder_us": 10.6085,
+        "chain_us": 283.9873046875
+      }
+    },
+    "F4-cache-zcount-csoftmax/rank2/mlp": {
+      "calls": 4,
+      "execution_path_validated": true,
+      "consumer_add_kernels_per_call": 0,
+      "fused_consumer": true,
+      "launch": {
+        "gemm_grid": [
+          512,
+          1,
+          1
+        ],
+        "gemm_block": [
+          128,
+          1,
+          1
+        ],
+        "decoder_grid": [
+          2048,
+          1,
+          1
+        ],
+        "decoder_block": [
+          128,
+          1,
+          1
+        ],
+        "decoder_rows": 1,
+        "receiver_variant": 0,
+        "decoder_kernel": "taco_ma4f_decode_consumer_kernel"
+      },
+      "submission_attribution": "CPU intervals use correlated launch API timestamps inside the existing projection scope; they include profiler overhead and other host submission work. They neither isolate guard cost nor measure GPU execution time or unprofiled training savings.",
+      "sum_us": {
+        "cpu_marker_to_gemm_launch_us": 467.376953125,
+        "gemm_to_barrier_api_gap_us": 8.8037109375
+      },
+      "median_us": {
+        "cpu_marker_to_gemm_launch_us": 24.137451171875,
+        "gemm_to_barrier_api_gap_us": 1.860107421875,
+        "cpu_us": 58.643499999999996,
+        "barrier_us": 66.2885,
+        "decoder_us": 11.5525,
+        "chain_us": 196.082763671875
+      }
+    },
+    "F4-cache-zcount-csoftmax/rank3/attn": {
+      "calls": 4,
+      "execution_path_validated": true,
+      "consumer_add_kernels_per_call": 0,
+      "fused_consumer": true,
+      "launch": {
+        "gemm_grid": [
+          512,
+          1,
+          1
+        ],
+        "gemm_block": [
+          128,
+          1,
+          1
+        ],
+        "decoder_grid": [
+          2048,
+          1,
+          1
+        ],
+        "decoder_block": [
+          128,
+          1,
+          1
+        ],
+        "decoder_rows": 1,
+        "receiver_variant": 0,
+        "decoder_kernel": "taco_ma4f_decode_consumer_kernel"
+      },
+      "submission_attribution": "CPU intervals use correlated launch API timestamps inside the existing projection scope; they include profiler overhead and other host submission work. They neither isolate guard cost nor measure GPU execution time or unprofiled training savings.",
+      "sum_us": {
+        "cpu_marker_to_gemm_launch_us": 571.6279296875,
+        "gemm_to_barrier_api_gap_us": 11.84716796875
+      },
+      "median_us": {
+        "cpu_marker_to_gemm_launch_us": 27.72900390625,
+        "gemm_to_barrier_api_gap_us": 1.89453125,
+        "cpu_us": 67.292,
+        "barrier_us": 251.3145,
+        "decoder_us": 11.216,
+        "chain_us": 330.626708984375
+      }
+    },
+    "F4-cache-zcount-csoftmax/rank3/mlp": {
+      "calls": 4,
+      "execution_path_validated": true,
+      "consumer_add_kernels_per_call": 0,
+      "fused_consumer": true,
+      "launch": {
+        "gemm_grid": [
+          512,
+          1,
+          1
+        ],
+        "gemm_block": [
+          128,
+          1,
+          1
+        ],
+        "decoder_grid": [
+          2048,
+          1,
+          1
+        ],
+        "decoder_block": [
+          128,
+          1,
+          1
+        ],
+        "decoder_rows": 1,
+        "receiver_variant": 0,
+        "decoder_kernel": "taco_ma4f_decode_consumer_kernel"
+      },
+      "submission_attribution": "CPU intervals use correlated launch API timestamps inside the existing projection scope; they include profiler overhead and other host submission work. They neither isolate guard cost nor measure GPU execution time or unprofiled training savings.",
+      "sum_us": {
+        "cpu_marker_to_gemm_launch_us": 496.87890625,
+        "gemm_to_barrier_api_gap_us": 8.83203125
+      },
+      "median_us": {
+        "cpu_marker_to_gemm_launch_us": 24.621337890625,
+        "gemm_to_barrier_api_gap_us": 1.8154296875,
+        "cpu_us": 59.9055,
+        "barrier_us": 66.4485,
+        "decoder_us": 11.6,
+        "chain_us": 194.034423828125
+      }
+    },
+    "F4-cache-zcount-csoftmax/rank4/attn": {
+      "calls": 4,
+      "execution_path_validated": true,
+      "consumer_add_kernels_per_call": 0,
+      "fused_consumer": true,
+      "launch": {
+        "gemm_grid": [
+          512,
+          1,
+          1
+        ],
+        "gemm_block": [
+          128,
+          1,
+          1
+        ],
+        "decoder_grid": [
+          2048,
+          1,
+          1
+        ],
+        "decoder_block": [
+          128,
+          1,
+          1
+        ],
+        "decoder_rows": 1,
+        "receiver_variant": 0,
+        "decoder_kernel": "taco_ma4f_decode_consumer_kernel"
+      },
+      "submission_attribution": "CPU intervals use correlated launch API timestamps inside the existing projection scope; they include profiler overhead and other host submission work. They neither isolate guard cost nor measure GPU execution time or unprofiled training savings.",
+      "sum_us": {
+        "cpu_marker_to_gemm_launch_us": 573.0498046875,
+        "gemm_to_barrier_api_gap_us": 10.6748046875
+      },
+      "median_us": {
+        "cpu_marker_to_gemm_launch_us": 26.212158203125,
+        "gemm_to_barrier_api_gap_us": 1.83154296875,
+        "cpu_us": 65.3155,
+        "barrier_us": 7.7435,
+        "decoder_us": 10.672,
+        "chain_us": 85.296142578125
+      }
+    },
+    "F4-cache-zcount-csoftmax/rank4/mlp": {
+      "calls": 4,
+      "execution_path_validated": true,
+      "consumer_add_kernels_per_call": 0,
+      "fused_consumer": true,
+      "launch": {
+        "gemm_grid": [
+          512,
+          1,
+          1
+        ],
+        "gemm_block": [
+          128,
+          1,
+          1
+        ],
+        "decoder_grid": [
+          2048,
+          1,
+          1
+        ],
+        "decoder_block": [
+          128,
+          1,
+          1
+        ],
+        "decoder_rows": 1,
+        "receiver_variant": 0,
+        "decoder_kernel": "taco_ma4f_decode_consumer_kernel"
+      },
+      "submission_attribution": "CPU intervals use correlated launch API timestamps inside the existing projection scope; they include profiler overhead and other host submission work. They neither isolate guard cost nor measure GPU execution time or unprofiled training savings.",
+      "sum_us": {
+        "cpu_marker_to_gemm_launch_us": 492.8408203125,
+        "gemm_to_barrier_api_gap_us": 8.013671875
+      },
+      "median_us": {
+        "cpu_marker_to_gemm_launch_us": 22.868896484375,
+        "gemm_to_barrier_api_gap_us": 1.612060546875,
+        "cpu_us": 56.6875,
+        "barrier_us": 69.9535,
+        "decoder_us": 11.168,
+        "chain_us": 197.058837890625
+      }
+    },
+    "F4-cache-zcount-csoftmax/rank5/attn": {
+      "calls": 4,
+      "execution_path_validated": true,
+      "consumer_add_kernels_per_call": 0,
+      "fused_consumer": true,
+      "launch": {
+        "gemm_grid": [
+          512,
+          1,
+          1
+        ],
+        "gemm_block": [
+          128,
+          1,
+          1
+        ],
+        "decoder_grid": [
+          2048,
+          1,
+          1
+        ],
+        "decoder_block": [
+          128,
+          1,
+          1
+        ],
+        "decoder_rows": 1,
+        "receiver_variant": 0,
+        "decoder_kernel": "taco_ma4f_decode_consumer_kernel"
+      },
+      "submission_attribution": "CPU intervals use correlated launch API timestamps inside the existing projection scope; they include profiler overhead and other host submission work. They neither isolate guard cost nor measure GPU execution time or unprofiled training savings.",
+      "sum_us": {
+        "cpu_marker_to_gemm_launch_us": 545.50390625,
+        "gemm_to_barrier_api_gap_us": 11.40234375
+      },
+      "median_us": {
+        "cpu_marker_to_gemm_launch_us": 26.342529296875,
+        "gemm_to_barrier_api_gap_us": 1.865966796875,
+        "cpu_us": 67.004,
+        "barrier_us": 251.1705,
+        "decoder_us": 10.864,
+        "chain_us": 327.9716796875
+      }
+    },
+    "F4-cache-zcount-csoftmax/rank5/mlp": {
+      "calls": 4,
+      "execution_path_validated": true,
+      "consumer_add_kernels_per_call": 0,
+      "fused_consumer": true,
+      "launch": {
+        "gemm_grid": [
+          512,
+          1,
+          1
+        ],
+        "gemm_block": [
+          128,
+          1,
+          1
+        ],
+        "decoder_grid": [
+          2048,
+          1,
+          1
+        ],
+        "decoder_block": [
+          128,
+          1,
+          1
+        ],
+        "decoder_rows": 1,
+        "receiver_variant": 0,
+        "decoder_kernel": "taco_ma4f_decode_consumer_kernel"
+      },
+      "submission_attribution": "CPU intervals use correlated launch API timestamps inside the existing projection scope; they include profiler overhead and other host submission work. They neither isolate guard cost nor measure GPU execution time or unprofiled training savings.",
+      "sum_us": {
+        "cpu_marker_to_gemm_launch_us": 1068.14404296875,
+        "gemm_to_barrier_api_gap_us": 8.66552734375
+      },
+      "median_us": {
+        "cpu_marker_to_gemm_launch_us": 24.531982421875,
+        "gemm_to_barrier_api_gap_us": 1.779052734375,
+        "cpu_us": 57.635,
+        "barrier_us": 66.129,
+        "decoder_us": 11.6165,
+        "chain_us": 195.0439453125
+      }
+    },
+    "F4-cache-zcount-csoftmax/rank6/attn": {
+      "calls": 4,
+      "execution_path_validated": true,
+      "consumer_add_kernels_per_call": 0,
+      "fused_consumer": true,
+      "launch": {
+        "gemm_grid": [
+          512,
+          1,
+          1
+        ],
+        "gemm_block": [
+          128,
+          1,
+          1
+        ],
+        "decoder_grid": [
+          2048,
+          1,
+          1
+        ],
+        "decoder_block": [
+          128,
+          1,
+          1
+        ],
+        "decoder_rows": 1,
+        "receiver_variant": 0,
+        "decoder_kernel": "taco_ma4f_decode_consumer_kernel"
+      },
+      "submission_attribution": "CPU intervals use correlated launch API timestamps inside the existing projection scope; they include profiler overhead and other host submission work. They neither isolate guard cost nor measure GPU execution time or unprofiled training savings.",
+      "sum_us": {
+        "cpu_marker_to_gemm_launch_us": 544.37841796875,
+        "gemm_to_barrier_api_gap_us": 11.6943359375
+      },
+      "median_us": {
+        "cpu_marker_to_gemm_launch_us": 23.220703125,
+        "gemm_to_barrier_api_gap_us": 2.053466796875,
+        "cpu_us": 62.9245,
+        "barrier_us": 258.2115,
+        "decoder_us": 10.688500000000001,
+        "chain_us": 334.260986328125
+      }
+    },
+    "F4-cache-zcount-csoftmax/rank6/mlp": {
+      "calls": 4,
+      "execution_path_validated": true,
+      "consumer_add_kernels_per_call": 0,
+      "fused_consumer": true,
+      "launch": {
+        "gemm_grid": [
+          512,
+          1,
+          1
+        ],
+        "gemm_block": [
+          128,
+          1,
+          1
+        ],
+        "decoder_grid": [
+          2048,
+          1,
+          1
+        ],
+        "decoder_block": [
+          128,
+          1,
+          1
+        ],
+        "decoder_rows": 1,
+        "receiver_variant": 0,
+        "decoder_kernel": "taco_ma4f_decode_consumer_kernel"
+      },
+      "submission_attribution": "CPU intervals use correlated launch API timestamps inside the existing projection scope; they include profiler overhead and other host submission work. They neither isolate guard cost nor measure GPU execution time or unprofiled training savings.",
+      "sum_us": {
+        "cpu_marker_to_gemm_launch_us": 486.9560546875,
+        "gemm_to_barrier_api_gap_us": 7.59521484375
+      },
+      "median_us": {
+        "cpu_marker_to_gemm_launch_us": 23.40087890625,
+        "gemm_to_barrier_api_gap_us": 1.64404296875,
+        "cpu_us": 58.004000000000005,
+        "barrier_us": 66.8785,
+        "decoder_us": 11.136,
+        "chain_us": 196.397216796875
+      }
+    },
+    "F4-cache-zcount-csoftmax/rank7/attn": {
+      "calls": 4,
+      "execution_path_validated": true,
+      "consumer_add_kernels_per_call": 0,
+      "fused_consumer": true,
+      "launch": {
+        "gemm_grid": [
+          512,
+          1,
+          1
+        ],
+        "gemm_block": [
+          128,
+          1,
+          1
+        ],
+        "decoder_grid": [
+          2048,
+          1,
+          1
+        ],
+        "decoder_block": [
+          128,
+          1,
+          1
+        ],
+        "decoder_rows": 1,
+        "receiver_variant": 0,
+        "decoder_kernel": "taco_ma4f_decode_consumer_kernel"
+      },
+      "submission_attribution": "CPU intervals use correlated launch API timestamps inside the existing projection scope; they include profiler overhead and other host submission work. They neither isolate guard cost nor measure GPU execution time or unprofiled training savings.",
+      "sum_us": {
+        "cpu_marker_to_gemm_launch_us": 1985.4375,
+        "gemm_to_barrier_api_gap_us": 10.7392578125
+      },
+      "median_us": {
+        "cpu_marker_to_gemm_launch_us": 27.821044921875,
+        "gemm_to_barrier_api_gap_us": 2.117919921875,
+        "cpu_us": 70.1625,
+        "barrier_us": 246.739,
+        "decoder_us": 10.7685,
+        "chain_us": 327.85986328125
+      }
+    },
+    "F4-cache-zcount-csoftmax/rank7/mlp": {
+      "calls": 4,
+      "execution_path_validated": true,
+      "consumer_add_kernels_per_call": 0,
+      "fused_consumer": true,
+      "launch": {
+        "gemm_grid": [
+          512,
+          1,
+          1
+        ],
+        "gemm_block": [
+          128,
+          1,
+          1
+        ],
+        "decoder_grid": [
+          2048,
+          1,
+          1
+        ],
+        "decoder_block": [
+          128,
+          1,
+          1
+        ],
+        "decoder_rows": 1,
+        "receiver_variant": 0,
+        "decoder_kernel": "taco_ma4f_decode_consumer_kernel"
+      },
+      "submission_attribution": "CPU intervals use correlated launch API timestamps inside the existing projection scope; they include profiler overhead and other host submission work. They neither isolate guard cost nor measure GPU execution time or unprofiled training savings.",
+      "sum_us": {
+        "cpu_marker_to_gemm_launch_us": 466.7626953125,
+        "gemm_to_barrier_api_gap_us": 8.390625
+      },
+      "median_us": {
+        "cpu_marker_to_gemm_launch_us": 21.1318359375,
+        "gemm_to_barrier_api_gap_us": 1.703857421875,
+        "cpu_us": 56.048,
+        "barrier_us": 68.12899999999999,
+        "decoder_us": 11.120000000000001,
+        "chain_us": 197.60302734375
+      }
+    },
+    "F4-cache-zcount-csoftmax-epoch/rank0/attn": {
+      "calls": 4,
+      "execution_path_validated": true,
+      "consumer_add_kernels_per_call": 0,
+      "fused_consumer": true,
+      "launch": {
+        "gemm_grid": [
+          512,
+          1,
+          1
+        ],
+        "gemm_block": [
+          128,
+          1,
+          1
+        ],
+        "decoder_grid": [
+          2048,
+          1,
+          1
+        ],
+        "decoder_block": [
+          128,
+          1,
+          1
+        ],
+        "decoder_rows": 1,
+        "receiver_variant": 0,
+        "decoder_kernel": "taco_ma4f_decode_consumer_kernel"
+      },
+      "submission_attribution": "CPU intervals use correlated launch API timestamps inside the existing projection scope; they include profiler overhead and other host submission work. They neither isolate guard cost nor measure GPU execution time or unprofiled training savings.",
+      "sum_us": {
+        "cpu_marker_to_gemm_launch_us": 629.587890625,
+        "gemm_to_barrier_api_gap_us": 4.669921875
+      },
+      "median_us": {
+        "cpu_marker_to_gemm_launch_us": 31.314453125,
+        "gemm_to_barrier_api_gap_us": 0.918701171875,
+        "cpu_us": 77.225,
+        "barrier_us": 51.345,
+        "decoder_us": 10.8955,
+        "chain_us": 127.42529296875
+      }
+    },
+    "F4-cache-zcount-csoftmax-epoch/rank0/mlp": {
+      "calls": 4,
+      "execution_path_validated": true,
+      "consumer_add_kernels_per_call": 0,
+      "fused_consumer": true,
+      "launch": {
+        "gemm_grid": [
+          512,
+          1,
+          1
+        ],
+        "gemm_block": [
+          128,
+          1,
+          1
+        ],
+        "decoder_grid": [
+          2048,
+          1,
+          1
+        ],
+        "decoder_block": [
+          128,
+          1,
+          1
+        ],
+        "decoder_rows": 1,
+        "receiver_variant": 0,
+        "decoder_kernel": "taco_ma4f_decode_consumer_kernel"
+      },
+      "submission_attribution": "CPU intervals use correlated launch API timestamps inside the existing projection scope; they include profiler overhead and other host submission work. They neither isolate guard cost nor measure GPU execution time or unprofiled training savings.",
+      "sum_us": {
+        "cpu_marker_to_gemm_launch_us": 1056.0068359375,
+        "gemm_to_barrier_api_gap_us": 3.8525390625
+      },
+      "median_us": {
+        "cpu_marker_to_gemm_launch_us": 22.577392578125,
+        "gemm_to_barrier_api_gap_us": 0.60498046875,
+        "cpu_us": 56.352000000000004,
+        "barrier_us": 48.1605,
+        "decoder_us": 11.808,
+        "chain_us": 177.810302734375
+      }
+    },
+    "F4-cache-zcount-csoftmax-epoch/rank1/attn": {
+      "calls": 4,
+      "execution_path_validated": true,
+      "consumer_add_kernels_per_call": 0,
+      "fused_consumer": true,
+      "launch": {
+        "gemm_grid": [
+          512,
+          1,
+          1
+        ],
+        "gemm_block": [
+          128,
+          1,
+          1
+        ],
+        "decoder_grid": [
+          2048,
+          1,
+          1
+        ],
+        "decoder_block": [
+          128,
+          1,
+          1
+        ],
+        "decoder_rows": 1,
+        "receiver_variant": 0,
+        "decoder_kernel": "taco_ma4f_decode_consumer_kernel"
+      },
+      "submission_attribution": "CPU intervals use correlated launch API timestamps inside the existing projection scope; they include profiler overhead and other host submission work. They neither isolate guard cost nor measure GPU execution time or unprofiled training savings.",
+      "sum_us": {
+        "cpu_marker_to_gemm_launch_us": 652.30322265625,
+        "gemm_to_barrier_api_gap_us": 5.27685546875
+      },
+      "median_us": {
+        "cpu_marker_to_gemm_launch_us": 31.965087890625,
+        "gemm_to_barrier_api_gap_us": 1.0966796875,
+        "cpu_us": 79.467,
+        "barrier_us": 6.928,
+        "decoder_us": 11.216,
+        "chain_us": 84.737548828125
+      }
+    },
+    "F4-cache-zcount-csoftmax-epoch/rank1/mlp": {
+      "calls": 4,
+      "execution_path_validated": true,
+      "consumer_add_kernels_per_call": 0,
+      "fused_consumer": true,
+      "launch": {
+        "gemm_grid": [
+          512,
+          1,
+          1
+        ],
+        "gemm_block": [
+          128,
+          1,
+          1
+        ],
+        "decoder_grid": [
+          2048,
+          1,
+          1
+        ],
+        "decoder_block": [
+          128,
+          1,
+          1
+        ],
+        "decoder_rows": 1,
+        "receiver_variant": 0,
+        "decoder_kernel": "taco_ma4f_decode_consumer_kernel"
+      },
+      "submission_attribution": "CPU intervals use correlated launch API timestamps inside the existing projection scope; they include profiler overhead and other host submission work. They neither isolate guard cost nor measure GPU execution time or unprofiled training savings.",
+      "sum_us": {
+        "cpu_marker_to_gemm_launch_us": 1081.3046875,
+        "gemm_to_barrier_api_gap_us": 4.47314453125
+      },
+      "median_us": {
+        "cpu_marker_to_gemm_launch_us": 34.03173828125,
+        "gemm_to_barrier_api_gap_us": 0.770751953125,
+        "cpu_us": 67.3885,
+        "barrier_us": 39.5525,
+        "decoder_us": 11.52,
+        "chain_us": 168.53125
+      }
+    },
+    "F4-cache-zcount-csoftmax-epoch/rank2/attn": {
+      "calls": 4,
+      "execution_path_validated": true,
+      "consumer_add_kernels_per_call": 0,
+      "fused_consumer": true,
+      "launch": {
+        "gemm_grid": [
+          512,
+          1,
+          1
+        ],
+        "gemm_block": [
+          128,
+          1,
+          1
+        ],
+        "decoder_grid": [
+          2048,
+          1,
+          1
+        ],
+        "decoder_block": [
+          128,
+          1,
+          1
+        ],
+        "decoder_rows": 1,
+        "receiver_variant": 0,
+        "decoder_kernel": "taco_ma4f_decode_consumer_kernel"
+      },
+      "submission_attribution": "CPU intervals use correlated launch API timestamps inside the existing projection scope; they include profiler overhead and other host submission work. They neither isolate guard cost nor measure GPU execution time or unprofiled training savings.",
+      "sum_us": {
+        "cpu_marker_to_gemm_launch_us": 566.89404296875,
+        "gemm_to_barrier_api_gap_us": 4.8955078125
+      },
+      "median_us": {
+        "cpu_marker_to_gemm_launch_us": 27.862060546875,
+        "gemm_to_barrier_api_gap_us": 0.75927734375,
+        "cpu_us": 65.4965,
+        "barrier_us": 297.604,
+        "decoder_us": 10.88,
+        "chain_us": 374.96533203125
+      }
+    },
+    "F4-cache-zcount-csoftmax-epoch/rank2/mlp": {
+      "calls": 4,
+      "execution_path_validated": true,
+      "consumer_add_kernels_per_call": 0,
+      "fused_consumer": true,
+      "launch": {
+        "gemm_grid": [
+          512,
+          1,
+          1
+        ],
+        "gemm_block": [
+          128,
+          1,
+          1
+        ],
+        "decoder_grid": [
+          2048,
+          1,
+          1
+        ],
+        "decoder_block": [
+          128,
+          1,
+          1
+        ],
+        "decoder_rows": 1,
+        "receiver_variant": 0,
+        "decoder_kernel": "taco_ma4f_decode_consumer_kernel"
+      },
+      "submission_attribution": "CPU intervals use correlated launch API timestamps inside the existing projection scope; they include profiler overhead and other host submission work. They neither isolate guard cost nor measure GPU execution time or unprofiled training savings.",
+      "sum_us": {
+        "cpu_marker_to_gemm_launch_us": 501.07861328125,
+        "gemm_to_barrier_api_gap_us": 4.7900390625
+      },
+      "median_us": {
+        "cpu_marker_to_gemm_launch_us": 25.348388671875,
+        "gemm_to_barrier_api_gap_us": 0.715576171875,
+        "cpu_us": 59.549499999999995,
+        "barrier_us": 48.385000000000005,
+        "decoder_us": 11.5685,
+        "chain_us": 177.60205078125
+      }
+    },
+    "F4-cache-zcount-csoftmax-epoch/rank3/attn": {
+      "calls": 4,
+      "execution_path_validated": true,
+      "consumer_add_kernels_per_call": 0,
+      "fused_consumer": true,
+      "launch": {
+        "gemm_grid": [
+          512,
+          1,
+          1
+        ],
+        "gemm_block": [
+          128,
+          1,
+          1
+        ],
+        "decoder_grid": [
+          2048,
+          1,
+          1
+        ],
+        "decoder_block": [
+          128,
+          1,
+          1
+        ],
+        "decoder_rows": 1,
+        "receiver_variant": 0,
+        "decoder_kernel": "taco_ma4f_decode_consumer_kernel"
+      },
+      "submission_attribution": "CPU intervals use correlated launch API timestamps inside the existing projection scope; they include profiler overhead and other host submission work. They neither isolate guard cost nor measure GPU execution time or unprofiled training savings.",
+      "sum_us": {
+        "cpu_marker_to_gemm_launch_us": 585.5,
+        "gemm_to_barrier_api_gap_us": 5.169921875
+      },
+      "median_us": {
+        "cpu_marker_to_gemm_launch_us": 25.631591796875,
+        "gemm_to_barrier_api_gap_us": 0.798583984375,
+        "cpu_us": 63.3405,
+        "barrier_us": 292.9305,
+        "decoder_us": 11.312,
+        "chain_us": 368.89892578125
+      }
+    },
+    "F4-cache-zcount-csoftmax-epoch/rank3/mlp": {
+      "calls": 4,
+      "execution_path_validated": true,
+      "consumer_add_kernels_per_call": 0,
+      "fused_consumer": true,
+      "launch": {
+        "gemm_grid": [
+          512,
+          1,
+          1
+        ],
+        "gemm_block": [
+          128,
+          1,
+          1
+        ],
+        "decoder_grid": [
+          2048,
+          1,
+          1
+        ],
+        "decoder_block": [
+          128,
+          1,
+          1
+        ],
+        "decoder_rows": 1,
+        "receiver_variant": 0,
+        "decoder_kernel": "taco_ma4f_decode_consumer_kernel"
+      },
+      "submission_attribution": "CPU intervals use correlated launch API timestamps inside the existing projection scope; they include profiler overhead and other host submission work. They neither isolate guard cost nor measure GPU execution time or unprofiled training savings.",
+      "sum_us": {
+        "cpu_marker_to_gemm_launch_us": 491.66943359375,
+        "gemm_to_barrier_api_gap_us": 3.67041015625
+      },
+      "median_us": {
+        "cpu_marker_to_gemm_launch_us": 27.03271484375,
+        "gemm_to_barrier_api_gap_us": 0.69384765625,
+        "cpu_us": 62.1905,
+        "barrier_us": 47.4885,
+        "decoder_us": 11.504,
+        "chain_us": 175.073486328125
+      }
+    },
+    "F4-cache-zcount-csoftmax-epoch/rank4/attn": {
+      "calls": 4,
+      "execution_path_validated": true,
+      "consumer_add_kernels_per_call": 0,
+      "fused_consumer": true,
+      "launch": {
+        "gemm_grid": [
+          512,
+          1,
+          1
+        ],
+        "gemm_block": [
+          128,
+          1,
+          1
+        ],
+        "decoder_grid": [
+          2048,
+          1,
+          1
+        ],
+        "decoder_block": [
+          128,
+          1,
+          1
+        ],
+        "decoder_rows": 1,
+        "receiver_variant": 0,
+        "decoder_kernel": "taco_ma4f_decode_consumer_kernel"
+      },
+      "submission_attribution": "CPU intervals use correlated launch API timestamps inside the existing projection scope; they include profiler overhead and other host submission work. They neither isolate guard cost nor measure GPU execution time or unprofiled training savings.",
+      "sum_us": {
+        "cpu_marker_to_gemm_launch_us": 1956.27978515625,
+        "gemm_to_barrier_api_gap_us": 5.1328125
+      },
+      "median_us": {
+        "cpu_marker_to_gemm_launch_us": 35.710205078125,
+        "gemm_to_barrier_api_gap_us": 1.0849609375,
+        "cpu_us": 90.7165,
+        "barrier_us": 9.6965,
+        "decoder_us": 10.832,
+        "chain_us": 228.6748046875
+      }
+    },
+    "F4-cache-zcount-csoftmax-epoch/rank4/mlp": {
+      "calls": 4,
+      "execution_path_validated": true,
+      "consumer_add_kernels_per_call": 0,
+      "fused_consumer": true,
+      "launch": {
+        "gemm_grid": [
+          512,
+          1,
+          1
+        ],
+        "gemm_block": [
+          128,
+          1,
+          1
+        ],
+        "decoder_grid": [
+          2048,
+          1,
+          1
+        ],
+        "decoder_block": [
+          128,
+          1,
+          1
+        ],
+        "decoder_rows": 1,
+        "receiver_variant": 0,
+        "decoder_kernel": "taco_ma4f_decode_consumer_kernel"
+      },
+      "submission_attribution": "CPU intervals use correlated launch API timestamps inside the existing projection scope; they include profiler overhead and other host submission work. They neither isolate guard cost nor measure GPU execution time or unprofiled training savings.",
+      "sum_us": {
+        "cpu_marker_to_gemm_launch_us": 1643.5625,
+        "gemm_to_barrier_api_gap_us": 4.1123046875
+      },
+      "median_us": {
+        "cpu_marker_to_gemm_launch_us": 23.026123046875,
+        "gemm_to_barrier_api_gap_us": 0.69580078125,
+        "cpu_us": 57.657,
+        "barrier_us": 6.096,
+        "decoder_us": 11.888,
+        "chain_us": 133.28173828125
+      }
+    },
+    "F4-cache-zcount-csoftmax-epoch/rank5/attn": {
+      "calls": 4,
+      "execution_path_validated": true,
+      "consumer_add_kernels_per_call": 0,
+      "fused_consumer": true,
+      "launch": {
+        "gemm_grid": [
+          512,
+          1,
+          1
+        ],
+        "gemm_block": [
+          128,
+          1,
+          1
+        ],
+        "decoder_grid": [
+          2048,
+          1,
+          1
+        ],
+        "decoder_block": [
+          128,
+          1,
+          1
+        ],
+        "decoder_rows": 1,
+        "receiver_variant": 0,
+        "decoder_kernel": "taco_ma4f_decode_consumer_kernel"
+      },
+      "submission_attribution": "CPU intervals use correlated launch API timestamps inside the existing projection scope; they include profiler overhead and other host submission work. They neither isolate guard cost nor measure GPU execution time or unprofiled training savings.",
+      "sum_us": {
+        "cpu_marker_to_gemm_launch_us": 583.88427734375,
+        "gemm_to_barrier_api_gap_us": 6.3408203125
+      },
+      "median_us": {
+        "cpu_marker_to_gemm_launch_us": 30.45556640625,
+        "gemm_to_barrier_api_gap_us": 1.096435546875,
+        "cpu_us": 72.661,
+        "barrier_us": 234.9305,
+        "decoder_us": 10.9755,
+        "chain_us": 314.78759765625
+      }
+    },
+    "F4-cache-zcount-csoftmax-epoch/rank5/mlp": {
+      "calls": 4,
+      "execution_path_validated": true,
+      "consumer_add_kernels_per_call": 0,
+      "fused_consumer": true,
+      "launch": {
+        "gemm_grid": [
+          512,
+          1,
+          1
+        ],
+        "gemm_block": [
+          128,
+          1,
+          1
+        ],
+        "decoder_grid": [
+          2048,
+          1,
+          1
+        ],
+        "decoder_block": [
+          128,
+          1,
+          1
+        ],
+        "decoder_rows": 1,
+        "receiver_variant": 0,
+        "decoder_kernel": "taco_ma4f_decode_consumer_kernel"
+      },
+      "submission_attribution": "CPU intervals use correlated launch API timestamps inside the existing projection scope; they include profiler overhead and other host submission work. They neither isolate guard cost nor measure GPU execution time or unprofiled training savings.",
+      "sum_us": {
+        "cpu_marker_to_gemm_launch_us": 1682.72607421875,
+        "gemm_to_barrier_api_gap_us": 3.82763671875
+      },
+      "median_us": {
+        "cpu_marker_to_gemm_launch_us": 34.482421875,
+        "gemm_to_barrier_api_gap_us": 0.736572265625,
+        "cpu_us": 70.093,
+        "barrier_us": 41.537000000000006,
+        "decoder_us": 11.681000000000001,
+        "chain_us": 168.6259765625
+      }
+    },
+    "F4-cache-zcount-csoftmax-epoch/rank6/attn": {
+      "calls": 4,
+      "execution_path_validated": true,
+      "consumer_add_kernels_per_call": 0,
+      "fused_consumer": true,
+      "launch": {
+        "gemm_grid": [
+          512,
+          1,
+          1
+        ],
+        "gemm_block": [
+          128,
+          1,
+          1
+        ],
+        "decoder_grid": [
+          2048,
+          1,
+          1
+        ],
+        "decoder_block": [
+          128,
+          1,
+          1
+        ],
+        "decoder_rows": 1,
+        "receiver_variant": 0,
+        "decoder_kernel": "taco_ma4f_decode_consumer_kernel"
+      },
+      "submission_attribution": "CPU intervals use correlated launch API timestamps inside the existing projection scope; they include profiler overhead and other host submission work. They neither isolate guard cost nor measure GPU execution time or unprofiled training savings.",
+      "sum_us": {
+        "cpu_marker_to_gemm_launch_us": 579.94482421875,
+        "gemm_to_barrier_api_gap_us": 5.1064453125
+      },
+      "median_us": {
+        "cpu_marker_to_gemm_launch_us": 25.125,
+        "gemm_to_barrier_api_gap_us": 0.751220703125,
+        "cpu_us": 63.3365,
+        "barrier_us": 304.0205,
+        "decoder_us": 10.8005,
+        "chain_us": 378.150146484375
+      }
+    },
+    "F4-cache-zcount-csoftmax-epoch/rank6/mlp": {
+      "calls": 4,
+      "execution_path_validated": true,
+      "consumer_add_kernels_per_call": 0,
+      "fused_consumer": true,
+      "launch": {
+        "gemm_grid": [
+          512,
+          1,
+          1
+        ],
+        "gemm_block": [
+          128,
+          1,
+          1
+        ],
+        "decoder_grid": [
+          2048,
+          1,
+          1
+        ],
+        "decoder_block": [
+          128,
+          1,
+          1
+        ],
+        "decoder_rows": 1,
+        "receiver_variant": 0,
+        "decoder_kernel": "taco_ma4f_decode_consumer_kernel"
+      },
+      "submission_attribution": "CPU intervals use correlated launch API timestamps inside the existing projection scope; they include profiler overhead and other host submission work. They neither isolate guard cost nor measure GPU execution time or unprofiled training savings.",
+      "sum_us": {
+        "cpu_marker_to_gemm_launch_us": 480.57568359375,
+        "gemm_to_barrier_api_gap_us": 3.69921875
+      },
+      "median_us": {
+        "cpu_marker_to_gemm_launch_us": 24.43505859375,
+        "gemm_to_barrier_api_gap_us": 0.645263671875,
+        "cpu_us": 57.7435,
+        "barrier_us": 48.513,
+        "decoder_us": 11.44,
+        "chain_us": 178.11572265625
+      }
+    },
+    "F4-cache-zcount-csoftmax-epoch/rank7/attn": {
+      "calls": 4,
+      "execution_path_validated": true,
+      "consumer_add_kernels_per_call": 0,
+      "fused_consumer": true,
+      "launch": {
+        "gemm_grid": [
+          512,
+          1,
+          1
+        ],
+        "gemm_block": [
+          128,
+          1,
+          1
+        ],
+        "decoder_grid": [
+          2048,
+          1,
+          1
+        ],
+        "decoder_block": [
+          128,
+          1,
+          1
+        ],
+        "decoder_rows": 1,
+        "receiver_variant": 0,
+        "decoder_kernel": "taco_ma4f_decode_consumer_kernel"
+      },
+      "submission_attribution": "CPU intervals use correlated launch API timestamps inside the existing projection scope; they include profiler overhead and other host submission work. They neither isolate guard cost nor measure GPU execution time or unprofiled training savings.",
+      "sum_us": {
+        "cpu_marker_to_gemm_launch_us": 580.64306640625,
+        "gemm_to_barrier_api_gap_us": 5.29296875
+      },
+      "median_us": {
+        "cpu_marker_to_gemm_launch_us": 30.6015625,
+        "gemm_to_barrier_api_gap_us": 0.719970703125,
+        "cpu_us": 71.5685,
+        "barrier_us": 220.62699999999998,
+        "decoder_us": 10.6405,
+        "chain_us": 298.0673828125
+      }
+    },
+    "F4-cache-zcount-csoftmax-epoch/rank7/mlp": {
+      "calls": 4,
+      "execution_path_validated": true,
+      "consumer_add_kernels_per_call": 0,
+      "fused_consumer": true,
+      "launch": {
+        "gemm_grid": [
+          512,
+          1,
+          1
+        ],
+        "gemm_block": [
+          128,
+          1,
+          1
+        ],
+        "decoder_grid": [
+          2048,
+          1,
+          1
+        ],
+        "decoder_block": [
+          128,
+          1,
+          1
+        ],
+        "decoder_rows": 1,
+        "receiver_variant": 0,
+        "decoder_kernel": "taco_ma4f_decode_consumer_kernel"
+      },
+      "submission_attribution": "CPU intervals use correlated launch API timestamps inside the existing projection scope; they include profiler overhead and other host submission work. They neither isolate guard cost nor measure GPU execution time or unprofiled training savings.",
+      "sum_us": {
+        "cpu_marker_to_gemm_launch_us": 522.9443359375,
+        "gemm_to_barrier_api_gap_us": 3.7529296875
+      },
+      "median_us": {
+        "cpu_marker_to_gemm_launch_us": 31.34814453125,
+        "gemm_to_barrier_api_gap_us": 0.702392578125,
+        "cpu_us": 67.17750000000001,
+        "barrier_us": 41.489000000000004,
+        "decoder_us": 11.152000000000001,
+        "chain_us": 169.330322265625
+      }
+    }
+  },
+  "evidence_files": {
+    "results/profile-F4-cache-zcount-csoftmax/rank0.json": "c61a1210277f37200b4bd882f4fe02a13152bff3bce3e8d3325d8c3c22b72058",
+    "results/profile-F4-cache-zcount-csoftmax/rank1.json": "18b0d29cdaa32b6a078c2b73c1c3820adff32d5b489990b6a29775d4e8f81ef4",
+    "results/profile-F4-cache-zcount-csoftmax/rank2.json": "5a699bd442ac8a9907e07df7fc86e5aefd098ac539bd3907c1e697ff0d19f4a9",
+    "results/profile-F4-cache-zcount-csoftmax/rank3.json": "6470615e9df4b743bf1109369cb9c8c2c3c01b79f71f4a5ad3cc17a45400b81e",
+    "results/profile-F4-cache-zcount-csoftmax/rank4.json": "1e887a0880fe065f3997792e38312d152c2eee84256984755f81dad545011267",
+    "results/profile-F4-cache-zcount-csoftmax/rank5.json": "80b3bc78c3f4d7349fcdec70e75ef117ecc46a4c18b95ea3adedba7903bc0e0b",
+    "results/profile-F4-cache-zcount-csoftmax/rank6.json": "fbcdc58b5b9e7c7721040ac95809680384c2286fe6544f9b1af83d9ee8f1adf3",
+    "results/profile-F4-cache-zcount-csoftmax/rank7.json": "d3c2871aa052c03c6dc70215550f2b4a3ff82505c9b883778382bc7aad56de89",
+    "results/profile-F4-cache-zcount-csoftmax-epoch/rank0.json": "10afa4e7fd4f57b8ccb817244533da1920ffaf4c9f899b943f4b395d5c848e33",
+    "results/profile-F4-cache-zcount-csoftmax-epoch/rank1.json": "6156dbe89c97494bf183d4a1d3c54b0251156197244cee68dc7b76751a52e330",
+    "results/profile-F4-cache-zcount-csoftmax-epoch/rank2.json": "d8d5a3b48ff334164fc47245f7397b4e15533b8313cc3fcb7c13425d03c5f40c",
+    "results/profile-F4-cache-zcount-csoftmax-epoch/rank3.json": "bc2fb8713d75115708c39b26d68a4fa904c882dfef7a195d52b5887fd0cfd39f",
+    "results/profile-F4-cache-zcount-csoftmax-epoch/rank4.json": "6c9a50304098f14c9b4941919440b32501050b38889b4dad3b7b4e3b1aaaae16",
+    "results/profile-F4-cache-zcount-csoftmax-epoch/rank5.json": "2111cd223612bbb25d6847b997a8bcd37dd03151124cac8fe24d0ad75a09a68d",
+    "results/profile-F4-cache-zcount-csoftmax-epoch/rank6.json": "20d026b6777ca9835e2b9937dcb555108af0aeafa0d3278ced7765b46df013cc",
+    "results/profile-F4-cache-zcount-csoftmax-epoch/rank7.json": "afb23bae393d3ff7d2eca52aae57747f72d5d7a38f5c24feb3b8b96edc4659b4",
+    "results/profile-F4-cache-zcount-csoftmax/rank0-attn-profile.json.gz": "0458e1f04ad1266ff01d754b112fdd133b129835f9d90efee3503513530e280c",
+    "results/profile-F4-cache-zcount-csoftmax/rank0-mlp-profile.json.gz": "f8b96198cda13ea43e7830d216b7dccdee365e1bb58a60e7ae5ac8ad2b0a2bd1",
+    "results/profile-F4-cache-zcount-csoftmax/rank1-attn-profile.json.gz": "002eb0e00a8f1a816c515025d5c1f38f1cba8cf71bf5e3ff7675cc53bfb7bc2f",
+    "results/profile-F4-cache-zcount-csoftmax/rank1-mlp-profile.json.gz": "977222b967b8647342b6ee361d4dcf4c9df57543fc8e061ca6c5df49edaf61c7",
+    "results/profile-F4-cache-zcount-csoftmax/rank2-attn-profile.json.gz": "c0fce06a5b7d75c2ae1debf542e865c474ae17a85052c693e4d4fcbe4ec0189d",
+    "results/profile-F4-cache-zcount-csoftmax/rank2-mlp-profile.json.gz": "059bcf89c560d02d285f0a163507749d3348fcf8101468a1bc86b703b01e56b8",
+    "results/profile-F4-cache-zcount-csoftmax/rank3-attn-profile.json.gz": "997c9b6084d8d0c62cb28acc03da2e6ef2fb6356ca9a1d009c8eae4b08ee208c",
+    "results/profile-F4-cache-zcount-csoftmax/rank3-mlp-profile.json.gz": "3ecf18eef911671692be3bb95276987d17b5bc771c537d6f9403b3bb31b5a785",
+    "results/profile-F4-cache-zcount-csoftmax/rank4-attn-profile.json.gz": "c578575f5cfe444741535f51abf2d95376b2d237c5a5f11d4a54721090f04f46",
+    "results/profile-F4-cache-zcount-csoftmax/rank4-mlp-profile.json.gz": "d7edd357a7a68950883b6e113410e2e3293be9f6b55dc9ccc7e9a998a0798296",
+    "results/profile-F4-cache-zcount-csoftmax/rank5-attn-profile.json.gz": "8891cebce27f19319a8502ceecb9e8cd33031d4e2b8fb228d1ae64b99cd29ad3",
+    "results/profile-F4-cache-zcount-csoftmax/rank5-mlp-profile.json.gz": "a5b656ec95e0247d34fc71d308c2ebfa3d30b519434f5b96b2ccd5c14cf6f9c2",
+    "results/profile-F4-cache-zcount-csoftmax/rank6-attn-profile.json.gz": "dfa8b42aaefc588119a24dfc344b136d12ca959183398d94a444f213bf262874",
+    "results/profile-F4-cache-zcount-csoftmax/rank6-mlp-profile.json.gz": "740485a42dd210cf09ad2172e17648ac35e9f983aa4feee1dda9ee4e66bd4bd0",
+    "results/profile-F4-cache-zcount-csoftmax/rank7-attn-profile.json.gz": "3350bc376dc9849db70a50135bae2af90a5262879db97d90dd9a2ded382eaa6e",
+    "results/profile-F4-cache-zcount-csoftmax/rank7-mlp-profile.json.gz": "794aa286a7d1025a571971f2a1ba1c05e0d1eccee002e7bdb8333fc1c4e786c9",
+    "results/profile-F4-cache-zcount-csoftmax-epoch/rank0-attn-profile.json.gz": "0b58936bdaeb9732745e40917f1a264e5ba162c38bfb6d456d5bb0caa1bb064d",
+    "results/profile-F4-cache-zcount-csoftmax-epoch/rank0-mlp-profile.json.gz": "d7e120a1a1abdd2685b0239c2d7a98a4de19e817b3c256fea8159aa0c7ac9800",
+    "results/profile-F4-cache-zcount-csoftmax-epoch/rank1-attn-profile.json.gz": "2b1208309f9414d2b75544f8505c679816b24b27209a74b63c2081a1e39c5b7e",
+    "results/profile-F4-cache-zcount-csoftmax-epoch/rank1-mlp-profile.json.gz": "dad5e8e84aee252dc8ecc3685648aedc74d54b18cf4aed4bf0006074d4cfd2d9",
+    "results/profile-F4-cache-zcount-csoftmax-epoch/rank2-attn-profile.json.gz": "21ed169dfa982e898da87a42c4f2b5160fa59015a05ece50e71eaa140cd72d1b",
+    "results/profile-F4-cache-zcount-csoftmax-epoch/rank2-mlp-profile.json.gz": "a6804124cfba9567b3778cb4f25d18e5a891999d730d8c0e72a4a61b9504605d",
+    "results/profile-F4-cache-zcount-csoftmax-epoch/rank3-attn-profile.json.gz": "dc41cbd3912504a4ddd2f561c46f36f2b5cafcbb0a6375e35c49d4c0fd771cb5",
+    "results/profile-F4-cache-zcount-csoftmax-epoch/rank3-mlp-profile.json.gz": "4366f426bf2a31ab2391b13259cdc2b6ed02e73d03efae7fb9c214fa88a6a2b4",
+    "results/profile-F4-cache-zcount-csoftmax-epoch/rank4-attn-profile.json.gz": "de3917b897fafe615eb96105d77d5eb845a94b37072f7ffb3763c11ea9bc2949",
+    "results/profile-F4-cache-zcount-csoftmax-epoch/rank4-mlp-profile.json.gz": "c259969dc3cad8607cdc2310924a51bbdb0e5597abd0e4ba1446e1916ce4dd0b",
+    "results/profile-F4-cache-zcount-csoftmax-epoch/rank5-attn-profile.json.gz": "7c54ea31c5865b9d6d1f2b570221957ccf6b647ff7244a602b5167be56cf7e0d",
+    "results/profile-F4-cache-zcount-csoftmax-epoch/rank5-mlp-profile.json.gz": "0e1a267431dc9a950854f44de4dcc6dd721eb58df61ba295566a51a784a73527",
+    "results/profile-F4-cache-zcount-csoftmax-epoch/rank6-attn-profile.json.gz": "94d28227114396d2ff36db18bce3da1bcbd051ff9b4421492470c2b385715f94",
+    "results/profile-F4-cache-zcount-csoftmax-epoch/rank6-mlp-profile.json.gz": "701487b6d8b03352dd5d7c74f6d6fcfd1031ba2b571c7ed2634033b3beb5fde1",
+    "results/profile-F4-cache-zcount-csoftmax-epoch/rank7-attn-profile.json.gz": "6a6deb5a090b05bd203034d0594833c533454d3e527fad38bec1769e7e66fec3",
+    "results/profile-F4-cache-zcount-csoftmax-epoch/rank7-mlp-profile.json.gz": "d81bf8d1ad4aa52708c1886d7c4daae453a8eaa83eae5e790eb4968ee1b617bc"
+  },
+  "limitation": "Complete row projection and publication measurement. GPU profile spans are perturbed and cannot substitute for paired unprofiled optimizer-step wall time."
+}
