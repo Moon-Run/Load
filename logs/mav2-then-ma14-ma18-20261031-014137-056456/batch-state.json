@@ -1,0 +1,28 @@
+{
+  "status": "failed",
+  "order": [
+    "mav2",
+    "ma14",
+    "ma15",
+    "ma16",
+    "ma17",
+    "ma18"
+  ],
+  "trials": 1,
+  "stages": {
+    "mav2": {
+      "status": "completed_with_quality_failure",
+      "log": "/workspace/TempName-New/logs/h100/phase6/mav2-then-ma14-ma18-20261031-014137-056456/mav2.log",
+      "batch": "/workspace/TempName-New/logs/h100/phase6/mav2-then-ma14-ma18-20261031-014137-056456/mav2",
+      "exit_code": 0,
+      "quality_within_pairs": false
+    },
+    "ma14-ma18": {
+      "status": "failed",
+      "log": "/workspace/TempName-New/logs/h100/phase6/mav2-then-ma14-ma18-20261031-014137-056456/ma14-ma18.log",
+      "exit_code": 1
+    }
+  },
+  "stage": "ma14-ma18",
+  "error": "CalledProcessError: Command '['bash', '/workspace/TempName-New/tools/h100/phase6/run_ma14_ma15_ma16_ma17_ma18.sh', '--trials', '1', '--execute']' returned non-zero exit status 1."
+}

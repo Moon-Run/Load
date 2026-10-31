@@ -1,0 +1,1 @@
+FLUX_THS_TARGETS=ths_op;gemm_rs;

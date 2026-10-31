@@ -1,0 +1,6119 @@
+{
+  "case": "h100-phase6",
+  "model": {
+    "layers": 32,
+    "micro_batch": 1,
+    "global_batch": 4,
+    "seed": 1234,
+    "token_seed": 4321,
+    "vocab": 32768,
+    "name": "h100-phase6",
+    "hidden": 4096,
+    "ffn": 16384,
+    "heads": 32,
+    "sequence": 2048,
+    "tp": 8
+  },
+  "world_size": 8,
+  "policy": "mav2",
+  "mode": "smoke",
+  "rank": 1,
+  "run_id": "c6965685f9fe470185150109eec7d770",
+  "hardware": {
+    "host": "10-118-122-131",
+    "devices": [
+      {
+        "name": "NVIDIA H100 80GB HBM3",
+        "uuid": "26e67438-f877-3123-29e0-d33d473c8141",
+        "sm_count": 132,
+        "capability": [
+          9,
+          0
+        ]
+      },
+      {
+        "name": "NVIDIA H100 80GB HBM3",
+        "uuid": "7f7217aa-30c6-c324-7a2a-47b3da64ed90",
+        "sm_count": 132,
+        "capability": [
+          9,
+          0
+        ]
+      },
+      {
+        "name": "NVIDIA H100 80GB HBM3",
+        "uuid": "aea7e493-405c-304c-b5c5-28cd9624699e",
+        "sm_count": 132,
+        "capability": [
+          9,
+          0
+        ]
+      },
+      {
+        "name": "NVIDIA H100 80GB HBM3",
+        "uuid": "3e7023fb-d34e-400f-6e3e-666145b657cf",
+        "sm_count": 132,
+        "capability": [
+          9,
+          0
+        ]
+      },
+      {
+        "name": "NVIDIA H100 80GB HBM3",
+        "uuid": "00c0a7d8-cbb2-4acb-3fa0-5a7d4e0f899d",
+        "sm_count": 132,
+        "capability": [
+          9,
+          0
+        ]
+      },
+      {
+        "name": "NVIDIA H100 80GB HBM3",
+        "uuid": "7f399bc6-8077-f309-92c7-538dccc06f42",
+        "sm_count": 132,
+        "capability": [
+          9,
+          0
+        ]
+      },
+      {
+        "name": "NVIDIA H100 80GB HBM3",
+        "uuid": "0d74eef5-ceef-e92e-242e-36ee582fac83",
+        "sm_count": 132,
+        "capability": [
+          9,
+          0
+        ]
+      },
+      {
+        "name": "NVIDIA H100 80GB HBM3",
+        "uuid": "9da6bcea-1b20-252e-4819-eb5699a9b1a1",
+        "sm_count": 132,
+        "capability": [
+          9,
+          0
+        ]
+      }
+    ],
+    "local_rank": 1
+  },
+  "torch": "2.6.0+cu124",
+  "cuda": "12.4",
+  "nccl": [
+    2,
+    21,
+    5
+  ],
+  "python": "/workspace/conda-envs/tempname-h100/bin/python",
+  "gpu_uuid": "7f7217aa-30c6-c324-7a2a-47b3da64ed90",
+  "padded_vocab_size": 33792,
+  "scope": "Three all-remote-quantized arms: H8, selective D8/H8, forced D8; shared fixed136 packets and NCCL.",
+  "sampling": false,
+  "profiling": false,
+  "block": -1,
+  "window": -1,
+  "losses": [
+    10.041153907775879,
+    12.40919303894043,
+    9.75635051727295
+  ],
+  "grad_norms": [
+    4.5865297211303995,
+    6.969450911097463,
+    0.8608392898289483
+  ],
+  "skips": 0,
+  "libflux_cuda.so": {
+    "path": "/workspace/TempName-New/logs/h100/phase6/mav2-three-arm-1x-50steps-20261030-215237-552847/flux-build/flux-gemm-only/python/flux/lib/libflux_cuda.so",
+    "sha256": "6c5cf6f5158641309ad80f56a644a260ffe55c6f2a8198264113858b1e846b62"
+  },
+  "libflux_cuda_ths_op.so": {
+    "path": "/workspace/TempName-New/logs/h100/phase6/mav2-three-arm-1x-50steps-20261030-215237-552847/flux-build/flux-gemm-only/python/flux/lib/libflux_cuda_ths_op.so",
+    "sha256": "4980c453feb02ef16a6372c9c4062e2162ced5c1c68c221dfc77943820419a93"
+  },
+  "local_rank": 1,
+  "tp_rank": 1,
+  "dp_rank": 0,
+  "tp_group_ranks": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "dp_group_ranks": [
+    1
+  ],
+  "communication": {
+    "environment": {
+      "NCCL_VERSION": "2.25.1-1",
+      "NCCL_NVLS_ENABLE": "0",
+      "NCCL_DEBUG": "WARN",
+      "TORCH_NCCL_ASYNC_ERROR_HANDLING": "1"
+    },
+    "config_files": {
+      "/etc/nccl.conf": null,
+      "/root/.nccl.conf": null
+    },
+    "nvls_request": "0"
+  },
+  "codec_identity": {
+    "implementation": "mav2-three-arm-h8-selective-d8-fixed136-v2",
+    "source_sha256": "2a3ae065f5fdaa3201b91efae7b5f68ca52030c6129bd924b1a9c90a5042b4d6",
+    "reference_sha256": "1a6f8e4ef7a7a20b1709d2a91eeed55832c0cf7d73f351b4dc6e8f152be60b5b",
+    "selective_reference_sha256": "87e8b217599253e689424a759426e29f752675c11ed11ac43a2a879ed85afea8",
+    "cuda_source_identity": {
+      "baseline_upstream/LICENSE.txt": "36e053d82c9ff1384a1045bb4cda1f5b569aa6a0e2faa1f9a42e16eb4c13ac78",
+      "baseline_upstream/provenance.json": "ed3ffb67ca7cd7045b796ff9a21e880a8de0b62b1937a1283471892cb2a7a107",
+      "baseline_upstream/taco.cu": "15a9fa3b41f59333c03170a886d1c5d596415cebbc3642447cfcfdd93dffad8e",
+      "baseline_upstream/taco_RS.config": "c5bef55bf028d4e9e4b11b3b580f0214b7d724105e385c9d1f0bb2f47b51f24d",
+      "baseline_codec.cu": "cea609bbefd96135aa4bd08a7db7bb8722880c8f382fa29dc979b42ec054efb9",
+      "basic_quant_receiver.cuh": "bde1ff6b18ab1362d0dccdc2cd7c09cef8f652edfb8bf728f91088468875c3dc",
+      "mav2_build.py": "fac01b0b86a89a440570496627f4d28ad5dcba2422de254bf260ae619a82344a",
+      "mav2_codec.cuh": "43c5c070d37d025c6f72cf04d2af115243450ffe1476ff729c5dc49ad5dcdba9",
+      "mav2_codec.py": "2a3ae065f5fdaa3201b91efae7b5f68ca52030c6129bd924b1a9c90a5042b4d6",
+      "mav2_reference.py": "87e8b217599253e689424a759426e29f752675c11ed11ac43a2a879ed85afea8",
+      "mav2_validation.py": "1b9bffbac920bc8e7a7bfa022d963c81438f19bfbb37f103d10ab26b82b5836e"
+    },
+    "transform": {
+      "group_size": 128,
+      "wire_bytes_per_group": 136,
+      "d8_relative_l2": 0.025,
+      "d8_max_abs_over_amax": 0.0625,
+      "selection": "online-per-token-channel-group",
+      "fallback": "H8",
+      "bf16_fallback": false,
+      "policies": {
+        "basic": "H8",
+        "mav2": "D8-or-H8",
+        "d8": "D8"
+      },
+      "forced_d8_error_guard": false
+    },
+    "quality_budget": {
+      "loss_atol": 0.05,
+      "loss_rtol": 0.05,
+      "grad_norm_atol": 0.1,
+      "grad_norm_rtol": 0.1
+    },
+    "receiver_implementation": "basic-ordered-bf16-fold-h8-or-d8-v1"
+  },
+  "protocol": "h100-mav2-selective-transform-three-arm-v2",
+  "scope_definition": {
+    "policy": "mav2",
+    "family": "flux_tensor",
+    "scope": "attn_mlp",
+    "roles": [
+      "attn",
+      "mlp"
+    ],
+    "implementation": "flux-sm90-gemm-only-selective-mav2-three-arm-h8-selective-d8-fixed136-v2",
+    "workspace": "gemm_output",
+    "output_clone": false,
+    "base": "original",
+    "order": "gemm_only",
+    "arrival": false,
+    "quantization": "all_remote",
+    "prefetch": false,
+    "graph": false,
+    "transform": "D8-or-H8"
+  },
+  "role_plan_sha256": {
+    "basic": {
+      "attn": null,
+      "mlp": null
+    },
+    "mav2": {
+      "attn": null,
+      "mlp": null
+    },
+    "d8": {
+      "attn": null,
+      "mlp": null
+    }
+  },
+  "initial_parameters_sha256": "0fabd43d03a7ef7890e6aceb6359ae650664bd41805b1126ba6fa42504a4f8d1",
+  "seed": 1234,
+  "precision": "bf16",
+  "parameter_count_local": 849207296,
+  "initial_rng_sha256": "3fb18e2b6d8b68ba12f95c6d3165e45e395a259e29de6c75eef80f5e820a8dd6",
+  "tokens_sha256": "76bccbfe59a3a7e94f23af97e92c0803b36a1deeeabc796fdebd0ccbb2d1f114",
+  "tokens_per_optimizer_step": 8192,
+  "timing_protocol": "full-step-one-clear-v2",
+  "initial_loss": 11.255816459655762,
+  "warmup_last_loss": 10.626579284667969,
+  "warmup_steps": 2,
+  "observed_shapes": {
+    "decoder.layers.0.self_attention.linear_proj": {
+      "M": 2048,
+      "N": 4096,
+      "K_global": 4096,
+      "input_shape": [
+        2048,
+        1,
+        512
+      ],
+      "input_stride": [
+        512,
+        512,
+        1
+      ],
+      "weight_shape": [
+        4096,
+        512
+      ],
+      "K_local": 512
+    },
+    "decoder.layers.0.mlp.linear_fc2": {
+      "M": 2048,
+      "N": 4096,
+      "K_global": 16384,
+      "input_shape": [
+        2048,
+        1,
+        2048
+      ],
+      "input_stride": [
+        2048,
+        2048,
+        1
+      ],
+      "weight_shape": [
+        4096,
+        2048
+      ],
+      "K_local": 2048
+    },
+    "decoder.layers.1.self_attention.linear_proj": {
+      "M": 2048,
+      "N": 4096,
+      "K_global": 4096,
+      "input_shape": [
+        2048,
+        1,
+        512
+      ],
+      "input_stride": [
+        512,
+        512,
+        1
+      ],
+      "weight_shape": [
+        4096,
+        512
+      ],
+      "K_local": 512
+    },
+    "decoder.layers.1.mlp.linear_fc2": {
+      "M": 2048,
+      "N": 4096,
+      "K_global": 16384,
+      "input_shape": [
+        2048,
+        1,
+        2048
+      ],
+      "input_stride": [
+        2048,
+        2048,
+        1
+      ],
+      "weight_shape": [
+        4096,
+        2048
+      ],
+      "K_local": 2048
+    },
+    "decoder.layers.2.self_attention.linear_proj": {
+      "M": 2048,
+      "N": 4096,
+      "K_global": 4096,
+      "input_shape": [
+        2048,
+        1,
+        512
+      ],
+      "input_stride": [
+        512,
+        512,
+        1
+      ],
+      "weight_shape": [
+        4096,
+        512
+      ],
+      "K_local": 512
+    },
+    "decoder.layers.2.mlp.linear_fc2": {
+      "M": 2048,
+      "N": 4096,
+      "K_global": 16384,
+      "input_shape": [
+        2048,
+        1,
+        2048
+      ],
+      "input_stride": [
+        2048,
+        2048,
+        1
+      ],
+      "weight_shape": [
+        4096,
+        2048
+      ],
+      "K_local": 2048
+    },
+    "decoder.layers.3.self_attention.linear_proj": {
+      "M": 2048,
+      "N": 4096,
+      "K_global": 4096,
+      "input_shape": [
+        2048,
+        1,
+        512
+      ],
+      "input_stride": [
+        512,
+        512,
+        1
+      ],
+      "weight_shape": [
+        4096,
+        512
+      ],
+      "K_local": 512
+    },
+    "decoder.layers.3.mlp.linear_fc2": {
+      "M": 2048,
+      "N": 4096,
+      "K_global": 16384,
+      "input_shape": [
+        2048,
+        1,
+        2048
+      ],
+      "input_stride": [
+        2048,
+        2048,
+        1
+      ],
+      "weight_shape": [
+        4096,
+        2048
+      ],
+      "K_local": 2048
+    },
+    "decoder.layers.4.self_attention.linear_proj": {
+      "M": 2048,
+      "N": 4096,
+      "K_global": 4096,
+      "input_shape": [
+        2048,
+        1,
+        512
+      ],
+      "input_stride": [
+        512,
+        512,
+        1
+      ],
+      "weight_shape": [
+        4096,
+        512
+      ],
+      "K_local": 512
+    },
+    "decoder.layers.4.mlp.linear_fc2": {
+      "M": 2048,
+      "N": 4096,
+      "K_global": 16384,
+      "input_shape": [
+        2048,
+        1,
+        2048
+      ],
+      "input_stride": [
+        2048,
+        2048,
+        1
+      ],
+      "weight_shape": [
+        4096,
+        2048
+      ],
+      "K_local": 2048
+    },
+    "decoder.layers.5.self_attention.linear_proj": {
+      "M": 2048,
+      "N": 4096,
+      "K_global": 4096,
+      "input_shape": [
+        2048,
+        1,
+        512
+      ],
+      "input_stride": [
+        512,
+        512,
+        1
+      ],
+      "weight_shape": [
+        4096,
+        512
+      ],
+      "K_local": 512
+    },
+    "decoder.layers.5.mlp.linear_fc2": {
+      "M": 2048,
+      "N": 4096,
+      "K_global": 16384,
+      "input_shape": [
+        2048,
+        1,
+        2048
+      ],
+      "input_stride": [
+        2048,
+        2048,
+        1
+      ],
+      "weight_shape": [
+        4096,
+        2048
+      ],
+      "K_local": 2048
+    },
+    "decoder.layers.6.self_attention.linear_proj": {
+      "M": 2048,
+      "N": 4096,
+      "K_global": 4096,
+      "input_shape": [
+        2048,
+        1,
+        512
+      ],
+      "input_stride": [
+        512,
+        512,
+        1
+      ],
+      "weight_shape": [
+        4096,
+        512
+      ],
+      "K_local": 512
+    },
+    "decoder.layers.6.mlp.linear_fc2": {
+      "M": 2048,
+      "N": 4096,
+      "K_global": 16384,
+      "input_shape": [
+        2048,
+        1,
+        2048
+      ],
+      "input_stride": [
+        2048,
+        2048,
+        1
+      ],
+      "weight_shape": [
+        4096,
+        2048
+      ],
+      "K_local": 2048
+    },
+    "decoder.layers.7.self_attention.linear_proj": {
+      "M": 2048,
+      "N": 4096,
+      "K_global": 4096,
+      "input_shape": [
+        2048,
+        1,
+        512
+      ],
+      "input_stride": [
+        512,
+        512,
+        1
+      ],
+      "weight_shape": [
+        4096,
+        512
+      ],
+      "K_local": 512
+    },
+    "decoder.layers.7.mlp.linear_fc2": {
+      "M": 2048,
+      "N": 4096,
+      "K_global": 16384,
+      "input_shape": [
+        2048,
+        1,
+        2048
+      ],
+      "input_stride": [
+        2048,
+        2048,
+        1
+      ],
+      "weight_shape": [
+        4096,
+        2048
+      ],
+      "K_local": 2048
+    },
+    "decoder.layers.8.self_attention.linear_proj": {
+      "M": 2048,
+      "N": 4096,
+      "K_global": 4096,
+      "input_shape": [
+        2048,
+        1,
+        512
+      ],
+      "input_stride": [
+        512,
+        512,
+        1
+      ],
+      "weight_shape": [
+        4096,
+        512
+      ],
+      "K_local": 512
+    },
+    "decoder.layers.8.mlp.linear_fc2": {
+      "M": 2048,
+      "N": 4096,
+      "K_global": 16384,
+      "input_shape": [
+        2048,
+        1,
+        2048
+      ],
+      "input_stride": [
+        2048,
+        2048,
+        1
+      ],
+      "weight_shape": [
+        4096,
+        2048
+      ],
+      "K_local": 2048
+    },
+    "decoder.layers.9.self_attention.linear_proj": {
+      "M": 2048,
+      "N": 4096,
+      "K_global": 4096,
+      "input_shape": [
+        2048,
+        1,
+        512
+      ],
+      "input_stride": [
+        512,
+        512,
+        1
+      ],
+      "weight_shape": [
+        4096,
+        512
+      ],
+      "K_local": 512
+    },
+    "decoder.layers.9.mlp.linear_fc2": {
+      "M": 2048,
+      "N": 4096,
+      "K_global": 16384,
+      "input_shape": [
+        2048,
+        1,
+        2048
+      ],
+      "input_stride": [
+        2048,
+        2048,
+        1
+      ],
+      "weight_shape": [
+        4096,
+        2048
+      ],
+      "K_local": 2048
+    },
+    "decoder.layers.10.self_attention.linear_proj": {
+      "M": 2048,
+      "N": 4096,
+      "K_global": 4096,
+      "input_shape": [
+        2048,
+        1,
+        512
+      ],
+      "input_stride": [
+        512,
+        512,
+        1
+      ],
+      "weight_shape": [
+        4096,
+        512
+      ],
+      "K_local": 512
+    },
+    "decoder.layers.10.mlp.linear_fc2": {
+      "M": 2048,
+      "N": 4096,
+      "K_global": 16384,
+      "input_shape": [
+        2048,
+        1,
+        2048
+      ],
+      "input_stride": [
+        2048,
+        2048,
+        1
+      ],
+      "weight_shape": [
+        4096,
+        2048
+      ],
+      "K_local": 2048
+    },
+    "decoder.layers.11.self_attention.linear_proj": {
+      "M": 2048,
+      "N": 4096,
+      "K_global": 4096,
+      "input_shape": [
+        2048,
+        1,
+        512
+      ],
+      "input_stride": [
+        512,
+        512,
+        1
+      ],
+      "weight_shape": [
+        4096,
+        512
+      ],
+      "K_local": 512
+    },
+    "decoder.layers.11.mlp.linear_fc2": {
+      "M": 2048,
+      "N": 4096,
+      "K_global": 16384,
+      "input_shape": [
+        2048,
+        1,
+        2048
+      ],
+      "input_stride": [
+        2048,
+        2048,
+        1
+      ],
+      "weight_shape": [
+        4096,
+        2048
+      ],
+      "K_local": 2048
+    },
+    "decoder.layers.12.self_attention.linear_proj": {
+      "M": 2048,
+      "N": 4096,
+      "K_global": 4096,
+      "input_shape": [
+        2048,
+        1,
+        512
+      ],
+      "input_stride": [
+        512,
+        512,
+        1
+      ],
+      "weight_shape": [
+        4096,
+        512
+      ],
+      "K_local": 512
+    },
+    "decoder.layers.12.mlp.linear_fc2": {
+      "M": 2048,
+      "N": 4096,
+      "K_global": 16384,
+      "input_shape": [
+        2048,
+        1,
+        2048
+      ],
+      "input_stride": [
+        2048,
+        2048,
+        1
+      ],
+      "weight_shape": [
+        4096,
+        2048
+      ],
+      "K_local": 2048
+    },
+    "decoder.layers.13.self_attention.linear_proj": {
+      "M": 2048,
+      "N": 4096,
+      "K_global": 4096,
+      "input_shape": [
+        2048,
+        1,
+        512
+      ],
+      "input_stride": [
+        512,
+        512,
+        1
+      ],
+      "weight_shape": [
+        4096,
+        512
+      ],
+      "K_local": 512
+    },
+    "decoder.layers.13.mlp.linear_fc2": {
+      "M": 2048,
+      "N": 4096,
+      "K_global": 16384,
+      "input_shape": [
+        2048,
+        1,
+        2048
+      ],
+      "input_stride": [
+        2048,
+        2048,
+        1
+      ],
+      "weight_shape": [
+        4096,
+        2048
+      ],
+      "K_local": 2048
+    },
+    "decoder.layers.14.self_attention.linear_proj": {
+      "M": 2048,
+      "N": 4096,
+      "K_global": 4096,
+      "input_shape": [
+        2048,
+        1,
+        512
+      ],
+      "input_stride": [
+        512,
+        512,
+        1
+      ],
+      "weight_shape": [
+        4096,
+        512
+      ],
+      "K_local": 512
+    },
+    "decoder.layers.14.mlp.linear_fc2": {
+      "M": 2048,
+      "N": 4096,
+      "K_global": 16384,
+      "input_shape": [
+        2048,
+        1,
+        2048
+      ],
+      "input_stride": [
+        2048,
+        2048,
+        1
+      ],
+      "weight_shape": [
+        4096,
+        2048
+      ],
+      "K_local": 2048
+    },
+    "decoder.layers.15.self_attention.linear_proj": {
+      "M": 2048,
+      "N": 4096,
+      "K_global": 4096,
+      "input_shape": [
+        2048,
+        1,
+        512
+      ],
+      "input_stride": [
+        512,
+        512,
+        1
+      ],
+      "weight_shape": [
+        4096,
+        512
+      ],
+      "K_local": 512
+    },
+    "decoder.layers.15.mlp.linear_fc2": {
+      "M": 2048,
+      "N": 4096,
+      "K_global": 16384,
+      "input_shape": [
+        2048,
+        1,
+        2048
+      ],
+      "input_stride": [
+        2048,
+        2048,
+        1
+      ],
+      "weight_shape": [
+        4096,
+        2048
+      ],
+      "K_local": 2048
+    },
+    "decoder.layers.16.self_attention.linear_proj": {
+      "M": 2048,
+      "N": 4096,
+      "K_global": 4096,
+      "input_shape": [
+        2048,
+        1,
+        512
+      ],
+      "input_stride": [
+        512,
+        512,
+        1
+      ],
+      "weight_shape": [
+        4096,
+        512
+      ],
+      "K_local": 512
+    },
+    "decoder.layers.16.mlp.linear_fc2": {
+      "M": 2048,
+      "N": 4096,
+      "K_global": 16384,
+      "input_shape": [
+        2048,
+        1,
+        2048
+      ],
+      "input_stride": [
+        2048,
+        2048,
+        1
+      ],
+      "weight_shape": [
+        4096,
+        2048
+      ],
+      "K_local": 2048
+    },
+    "decoder.layers.17.self_attention.linear_proj": {
+      "M": 2048,
+      "N": 4096,
+      "K_global": 4096,
+      "input_shape": [
+        2048,
+        1,
+        512
+      ],
+      "input_stride": [
+        512,
+        512,
+        1
+      ],
+      "weight_shape": [
+        4096,
+        512
+      ],
+      "K_local": 512
+    },
+    "decoder.layers.17.mlp.linear_fc2": {
+      "M": 2048,
+      "N": 4096,
+      "K_global": 16384,
+      "input_shape": [
+        2048,
+        1,
+        2048
+      ],
+      "input_stride": [
+        2048,
+        2048,
+        1
+      ],
+      "weight_shape": [
+        4096,
+        2048
+      ],
+      "K_local": 2048
+    },
+    "decoder.layers.18.self_attention.linear_proj": {
+      "M": 2048,
+      "N": 4096,
+      "K_global": 4096,
+      "input_shape": [
+        2048,
+        1,
+        512
+      ],
+      "input_stride": [
+        512,
+        512,
+        1
+      ],
+      "weight_shape": [
+        4096,
+        512
+      ],
+      "K_local": 512
+    },
+    "decoder.layers.18.mlp.linear_fc2": {
+      "M": 2048,
+      "N": 4096,
+      "K_global": 16384,
+      "input_shape": [
+        2048,
+        1,
+        2048
+      ],
+      "input_stride": [
+        2048,
+        2048,
+        1
+      ],
+      "weight_shape": [
+        4096,
+        2048
+      ],
+      "K_local": 2048
+    },
+    "decoder.layers.19.self_attention.linear_proj": {
+      "M": 2048,
+      "N": 4096,
+      "K_global": 4096,
+      "input_shape": [
+        2048,
+        1,
+        512
+      ],
+      "input_stride": [
+        512,
+        512,
+        1
+      ],
+      "weight_shape": [
+        4096,
+        512
+      ],
+      "K_local": 512
+    },
+    "decoder.layers.19.mlp.linear_fc2": {
+      "M": 2048,
+      "N": 4096,
+      "K_global": 16384,
+      "input_shape": [
+        2048,
+        1,
+        2048
+      ],
+      "input_stride": [
+        2048,
+        2048,
+        1
+      ],
+      "weight_shape": [
+        4096,
+        2048
+      ],
+      "K_local": 2048
+    },
+    "decoder.layers.20.self_attention.linear_proj": {
+      "M": 2048,
+      "N": 4096,
+      "K_global": 4096,
+      "input_shape": [
+        2048,
+        1,
+        512
+      ],
+      "input_stride": [
+        512,
+        512,
+        1
+      ],
+      "weight_shape": [
+        4096,
+        512
+      ],
+      "K_local": 512
+    },
+    "decoder.layers.20.mlp.linear_fc2": {
+      "M": 2048,
+      "N": 4096,
+      "K_global": 16384,
+      "input_shape": [
+        2048,
+        1,
+        2048
+      ],
+      "input_stride": [
+        2048,
+        2048,
+        1
+      ],
+      "weight_shape": [
+        4096,
+        2048
+      ],
+      "K_local": 2048
+    },
+    "decoder.layers.21.self_attention.linear_proj": {
+      "M": 2048,
+      "N": 4096,
+      "K_global": 4096,
+      "input_shape": [
+        2048,
+        1,
+        512
+      ],
+      "input_stride": [
+        512,
+        512,
+        1
+      ],
+      "weight_shape": [
+        4096,
+        512
+      ],
+      "K_local": 512
+    },
+    "decoder.layers.21.mlp.linear_fc2": {
+      "M": 2048,
+      "N": 4096,
+      "K_global": 16384,
+      "input_shape": [
+        2048,
+        1,
+        2048
+      ],
+      "input_stride": [
+        2048,
+        2048,
+        1
+      ],
+      "weight_shape": [
+        4096,
+        2048
+      ],
+      "K_local": 2048
+    },
+    "decoder.layers.22.self_attention.linear_proj": {
+      "M": 2048,
+      "N": 4096,
+      "K_global": 4096,
+      "input_shape": [
+        2048,
+        1,
+        512
+      ],
+      "input_stride": [
+        512,
+        512,
+        1
+      ],
+      "weight_shape": [
+        4096,
+        512
+      ],
+      "K_local": 512
+    },
+    "decoder.layers.22.mlp.linear_fc2": {
+      "M": 2048,
+      "N": 4096,
+      "K_global": 16384,
+      "input_shape": [
+        2048,
+        1,
+        2048
+      ],
+      "input_stride": [
+        2048,
+        2048,
+        1
+      ],
+      "weight_shape": [
+        4096,
+        2048
+      ],
+      "K_local": 2048
+    },
+    "decoder.layers.23.self_attention.linear_proj": {
+      "M": 2048,
+      "N": 4096,
+      "K_global": 4096,
+      "input_shape": [
+        2048,
+        1,
+        512
+      ],
+      "input_stride": [
+        512,
+        512,
+        1
+      ],
+      "weight_shape": [
+        4096,
+        512
+      ],
+      "K_local": 512
+    },
+    "decoder.layers.23.mlp.linear_fc2": {
+      "M": 2048,
+      "N": 4096,
+      "K_global": 16384,
+      "input_shape": [
+        2048,
+        1,
+        2048
+      ],
+      "input_stride": [
+        2048,
+        2048,
+        1
+      ],
+      "weight_shape": [
+        4096,
+        2048
+      ],
+      "K_local": 2048
+    },
+    "decoder.layers.24.self_attention.linear_proj": {
+      "M": 2048,
+      "N": 4096,
+      "K_global": 4096,
+      "input_shape": [
+        2048,
+        1,
+        512
+      ],
+      "input_stride": [
+        512,
+        512,
+        1
+      ],
+      "weight_shape": [
+        4096,
+        512
+      ],
+      "K_local": 512
+    },
+    "decoder.layers.24.mlp.linear_fc2": {
+      "M": 2048,
+      "N": 4096,
+      "K_global": 16384,
+      "input_shape": [
+        2048,
+        1,
+        2048
+      ],
+      "input_stride": [
+        2048,
+        2048,
+        1
+      ],
+      "weight_shape": [
+        4096,
+        2048
+      ],
+      "K_local": 2048
+    },
+    "decoder.layers.25.self_attention.linear_proj": {
+      "M": 2048,
+      "N": 4096,
+      "K_global": 4096,
+      "input_shape": [
+        2048,
+        1,
+        512
+      ],
+      "input_stride": [
+        512,
+        512,
+        1
+      ],
+      "weight_shape": [
+        4096,
+        512
+      ],
+      "K_local": 512
+    },
+    "decoder.layers.25.mlp.linear_fc2": {
+      "M": 2048,
+      "N": 4096,
+      "K_global": 16384,
+      "input_shape": [
+        2048,
+        1,
+        2048
+      ],
+      "input_stride": [
+        2048,
+        2048,
+        1
+      ],
+      "weight_shape": [
+        4096,
+        2048
+      ],
+      "K_local": 2048
+    },
+    "decoder.layers.26.self_attention.linear_proj": {
+      "M": 2048,
+      "N": 4096,
+      "K_global": 4096,
+      "input_shape": [
+        2048,
+        1,
+        512
+      ],
+      "input_stride": [
+        512,
+        512,
+        1
+      ],
+      "weight_shape": [
+        4096,
+        512
+      ],
+      "K_local": 512
+    },
+    "decoder.layers.26.mlp.linear_fc2": {
+      "M": 2048,
+      "N": 4096,
+      "K_global": 16384,
+      "input_shape": [
+        2048,
+        1,
+        2048
+      ],
+      "input_stride": [
+        2048,
+        2048,
+        1
+      ],
+      "weight_shape": [
+        4096,
+        2048
+      ],
+      "K_local": 2048
+    },
+    "decoder.layers.27.self_attention.linear_proj": {
+      "M": 2048,
+      "N": 4096,
+      "K_global": 4096,
+      "input_shape": [
+        2048,
+        1,
+        512
+      ],
+      "input_stride": [
+        512,
+        512,
+        1
+      ],
+      "weight_shape": [
+        4096,
+        512
+      ],
+      "K_local": 512
+    },
+    "decoder.layers.27.mlp.linear_fc2": {
+      "M": 2048,
+      "N": 4096,
+      "K_global": 16384,
+      "input_shape": [
+        2048,
+        1,
+        2048
+      ],
+      "input_stride": [
+        2048,
+        2048,
+        1
+      ],
+      "weight_shape": [
+        4096,
+        2048
+      ],
+      "K_local": 2048
+    },
+    "decoder.layers.28.self_attention.linear_proj": {
+      "M": 2048,
+      "N": 4096,
+      "K_global": 4096,
+      "input_shape": [
+        2048,
+        1,
+        512
+      ],
+      "input_stride": [
+        512,
+        512,
+        1
+      ],
+      "weight_shape": [
+        4096,
+        512
+      ],
+      "K_local": 512
+    },
+    "decoder.layers.28.mlp.linear_fc2": {
+      "M": 2048,
+      "N": 4096,
+      "K_global": 16384,
+      "input_shape": [
+        2048,
+        1,
+        2048
+      ],
+      "input_stride": [
+        2048,
+        2048,
+        1
+      ],
+      "weight_shape": [
+        4096,
+        2048
+      ],
+      "K_local": 2048
+    },
+    "decoder.layers.29.self_attention.linear_proj": {
+      "M": 2048,
+      "N": 4096,
+      "K_global": 4096,
+      "input_shape": [
+        2048,
+        1,
+        512
+      ],
+      "input_stride": [
+        512,
+        512,
+        1
+      ],
+      "weight_shape": [
+        4096,
+        512
+      ],
+      "K_local": 512
+    },
+    "decoder.layers.29.mlp.linear_fc2": {
+      "M": 2048,
+      "N": 4096,
+      "K_global": 16384,
+      "input_shape": [
+        2048,
+        1,
+        2048
+      ],
+      "input_stride": [
+        2048,
+        2048,
+        1
+      ],
+      "weight_shape": [
+        4096,
+        2048
+      ],
+      "K_local": 2048
+    },
+    "decoder.layers.30.self_attention.linear_proj": {
+      "M": 2048,
+      "N": 4096,
+      "K_global": 4096,
+      "input_shape": [
+        2048,
+        1,
+        512
+      ],
+      "input_stride": [
+        512,
+        512,
+        1
+      ],
+      "weight_shape": [
+        4096,
+        512
+      ],
+      "K_local": 512
+    },
+    "decoder.layers.30.mlp.linear_fc2": {
+      "M": 2048,
+      "N": 4096,
+      "K_global": 16384,
+      "input_shape": [
+        2048,
+        1,
+        2048
+      ],
+      "input_stride": [
+        2048,
+        2048,
+        1
+      ],
+      "weight_shape": [
+        4096,
+        2048
+      ],
+      "K_local": 2048
+    },
+    "decoder.layers.31.self_attention.linear_proj": {
+      "M": 2048,
+      "N": 4096,
+      "K_global": 4096,
+      "input_shape": [
+        2048,
+        1,
+        512
+      ],
+      "input_stride": [
+        512,
+        512,
+        1
+      ],
+      "weight_shape": [
+        4096,
+        512
+      ],
+      "K_local": 512
+    },
+    "decoder.layers.31.mlp.linear_fc2": {
+      "M": 2048,
+      "N": 4096,
+      "K_global": 16384,
+      "input_shape": [
+        2048,
+        1,
+        2048
+      ],
+      "input_stride": [
+        2048,
+        2048,
+        1
+      ],
+      "weight_shape": [
+        4096,
+        2048
+      ],
+      "K_local": 2048
+    }
+  },
+  "module_policies": {
+    "decoder.layers.0.self_attention.linear_proj": "flux_tensor",
+    "decoder.layers.0.mlp.linear_fc2": "flux_tensor",
+    "decoder.layers.1.self_attention.linear_proj": "flux_tensor",
+    "decoder.layers.1.mlp.linear_fc2": "flux_tensor",
+    "decoder.layers.2.self_attention.linear_proj": "flux_tensor",
+    "decoder.layers.2.mlp.linear_fc2": "flux_tensor",
+    "decoder.layers.3.self_attention.linear_proj": "flux_tensor",
+    "decoder.layers.3.mlp.linear_fc2": "flux_tensor",
+    "decoder.layers.4.self_attention.linear_proj": "flux_tensor",
+    "decoder.layers.4.mlp.linear_fc2": "flux_tensor",
+    "decoder.layers.5.self_attention.linear_proj": "flux_tensor",
+    "decoder.layers.5.mlp.linear_fc2": "flux_tensor",
+    "decoder.layers.6.self_attention.linear_proj": "flux_tensor",
+    "decoder.layers.6.mlp.linear_fc2": "flux_tensor",
+    "decoder.layers.7.self_attention.linear_proj": "flux_tensor",
+    "decoder.layers.7.mlp.linear_fc2": "flux_tensor",
+    "decoder.layers.8.self_attention.linear_proj": "flux_tensor",
+    "decoder.layers.8.mlp.linear_fc2": "flux_tensor",
+    "decoder.layers.9.self_attention.linear_proj": "flux_tensor",
+    "decoder.layers.9.mlp.linear_fc2": "flux_tensor",
+    "decoder.layers.10.self_attention.linear_proj": "flux_tensor",
+    "decoder.layers.10.mlp.linear_fc2": "flux_tensor",
+    "decoder.layers.11.self_attention.linear_proj": "flux_tensor",
+    "decoder.layers.11.mlp.linear_fc2": "flux_tensor",
+    "decoder.layers.12.self_attention.linear_proj": "flux_tensor",
+    "decoder.layers.12.mlp.linear_fc2": "flux_tensor",
+    "decoder.layers.13.self_attention.linear_proj": "flux_tensor",
+    "decoder.layers.13.mlp.linear_fc2": "flux_tensor",
+    "decoder.layers.14.self_attention.linear_proj": "flux_tensor",
+    "decoder.layers.14.mlp.linear_fc2": "flux_tensor",
+    "decoder.layers.15.self_attention.linear_proj": "flux_tensor",
+    "decoder.layers.15.mlp.linear_fc2": "flux_tensor",
+    "decoder.layers.16.self_attention.linear_proj": "flux_tensor",
+    "decoder.layers.16.mlp.linear_fc2": "flux_tensor",
+    "decoder.layers.17.self_attention.linear_proj": "flux_tensor",
+    "decoder.layers.17.mlp.linear_fc2": "flux_tensor",
+    "decoder.layers.18.self_attention.linear_proj": "flux_tensor",
+    "decoder.layers.18.mlp.linear_fc2": "flux_tensor",
+    "decoder.layers.19.self_attention.linear_proj": "flux_tensor",
+    "decoder.layers.19.mlp.linear_fc2": "flux_tensor",
+    "decoder.layers.20.self_attention.linear_proj": "flux_tensor",
+    "decoder.layers.20.mlp.linear_fc2": "flux_tensor",
+    "decoder.layers.21.self_attention.linear_proj": "flux_tensor",
+    "decoder.layers.21.mlp.linear_fc2": "flux_tensor",
+    "decoder.layers.22.self_attention.linear_proj": "flux_tensor",
+    "decoder.layers.22.mlp.linear_fc2": "flux_tensor",
+    "decoder.layers.23.self_attention.linear_proj": "flux_tensor",
+    "decoder.layers.23.mlp.linear_fc2": "flux_tensor",
+    "decoder.layers.24.self_attention.linear_proj": "flux_tensor",
+    "decoder.layers.24.mlp.linear_fc2": "flux_tensor",
+    "decoder.layers.25.self_attention.linear_proj": "flux_tensor",
+    "decoder.layers.25.mlp.linear_fc2": "flux_tensor",
+    "decoder.layers.26.self_attention.linear_proj": "flux_tensor",
+    "decoder.layers.26.mlp.linear_fc2": "flux_tensor",
+    "decoder.layers.27.self_attention.linear_proj": "flux_tensor",
+    "decoder.layers.27.mlp.linear_fc2": "flux_tensor",
+    "decoder.layers.28.self_attention.linear_proj": "flux_tensor",
+    "decoder.layers.28.mlp.linear_fc2": "flux_tensor",
+    "decoder.layers.29.self_attention.linear_proj": "flux_tensor",
+    "decoder.layers.29.mlp.linear_fc2": "flux_tensor",
+    "decoder.layers.30.self_attention.linear_proj": "flux_tensor",
+    "decoder.layers.30.mlp.linear_fc2": "flux_tensor",
+    "decoder.layers.31.self_attention.linear_proj": "flux_tensor",
+    "decoder.layers.31.mlp.linear_fc2": "flux_tensor"
+  },
+  "warmup_calls": {
+    "decoder.layers.0.self_attention.linear_proj": 8,
+    "decoder.layers.0.mlp.linear_fc2": 8,
+    "decoder.layers.1.self_attention.linear_proj": 8,
+    "decoder.layers.1.mlp.linear_fc2": 8,
+    "decoder.layers.2.self_attention.linear_proj": 8,
+    "decoder.layers.2.mlp.linear_fc2": 8,
+    "decoder.layers.3.self_attention.linear_proj": 8,
+    "decoder.layers.3.mlp.linear_fc2": 8,
+    "decoder.layers.4.self_attention.linear_proj": 8,
+    "decoder.layers.4.mlp.linear_fc2": 8,
+    "decoder.layers.5.self_attention.linear_proj": 8,
+    "decoder.layers.5.mlp.linear_fc2": 8,
+    "decoder.layers.6.self_attention.linear_proj": 8,
+    "decoder.layers.6.mlp.linear_fc2": 8,
+    "decoder.layers.7.self_attention.linear_proj": 8,
+    "decoder.layers.7.mlp.linear_fc2": 8,
+    "decoder.layers.8.self_attention.linear_proj": 8,
+    "decoder.layers.8.mlp.linear_fc2": 8,
+    "decoder.layers.9.self_attention.linear_proj": 8,
+    "decoder.layers.9.mlp.linear_fc2": 8,
+    "decoder.layers.10.self_attention.linear_proj": 8,
+    "decoder.layers.10.mlp.linear_fc2": 8,
+    "decoder.layers.11.self_attention.linear_proj": 8,
+    "decoder.layers.11.mlp.linear_fc2": 8,
+    "decoder.layers.12.self_attention.linear_proj": 8,
+    "decoder.layers.12.mlp.linear_fc2": 8,
+    "decoder.layers.13.self_attention.linear_proj": 8,
+    "decoder.layers.13.mlp.linear_fc2": 8,
+    "decoder.layers.14.self_attention.linear_proj": 8,
+    "decoder.layers.14.mlp.linear_fc2": 8,
+    "decoder.layers.15.self_attention.linear_proj": 8,
+    "decoder.layers.15.mlp.linear_fc2": 8,
+    "decoder.layers.16.self_attention.linear_proj": 8,
+    "decoder.layers.16.mlp.linear_fc2": 8,
+    "decoder.layers.17.self_attention.linear_proj": 8,
+    "decoder.layers.17.mlp.linear_fc2": 8,
+    "decoder.layers.18.self_attention.linear_proj": 8,
+    "decoder.layers.18.mlp.linear_fc2": 8,
+    "decoder.layers.19.self_attention.linear_proj": 8,
+    "decoder.layers.19.mlp.linear_fc2": 8,
+    "decoder.layers.20.self_attention.linear_proj": 8,
+    "decoder.layers.20.mlp.linear_fc2": 8,
+    "decoder.layers.21.self_attention.linear_proj": 8,
+    "decoder.layers.21.mlp.linear_fc2": 8,
+    "decoder.layers.22.self_attention.linear_proj": 8,
+    "decoder.layers.22.mlp.linear_fc2": 8,
+    "decoder.layers.23.self_attention.linear_proj": 8,
+    "decoder.layers.23.mlp.linear_fc2": 8,
+    "decoder.layers.24.self_attention.linear_proj": 8,
+    "decoder.layers.24.mlp.linear_fc2": 8,
+    "decoder.layers.25.self_attention.linear_proj": 8,
+    "decoder.layers.25.mlp.linear_fc2": 8,
+    "decoder.layers.26.self_attention.linear_proj": 8,
+    "decoder.layers.26.mlp.linear_fc2": 8,
+    "decoder.layers.27.self_attention.linear_proj": 8,
+    "decoder.layers.27.mlp.linear_fc2": 8,
+    "decoder.layers.28.self_attention.linear_proj": 8,
+    "decoder.layers.28.mlp.linear_fc2": 8,
+    "decoder.layers.29.self_attention.linear_proj": 8,
+    "decoder.layers.29.mlp.linear_fc2": 8,
+    "decoder.layers.30.self_attention.linear_proj": 8,
+    "decoder.layers.30.mlp.linear_fc2": 8,
+    "decoder.layers.31.self_attention.linear_proj": 8,
+    "decoder.layers.31.mlp.linear_fc2": 8
+  },
+  "elapsed_seconds": 2.3214916344732046,
+  "timed_steps": 3,
+  "ms_per_step": 773.8305448244015,
+  "tokens_per_second": 10586.297032070423,
+  "passed": true,
+  "timed_target_calls_expected": 768,
+  "forward_checks": {
+    "decoder.layers.0.self_attention.linear_proj": {
+      "max_abs": 0.0048828125,
+      "relative_l2": 0.024029585991362585,
+      "protocol_relative_l2": 8.677648168849227e-05,
+      "budget_vs_bf16": 0.05,
+      "budget_vs_codec": 0.01,
+      "passed": true
+    },
+    "decoder.layers.0.mlp.linear_fc2": {
+      "max_abs": 0.0390625,
+      "relative_l2": 0.02402477418645537,
+      "protocol_relative_l2": 0.00014624799382381386,
+      "budget_vs_bf16": 0.05,
+      "budget_vs_codec": 0.01,
+      "passed": true
+    },
+    "decoder.layers.1.self_attention.linear_proj": {
+      "max_abs": 0.01318359375,
+      "relative_l2": 0.023589429048868127,
+      "protocol_relative_l2": 8.756534441451269e-05,
+      "budget_vs_bf16": 0.05,
+      "budget_vs_codec": 0.01,
+      "passed": true
+    },
+    "decoder.layers.1.mlp.linear_fc2": {
+      "max_abs": 0.03515625,
+      "relative_l2": 0.024038026608821213,
+      "protocol_relative_l2": 2.331108972196721e-05,
+      "budget_vs_bf16": 0.05,
+      "budget_vs_codec": 0.01,
+      "passed": true
+    },
+    "decoder.layers.2.self_attention.linear_proj": {
+      "max_abs": 0.015625,
+      "relative_l2": 0.024219432750371125,
+      "protocol_relative_l2": 3.0472085911294255e-05,
+      "budget_vs_bf16": 0.05,
+      "budget_vs_codec": 0.01,
+      "passed": true
+    },
+    "decoder.layers.2.mlp.linear_fc2": {
+      "max_abs": 0.03515625,
+      "relative_l2": 0.02381899929433405,
+      "protocol_relative_l2": 0.0001666162912917363,
+      "budget_vs_bf16": 0.05,
+      "budget_vs_codec": 0.01,
+      "passed": true
+    },
+    "decoder.layers.3.self_attention.linear_proj": {
+      "max_abs": 0.01953125,
+      "relative_l2": 0.024544861881335544,
+      "protocol_relative_l2": 8.72696264447305e-05,
+      "budget_vs_bf16": 0.05,
+      "budget_vs_codec": 0.01,
+      "passed": true
+    },
+    "decoder.layers.3.mlp.linear_fc2": {
+      "max_abs": 0.0390625,
+      "relative_l2": 0.02374320144598235,
+      "protocol_relative_l2": 7.803159243711709e-05,
+      "budget_vs_bf16": 0.05,
+      "budget_vs_codec": 0.01,
+      "passed": true
+    },
+    "decoder.layers.4.self_attention.linear_proj": {
+      "max_abs": 0.0185546875,
+      "relative_l2": 0.024065038976901713,
+      "protocol_relative_l2": 2.3324474488813104e-05,
+      "budget_vs_bf16": 0.05,
+      "budget_vs_codec": 0.01,
+      "passed": true
+    },
+    "decoder.layers.4.mlp.linear_fc2": {
+      "max_abs": 0.0390625,
+      "relative_l2": 0.023849512145812234,
+      "protocol_relative_l2": 9.006347593602462e-05,
+      "budget_vs_bf16": 0.05,
+      "budget_vs_codec": 0.01,
+      "passed": true
+    },
+    "decoder.layers.5.self_attention.linear_proj": {
+      "max_abs": 0.0205078125,
+      "relative_l2": 0.023921377774971928,
+      "protocol_relative_l2": 2.4634459144389374e-05,
+      "budget_vs_bf16": 0.05,
+      "budget_vs_codec": 0.01,
+      "passed": true
+    },
+    "decoder.layers.5.mlp.linear_fc2": {
+      "max_abs": 0.03515625,
+      "relative_l2": 0.024098385085043916,
+      "protocol_relative_l2": 9.977588435518962e-05,
+      "budget_vs_bf16": 0.05,
+      "budget_vs_codec": 0.01,
+      "passed": true
+    },
+    "decoder.layers.6.self_attention.linear_proj": {
+      "max_abs": 0.01953125,
+      "relative_l2": 0.023597449238558457,
+      "protocol_relative_l2": 7.938366686885153e-05,
+      "budget_vs_bf16": 0.05,
+      "budget_vs_codec": 0.01,
+      "passed": true
+    },
+    "decoder.layers.6.mlp.linear_fc2": {
+      "max_abs": 0.03515625,
+      "relative_l2": 0.02392389029565477,
+      "protocol_relative_l2": 9.179134009686446e-05,
+      "budget_vs_bf16": 0.05,
+      "budget_vs_codec": 0.01,
+      "passed": true
+    },
+    "decoder.layers.7.self_attention.linear_proj": {
+      "max_abs": 0.01953125,
+      "relative_l2": 0.023934810181534823,
+      "protocol_relative_l2": 3.9086717288595366e-05,
+      "budget_vs_bf16": 0.05,
+      "budget_vs_codec": 0.01,
+      "passed": true
+    },
+    "decoder.layers.7.mlp.linear_fc2": {
+      "max_abs": 0.03466796875,
+      "relative_l2": 0.02401207491347616,
+      "protocol_relative_l2": 9.684727940130743e-05,
+      "budget_vs_bf16": 0.05,
+      "budget_vs_codec": 0.01,
+      "passed": true
+    },
+    "decoder.layers.8.self_attention.linear_proj": {
+      "max_abs": 0.021484375,
+      "relative_l2": 0.024742231287678603,
+      "protocol_relative_l2": 0.000108054430815729,
+      "budget_vs_bf16": 0.05,
+      "budget_vs_codec": 0.01,
+      "passed": true
+    },
+    "decoder.layers.8.mlp.linear_fc2": {
+      "max_abs": 0.033203125,
+      "relative_l2": 0.023833325283027562,
+      "protocol_relative_l2": 4.7202391882808776e-05,
+      "budget_vs_bf16": 0.05,
+      "budget_vs_codec": 0.01,
+      "passed": true
+    },
+    "decoder.layers.9.self_attention.linear_proj": {
+      "max_abs": 0.021484375,
+      "relative_l2": 0.02387871684321983,
+      "protocol_relative_l2": 6.816801626172203e-05,
+      "budget_vs_bf16": 0.05,
+      "budget_vs_codec": 0.01,
+      "passed": true
+    },
+    "decoder.layers.9.mlp.linear_fc2": {
+      "max_abs": 0.033203125,
+      "relative_l2": 0.024057325333212823,
+      "protocol_relative_l2": 9.614851637149592e-05,
+      "budget_vs_bf16": 0.05,
+      "budget_vs_codec": 0.01,
+      "passed": true
+    },
+    "decoder.layers.10.self_attention.linear_proj": {
+      "max_abs": 0.021484375,
+      "relative_l2": 0.024268193145703616,
+      "protocol_relative_l2": 8.205819315587922e-05,
+      "budget_vs_bf16": 0.05,
+      "budget_vs_codec": 0.01,
+      "passed": true
+    },
+    "decoder.layers.10.mlp.linear_fc2": {
+      "max_abs": 0.03564453125,
+      "relative_l2": 0.024155435862228316,
+      "protocol_relative_l2": 7.533387997031567e-05,
+      "budget_vs_bf16": 0.05,
+      "budget_vs_codec": 0.01,
+      "passed": true
+    },
+    "decoder.layers.11.self_attention.linear_proj": {
+      "max_abs": 0.0234375,
+      "relative_l2": 0.024077907154203458,
+      "protocol_relative_l2": 3.1808267556191596e-05,
+      "budget_vs_bf16": 0.05,
+      "budget_vs_codec": 0.01,
+      "passed": true
+    },
+    "decoder.layers.11.mlp.linear_fc2": {
+      "max_abs": 0.0361328125,
+      "relative_l2": 0.023850672643010908,
+      "protocol_relative_l2": 2.1763548828425904e-05,
+      "budget_vs_bf16": 0.05,
+      "budget_vs_codec": 0.01,
+      "passed": true
+    },
+    "decoder.layers.12.self_attention.linear_proj": {
+      "max_abs": 0.0205078125,
+      "relative_l2": 0.023750220324950937,
+      "protocol_relative_l2": 6.258536808427484e-05,
+      "budget_vs_bf16": 0.05,
+      "budget_vs_codec": 0.01,
+      "passed": true
+    },
+    "decoder.layers.12.mlp.linear_fc2": {
+      "max_abs": 0.03515625,
+      "relative_l2": 0.024134086090541188,
+      "protocol_relative_l2": 6.165291739951754e-05,
+      "budget_vs_bf16": 0.05,
+      "budget_vs_codec": 0.01,
+      "passed": true
+    },
+    "decoder.layers.13.self_attention.linear_proj": {
+      "max_abs": 0.02099609375,
+      "relative_l2": 0.02361988574071438,
+      "protocol_relative_l2": 5.4124317372214154e-05,
+      "budget_vs_bf16": 0.05,
+      "budget_vs_codec": 0.01,
+      "passed": true
+    },
+    "decoder.layers.13.mlp.linear_fc2": {
+      "max_abs": 0.03515625,
+      "relative_l2": 0.02420559833843304,
+      "protocol_relative_l2": 7.280054489984257e-05,
+      "budget_vs_bf16": 0.05,
+      "budget_vs_codec": 0.01,
+      "passed": true
+    },
+    "decoder.layers.14.self_attention.linear_proj": {
+      "max_abs": 0.01953125,
+      "relative_l2": 0.024402309219726397,
+      "protocol_relative_l2": 0.0001409997099622277,
+      "budget_vs_bf16": 0.05,
+      "budget_vs_codec": 0.01,
+      "passed": true
+    },
+    "decoder.layers.14.mlp.linear_fc2": {
+      "max_abs": 0.03515625,
+      "relative_l2": 0.024105109742084664,
+      "protocol_relative_l2": 7.537068101654992e-05,
+      "budget_vs_bf16": 0.05,
+      "budget_vs_codec": 0.01,
+      "passed": true
+    },
+    "decoder.layers.15.self_attention.linear_proj": {
+      "max_abs": 0.02392578125,
+      "relative_l2": 0.02396005986627763,
+      "protocol_relative_l2": 5.7186085330543695e-05,
+      "budget_vs_bf16": 0.05,
+      "budget_vs_codec": 0.01,
+      "passed": true
+    },
+    "decoder.layers.15.mlp.linear_fc2": {
+      "max_abs": 0.03515625,
+      "relative_l2": 0.023898947904655757,
+      "protocol_relative_l2": 6.467874232768487e-05,
+      "budget_vs_bf16": 0.05,
+      "budget_vs_codec": 0.01,
+      "passed": true
+    },
+    "decoder.layers.16.self_attention.linear_proj": {
+      "max_abs": 0.02099609375,
+      "relative_l2": 0.02365564262681884,
+      "protocol_relative_l2": 5.100191347549724e-05,
+      "budget_vs_bf16": 0.05,
+      "budget_vs_codec": 0.01,
+      "passed": true
+    },
+    "decoder.layers.16.mlp.linear_fc2": {
+      "max_abs": 0.033203125,
+      "relative_l2": 0.024241279672723832,
+      "protocol_relative_l2": 0.00012815607682576896,
+      "budget_vs_bf16": 0.05,
+      "budget_vs_codec": 0.01,
+      "passed": true
+    },
+    "decoder.layers.17.self_attention.linear_proj": {
+      "max_abs": 0.0244140625,
+      "relative_l2": 0.023569446047291942,
+      "protocol_relative_l2": 6.0788056823838544e-05,
+      "budget_vs_bf16": 0.05,
+      "budget_vs_codec": 0.01,
+      "passed": true
+    },
+    "decoder.layers.17.mlp.linear_fc2": {
+      "max_abs": 0.0390625,
+      "relative_l2": 0.02382037096391697,
+      "protocol_relative_l2": 3.5197448040869876e-05,
+      "budget_vs_bf16": 0.05,
+      "budget_vs_codec": 0.01,
+      "passed": true
+    },
+    "decoder.layers.18.self_attention.linear_proj": {
+      "max_abs": 0.02099609375,
+      "relative_l2": 0.023917385041798345,
+      "protocol_relative_l2": 9.45143105249559e-05,
+      "budget_vs_bf16": 0.05,
+      "budget_vs_codec": 0.01,
+      "passed": true
+    },
+    "decoder.layers.18.mlp.linear_fc2": {
+      "max_abs": 0.037109375,
+      "relative_l2": 0.023922056097028792,
+      "protocol_relative_l2": 0.00012226660959027084,
+      "budget_vs_bf16": 0.05,
+      "budget_vs_codec": 0.01,
+      "passed": true
+    },
+    "decoder.layers.19.self_attention.linear_proj": {
+      "max_abs": 0.021484375,
+      "relative_l2": 0.023814668930562086,
+      "protocol_relative_l2": 7.384456435587478e-05,
+      "budget_vs_bf16": 0.05,
+      "budget_vs_codec": 0.01,
+      "passed": true
+    },
+    "decoder.layers.19.mlp.linear_fc2": {
+      "max_abs": 0.03515625,
+      "relative_l2": 0.024016854495241824,
+      "protocol_relative_l2": 6.357863387650606e-05,
+      "budget_vs_bf16": 0.05,
+      "budget_vs_codec": 0.01,
+      "passed": true
+    },
+    "decoder.layers.20.self_attention.linear_proj": {
+      "max_abs": 0.0234375,
+      "relative_l2": 0.023839438010292143,
+      "protocol_relative_l2": 0.00010089945694898407,
+      "budget_vs_bf16": 0.05,
+      "budget_vs_codec": 0.01,
+      "passed": true
+    },
+    "decoder.layers.20.mlp.linear_fc2": {
+      "max_abs": 0.033203125,
+      "relative_l2": 0.023830421615568666,
+      "protocol_relative_l2": 5.300666212049933e-05,
+      "budget_vs_bf16": 0.05,
+      "budget_vs_codec": 0.01,
+      "passed": true
+    },
+    "decoder.layers.21.self_attention.linear_proj": {
+      "max_abs": 0.021484375,
+      "relative_l2": 0.02403119531444511,
+      "protocol_relative_l2": 5.198551253448199e-05,
+      "budget_vs_bf16": 0.05,
+      "budget_vs_codec": 0.01,
+      "passed": true
+    },
+    "decoder.layers.21.mlp.linear_fc2": {
+      "max_abs": 0.041015625,
+      "relative_l2": 0.024128488555648465,
+      "protocol_relative_l2": 5.282470996498001e-05,
+      "budget_vs_bf16": 0.05,
+      "budget_vs_codec": 0.01,
+      "passed": true
+    },
+    "decoder.layers.22.self_attention.linear_proj": {
+      "max_abs": 0.025390625,
+      "relative_l2": 0.024066021950532694,
+      "protocol_relative_l2": 7.688788622393724e-05,
+      "budget_vs_bf16": 0.05,
+      "budget_vs_codec": 0.01,
+      "passed": true
+    },
+    "decoder.layers.22.mlp.linear_fc2": {
+      "max_abs": 0.03515625,
+      "relative_l2": 0.023845761491578427,
+      "protocol_relative_l2": 0.00012796848948499966,
+      "budget_vs_bf16": 0.05,
+      "budget_vs_codec": 0.01,
+      "passed": true
+    },
+    "decoder.layers.23.self_attention.linear_proj": {
+      "max_abs": 0.0234375,
+      "relative_l2": 0.023892165342360428,
+      "protocol_relative_l2": 5.8660530621248035e-05,
+      "budget_vs_bf16": 0.05,
+      "budget_vs_codec": 0.01,
+      "passed": true
+    },
+    "decoder.layers.23.mlp.linear_fc2": {
+      "max_abs": 0.03515625,
+      "relative_l2": 0.023945904271299157,
+      "protocol_relative_l2": 4.904865841820731e-05,
+      "budget_vs_bf16": 0.05,
+      "budget_vs_codec": 0.01,
+      "passed": true
+    },
+    "decoder.layers.24.self_attention.linear_proj": {
+      "max_abs": 0.0234375,
+      "relative_l2": 0.023822851872809317,
+      "protocol_relative_l2": 0.00011970664807059687,
+      "budget_vs_bf16": 0.05,
+      "budget_vs_codec": 0.01,
+      "passed": true
+    },
+    "decoder.layers.24.mlp.linear_fc2": {
+      "max_abs": 0.03515625,
+      "relative_l2": 0.024013013989029112,
+      "protocol_relative_l2": 9.405009187171576e-05,
+      "budget_vs_bf16": 0.05,
+      "budget_vs_codec": 0.01,
+      "passed": true
+    },
+    "decoder.layers.25.self_attention.linear_proj": {
+      "max_abs": 0.0234375,
+      "relative_l2": 0.023814888696452416,
+      "protocol_relative_l2": 4.818247638919701e-05,
+      "budget_vs_bf16": 0.05,
+      "budget_vs_codec": 0.01,
+      "passed": true
+    },
+    "decoder.layers.25.mlp.linear_fc2": {
+      "max_abs": 0.0341796875,
+      "relative_l2": 0.02402610496251668,
+      "protocol_relative_l2": 9.55325706684275e-05,
+      "budget_vs_bf16": 0.05,
+      "budget_vs_codec": 0.01,
+      "passed": true
+    },
+    "decoder.layers.26.self_attention.linear_proj": {
+      "max_abs": 0.0234375,
+      "relative_l2": 0.023676121372539327,
+      "protocol_relative_l2": 9.317250613829159e-05,
+      "budget_vs_bf16": 0.05,
+      "budget_vs_codec": 0.01,
+      "passed": true
+    },
+    "decoder.layers.26.mlp.linear_fc2": {
+      "max_abs": 0.03515625,
+      "relative_l2": 0.02379048313743704,
+      "protocol_relative_l2": 7.850735131530771e-05,
+      "budget_vs_bf16": 0.05,
+      "budget_vs_codec": 0.01,
+      "passed": true
+    },
+    "decoder.layers.27.self_attention.linear_proj": {
+      "max_abs": 0.0244140625,
+      "relative_l2": 0.023629658922264055,
+      "protocol_relative_l2": 8.431301786661597e-05,
+      "budget_vs_bf16": 0.05,
+      "budget_vs_codec": 0.01,
+      "passed": true
+    },
+    "decoder.layers.27.mlp.linear_fc2": {
+      "max_abs": 0.037109375,
+      "relative_l2": 0.023701691528456744,
+      "protocol_relative_l2": 3.945077259648887e-05,
+      "budget_vs_bf16": 0.05,
+      "budget_vs_codec": 0.01,
+      "passed": true
+    },
+    "decoder.layers.28.self_attention.linear_proj": {
+      "max_abs": 0.0224609375,
+      "relative_l2": 0.02370219106140833,
+      "protocol_relative_l2": 3.808572804488915e-05,
+      "budget_vs_bf16": 0.05,
+      "budget_vs_codec": 0.01,
+      "passed": true
+    },
+    "decoder.layers.28.mlp.linear_fc2": {
+      "max_abs": 0.0322265625,
+      "relative_l2": 0.02370622372315402,
+      "protocol_relative_l2": 0.000104901135715783,
+      "budget_vs_bf16": 0.05,
+      "budget_vs_codec": 0.01,
+      "passed": true
+    },
+    "decoder.layers.29.self_attention.linear_proj": {
+      "max_abs": 0.02734375,
+      "relative_l2": 0.024125988180047502,
+      "protocol_relative_l2": 9.397703846725745e-05,
+      "budget_vs_bf16": 0.05,
+      "budget_vs_codec": 0.01,
+      "passed": true
+    },
+    "decoder.layers.29.mlp.linear_fc2": {
+      "max_abs": 0.03515625,
+      "relative_l2": 0.023739243161219933,
+      "protocol_relative_l2": 4.7659599522770775e-05,
+      "budget_vs_bf16": 0.05,
+      "budget_vs_codec": 0.01,
+      "passed": true
+    },
+    "decoder.layers.30.self_attention.linear_proj": {
+      "max_abs": 0.022216796875,
+      "relative_l2": 0.023376441906400293,
+      "protocol_relative_l2": 0.00010242370042206736,
+      "budget_vs_bf16": 0.05,
+      "budget_vs_codec": 0.01,
+      "passed": true
+    },
+    "decoder.layers.30.mlp.linear_fc2": {
+      "max_abs": 0.033203125,
+      "relative_l2": 0.023504122124699857,
+      "protocol_relative_l2": 6.927241681118474e-05,
+      "budget_vs_bf16": 0.05,
+      "budget_vs_codec": 0.01,
+      "passed": true
+    },
+    "decoder.layers.31.self_attention.linear_proj": {
+      "max_abs": 0.0205078125,
+      "relative_l2": 0.024146779884181256,
+      "protocol_relative_l2": 8.011164618552615e-05,
+      "budget_vs_bf16": 0.05,
+      "budget_vs_codec": 0.01,
+      "passed": true
+    },
+    "decoder.layers.31.mlp.linear_fc2": {
+      "max_abs": 0.0390625,
+      "relative_l2": 0.024030502745958138,
+      "protocol_relative_l2": 9.734958447419652e-05,
+      "budget_vs_bf16": 0.05,
+      "budget_vs_codec": 0.01,
+      "passed": true
+    }
+  },
+  "codec_placements": {
+    "decoder.layers.0.self_attention.linear_proj": "tensor",
+    "decoder.layers.0.mlp.linear_fc2": "tensor",
+    "decoder.layers.1.self_attention.linear_proj": "tensor",
+    "decoder.layers.1.mlp.linear_fc2": "tensor",
+    "decoder.layers.2.self_attention.linear_proj": "tensor",
+    "decoder.layers.2.mlp.linear_fc2": "tensor",
+    "decoder.layers.3.self_attention.linear_proj": "tensor",
+    "decoder.layers.3.mlp.linear_fc2": "tensor",
+    "decoder.layers.4.self_attention.linear_proj": "tensor",
+    "decoder.layers.4.mlp.linear_fc2": "tensor",
+    "decoder.layers.5.self_attention.linear_proj": "tensor",
+    "decoder.layers.5.mlp.linear_fc2": "tensor",
+    "decoder.layers.6.self_attention.linear_proj": "tensor",
+    "decoder.layers.6.mlp.linear_fc2": "tensor",
+    "decoder.layers.7.self_attention.linear_proj": "tensor",
+    "decoder.layers.7.mlp.linear_fc2": "tensor",
+    "decoder.layers.8.self_attention.linear_proj": "tensor",
+    "decoder.layers.8.mlp.linear_fc2": "tensor",
+    "decoder.layers.9.self_attention.linear_proj": "tensor",
+    "decoder.layers.9.mlp.linear_fc2": "tensor",
+    "decoder.layers.10.self_attention.linear_proj": "tensor",
+    "decoder.layers.10.mlp.linear_fc2": "tensor",
+    "decoder.layers.11.self_attention.linear_proj": "tensor",
+    "decoder.layers.11.mlp.linear_fc2": "tensor",
+    "decoder.layers.12.self_attention.linear_proj": "tensor",
+    "decoder.layers.12.mlp.linear_fc2": "tensor",
+    "decoder.layers.13.self_attention.linear_proj": "tensor",
+    "decoder.layers.13.mlp.linear_fc2": "tensor",
+    "decoder.layers.14.self_attention.linear_proj": "tensor",
+    "decoder.layers.14.mlp.linear_fc2": "tensor",
+    "decoder.layers.15.self_attention.linear_proj": "tensor",
+    "decoder.layers.15.mlp.linear_fc2": "tensor",
+    "decoder.layers.16.self_attention.linear_proj": "tensor",
+    "decoder.layers.16.mlp.linear_fc2": "tensor",
+    "decoder.layers.17.self_attention.linear_proj": "tensor",
+    "decoder.layers.17.mlp.linear_fc2": "tensor",
+    "decoder.layers.18.self_attention.linear_proj": "tensor",
+    "decoder.layers.18.mlp.linear_fc2": "tensor",
+    "decoder.layers.19.self_attention.linear_proj": "tensor",
+    "decoder.layers.19.mlp.linear_fc2": "tensor",
+    "decoder.layers.20.self_attention.linear_proj": "tensor",
+    "decoder.layers.20.mlp.linear_fc2": "tensor",
+    "decoder.layers.21.self_attention.linear_proj": "tensor",
+    "decoder.layers.21.mlp.linear_fc2": "tensor",
+    "decoder.layers.22.self_attention.linear_proj": "tensor",
+    "decoder.layers.22.mlp.linear_fc2": "tensor",
+    "decoder.layers.23.self_attention.linear_proj": "tensor",
+    "decoder.layers.23.mlp.linear_fc2": "tensor",
+    "decoder.layers.24.self_attention.linear_proj": "tensor",
+    "decoder.layers.24.mlp.linear_fc2": "tensor",
+    "decoder.layers.25.self_attention.linear_proj": "tensor",
+    "decoder.layers.25.mlp.linear_fc2": "tensor",
+    "decoder.layers.26.self_attention.linear_proj": "tensor",
+    "decoder.layers.26.mlp.linear_fc2": "tensor",
+    "decoder.layers.27.self_attention.linear_proj": "tensor",
+    "decoder.layers.27.mlp.linear_fc2": "tensor",
+    "decoder.layers.28.self_attention.linear_proj": "tensor",
+    "decoder.layers.28.mlp.linear_fc2": "tensor",
+    "decoder.layers.29.self_attention.linear_proj": "tensor",
+    "decoder.layers.29.mlp.linear_fc2": "tensor",
+    "decoder.layers.30.self_attention.linear_proj": "tensor",
+    "decoder.layers.30.mlp.linear_fc2": "tensor",
+    "decoder.layers.31.self_attention.linear_proj": "tensor",
+    "decoder.layers.31.mlp.linear_fc2": "tensor"
+  },
+  "selection_checks": {
+    "decoder.layers.0.self_attention.linear_proj": {
+      "mask_sha256": null,
+      "wire_bytes": 7798784,
+      "bf16_wire_bytes": 14680064,
+      "role": "attn",
+      "shape": [
+        2048,
+        4096,
+        4096
+      ],
+      "plan_sha256": null
+    },
+    "decoder.layers.0.mlp.linear_fc2": {
+      "mask_sha256": null,
+      "wire_bytes": 7798784,
+      "bf16_wire_bytes": 14680064,
+      "role": "mlp",
+      "shape": [
+        2048,
+        4096,
+        16384
+      ],
+      "plan_sha256": null
+    },
+    "decoder.layers.1.self_attention.linear_proj": {
+      "mask_sha256": null,
+      "wire_bytes": 7798784,
+      "bf16_wire_bytes": 14680064,
+      "role": "attn",
+      "shape": [
+        2048,
+        4096,
+        4096
+      ],
+      "plan_sha256": null
+    },
+    "decoder.layers.1.mlp.linear_fc2": {
+      "mask_sha256": null,
+      "wire_bytes": 7798784,
+      "bf16_wire_bytes": 14680064,
+      "role": "mlp",
+      "shape": [
+        2048,
+        4096,
+        16384
+      ],
+      "plan_sha256": null
+    },
+    "decoder.layers.2.self_attention.linear_proj": {
+      "mask_sha256": null,
+      "wire_bytes": 7798784,
+      "bf16_wire_bytes": 14680064,
+      "role": "attn",
+      "shape": [
+        2048,
+        4096,
+        4096
+      ],
+      "plan_sha256": null
+    },
+    "decoder.layers.2.mlp.linear_fc2": {
+      "mask_sha256": null,
+      "wire_bytes": 7798784,
+      "bf16_wire_bytes": 14680064,
+      "role": "mlp",
+      "shape": [
+        2048,
+        4096,
+        16384
+      ],
+      "plan_sha256": null
+    },
+    "decoder.layers.3.self_attention.linear_proj": {
+      "mask_sha256": null,
+      "wire_bytes": 7798784,
+      "bf16_wire_bytes": 14680064,
+      "role": "attn",
+      "shape": [
+        2048,
+        4096,
+        4096
+      ],
+      "plan_sha256": null
+    },
+    "decoder.layers.3.mlp.linear_fc2": {
+      "mask_sha256": null,
+      "wire_bytes": 7798784,
+      "bf16_wire_bytes": 14680064,
+      "role": "mlp",
+      "shape": [
+        2048,
+        4096,
+        16384
+      ],
+      "plan_sha256": null
+    },
+    "decoder.layers.4.self_attention.linear_proj": {
+      "mask_sha256": null,
+      "wire_bytes": 7798784,
+      "bf16_wire_bytes": 14680064,
+      "role": "attn",
+      "shape": [
+        2048,
+        4096,
+        4096
+      ],
+      "plan_sha256": null
+    },
+    "decoder.layers.4.mlp.linear_fc2": {
+      "mask_sha256": null,
+      "wire_bytes": 7798784,
+      "bf16_wire_bytes": 14680064,
+      "role": "mlp",
+      "shape": [
+        2048,
+        4096,
+        16384
+      ],
+      "plan_sha256": null
+    },
+    "decoder.layers.5.self_attention.linear_proj": {
+      "mask_sha256": null,
+      "wire_bytes": 7798784,
+      "bf16_wire_bytes": 14680064,
+      "role": "attn",
+      "shape": [
+        2048,
+        4096,
+        4096
+      ],
+      "plan_sha256": null
+    },
+    "decoder.layers.5.mlp.linear_fc2": {
+      "mask_sha256": null,
+      "wire_bytes": 7798784,
+      "bf16_wire_bytes": 14680064,
+      "role": "mlp",
+      "shape": [
+        2048,
+        4096,
+        16384
+      ],
+      "plan_sha256": null
+    },
+    "decoder.layers.6.self_attention.linear_proj": {
+      "mask_sha256": null,
+      "wire_bytes": 7798784,
+      "bf16_wire_bytes": 14680064,
+      "role": "attn",
+      "shape": [
+        2048,
+        4096,
+        4096
+      ],
+      "plan_sha256": null
+    },
+    "decoder.layers.6.mlp.linear_fc2": {
+      "mask_sha256": null,
+      "wire_bytes": 7798784,
+      "bf16_wire_bytes": 14680064,
+      "role": "mlp",
+      "shape": [
+        2048,
+        4096,
+        16384
+      ],
+      "plan_sha256": null
+    },
+    "decoder.layers.7.self_attention.linear_proj": {
+      "mask_sha256": null,
+      "wire_bytes": 7798784,
+      "bf16_wire_bytes": 14680064,
+      "role": "attn",
+      "shape": [
+        2048,
+        4096,
+        4096
+      ],
+      "plan_sha256": null
+    },
+    "decoder.layers.7.mlp.linear_fc2": {
+      "mask_sha256": null,
+      "wire_bytes": 7798784,
+      "bf16_wire_bytes": 14680064,
+      "role": "mlp",
+      "shape": [
+        2048,
+        4096,
+        16384
+      ],
+      "plan_sha256": null
+    },
+    "decoder.layers.8.self_attention.linear_proj": {
+      "mask_sha256": null,
+      "wire_bytes": 7798784,
+      "bf16_wire_bytes": 14680064,
+      "role": "attn",
+      "shape": [
+        2048,
+        4096,
+        4096
+      ],
+      "plan_sha256": null
+    },
+    "decoder.layers.8.mlp.linear_fc2": {
+      "mask_sha256": null,
+      "wire_bytes": 7798784,
+      "bf16_wire_bytes": 14680064,
+      "role": "mlp",
+      "shape": [
+        2048,
+        4096,
+        16384
+      ],
+      "plan_sha256": null
+    },
+    "decoder.layers.9.self_attention.linear_proj": {
+      "mask_sha256": null,
+      "wire_bytes": 7798784,
+      "bf16_wire_bytes": 14680064,
+      "role": "attn",
+      "shape": [
+        2048,
+        4096,
+        4096
+      ],
+      "plan_sha256": null
+    },
+    "decoder.layers.9.mlp.linear_fc2": {
+      "mask_sha256": null,
+      "wire_bytes": 7798784,
+      "bf16_wire_bytes": 14680064,
+      "role": "mlp",
+      "shape": [
+        2048,
+        4096,
+        16384
+      ],
+      "plan_sha256": null
+    },
+    "decoder.layers.10.self_attention.linear_proj": {
+      "mask_sha256": null,
+      "wire_bytes": 7798784,
+      "bf16_wire_bytes": 14680064,
+      "role": "attn",
+      "shape": [
+        2048,
+        4096,
+        4096
+      ],
+      "plan_sha256": null
+    },
+    "decoder.layers.10.mlp.linear_fc2": {
+      "mask_sha256": null,
+      "wire_bytes": 7798784,
+      "bf16_wire_bytes": 14680064,
+      "role": "mlp",
+      "shape": [
+        2048,
+        4096,
+        16384
+      ],
+      "plan_sha256": null
+    },
+    "decoder.layers.11.self_attention.linear_proj": {
+      "mask_sha256": null,
+      "wire_bytes": 7798784,
+      "bf16_wire_bytes": 14680064,
+      "role": "attn",
+      "shape": [
+        2048,
+        4096,
+        4096
+      ],
+      "plan_sha256": null
+    },
+    "decoder.layers.11.mlp.linear_fc2": {
+      "mask_sha256": null,
+      "wire_bytes": 7798784,
+      "bf16_wire_bytes": 14680064,
+      "role": "mlp",
+      "shape": [
+        2048,
+        4096,
+        16384
+      ],
+      "plan_sha256": null
+    },
+    "decoder.layers.12.self_attention.linear_proj": {
+      "mask_sha256": null,
+      "wire_bytes": 7798784,
+      "bf16_wire_bytes": 14680064,
+      "role": "attn",
+      "shape": [
+        2048,
+        4096,
+        4096
+      ],
+      "plan_sha256": null
+    },
+    "decoder.layers.12.mlp.linear_fc2": {
+      "mask_sha256": null,
+      "wire_bytes": 7798784,
+      "bf16_wire_bytes": 14680064,
+      "role": "mlp",
+      "shape": [
+        2048,
+        4096,
+        16384
+      ],
+      "plan_sha256": null
+    },
+    "decoder.layers.13.self_attention.linear_proj": {
+      "mask_sha256": null,
+      "wire_bytes": 7798784,
+      "bf16_wire_bytes": 14680064,
+      "role": "attn",
+      "shape": [
+        2048,
+        4096,
+        4096
+      ],
+      "plan_sha256": null
+    },
+    "decoder.layers.13.mlp.linear_fc2": {
+      "mask_sha256": null,
+      "wire_bytes": 7798784,
+      "bf16_wire_bytes": 14680064,
+      "role": "mlp",
+      "shape": [
+        2048,
+        4096,
+        16384
+      ],
+      "plan_sha256": null
+    },
+    "decoder.layers.14.self_attention.linear_proj": {
+      "mask_sha256": null,
+      "wire_bytes": 7798784,
+      "bf16_wire_bytes": 14680064,
+      "role": "attn",
+      "shape": [
+        2048,
+        4096,
+        4096
+      ],
+      "plan_sha256": null
+    },
+    "decoder.layers.14.mlp.linear_fc2": {
+      "mask_sha256": null,
+      "wire_bytes": 7798784,
+      "bf16_wire_bytes": 14680064,
+      "role": "mlp",
+      "shape": [
+        2048,
+        4096,
+        16384
+      ],
+      "plan_sha256": null
+    },
+    "decoder.layers.15.self_attention.linear_proj": {
+      "mask_sha256": null,
+      "wire_bytes": 7798784,
+      "bf16_wire_bytes": 14680064,
+      "role": "attn",
+      "shape": [
+        2048,
+        4096,
+        4096
+      ],
+      "plan_sha256": null
+    },
+    "decoder.layers.15.mlp.linear_fc2": {
+      "mask_sha256": null,
+      "wire_bytes": 7798784,
+      "bf16_wire_bytes": 14680064,
+      "role": "mlp",
+      "shape": [
+        2048,
+        4096,
+        16384
+      ],
+      "plan_sha256": null
+    },
+    "decoder.layers.16.self_attention.linear_proj": {
+      "mask_sha256": null,
+      "wire_bytes": 7798784,
+      "bf16_wire_bytes": 14680064,
+      "role": "attn",
+      "shape": [
+        2048,
+        4096,
+        4096
+      ],
+      "plan_sha256": null
+    },
+    "decoder.layers.16.mlp.linear_fc2": {
+      "mask_sha256": null,
+      "wire_bytes": 7798784,
+      "bf16_wire_bytes": 14680064,
+      "role": "mlp",
+      "shape": [
+        2048,
+        4096,
+        16384
+      ],
+      "plan_sha256": null
+    },
+    "decoder.layers.17.self_attention.linear_proj": {
+      "mask_sha256": null,
+      "wire_bytes": 7798784,
+      "bf16_wire_bytes": 14680064,
+      "role": "attn",
+      "shape": [
+        2048,
+        4096,
+        4096
+      ],
+      "plan_sha256": null
+    },
+    "decoder.layers.17.mlp.linear_fc2": {
+      "mask_sha256": null,
+      "wire_bytes": 7798784,
+      "bf16_wire_bytes": 14680064,
+      "role": "mlp",
+      "shape": [
+        2048,
+        4096,
+        16384
+      ],
+      "plan_sha256": null
+    },
+    "decoder.layers.18.self_attention.linear_proj": {
+      "mask_sha256": null,
+      "wire_bytes": 7798784,
+      "bf16_wire_bytes": 14680064,
+      "role": "attn",
+      "shape": [
+        2048,
+        4096,
+        4096
+      ],
+      "plan_sha256": null
+    },
+    "decoder.layers.18.mlp.linear_fc2": {
+      "mask_sha256": null,
+      "wire_bytes": 7798784,
+      "bf16_wire_bytes": 14680064,
+      "role": "mlp",
+      "shape": [
+        2048,
+        4096,
+        16384
+      ],
+      "plan_sha256": null
+    },
+    "decoder.layers.19.self_attention.linear_proj": {
+      "mask_sha256": null,
+      "wire_bytes": 7798784,
+      "bf16_wire_bytes": 14680064,
+      "role": "attn",
+      "shape": [
+        2048,
+        4096,
+        4096
+      ],
+      "plan_sha256": null
+    },
+    "decoder.layers.19.mlp.linear_fc2": {
+      "mask_sha256": null,
+      "wire_bytes": 7798784,
+      "bf16_wire_bytes": 14680064,
+      "role": "mlp",
+      "shape": [
+        2048,
+        4096,
+        16384
+      ],
+      "plan_sha256": null
+    },
+    "decoder.layers.20.self_attention.linear_proj": {
+      "mask_sha256": null,
+      "wire_bytes": 7798784,
+      "bf16_wire_bytes": 14680064,
+      "role": "attn",
+      "shape": [
+        2048,
+        4096,
+        4096
+      ],
+      "plan_sha256": null
+    },
+    "decoder.layers.20.mlp.linear_fc2": {
+      "mask_sha256": null,
+      "wire_bytes": 7798784,
+      "bf16_wire_bytes": 14680064,
+      "role": "mlp",
+      "shape": [
+        2048,
+        4096,
+        16384
+      ],
+      "plan_sha256": null
+    },
+    "decoder.layers.21.self_attention.linear_proj": {
+      "mask_sha256": null,
+      "wire_bytes": 7798784,
+      "bf16_wire_bytes": 14680064,
+      "role": "attn",
+      "shape": [
+        2048,
+        4096,
+        4096
+      ],
+      "plan_sha256": null
+    },
+    "decoder.layers.21.mlp.linear_fc2": {
+      "mask_sha256": null,
+      "wire_bytes": 7798784,
+      "bf16_wire_bytes": 14680064,
+      "role": "mlp",
+      "shape": [
+        2048,
+        4096,
+        16384
+      ],
+      "plan_sha256": null
+    },
+    "decoder.layers.22.self_attention.linear_proj": {
+      "mask_sha256": null,
+      "wire_bytes": 7798784,
+      "bf16_wire_bytes": 14680064,
+      "role": "attn",
+      "shape": [
+        2048,
+        4096,
+        4096
+      ],
+      "plan_sha256": null
+    },
+    "decoder.layers.22.mlp.linear_fc2": {
+      "mask_sha256": null,
+      "wire_bytes": 7798784,
+      "bf16_wire_bytes": 14680064,
+      "role": "mlp",
+      "shape": [
+        2048,
+        4096,
+        16384
+      ],
+      "plan_sha256": null
+    },
+    "decoder.layers.23.self_attention.linear_proj": {
+      "mask_sha256": null,
+      "wire_bytes": 7798784,
+      "bf16_wire_bytes": 14680064,
+      "role": "attn",
+      "shape": [
+        2048,
+        4096,
+        4096
+      ],
+      "plan_sha256": null
+    },
+    "decoder.layers.23.mlp.linear_fc2": {
+      "mask_sha256": null,
+      "wire_bytes": 7798784,
+      "bf16_wire_bytes": 14680064,
+      "role": "mlp",
+      "shape": [
+        2048,
+        4096,
+        16384
+      ],
+      "plan_sha256": null
+    },
+    "decoder.layers.24.self_attention.linear_proj": {
+      "mask_sha256": null,
+      "wire_bytes": 7798784,
+      "bf16_wire_bytes": 14680064,
+      "role": "attn",
+      "shape": [
+        2048,
+        4096,
+        4096
+      ],
+      "plan_sha256": null
+    },
+    "decoder.layers.24.mlp.linear_fc2": {
+      "mask_sha256": null,
+      "wire_bytes": 7798784,
+      "bf16_wire_bytes": 14680064,
+      "role": "mlp",
+      "shape": [
+        2048,
+        4096,
+        16384
+      ],
+      "plan_sha256": null
+    },
+    "decoder.layers.25.self_attention.linear_proj": {
+      "mask_sha256": null,
+      "wire_bytes": 7798784,
+      "bf16_wire_bytes": 14680064,
+      "role": "attn",
+      "shape": [
+        2048,
+        4096,
+        4096
+      ],
+      "plan_sha256": null
+    },
+    "decoder.layers.25.mlp.linear_fc2": {
+      "mask_sha256": null,
+      "wire_bytes": 7798784,
+      "bf16_wire_bytes": 14680064,
+      "role": "mlp",
+      "shape": [
+        2048,
+        4096,
+        16384
+      ],
+      "plan_sha256": null
+    },
+    "decoder.layers.26.self_attention.linear_proj": {
+      "mask_sha256": null,
+      "wire_bytes": 7798784,
+      "bf16_wire_bytes": 14680064,
+      "role": "attn",
+      "shape": [
+        2048,
+        4096,
+        4096
+      ],
+      "plan_sha256": null
+    },
+    "decoder.layers.26.mlp.linear_fc2": {
+      "mask_sha256": null,
+      "wire_bytes": 7798784,
+      "bf16_wire_bytes": 14680064,
+      "role": "mlp",
+      "shape": [
+        2048,
+        4096,
+        16384
+      ],
+      "plan_sha256": null
+    },
+    "decoder.layers.27.self_attention.linear_proj": {
+      "mask_sha256": null,
+      "wire_bytes": 7798784,
+      "bf16_wire_bytes": 14680064,
+      "role": "attn",
+      "shape": [
+        2048,
+        4096,
+        4096
+      ],
+      "plan_sha256": null
+    },
+    "decoder.layers.27.mlp.linear_fc2": {
+      "mask_sha256": null,
+      "wire_bytes": 7798784,
+      "bf16_wire_bytes": 14680064,
+      "role": "mlp",
+      "shape": [
+        2048,
+        4096,
+        16384
+      ],
+      "plan_sha256": null
+    },
+    "decoder.layers.28.self_attention.linear_proj": {
+      "mask_sha256": null,
+      "wire_bytes": 7798784,
+      "bf16_wire_bytes": 14680064,
+      "role": "attn",
+      "shape": [
+        2048,
+        4096,
+        4096
+      ],
+      "plan_sha256": null
+    },
+    "decoder.layers.28.mlp.linear_fc2": {
+      "mask_sha256": null,
+      "wire_bytes": 7798784,
+      "bf16_wire_bytes": 14680064,
+      "role": "mlp",
+      "shape": [
+        2048,
+        4096,
+        16384
+      ],
+      "plan_sha256": null
+    },
+    "decoder.layers.29.self_attention.linear_proj": {
+      "mask_sha256": null,
+      "wire_bytes": 7798784,
+      "bf16_wire_bytes": 14680064,
+      "role": "attn",
+      "shape": [
+        2048,
+        4096,
+        4096
+      ],
+      "plan_sha256": null
+    },
+    "decoder.layers.29.mlp.linear_fc2": {
+      "mask_sha256": null,
+      "wire_bytes": 7798784,
+      "bf16_wire_bytes": 14680064,
+      "role": "mlp",
+      "shape": [
+        2048,
+        4096,
+        16384
+      ],
+      "plan_sha256": null
+    },
+    "decoder.layers.30.self_attention.linear_proj": {
+      "mask_sha256": null,
+      "wire_bytes": 7798784,
+      "bf16_wire_bytes": 14680064,
+      "role": "attn",
+      "shape": [
+        2048,
+        4096,
+        4096
+      ],
+      "plan_sha256": null
+    },
+    "decoder.layers.30.mlp.linear_fc2": {
+      "mask_sha256": null,
+      "wire_bytes": 7798784,
+      "bf16_wire_bytes": 14680064,
+      "role": "mlp",
+      "shape": [
+        2048,
+        4096,
+        16384
+      ],
+      "plan_sha256": null
+    },
+    "decoder.layers.31.self_attention.linear_proj": {
+      "mask_sha256": null,
+      "wire_bytes": 7798784,
+      "bf16_wire_bytes": 14680064,
+      "role": "attn",
+      "shape": [
+        2048,
+        4096,
+        4096
+      ],
+      "plan_sha256": null
+    },
+    "decoder.layers.31.mlp.linear_fc2": {
+      "mask_sha256": null,
+      "wire_bytes": 7798784,
+      "bf16_wire_bytes": 14680064,
+      "role": "mlp",
+      "shape": [
+        2048,
+        4096,
+        16384
+      ],
+      "plan_sha256": null
+    }
+  },
+  "codec_calls": {
+    "decoder.layers.0.self_attention.linear_proj": 20,
+    "decoder.layers.0.mlp.linear_fc2": 20,
+    "decoder.layers.1.self_attention.linear_proj": 20,
+    "decoder.layers.1.mlp.linear_fc2": 20,
+    "decoder.layers.2.self_attention.linear_proj": 20,
+    "decoder.layers.2.mlp.linear_fc2": 20,
+    "decoder.layers.3.self_attention.linear_proj": 20,
+    "decoder.layers.3.mlp.linear_fc2": 20,
+    "decoder.layers.4.self_attention.linear_proj": 20,
+    "decoder.layers.4.mlp.linear_fc2": 20,
+    "decoder.layers.5.self_attention.linear_proj": 20,
+    "decoder.layers.5.mlp.linear_fc2": 20,
+    "decoder.layers.6.self_attention.linear_proj": 20,
+    "decoder.layers.6.mlp.linear_fc2": 20,
+    "decoder.layers.7.self_attention.linear_proj": 20,
+    "decoder.layers.7.mlp.linear_fc2": 20,
+    "decoder.layers.8.self_attention.linear_proj": 20,
+    "decoder.layers.8.mlp.linear_fc2": 20,
+    "decoder.layers.9.self_attention.linear_proj": 20,
+    "decoder.layers.9.mlp.linear_fc2": 20,
+    "decoder.layers.10.self_attention.linear_proj": 20,
+    "decoder.layers.10.mlp.linear_fc2": 20,
+    "decoder.layers.11.self_attention.linear_proj": 20,
+    "decoder.layers.11.mlp.linear_fc2": 20,
+    "decoder.layers.12.self_attention.linear_proj": 20,
+    "decoder.layers.12.mlp.linear_fc2": 20,
+    "decoder.layers.13.self_attention.linear_proj": 20,
+    "decoder.layers.13.mlp.linear_fc2": 20,
+    "decoder.layers.14.self_attention.linear_proj": 20,
+    "decoder.layers.14.mlp.linear_fc2": 20,
+    "decoder.layers.15.self_attention.linear_proj": 20,
+    "decoder.layers.15.mlp.linear_fc2": 20,
+    "decoder.layers.16.self_attention.linear_proj": 20,
+    "decoder.layers.16.mlp.linear_fc2": 20,
+    "decoder.layers.17.self_attention.linear_proj": 20,
+    "decoder.layers.17.mlp.linear_fc2": 20,
+    "decoder.layers.18.self_attention.linear_proj": 20,
+    "decoder.layers.18.mlp.linear_fc2": 20,
+    "decoder.layers.19.self_attention.linear_proj": 20,
+    "decoder.layers.19.mlp.linear_fc2": 20,
+    "decoder.layers.20.self_attention.linear_proj": 20,
+    "decoder.layers.20.mlp.linear_fc2": 20,
+    "decoder.layers.21.self_attention.linear_proj": 20,
+    "decoder.layers.21.mlp.linear_fc2": 20,
+    "decoder.layers.22.self_attention.linear_proj": 20,
+    "decoder.layers.22.mlp.linear_fc2": 20,
+    "decoder.layers.23.self_attention.linear_proj": 20,
+    "decoder.layers.23.mlp.linear_fc2": 20,
+    "decoder.layers.24.self_attention.linear_proj": 20,
+    "decoder.layers.24.mlp.linear_fc2": 20,
+    "decoder.layers.25.self_attention.linear_proj": 20,
+    "decoder.layers.25.mlp.linear_fc2": 20,
+    "decoder.layers.26.self_attention.linear_proj": 20,
+    "decoder.layers.26.mlp.linear_fc2": 20,
+    "decoder.layers.27.self_attention.linear_proj": 20,
+    "decoder.layers.27.mlp.linear_fc2": 20,
+    "decoder.layers.28.self_attention.linear_proj": 20,
+    "decoder.layers.28.mlp.linear_fc2": 20,
+    "decoder.layers.29.self_attention.linear_proj": 20,
+    "decoder.layers.29.mlp.linear_fc2": 20,
+    "decoder.layers.30.self_attention.linear_proj": 20,
+    "decoder.layers.30.mlp.linear_fc2": 20,
+    "decoder.layers.31.self_attention.linear_proj": 20,
+    "decoder.layers.31.mlp.linear_fc2": 20
+  },
+  "transform_diagnostics": {
+    "decoder.layers.0.self_attention.linear_proj": {
+      "total": 57344,
+      "d8": 20640,
+      "h8": 36704,
+      "nonfinite": 0,
+      "invalid_tags": 0,
+      "bytes_per_group": 136,
+      "selector": {
+        "relative_l2": 0.025,
+        "max_abs_over_amax": 0.0625
+      },
+      "d8_fraction": 0.3599330357142857,
+      "policy": "mav2",
+      "calls": 20,
+      "sampled_calls": 1,
+      "sampling": "first real projection call; diagnostics read after window",
+      "quantized_remote_fraction": 1.0,
+      "quality_selection": true,
+      "h8_fallback_allowed": true
+    },
+    "decoder.layers.0.mlp.linear_fc2": {
+      "total": 57344,
+      "d8": 20665,
+      "h8": 36679,
+      "nonfinite": 0,
+      "invalid_tags": 0,
+      "bytes_per_group": 136,
+      "selector": {
+        "relative_l2": 0.025,
+        "max_abs_over_amax": 0.0625
+      },
+      "d8_fraction": 0.36036900111607145,
+      "policy": "mav2",
+      "calls": 20,
+      "sampled_calls": 1,
+      "sampling": "first real projection call; diagnostics read after window",
+      "quantized_remote_fraction": 1.0,
+      "quality_selection": true,
+      "h8_fallback_allowed": true
+    },
+    "decoder.layers.1.self_attention.linear_proj": {
+      "total": 57344,
+      "d8": 20746,
+      "h8": 36598,
+      "nonfinite": 0,
+      "invalid_tags": 0,
+      "bytes_per_group": 136,
+      "selector": {
+        "relative_l2": 0.025,
+        "max_abs_over_amax": 0.0625
+      },
+      "d8_fraction": 0.36178152901785715,
+      "policy": "mav2",
+      "calls": 20,
+      "sampled_calls": 1,
+      "sampling": "first real projection call; diagnostics read after window",
+      "quantized_remote_fraction": 1.0,
+      "quality_selection": true,
+      "h8_fallback_allowed": true
+    },
+    "decoder.layers.1.mlp.linear_fc2": {
+      "total": 57344,
+      "d8": 20432,
+      "h8": 36912,
+      "nonfinite": 0,
+      "invalid_tags": 0,
+      "bytes_per_group": 136,
+      "selector": {
+        "relative_l2": 0.025,
+        "max_abs_over_amax": 0.0625
+      },
+      "d8_fraction": 0.35630580357142855,
+      "policy": "mav2",
+      "calls": 20,
+      "sampled_calls": 1,
+      "sampling": "first real projection call; diagnostics read after window",
+      "quantized_remote_fraction": 1.0,
+      "quality_selection": true,
+      "h8_fallback_allowed": true
+    },
+    "decoder.layers.2.self_attention.linear_proj": {
+      "total": 57344,
+      "d8": 19736,
+      "h8": 37608,
+      "nonfinite": 0,
+      "invalid_tags": 0,
+      "bytes_per_group": 136,
+      "selector": {
+        "relative_l2": 0.025,
+        "max_abs_over_amax": 0.0625
+      },
+      "d8_fraction": 0.3441685267857143,
+      "policy": "mav2",
+      "calls": 20,
+      "sampled_calls": 1,
+      "sampling": "first real projection call; diagnostics read after window",
+      "quantized_remote_fraction": 1.0,
+      "quality_selection": true,
+      "h8_fallback_allowed": true
+    },
+    "decoder.layers.2.mlp.linear_fc2": {
+      "total": 57344,
+      "d8": 20103,
+      "h8": 37241,
+      "nonfinite": 0,
+      "invalid_tags": 0,
+      "bytes_per_group": 136,
+      "selector": {
+        "relative_l2": 0.025,
+        "max_abs_over_amax": 0.0625
+      },
+      "d8_fraction": 0.35056849888392855,
+      "policy": "mav2",
+      "calls": 20,
+      "sampled_calls": 1,
+      "sampling": "first real projection call; diagnostics read after window",
+      "quantized_remote_fraction": 1.0,
+      "quality_selection": true,
+      "h8_fallback_allowed": true
+    },
+    "decoder.layers.3.self_attention.linear_proj": {
+      "total": 57344,
+      "d8": 19949,
+      "h8": 37395,
+      "nonfinite": 0,
+      "invalid_tags": 0,
+      "bytes_per_group": 136,
+      "selector": {
+        "relative_l2": 0.025,
+        "max_abs_over_amax": 0.0625
+      },
+      "d8_fraction": 0.34788295200892855,
+      "policy": "mav2",
+      "calls": 20,
+      "sampled_calls": 1,
+      "sampling": "first real projection call; diagnostics read after window",
+      "quantized_remote_fraction": 1.0,
+      "quality_selection": true,
+      "h8_fallback_allowed": true
+    },
+    "decoder.layers.3.mlp.linear_fc2": {
+      "total": 57344,
+      "d8": 20300,
+      "h8": 37044,
+      "nonfinite": 0,
+      "invalid_tags": 0,
+      "bytes_per_group": 136,
+      "selector": {
+        "relative_l2": 0.025,
+        "max_abs_over_amax": 0.0625
+      },
+      "d8_fraction": 0.35400390625,
+      "policy": "mav2",
+      "calls": 20,
+      "sampled_calls": 1,
+      "sampling": "first real projection call; diagnostics read after window",
+      "quantized_remote_fraction": 1.0,
+      "quality_selection": true,
+      "h8_fallback_allowed": true
+    },
+    "decoder.layers.4.self_attention.linear_proj": {
+      "total": 57344,
+      "d8": 21164,
+      "h8": 36180,
+      "nonfinite": 0,
+      "invalid_tags": 0,
+      "bytes_per_group": 136,
+      "selector": {
+        "relative_l2": 0.025,
+        "max_abs_over_amax": 0.0625
+      },
+      "d8_fraction": 0.3690708705357143,
+      "policy": "mav2",
+      "calls": 20,
+      "sampled_calls": 1,
+      "sampling": "first real projection call; diagnostics read after window",
+      "quantized_remote_fraction": 1.0,
+      "quality_selection": true,
+      "h8_fallback_allowed": true
+    },
+    "decoder.layers.4.mlp.linear_fc2": {
+      "total": 57344,
+      "d8": 20536,
+      "h8": 36808,
+      "nonfinite": 0,
+      "invalid_tags": 0,
+      "bytes_per_group": 136,
+      "selector": {
+        "relative_l2": 0.025,
+        "max_abs_over_amax": 0.0625
+      },
+      "d8_fraction": 0.35811941964285715,
+      "policy": "mav2",
+      "calls": 20,
+      "sampled_calls": 1,
+      "sampling": "first real projection call; diagnostics read after window",
+      "quantized_remote_fraction": 1.0,
+      "quality_selection": true,
+      "h8_fallback_allowed": true
+    },
+    "decoder.layers.5.self_attention.linear_proj": {
+      "total": 57344,
+      "d8": 18734,
+      "h8": 38610,
+      "nonfinite": 0,
+      "invalid_tags": 0,
+      "bytes_per_group": 136,
+      "selector": {
+        "relative_l2": 0.025,
+        "max_abs_over_amax": 0.0625
+      },
+      "d8_fraction": 0.32669503348214285,
+      "policy": "mav2",
+      "calls": 20,
+      "sampled_calls": 1,
+      "sampling": "first real projection call; diagnostics read after window",
+      "quantized_remote_fraction": 1.0,
+      "quality_selection": true,
+      "h8_fallback_allowed": true
+    },
+    "decoder.layers.5.mlp.linear_fc2": {
+      "total": 57344,
+      "d8": 20339,
+      "h8": 37005,
+      "nonfinite": 0,
+      "invalid_tags": 0,
+      "bytes_per_group": 136,
+      "selector": {
+        "relative_l2": 0.025,
+        "max_abs_over_amax": 0.0625
+      },
+      "d8_fraction": 0.3546840122767857,
+      "policy": "mav2",
+      "calls": 20,
+      "sampled_calls": 1,
+      "sampling": "first real projection call; diagnostics read after window",
+      "quantized_remote_fraction": 1.0,
+      "quality_selection": true,
+      "h8_fallback_allowed": true
+    },
+    "decoder.layers.6.self_attention.linear_proj": {
+      "total": 57344,
+      "d8": 18524,
+      "h8": 38820,
+      "nonfinite": 0,
+      "invalid_tags": 0,
+      "bytes_per_group": 136,
+      "selector": {
+        "relative_l2": 0.025,
+        "max_abs_over_amax": 0.0625
+      },
+      "d8_fraction": 0.32303292410714285,
+      "policy": "mav2",
+      "calls": 20,
+      "sampled_calls": 1,
+      "sampling": "first real projection call; diagnostics read after window",
+      "quantized_remote_fraction": 1.0,
+      "quality_selection": true,
+      "h8_fallback_allowed": true
+    },
+    "decoder.layers.6.mlp.linear_fc2": {
+      "total": 57344,
+      "d8": 20118,
+      "h8": 37226,
+      "nonfinite": 0,
+      "invalid_tags": 0,
+      "bytes_per_group": 136,
+      "selector": {
+        "relative_l2": 0.025,
+        "max_abs_over_amax": 0.0625
+      },
+      "d8_fraction": 0.350830078125,
+      "policy": "mav2",
+      "calls": 20,
+      "sampled_calls": 1,
+      "sampling": "first real projection call; diagnostics read after window",
+      "quantized_remote_fraction": 1.0,
+      "quality_selection": true,
+      "h8_fallback_allowed": true
+    },
+    "decoder.layers.7.self_attention.linear_proj": {
+      "total": 57344,
+      "d8": 18555,
+      "h8": 38789,
+      "nonfinite": 0,
+      "invalid_tags": 0,
+      "bytes_per_group": 136,
+      "selector": {
+        "relative_l2": 0.025,
+        "max_abs_over_amax": 0.0625
+      },
+      "d8_fraction": 0.32357352120535715,
+      "policy": "mav2",
+      "calls": 20,
+      "sampled_calls": 1,
+      "sampling": "first real projection call; diagnostics read after window",
+      "quantized_remote_fraction": 1.0,
+      "quality_selection": true,
+      "h8_fallback_allowed": true
+    },
+    "decoder.layers.7.mlp.linear_fc2": {
+      "total": 57344,
+      "d8": 20378,
+      "h8": 36966,
+      "nonfinite": 0,
+      "invalid_tags": 0,
+      "bytes_per_group": 136,
+      "selector": {
+        "relative_l2": 0.025,
+        "max_abs_over_amax": 0.0625
+      },
+      "d8_fraction": 0.35536411830357145,
+      "policy": "mav2",
+      "calls": 20,
+      "sampled_calls": 1,
+      "sampling": "first real projection call; diagnostics read after window",
+      "quantized_remote_fraction": 1.0,
+      "quality_selection": true,
+      "h8_fallback_allowed": true
+    },
+    "decoder.layers.8.self_attention.linear_proj": {
+      "total": 57344,
+      "d8": 20723,
+      "h8": 36621,
+      "nonfinite": 0,
+      "invalid_tags": 0,
+      "bytes_per_group": 136,
+      "selector": {
+        "relative_l2": 0.025,
+        "max_abs_over_amax": 0.0625
+      },
+      "d8_fraction": 0.3613804408482143,
+      "policy": "mav2",
+      "calls": 20,
+      "sampled_calls": 1,
+      "sampling": "first real projection call; diagnostics read after window",
+      "quantized_remote_fraction": 1.0,
+      "quality_selection": true,
+      "h8_fallback_allowed": true
+    },
+    "decoder.layers.8.mlp.linear_fc2": {
+      "total": 57344,
+      "d8": 20766,
+      "h8": 36578,
+      "nonfinite": 0,
+      "invalid_tags": 0,
+      "bytes_per_group": 136,
+      "selector": {
+        "relative_l2": 0.025,
+        "max_abs_over_amax": 0.0625
+      },
+      "d8_fraction": 0.3621303013392857,
+      "policy": "mav2",
+      "calls": 20,
+      "sampled_calls": 1,
+      "sampling": "first real projection call; diagnostics read after window",
+      "quantized_remote_fraction": 1.0,
+      "quality_selection": true,
+      "h8_fallback_allowed": true
+    },
+    "decoder.layers.9.self_attention.linear_proj": {
+      "total": 57344,
+      "d8": 23319,
+      "h8": 34025,
+      "nonfinite": 0,
+      "invalid_tags": 0,
+      "bytes_per_group": 136,
+      "selector": {
+        "relative_l2": 0.025,
+        "max_abs_over_amax": 0.0625
+      },
+      "d8_fraction": 0.40665108816964285,
+      "policy": "mav2",
+      "calls": 20,
+      "sampled_calls": 1,
+      "sampling": "first real projection call; diagnostics read after window",
+      "quantized_remote_fraction": 1.0,
+      "quality_selection": true,
+      "h8_fallback_allowed": true
+    },
+    "decoder.layers.9.mlp.linear_fc2": {
+      "total": 57344,
+      "d8": 20322,
+      "h8": 37022,
+      "nonfinite": 0,
+      "invalid_tags": 0,
+      "bytes_per_group": 136,
+      "selector": {
+        "relative_l2": 0.025,
+        "max_abs_over_amax": 0.0625
+      },
+      "d8_fraction": 0.35438755580357145,
+      "policy": "mav2",
+      "calls": 20,
+      "sampled_calls": 1,
+      "sampling": "first real projection call; diagnostics read after window",
+      "quantized_remote_fraction": 1.0,
+      "quality_selection": true,
+      "h8_fallback_allowed": true
+    },
+    "decoder.layers.10.self_attention.linear_proj": {
+      "total": 57344,
+      "d8": 19131,
+      "h8": 38213,
+      "nonfinite": 0,
+      "invalid_tags": 0,
+      "bytes_per_group": 136,
+      "selector": {
+        "relative_l2": 0.025,
+        "max_abs_over_amax": 0.0625
+      },
+      "d8_fraction": 0.3336181640625,
+      "policy": "mav2",
+      "calls": 20,
+      "sampled_calls": 1,
+      "sampling": "first real projection call; diagnostics read after window",
+      "quantized_remote_fraction": 1.0,
+      "quality_selection": true,
+      "h8_fallback_allowed": true
+    },
+    "decoder.layers.10.mlp.linear_fc2": {
+      "total": 57344,
+      "d8": 20762,
+      "h8": 36582,
+      "nonfinite": 0,
+      "invalid_tags": 0,
+      "bytes_per_group": 136,
+      "selector": {
+        "relative_l2": 0.025,
+        "max_abs_over_amax": 0.0625
+      },
+      "d8_fraction": 0.362060546875,
+      "policy": "mav2",
+      "calls": 20,
+      "sampled_calls": 1,
+      "sampling": "first real projection call; diagnostics read after window",
+      "quantized_remote_fraction": 1.0,
+      "quality_selection": true,
+      "h8_fallback_allowed": true
+    },
+    "decoder.layers.11.self_attention.linear_proj": {
+      "total": 57344,
+      "d8": 23620,
+      "h8": 33724,
+      "nonfinite": 0,
+      "invalid_tags": 0,
+      "bytes_per_group": 136,
+      "selector": {
+        "relative_l2": 0.025,
+        "max_abs_over_amax": 0.0625
+      },
+      "d8_fraction": 0.41190011160714285,
+      "policy": "mav2",
+      "calls": 20,
+      "sampled_calls": 1,
+      "sampling": "first real projection call; diagnostics read after window",
+      "quantized_remote_fraction": 1.0,
+      "quality_selection": true,
+      "h8_fallback_allowed": true
+    },
+    "decoder.layers.11.mlp.linear_fc2": {
+      "total": 57344,
+      "d8": 20755,
+      "h8": 36589,
+      "nonfinite": 0,
+      "invalid_tags": 0,
+      "bytes_per_group": 136,
+      "selector": {
+        "relative_l2": 0.025,
+        "max_abs_over_amax": 0.0625
+      },
+      "d8_fraction": 0.3619384765625,
+      "policy": "mav2",
+      "calls": 20,
+      "sampled_calls": 1,
+      "sampling": "first real projection call; diagnostics read after window",
+      "quantized_remote_fraction": 1.0,
+      "quality_selection": true,
+      "h8_fallback_allowed": true
+    },
+    "decoder.layers.12.self_attention.linear_proj": {
+      "total": 57344,
+      "d8": 21206,
+      "h8": 36138,
+      "nonfinite": 0,
+      "invalid_tags": 0,
+      "bytes_per_group": 136,
+      "selector": {
+        "relative_l2": 0.025,
+        "max_abs_over_amax": 0.0625
+      },
+      "d8_fraction": 0.3698032924107143,
+      "policy": "mav2",
+      "calls": 20,
+      "sampled_calls": 1,
+      "sampling": "first real projection call; diagnostics read after window",
+      "quantized_remote_fraction": 1.0,
+      "quality_selection": true,
+      "h8_fallback_allowed": true
+    },
+    "decoder.layers.12.mlp.linear_fc2": {
+      "total": 57344,
+      "d8": 20547,
+      "h8": 36797,
+      "nonfinite": 0,
+      "invalid_tags": 0,
+      "bytes_per_group": 136,
+      "selector": {
+        "relative_l2": 0.025,
+        "max_abs_over_amax": 0.0625
+      },
+      "d8_fraction": 0.35831124441964285,
+      "policy": "mav2",
+      "calls": 20,
+      "sampled_calls": 1,
+      "sampling": "first real projection call; diagnostics read after window",
+      "quantized_remote_fraction": 1.0,
+      "quality_selection": true,
+      "h8_fallback_allowed": true
+    },
+    "decoder.layers.13.self_attention.linear_proj": {
+      "total": 57344,
+      "d8": 20983,
+      "h8": 36361,
+      "nonfinite": 0,
+      "invalid_tags": 0,
+      "bytes_per_group": 136,
+      "selector": {
+        "relative_l2": 0.025,
+        "max_abs_over_amax": 0.0625
+      },
+      "d8_fraction": 0.3659144810267857,
+      "policy": "mav2",
+      "calls": 20,
+      "sampled_calls": 1,
+      "sampling": "first real projection call; diagnostics read after window",
+      "quantized_remote_fraction": 1.0,
+      "quality_selection": true,
+      "h8_fallback_allowed": true
+    },
+    "decoder.layers.13.mlp.linear_fc2": {
+      "total": 57344,
+      "d8": 20659,
+      "h8": 36685,
+      "nonfinite": 0,
+      "invalid_tags": 0,
+      "bytes_per_group": 136,
+      "selector": {
+        "relative_l2": 0.025,
+        "max_abs_over_amax": 0.0625
+      },
+      "d8_fraction": 0.36026436941964285,
+      "policy": "mav2",
+      "calls": 20,
+      "sampled_calls": 1,
+      "sampling": "first real projection call; diagnostics read after window",
+      "quantized_remote_fraction": 1.0,
+      "quality_selection": true,
+      "h8_fallback_allowed": true
+    },
+    "decoder.layers.14.self_attention.linear_proj": {
+      "total": 57344,
+      "d8": 20565,
+      "h8": 36779,
+      "nonfinite": 0,
+      "invalid_tags": 0,
+      "bytes_per_group": 136,
+      "selector": {
+        "relative_l2": 0.025,
+        "max_abs_over_amax": 0.0625
+      },
+      "d8_fraction": 0.35862513950892855,
+      "policy": "mav2",
+      "calls": 20,
+      "sampled_calls": 1,
+      "sampling": "first real projection call; diagnostics read after window",
+      "quantized_remote_fraction": 1.0,
+      "quality_selection": true,
+      "h8_fallback_allowed": true
+    },
+    "decoder.layers.14.mlp.linear_fc2": {
+      "total": 57344,
+      "d8": 20006,
+      "h8": 37338,
+      "nonfinite": 0,
+      "invalid_tags": 0,
+      "bytes_per_group": 136,
+      "selector": {
+        "relative_l2": 0.025,
+        "max_abs_over_amax": 0.0625
+      },
+      "d8_fraction": 0.348876953125,
+      "policy": "mav2",
+      "calls": 20,
+      "sampled_calls": 1,
+      "sampling": "first real projection call; diagnostics read after window",
+      "quantized_remote_fraction": 1.0,
+      "quality_selection": true,
+      "h8_fallback_allowed": true
+    },
+    "decoder.layers.15.self_attention.linear_proj": {
+      "total": 57344,
+      "d8": 20671,
+      "h8": 36673,
+      "nonfinite": 0,
+      "invalid_tags": 0,
+      "bytes_per_group": 136,
+      "selector": {
+        "relative_l2": 0.025,
+        "max_abs_over_amax": 0.0625
+      },
+      "d8_fraction": 0.3604736328125,
+      "policy": "mav2",
+      "calls": 20,
+      "sampled_calls": 1,
+      "sampling": "first real projection call; diagnostics read after window",
+      "quantized_remote_fraction": 1.0,
+      "quality_selection": true,
+      "h8_fallback_allowed": true
+    },
+    "decoder.layers.15.mlp.linear_fc2": {
+      "total": 57344,
+      "d8": 20463,
+      "h8": 36881,
+      "nonfinite": 0,
+      "invalid_tags": 0,
+      "bytes_per_group": 136,
+      "selector": {
+        "relative_l2": 0.025,
+        "max_abs_over_amax": 0.0625
+      },
+      "d8_fraction": 0.35684640066964285,
+      "policy": "mav2",
+      "calls": 20,
+      "sampled_calls": 1,
+      "sampling": "first real projection call; diagnostics read after window",
+      "quantized_remote_fraction": 1.0,
+      "quality_selection": true,
+      "h8_fallback_allowed": true
+    },
+    "decoder.layers.16.self_attention.linear_proj": {
+      "total": 57344,
+      "d8": 22802,
+      "h8": 34542,
+      "nonfinite": 0,
+      "invalid_tags": 0,
+      "bytes_per_group": 136,
+      "selector": {
+        "relative_l2": 0.025,
+        "max_abs_over_amax": 0.0625
+      },
+      "d8_fraction": 0.3976353236607143,
+      "policy": "mav2",
+      "calls": 20,
+      "sampled_calls": 1,
+      "sampling": "first real projection call; diagnostics read after window",
+      "quantized_remote_fraction": 1.0,
+      "quality_selection": true,
+      "h8_fallback_allowed": true
+    },
+    "decoder.layers.16.mlp.linear_fc2": {
+      "total": 57344,
+      "d8": 20703,
+      "h8": 36641,
+      "nonfinite": 0,
+      "invalid_tags": 0,
+      "bytes_per_group": 136,
+      "selector": {
+        "relative_l2": 0.025,
+        "max_abs_over_amax": 0.0625
+      },
+      "d8_fraction": 0.3610316685267857,
+      "policy": "mav2",
+      "calls": 20,
+      "sampled_calls": 1,
+      "sampling": "first real projection call; diagnostics read after window",
+      "quantized_remote_fraction": 1.0,
+      "quality_selection": true,
+      "h8_fallback_allowed": true
+    },
+    "decoder.layers.17.self_attention.linear_proj": {
+      "total": 57344,
+      "d8": 19369,
+      "h8": 37975,
+      "nonfinite": 0,
+      "invalid_tags": 0,
+      "bytes_per_group": 136,
+      "selector": {
+        "relative_l2": 0.025,
+        "max_abs_over_amax": 0.0625
+      },
+      "d8_fraction": 0.3377685546875,
+      "policy": "mav2",
+      "calls": 20,
+      "sampled_calls": 1,
+      "sampling": "first real projection call; diagnostics read after window",
+      "quantized_remote_fraction": 1.0,
+      "quality_selection": true,
+      "h8_fallback_allowed": true
+    },
+    "decoder.layers.17.mlp.linear_fc2": {
+      "total": 57344,
+      "d8": 20837,
+      "h8": 36507,
+      "nonfinite": 0,
+      "invalid_tags": 0,
+      "bytes_per_group": 136,
+      "selector": {
+        "relative_l2": 0.025,
+        "max_abs_over_amax": 0.0625
+      },
+      "d8_fraction": 0.36336844308035715,
+      "policy": "mav2",
+      "calls": 20,
+      "sampled_calls": 1,
+      "sampling": "first real projection call; diagnostics read after window",
+      "quantized_remote_fraction": 1.0,
+      "quality_selection": true,
+      "h8_fallback_allowed": true
+    },
+    "decoder.layers.18.self_attention.linear_proj": {
+      "total": 57344,
+      "d8": 19160,
+      "h8": 38184,
+      "nonfinite": 0,
+      "invalid_tags": 0,
+      "bytes_per_group": 136,
+      "selector": {
+        "relative_l2": 0.025,
+        "max_abs_over_amax": 0.0625
+      },
+      "d8_fraction": 0.33412388392857145,
+      "policy": "mav2",
+      "calls": 20,
+      "sampled_calls": 1,
+      "sampling": "first real projection call; diagnostics read after window",
+      "quantized_remote_fraction": 1.0,
+      "quality_selection": true,
+      "h8_fallback_allowed": true
+    },
+    "decoder.layers.18.mlp.linear_fc2": {
+      "total": 57344,
+      "d8": 20950,
+      "h8": 36394,
+      "nonfinite": 0,
+      "invalid_tags": 0,
+      "bytes_per_group": 136,
+      "selector": {
+        "relative_l2": 0.025,
+        "max_abs_over_amax": 0.0625
+      },
+      "d8_fraction": 0.36533900669642855,
+      "policy": "mav2",
+      "calls": 20,
+      "sampled_calls": 1,
+      "sampling": "first real projection call; diagnostics read after window",
+      "quantized_remote_fraction": 1.0,
+      "quality_selection": true,
+      "h8_fallback_allowed": true
+    },
+    "decoder.layers.19.self_attention.linear_proj": {
+      "total": 57344,
+      "d8": 21093,
+      "h8": 36251,
+      "nonfinite": 0,
+      "invalid_tags": 0,
+      "bytes_per_group": 136,
+      "selector": {
+        "relative_l2": 0.025,
+        "max_abs_over_amax": 0.0625
+      },
+      "d8_fraction": 0.36783272879464285,
+      "policy": "mav2",
+      "calls": 20,
+      "sampled_calls": 1,
+      "sampling": "first real projection call; diagnostics read after window",
+      "quantized_remote_fraction": 1.0,
+      "quality_selection": true,
+      "h8_fallback_allowed": true
+    },
+    "decoder.layers.19.mlp.linear_fc2": {
+      "total": 57344,
+      "d8": 20145,
+      "h8": 37199,
+      "nonfinite": 0,
+      "invalid_tags": 0,
+      "bytes_per_group": 136,
+      "selector": {
+        "relative_l2": 0.025,
+        "max_abs_over_amax": 0.0625
+      },
+      "d8_fraction": 0.35130092075892855,
+      "policy": "mav2",
+      "calls": 20,
+      "sampled_calls": 1,
+      "sampling": "first real projection call; diagnostics read after window",
+      "quantized_remote_fraction": 1.0,
+      "quality_selection": true,
+      "h8_fallback_allowed": true
+    },
+    "decoder.layers.20.self_attention.linear_proj": {
+      "total": 57344,
+      "d8": 19560,
+      "h8": 37784,
+      "nonfinite": 0,
+      "invalid_tags": 0,
+      "bytes_per_group": 136,
+      "selector": {
+        "relative_l2": 0.025,
+        "max_abs_over_amax": 0.0625
+      },
+      "d8_fraction": 0.34109933035714285,
+      "policy": "mav2",
+      "calls": 20,
+      "sampled_calls": 1,
+      "sampling": "first real projection call; diagnostics read after window",
+      "quantized_remote_fraction": 1.0,
+      "quality_selection": true,
+      "h8_fallback_allowed": true
+    },
+    "decoder.layers.20.mlp.linear_fc2": {
+      "total": 57344,
+      "d8": 20618,
+      "h8": 36726,
+      "nonfinite": 0,
+      "invalid_tags": 0,
+      "bytes_per_group": 136,
+      "selector": {
+        "relative_l2": 0.025,
+        "max_abs_over_amax": 0.0625
+      },
+      "d8_fraction": 0.3595493861607143,
+      "policy": "mav2",
+      "calls": 20,
+      "sampled_calls": 1,
+      "sampling": "first real projection call; diagnostics read after window",
+      "quantized_remote_fraction": 1.0,
+      "quality_selection": true,
+      "h8_fallback_allowed": true
+    },
+    "decoder.layers.21.self_attention.linear_proj": {
+      "total": 57344,
+      "d8": 22736,
+      "h8": 34608,
+      "nonfinite": 0,
+      "invalid_tags": 0,
+      "bytes_per_group": 136,
+      "selector": {
+        "relative_l2": 0.025,
+        "max_abs_over_amax": 0.0625
+      },
+      "d8_fraction": 0.396484375,
+      "policy": "mav2",
+      "calls": 20,
+      "sampled_calls": 1,
+      "sampling": "first real projection call; diagnostics read after window",
+      "quantized_remote_fraction": 1.0,
+      "quality_selection": true,
+      "h8_fallback_allowed": true
+    },
+    "decoder.layers.21.mlp.linear_fc2": {
+      "total": 57344,
+      "d8": 20638,
+      "h8": 36706,
+      "nonfinite": 0,
+      "invalid_tags": 0,
+      "bytes_per_group": 136,
+      "selector": {
+        "relative_l2": 0.025,
+        "max_abs_over_amax": 0.0625
+      },
+      "d8_fraction": 0.35989815848214285,
+      "policy": "mav2",
+      "calls": 20,
+      "sampled_calls": 1,
+      "sampling": "first real projection call; diagnostics read after window",
+      "quantized_remote_fraction": 1.0,
+      "quality_selection": true,
+      "h8_fallback_allowed": true
+    },
+    "decoder.layers.22.self_attention.linear_proj": {
+      "total": 57344,
+      "d8": 20569,
+      "h8": 36775,
+      "nonfinite": 0,
+      "invalid_tags": 0,
+      "bytes_per_group": 136,
+      "selector": {
+        "relative_l2": 0.025,
+        "max_abs_over_amax": 0.0625
+      },
+      "d8_fraction": 0.3586948939732143,
+      "policy": "mav2",
+      "calls": 20,
+      "sampled_calls": 1,
+      "sampling": "first real projection call; diagnostics read after window",
+      "quantized_remote_fraction": 1.0,
+      "quality_selection": true,
+      "h8_fallback_allowed": true
+    },
+    "decoder.layers.22.mlp.linear_fc2": {
+      "total": 57344,
+      "d8": 20775,
+      "h8": 36569,
+      "nonfinite": 0,
+      "invalid_tags": 0,
+      "bytes_per_group": 136,
+      "selector": {
+        "relative_l2": 0.025,
+        "max_abs_over_amax": 0.0625
+      },
+      "d8_fraction": 0.36228724888392855,
+      "policy": "mav2",
+      "calls": 20,
+      "sampled_calls": 1,
+      "sampling": "first real projection call; diagnostics read after window",
+      "quantized_remote_fraction": 1.0,
+      "quality_selection": true,
+      "h8_fallback_allowed": true
+    },
+    "decoder.layers.23.self_attention.linear_proj": {
+      "total": 57344,
+      "d8": 19269,
+      "h8": 38075,
+      "nonfinite": 0,
+      "invalid_tags": 0,
+      "bytes_per_group": 136,
+      "selector": {
+        "relative_l2": 0.025,
+        "max_abs_over_amax": 0.0625
+      },
+      "d8_fraction": 0.33602469308035715,
+      "policy": "mav2",
+      "calls": 20,
+      "sampled_calls": 1,
+      "sampling": "first real projection call; diagnostics read after window",
+      "quantized_remote_fraction": 1.0,
+      "quality_selection": true,
+      "h8_fallback_allowed": true
+    },
+    "decoder.layers.23.mlp.linear_fc2": {
+      "total": 57344,
+      "d8": 21042,
+      "h8": 36302,
+      "nonfinite": 0,
+      "invalid_tags": 0,
+      "bytes_per_group": 136,
+      "selector": {
+        "relative_l2": 0.025,
+        "max_abs_over_amax": 0.0625
+      },
+      "d8_fraction": 0.366943359375,
+      "policy": "mav2",
+      "calls": 20,
+      "sampled_calls": 1,
+      "sampling": "first real projection call; diagnostics read after window",
+      "quantized_remote_fraction": 1.0,
+      "quality_selection": true,
+      "h8_fallback_allowed": true
+    },
+    "decoder.layers.24.self_attention.linear_proj": {
+      "total": 57344,
+      "d8": 20598,
+      "h8": 36746,
+      "nonfinite": 0,
+      "invalid_tags": 0,
+      "bytes_per_group": 136,
+      "selector": {
+        "relative_l2": 0.025,
+        "max_abs_over_amax": 0.0625
+      },
+      "d8_fraction": 0.3592006138392857,
+      "policy": "mav2",
+      "calls": 20,
+      "sampled_calls": 1,
+      "sampling": "first real projection call; diagnostics read after window",
+      "quantized_remote_fraction": 1.0,
+      "quality_selection": true,
+      "h8_fallback_allowed": true
+    },
+    "decoder.layers.24.mlp.linear_fc2": {
+      "total": 57344,
+      "d8": 20481,
+      "h8": 36863,
+      "nonfinite": 0,
+      "invalid_tags": 0,
+      "bytes_per_group": 136,
+      "selector": {
+        "relative_l2": 0.025,
+        "max_abs_over_amax": 0.0625
+      },
+      "d8_fraction": 0.35716029575892855,
+      "policy": "mav2",
+      "calls": 20,
+      "sampled_calls": 1,
+      "sampling": "first real projection call; diagnostics read after window",
+      "quantized_remote_fraction": 1.0,
+      "quality_selection": true,
+      "h8_fallback_allowed": true
+    },
+    "decoder.layers.25.self_attention.linear_proj": {
+      "total": 57344,
+      "d8": 20325,
+      "h8": 37019,
+      "nonfinite": 0,
+      "invalid_tags": 0,
+      "bytes_per_group": 136,
+      "selector": {
+        "relative_l2": 0.025,
+        "max_abs_over_amax": 0.0625
+      },
+      "d8_fraction": 0.3544398716517857,
+      "policy": "mav2",
+      "calls": 20,
+      "sampled_calls": 1,
+      "sampling": "first real projection call; diagnostics read after window",
+      "quantized_remote_fraction": 1.0,
+      "quality_selection": true,
+      "h8_fallback_allowed": true
+    },
+    "decoder.layers.25.mlp.linear_fc2": {
+      "total": 57344,
+      "d8": 20947,
+      "h8": 36397,
+      "nonfinite": 0,
+      "invalid_tags": 0,
+      "bytes_per_group": 136,
+      "selector": {
+        "relative_l2": 0.025,
+        "max_abs_over_amax": 0.0625
+      },
+      "d8_fraction": 0.3652866908482143,
+      "policy": "mav2",
+      "calls": 20,
+      "sampled_calls": 1,
+      "sampling": "first real projection call; diagnostics read after window",
+      "quantized_remote_fraction": 1.0,
+      "quality_selection": true,
+      "h8_fallback_allowed": true
+    },
+    "decoder.layers.26.self_attention.linear_proj": {
+      "total": 57344,
+      "d8": 23226,
+      "h8": 34118,
+      "nonfinite": 0,
+      "invalid_tags": 0,
+      "bytes_per_group": 136,
+      "selector": {
+        "relative_l2": 0.025,
+        "max_abs_over_amax": 0.0625
+      },
+      "d8_fraction": 0.405029296875,
+      "policy": "mav2",
+      "calls": 20,
+      "sampled_calls": 1,
+      "sampling": "first real projection call; diagnostics read after window",
+      "quantized_remote_fraction": 1.0,
+      "quality_selection": true,
+      "h8_fallback_allowed": true
+    },
+    "decoder.layers.26.mlp.linear_fc2": {
+      "total": 57344,
+      "d8": 20544,
+      "h8": 36800,
+      "nonfinite": 0,
+      "invalid_tags": 0,
+      "bytes_per_group": 136,
+      "selector": {
+        "relative_l2": 0.025,
+        "max_abs_over_amax": 0.0625
+      },
+      "d8_fraction": 0.35825892857142855,
+      "policy": "mav2",
+      "calls": 20,
+      "sampled_calls": 1,
+      "sampling": "first real projection call; diagnostics read after window",
+      "quantized_remote_fraction": 1.0,
+      "quality_selection": true,
+      "h8_fallback_allowed": true
+    },
+    "decoder.layers.27.self_attention.linear_proj": {
+      "total": 57344,
+      "d8": 15808,
+      "h8": 41536,
+      "nonfinite": 0,
+      "invalid_tags": 0,
+      "bytes_per_group": 136,
+      "selector": {
+        "relative_l2": 0.025,
+        "max_abs_over_amax": 0.0625
+      },
+      "d8_fraction": 0.27566964285714285,
+      "policy": "mav2",
+      "calls": 20,
+      "sampled_calls": 1,
+      "sampling": "first real projection call; diagnostics read after window",
+      "quantized_remote_fraction": 1.0,
+      "quality_selection": true,
+      "h8_fallback_allowed": true
+    },
+    "decoder.layers.27.mlp.linear_fc2": {
+      "total": 57344,
+      "d8": 20725,
+      "h8": 36619,
+      "nonfinite": 0,
+      "invalid_tags": 0,
+      "bytes_per_group": 136,
+      "selector": {
+        "relative_l2": 0.025,
+        "max_abs_over_amax": 0.0625
+      },
+      "d8_fraction": 0.36141531808035715,
+      "policy": "mav2",
+      "calls": 20,
+      "sampled_calls": 1,
+      "sampling": "first real projection call; diagnostics read after window",
+      "quantized_remote_fraction": 1.0,
+      "quality_selection": true,
+      "h8_fallback_allowed": true
+    },
+    "decoder.layers.28.self_attention.linear_proj": {
+      "total": 57344,
+      "d8": 16891,
+      "h8": 40453,
+      "nonfinite": 0,
+      "invalid_tags": 0,
+      "bytes_per_group": 136,
+      "selector": {
+        "relative_l2": 0.025,
+        "max_abs_over_amax": 0.0625
+      },
+      "d8_fraction": 0.2945556640625,
+      "policy": "mav2",
+      "calls": 20,
+      "sampled_calls": 1,
+      "sampling": "first real projection call; diagnostics read after window",
+      "quantized_remote_fraction": 1.0,
+      "quality_selection": true,
+      "h8_fallback_allowed": true
+    },
+    "decoder.layers.28.mlp.linear_fc2": {
+      "total": 57344,
+      "d8": 20701,
+      "h8": 36643,
+      "nonfinite": 0,
+      "invalid_tags": 0,
+      "bytes_per_group": 136,
+      "selector": {
+        "relative_l2": 0.025,
+        "max_abs_over_amax": 0.0625
+      },
+      "d8_fraction": 0.36099679129464285,
+      "policy": "mav2",
+      "calls": 20,
+      "sampled_calls": 1,
+      "sampling": "first real projection call; diagnostics read after window",
+      "quantized_remote_fraction": 1.0,
+      "quality_selection": true,
+      "h8_fallback_allowed": true
+    },
+    "decoder.layers.29.self_attention.linear_proj": {
+      "total": 57344,
+      "d8": 23710,
+      "h8": 33634,
+      "nonfinite": 0,
+      "invalid_tags": 0,
+      "bytes_per_group": 136,
+      "selector": {
+        "relative_l2": 0.025,
+        "max_abs_over_amax": 0.0625
+      },
+      "d8_fraction": 0.41346958705357145,
+      "policy": "mav2",
+      "calls": 20,
+      "sampled_calls": 1,
+      "sampling": "first real projection call; diagnostics read after window",
+      "quantized_remote_fraction": 1.0,
+      "quality_selection": true,
+      "h8_fallback_allowed": true
+    },
+    "decoder.layers.29.mlp.linear_fc2": {
+      "total": 57344,
+      "d8": 20538,
+      "h8": 36806,
+      "nonfinite": 0,
+      "invalid_tags": 0,
+      "bytes_per_group": 136,
+      "selector": {
+        "relative_l2": 0.025,
+        "max_abs_over_amax": 0.0625
+      },
+      "d8_fraction": 0.358154296875,
+      "policy": "mav2",
+      "calls": 20,
+      "sampled_calls": 1,
+      "sampling": "first real projection call; diagnostics read after window",
+      "quantized_remote_fraction": 1.0,
+      "quality_selection": true,
+      "h8_fallback_allowed": true
+    },
+    "decoder.layers.30.self_attention.linear_proj": {
+      "total": 57344,
+      "d8": 25079,
+      "h8": 32265,
+      "nonfinite": 0,
+      "invalid_tags": 0,
+      "bytes_per_group": 136,
+      "selector": {
+        "relative_l2": 0.025,
+        "max_abs_over_amax": 0.0625
+      },
+      "d8_fraction": 0.43734305245535715,
+      "policy": "mav2",
+      "calls": 20,
+      "sampled_calls": 1,
+      "sampling": "first real projection call; diagnostics read after window",
+      "quantized_remote_fraction": 1.0,
+      "quality_selection": true,
+      "h8_fallback_allowed": true
+    },
+    "decoder.layers.30.mlp.linear_fc2": {
+      "total": 57344,
+      "d8": 20744,
+      "h8": 36600,
+      "nonfinite": 0,
+      "invalid_tags": 0,
+      "bytes_per_group": 136,
+      "selector": {
+        "relative_l2": 0.025,
+        "max_abs_over_amax": 0.0625
+      },
+      "d8_fraction": 0.3617466517857143,
+      "policy": "mav2",
+      "calls": 20,
+      "sampled_calls": 1,
+      "sampling": "first real projection call; diagnostics read after window",
+      "quantized_remote_fraction": 1.0,
+      "quality_selection": true,
+      "h8_fallback_allowed": true
+    },
+    "decoder.layers.31.self_attention.linear_proj": {
+      "total": 57344,
+      "d8": 20102,
+      "h8": 37242,
+      "nonfinite": 0,
+      "invalid_tags": 0,
+      "bytes_per_group": 136,
+      "selector": {
+        "relative_l2": 0.025,
+        "max_abs_over_amax": 0.0625
+      },
+      "d8_fraction": 0.35055106026785715,
+      "policy": "mav2",
+      "calls": 20,
+      "sampled_calls": 1,
+      "sampling": "first real projection call; diagnostics read after window",
+      "quantized_remote_fraction": 1.0,
+      "quality_selection": true,
+      "h8_fallback_allowed": true
+    },
+    "decoder.layers.31.mlp.linear_fc2": {
+      "total": 57344,
+      "d8": 20349,
+      "h8": 36995,
+      "nonfinite": 0,
+      "invalid_tags": 0,
+      "bytes_per_group": 136,
+      "selector": {
+        "relative_l2": 0.025,
+        "max_abs_over_amax": 0.0625
+      },
+      "d8_fraction": 0.3548583984375,
+      "policy": "mav2",
+      "calls": 20,
+      "sampled_calls": 1,
+      "sampling": "first real projection call; diagnostics read after window",
+      "quantized_remote_fraction": 1.0,
+      "quality_selection": true,
+      "h8_fallback_allowed": true
+    }
+  },
+  "codec_library": {
+    "path": "/workspace/TempName-New/logs/h100/phase6/mav2-then-ma14-ma18-20261031-014137-056456/mav2/codec-build/libmav2_quant.so",
+    "sha256": "0f7fd93f4204b4ec10834468a48f15a8e7c6d39668eb5f749358b487ea71effb"
+  },
+  "codec_validation": {
+    "passed": true,
+    "cases": [
+      {
+        "case": "zeros",
+        "shape": [
+          56,
+          128
+        ],
+        "chunks": 7,
+        "relative_l2": 0.0,
+        "protocol_relative_l2": 0.0,
+        "packet_relative_l2": 0.0,
+        "finite": true,
+        "budget_vs_bf16": 0.05,
+        "budget_vs_codec": 0.01,
+        "budget_vs_packet": 0.005,
+        "passed": true
+      },
+      {
+        "case": "small",
+        "shape": [
+          56,
+          128
+        ],
+        "chunks": 7,
+        "relative_l2": 0.025842446833848953,
+        "protocol_relative_l2": 0.0,
+        "packet_relative_l2": 0.0,
+        "finite": true,
+        "budget_vs_bf16": 0.05,
+        "budget_vs_codec": 0.01,
+        "budget_vs_packet": 0.005,
+        "passed": true
+      },
+      {
+        "case": "outliers",
+        "shape": [
+          56,
+          128
+        ],
+        "chunks": 7,
+        "relative_l2": 0.027266183868050575,
+        "protocol_relative_l2": 3.90076193568234e-09,
+        "packet_relative_l2": 0.0,
+        "finite": true,
+        "budget_vs_bf16": 0.05,
+        "budget_vs_codec": 0.01,
+        "budget_vs_packet": 0.005,
+        "passed": true
+      },
+      {
+        "case": "full_shape",
+        "shape": [
+          1792,
+          4096
+        ],
+        "chunks": 7,
+        "relative_l2": 0.025767365470528603,
+        "protocol_relative_l2": 8.076093217823654e-05,
+        "packet_relative_l2": 0.0,
+        "finite": true,
+        "budget_vs_bf16": 0.05,
+        "budget_vs_codec": 0.01,
+        "budget_vs_packet": 0.005,
+        "passed": true
+      }
+    ],
+    "retained_outputs_unchanged": true,
+    "synthetic": false,
+    "library": {
+      "path": "/workspace/TempName-New/logs/h100/phase6/mav2-then-ma14-ma18-20261031-014137-056456/mav2/codec-build/libmav2_quant.so",
+      "sha256": "0f7fd93f4204b4ec10834468a48f15a8e7c6d39668eb5f749358b487ea71effb"
+    },
+    "denominator": "BF16 input norm; minimum 1e-20",
+    "receiver_fusion": {
+      "passed": true,
+      "rank": 1,
+      "cases": [
+        {
+          "case": "zeros",
+          "rank": 1,
+          "shape": [
+            8,
+            128
+          ],
+          "bitwise_equal": true
+        },
+        {
+          "case": "small",
+          "rank": 1,
+          "shape": [
+            8,
+            128
+          ],
+          "bitwise_equal": true
+        },
+        {
+          "case": "outliers",
+          "rank": 1,
+          "shape": [
+            8,
+            128
+          ],
+          "bitwise_equal": true
+        },
+        {
+          "case": "full_shape",
+          "rank": 1,
+          "shape": [
+            256,
+            4096
+          ],
+          "bitwise_equal": true
+        }
+      ],
+      "retained_outputs_unchanged": true,
+      "synthetic": false
+    },
+    "selective_transform": {
+      "passed": true,
+      "rank": 1,
+      "cases": [
+        {
+          "case": "zeros",
+          "shape": [
+            8,
+            128
+          ],
+          "passed": true,
+          "finite": true,
+          "relative_l2": 0.0,
+          "protocol_relative_l2": 0.0,
+          "packet_relative_l2": 0.0,
+          "forced_d8_relative_l2": 0.0,
+          "forced_d8_reference_budget": 0.008,
+          "forced_h8_packet_equal": true,
+          "forced_h8_decode_equal": true,
+          "forced_h8_fold_equal": true,
+          "ordered_bf16_fold_equal": true,
+          "diagnostics": {
+            "total": 56,
+            "d8": 56,
+            "h8": 0,
+            "nonfinite": 0,
+            "invalid_tags": 0,
+            "bytes_per_group": 136,
+            "selector": {
+              "relative_l2": 0.025,
+              "max_abs_over_amax": 0.0625
+            },
+            "d8_fraction": 1.0
+          }
+        },
+        {
+          "case": "small",
+          "shape": [
+            8,
+            128
+          ],
+          "passed": true,
+          "finite": true,
+          "relative_l2": 0.02491694224047262,
+          "protocol_relative_l2": 0.0,
+          "packet_relative_l2": 0.0,
+          "forced_d8_relative_l2": 0.0,
+          "forced_d8_reference_budget": 0.008,
+          "forced_h8_packet_equal": true,
+          "forced_h8_decode_equal": true,
+          "forced_h8_fold_equal": true,
+          "ordered_bf16_fold_equal": true,
+          "diagnostics": {
+            "total": 56,
+            "d8": 24,
+            "h8": 32,
+            "nonfinite": 0,
+            "invalid_tags": 0,
+            "bytes_per_group": 136,
+            "selector": {
+              "relative_l2": 0.025,
+              "max_abs_over_amax": 0.0625
+            },
+            "d8_fraction": 0.42857142857142855
+          }
+        },
+        {
+          "case": "outliers",
+          "shape": [
+            8,
+            128
+          ],
+          "passed": true,
+          "finite": true,
+          "relative_l2": 0.00466826734347954,
+          "protocol_relative_l2": 0.0,
+          "packet_relative_l2": 0.0,
+          "forced_d8_relative_l2": 0.0,
+          "forced_d8_reference_budget": 0.008,
+          "forced_h8_packet_equal": true,
+          "forced_h8_decode_equal": true,
+          "forced_h8_fold_equal": true,
+          "ordered_bf16_fold_equal": true,
+          "diagnostics": {
+            "total": 56,
+            "d8": 56,
+            "h8": 0,
+            "nonfinite": 0,
+            "invalid_tags": 0,
+            "bytes_per_group": 136,
+            "selector": {
+              "relative_l2": 0.025,
+              "max_abs_over_amax": 0.0625
+            },
+            "d8_fraction": 1.0
+          }
+        },
+        {
+          "case": "tiny",
+          "shape": [
+            8,
+            128
+          ],
+          "passed": true,
+          "finite": true,
+          "relative_l2": 0.0,
+          "protocol_relative_l2": 0.0,
+          "packet_relative_l2": 0.0,
+          "forced_d8_relative_l2": 0.0,
+          "forced_d8_reference_budget": 0.008,
+          "forced_h8_packet_equal": true,
+          "forced_h8_decode_equal": true,
+          "forced_h8_fold_equal": true,
+          "ordered_bf16_fold_equal": true,
+          "diagnostics": {
+            "total": 56,
+            "d8": 56,
+            "h8": 0,
+            "nonfinite": 0,
+            "invalid_tags": 0,
+            "bytes_per_group": 136,
+            "selector": {
+              "relative_l2": 0.025,
+              "max_abs_over_amax": 0.0625
+            },
+            "d8_fraction": 1.0
+          }
+        },
+        {
+          "case": "mixed",
+          "shape": [
+            8,
+            128
+          ],
+          "passed": true,
+          "finite": true,
+          "relative_l2": 0.0013153230106873568,
+          "protocol_relative_l2": 0.0,
+          "packet_relative_l2": 0.0,
+          "forced_d8_relative_l2": 0.0,
+          "forced_d8_reference_budget": 0.008,
+          "forced_h8_packet_equal": true,
+          "forced_h8_decode_equal": true,
+          "forced_h8_fold_equal": true,
+          "ordered_bf16_fold_equal": true,
+          "diagnostics": {
+            "total": 56,
+            "d8": 28,
+            "h8": 28,
+            "nonfinite": 0,
+            "invalid_tags": 0,
+            "bytes_per_group": 136,
+            "selector": {
+              "relative_l2": 0.025,
+              "max_abs_over_amax": 0.0625
+            },
+            "d8_fraction": 0.5
+          }
+        },
+        {
+          "case": "rounding_midpoint",
+          "shape": [
+            8,
+            128
+          ],
+          "passed": true,
+          "finite": true,
+          "relative_l2": 0.0,
+          "protocol_relative_l2": 0.0,
+          "packet_relative_l2": 0.0,
+          "forced_d8_relative_l2": 0.0,
+          "forced_d8_reference_budget": 0.008,
+          "forced_h8_packet_equal": true,
+          "forced_h8_decode_equal": true,
+          "forced_h8_fold_equal": true,
+          "ordered_bf16_fold_equal": true,
+          "diagnostics": {
+            "total": 56,
+            "d8": 0,
+            "h8": 56,
+            "nonfinite": 0,
+            "invalid_tags": 0,
+            "bytes_per_group": 136,
+            "selector": {
+              "relative_l2": 0.025,
+              "max_abs_over_amax": 0.0625
+            },
+            "d8_fraction": 0.0
+          }
+        },
+        {
+          "case": "full_shape",
+          "shape": [
+            256,
+            4096
+          ],
+          "passed": true,
+          "finite": true,
+          "relative_l2": 0.02504412107912252,
+          "protocol_relative_l2": 2.9417206334719506e-05,
+          "packet_relative_l2": 0.0,
+          "forced_d8_relative_l2": 0.0,
+          "forced_d8_reference_budget": 0.008,
+          "forced_h8_packet_equal": true,
+          "forced_h8_decode_equal": true,
+          "forced_h8_fold_equal": true,
+          "ordered_bf16_fold_equal": true,
+          "diagnostics": {
+            "total": 57344,
+            "d8": 20582,
+            "h8": 36762,
+            "nonfinite": 0,
+            "invalid_tags": 0,
+            "bytes_per_group": 136,
+            "selector": {
+              "relative_l2": 0.025,
+              "max_abs_over_amax": 0.0625
+            },
+            "d8_fraction": 0.35892159598214285
+          }
+        }
+      ],
+      "retained_outputs_unchanged": true,
+      "synthetic": false,
+      "selector": {
+        "relative_l2": 0.025,
+        "max_abs_over_amax": 0.0625
+      },
+      "nonfinite_input_policy": "CUDA device assertion",
+      "nonfinite_checks": [
+        {
+          "value": "nan",
+          "rejected": true,
+          "separate_cuda_context": true
+        },
+        {
+          "value": "inf",
+          "rejected": true,
+          "separate_cuda_context": true
+        }
+      ],
+      "quantized_remote_fraction": 1.0,
+      "bytes_per_group": 136
+    },
+    "forced_direct": {
+      "passed": true,
+      "rank": 1,
+      "cases": [
+        {
+          "case": "zeros",
+          "shape": [
+            8,
+            128
+          ],
+          "passed": true,
+          "finite": true,
+          "relative_l2": 0.0,
+          "protocol_relative_l2": 0.0,
+          "packet_relative_l2": 0.0,
+          "ordered_bf16_fold_equal": true,
+          "formal_equals_diagnostic": true,
+          "diagnostics": {
+            "total": 56,
+            "d8": 56,
+            "h8": 0,
+            "nonfinite": 0,
+            "invalid_tags": 0,
+            "bytes_per_group": 136,
+            "selector": {
+              "relative_l2": 0.025,
+              "max_abs_over_amax": 0.0625
+            },
+            "d8_fraction": 1.0
+          },
+          "policy": "d8",
+          "quality_selection": false,
+          "h8_fallback_allowed": false,
+          "budget_vs_reference": 0.008,
+          "rounding_midpoint": null
+        },
+        {
+          "case": "small",
+          "shape": [
+            8,
+            128
+          ],
+          "passed": true,
+          "finite": true,
+          "relative_l2": 0.025741655500482134,
+          "protocol_relative_l2": 0.0,
+          "packet_relative_l2": 0.0,
+          "ordered_bf16_fold_equal": true,
+          "formal_equals_diagnostic": true,
+          "diagnostics": {
+            "total": 56,
+            "d8": 56,
+            "h8": 0,
+            "nonfinite": 0,
+            "invalid_tags": 0,
+            "bytes_per_group": 136,
+            "selector": {
+              "relative_l2": 0.025,
+              "max_abs_over_amax": 0.0625
+            },
+            "d8_fraction": 1.0
+          },
+          "policy": "d8",
+          "quality_selection": false,
+          "h8_fallback_allowed": false,
+          "budget_vs_reference": 0.008,
+          "rounding_midpoint": null
+        },
+        {
+          "case": "outliers",
+          "shape": [
+            8,
+            128
+          ],
+          "passed": true,
+          "finite": true,
+          "relative_l2": 0.00466826734347954,
+          "protocol_relative_l2": 0.0,
+          "packet_relative_l2": 0.0,
+          "ordered_bf16_fold_equal": true,
+          "formal_equals_diagnostic": true,
+          "diagnostics": {
+            "total": 56,
+            "d8": 56,
+            "h8": 0,
+            "nonfinite": 0,
+            "invalid_tags": 0,
+            "bytes_per_group": 136,
+            "selector": {
+              "relative_l2": 0.025,
+              "max_abs_over_amax": 0.0625
+            },
+            "d8_fraction": 1.0
+          },
+          "policy": "d8",
+          "quality_selection": false,
+          "h8_fallback_allowed": false,
+          "budget_vs_reference": 0.008,
+          "rounding_midpoint": null
+        },
+        {
+          "case": "tiny",
+          "shape": [
+            8,
+            128
+          ],
+          "passed": true,
+          "finite": true,
+          "relative_l2": 0.0,
+          "protocol_relative_l2": 0.0,
+          "packet_relative_l2": 0.0,
+          "ordered_bf16_fold_equal": true,
+          "formal_equals_diagnostic": true,
+          "diagnostics": {
+            "total": 56,
+            "d8": 56,
+            "h8": 0,
+            "nonfinite": 0,
+            "invalid_tags": 0,
+            "bytes_per_group": 136,
+            "selector": {
+              "relative_l2": 0.025,
+              "max_abs_over_amax": 0.0625
+            },
+            "d8_fraction": 1.0
+          },
+          "policy": "d8",
+          "quality_selection": false,
+          "h8_fallback_allowed": false,
+          "budget_vs_reference": 0.008,
+          "rounding_midpoint": null
+        },
+        {
+          "case": "mixed",
+          "shape": [
+            8,
+            128
+          ],
+          "passed": true,
+          "finite": true,
+          "relative_l2": 0.029645875062162957,
+          "protocol_relative_l2": 0.0,
+          "packet_relative_l2": 0.0,
+          "ordered_bf16_fold_equal": true,
+          "formal_equals_diagnostic": true,
+          "diagnostics": {
+            "total": 56,
+            "d8": 56,
+            "h8": 0,
+            "nonfinite": 0,
+            "invalid_tags": 0,
+            "bytes_per_group": 136,
+            "selector": {
+              "relative_l2": 0.025,
+              "max_abs_over_amax": 0.0625
+            },
+            "d8_fraction": 1.0
+          },
+          "policy": "d8",
+          "quality_selection": false,
+          "h8_fallback_allowed": false,
+          "budget_vs_reference": 0.008,
+          "rounding_midpoint": null
+        },
+        {
+          "case": "rounding_midpoint",
+          "shape": [
+            8,
+            128
+          ],
+          "passed": true,
+          "finite": true,
+          "relative_l2": 0.04322677245664829,
+          "protocol_relative_l2": 0.0,
+          "packet_relative_l2": 0.0,
+          "ordered_bf16_fold_equal": true,
+          "formal_equals_diagnostic": true,
+          "diagnostics": {
+            "total": 56,
+            "d8": 56,
+            "h8": 0,
+            "nonfinite": 0,
+            "invalid_tags": 0,
+            "bytes_per_group": 136,
+            "selector": {
+              "relative_l2": 0.025,
+              "max_abs_over_amax": 0.0625
+            },
+            "d8_fraction": 1.0
+          },
+          "policy": "d8",
+          "quality_selection": false,
+          "h8_fallback_allowed": false,
+          "budget_vs_reference": 0.008,
+          "rounding_midpoint": {
+            "scale_exact": true,
+            "payload_exact": true,
+            "reference_equal": true
+          }
+        },
+        {
+          "case": "full_shape",
+          "shape": [
+            256,
+            4096
+          ],
+          "passed": true,
+          "finite": true,
+          "relative_l2": 0.025760753241864148,
+          "protocol_relative_l2": 0.0,
+          "packet_relative_l2": 0.0,
+          "ordered_bf16_fold_equal": true,
+          "formal_equals_diagnostic": true,
+          "diagnostics": {
+            "total": 57344,
+            "d8": 57344,
+            "h8": 0,
+            "nonfinite": 0,
+            "invalid_tags": 0,
+            "bytes_per_group": 136,
+            "selector": {
+              "relative_l2": 0.025,
+              "max_abs_over_amax": 0.0625
+            },
+            "d8_fraction": 1.0
+          },
+          "policy": "d8",
+          "quality_selection": false,
+          "h8_fallback_allowed": false,
+          "budget_vs_reference": 0.008,
+          "rounding_midpoint": null
+        }
+      ],
+      "retained_outputs_unchanged": true,
+      "synthetic": false,
+      "policy": "d8",
+      "quality_selection": false,
+      "h8_fallback_allowed": false,
+      "nonfinite_input_policy": "CUDA device assertion",
+      "nonfinite_checks": [
+        {
+          "value": "nan",
+          "rejected": true,
+          "separate_cuda_context": true
+        },
+        {
+          "value": "inf",
+          "rejected": true,
+          "separate_cuda_context": true
+        }
+      ],
+      "quantized_remote_fraction": 1.0,
+      "bytes_per_group": 136
+    }
+  },
+  "smoke_output_sha256": {
+    "decoder.layers.0.self_attention.linear_proj": "9ba3b8581ea9775c520f90f2dc2075520935db91eef5e32fc863824b4ba03794",
+    "decoder.layers.0.mlp.linear_fc2": "af93894d92ed3eba95d34df2c0ffa0dc060b97dcf1a0d0eabe732336f81205ee",
+    "decoder.layers.1.self_attention.linear_proj": "9a43b6d05297d383d203c6c59ef4daa045bb321aff14d5033c5309831b8551d4",
+    "decoder.layers.1.mlp.linear_fc2": "2d3e819df47e3c692ee92058ce6a6eb79361604b13e0b4f67adab4df03b2de17",
+    "decoder.layers.2.self_attention.linear_proj": "9832dd25e00e48866e6a809d07a54992ff7b6a446e56b01e283a1ed6ab07acc3",
+    "decoder.layers.2.mlp.linear_fc2": "73f7b3272b28593a3e81328f402f24290487196bec793b47438c5ccc56815b62",
+    "decoder.layers.3.self_attention.linear_proj": "b99a4147931def5a7a27be35b2f46473d7b54205c8a7c5e1064c8dac39e85968",
+    "decoder.layers.3.mlp.linear_fc2": "e2962fd7b01e124efafbfb410be9904470708da57a41f385de05c5c12eeb3c71",
+    "decoder.layers.4.self_attention.linear_proj": "c3229a7ff0d1040509efe023f29f03c154e59ee84c78971849e005cf1404fb26",
+    "decoder.layers.4.mlp.linear_fc2": "b8709fdea0b2e49a25f9d7699b54d45564db7e18d9a91320d0b08aa0ea82b71f",
+    "decoder.layers.5.self_attention.linear_proj": "72d8f68fa2b81751002389b00f349b14f79013b2380082596fa7bfc9d69d8e1f",
+    "decoder.layers.5.mlp.linear_fc2": "bb42b2fef5ff0269c5a60ceb115fb6ca5bb6b8173859ec7098e779424a49be8b",
+    "decoder.layers.6.self_attention.linear_proj": "8413f439ff716015e9f5880aad8cdb7d21478d8d39f7020d4a4b1509978b83c5",
+    "decoder.layers.6.mlp.linear_fc2": "3cda3551856b9dab8f81b6a3f4ddee8ac37ab596221381d07fb3f5b5c34d19d2",
+    "decoder.layers.7.self_attention.linear_proj": "f8866933a5dd488462a11a41a95fecf2eb1f0b2d99fb9cd5588ee01004a6e2ed",
+    "decoder.layers.7.mlp.linear_fc2": "6fa4157c2f0bb77484522d5e8ce56652fd2d4a37868e8fd920d510e644508c8f",
+    "decoder.layers.8.self_attention.linear_proj": "e44cadb007047daab034a38cdcfcd7a50372e4d3a01df6912688ac7797f28efd",
+    "decoder.layers.8.mlp.linear_fc2": "4255351d95fb418825ff48011637b3ac38b55bfb4f76aa3199f27527b93d7751",
+    "decoder.layers.9.self_attention.linear_proj": "aefabc8c05daac2524ae97080c8cc23f964b7e4b1d6646a56d6f2174a49a8825",
+    "decoder.layers.9.mlp.linear_fc2": "43cbd9117e60b919d17d1ba55fdbc970b4f5ee01bf4405058b079577031ce805",
+    "decoder.layers.10.self_attention.linear_proj": "c41a878de231a5f465162b13d83a5bca0915aa09e66e795ac06bf07fc18d8b2f",
+    "decoder.layers.10.mlp.linear_fc2": "f65935cb65c45f09c943b8cf9bcb657a51491144027af9c57f277fde38917005",
+    "decoder.layers.11.self_attention.linear_proj": "388f20bc98935af7277dc8843267267c63afc93e16b8d72b3eb647a7b82776df",
+    "decoder.layers.11.mlp.linear_fc2": "0c0536c1a379273878d389df7edce6010b339bb36f9abf7483a4796bef888975",
+    "decoder.layers.12.self_attention.linear_proj": "cd3e7c2403a4ce91979c3eec8d6952f4f88a4a8c67451734606dc67b54e1c60b",
+    "decoder.layers.12.mlp.linear_fc2": "a8896f6b5621d3c1d8d1cef35a2b331049e08e5b255afd0de704e83044edeb5f",
+    "decoder.layers.13.self_attention.linear_proj": "62e84a1801be86a2af9487bdb6720a32284e4ef763b121e542a0046832ea0566",
+    "decoder.layers.13.mlp.linear_fc2": "44ae96157be62280f861a1b303086fe50eaf4dab5d39ae474dfdc991d8c0bd96",
+    "decoder.layers.14.self_attention.linear_proj": "3085293a6b0cfcbb6611e129de414a5f53ac6b6787f1e676d0b385ff50d9bf98",
+    "decoder.layers.14.mlp.linear_fc2": "96258fd8ef7f54194b31ad8047ba2f70a5bedc1b9a7dfa44068ed68958e42984",
+    "decoder.layers.15.self_attention.linear_proj": "c00e6af3224246ed167170fb1cb78ded53f2d3a07d4fccbaf01fedf2da0eb31f",
+    "decoder.layers.15.mlp.linear_fc2": "69fe7a5cb6f085a84cf47c739b28cefaedbc02aa4604a7b279c2484ae2ae9e8b",
+    "decoder.layers.16.self_attention.linear_proj": "95b6e5cbabd6120f9cd3b0bfc0ec360a636eca8c466434a1a4fe1e80e9d011fb",
+    "decoder.layers.16.mlp.linear_fc2": "86aa01f14aa08adddd0ed1e586e30e646b154ae773def8aef7bbe3bed4303fab",
+    "decoder.layers.17.self_attention.linear_proj": "8ab3b7dc279b1951973443979dc5c69ccffb6c936dde00005490a49852385da5",
+    "decoder.layers.17.mlp.linear_fc2": "ec9d2172472d77f49f85b9d23aa45457a9336fe5a082aea277ffc2d0288aaf00",
+    "decoder.layers.18.self_attention.linear_proj": "095f83d463aa85456b93903f84de8c0d9a9b5f64363f3e7aaea01e06b768cf23",
+    "decoder.layers.18.mlp.linear_fc2": "179b16c64bfc4ce8dd9b86a7273fb1a99983fbf443225bcf1e4c66b11a438ab2",
+    "decoder.layers.19.self_attention.linear_proj": "b474ea7ac5db6d42631e95301d57343ab0095a1ae4c7c78c28a1e53efe807a88",
+    "decoder.layers.19.mlp.linear_fc2": "2014074c39fc8743e740e5af9b68c0ca088b3f0720ede71214275283b135312f",
+    "decoder.layers.20.self_attention.linear_proj": "15abf490bb7929f17ecc4a7a717a9d6ffc0441e22d3a28a107631f49a7c996e2",
+    "decoder.layers.20.mlp.linear_fc2": "b55b5e180997f416eb6922825c4168d4298a3fdd02e6eec7b2aadffe89435c96",
+    "decoder.layers.21.self_attention.linear_proj": "2944b747f2f26cc2dd3f47c5e7f05e8386aba1822fa66121cc0a4a1fbe865e81",
+    "decoder.layers.21.mlp.linear_fc2": "8e2cf2bd532ed2ae2ecce0709f1c80f8ae03f5abe013bb09872821029743b1b8",
+    "decoder.layers.22.self_attention.linear_proj": "79c0c0ad5e7abbc8efb84f5007bc0b8a11a50a24aad20bc3ec779a70c0cb6283",
+    "decoder.layers.22.mlp.linear_fc2": "ec202279f90b5899335b415ee760501dbc529658da1ca14e4e178d615feac0a7",
+    "decoder.layers.23.self_attention.linear_proj": "ee97cbf01f4e74cc85e0e5222d619b8146f9b9c71918c156ac0e000d1bab8938",
+    "decoder.layers.23.mlp.linear_fc2": "6bb67fce70865a9eaec811a1f89e7abfbac9a7a659fb274438a59c933ad196ac",
+    "decoder.layers.24.self_attention.linear_proj": "1fd1a09dc09241d8d24f9b129a9b913bc70175023041f590081564274239203e",
+    "decoder.layers.24.mlp.linear_fc2": "5d30715df8221b638112da3bef8b8fb3f67eddc15d23925e250d6eec6c1f8585",
+    "decoder.layers.25.self_attention.linear_proj": "ad13d8e20127f426ed419e97b9092736587c5a1dae218075cca4709aa213c76d",
+    "decoder.layers.25.mlp.linear_fc2": "b1f55ac13f933c412f2d4685b997d5853697abe90f13a5ec8201539f7d5323ab",
+    "decoder.layers.26.self_attention.linear_proj": "f1067d08c561e0629b805519b656e6a10511cce70e3a612c10c9103bcee8eb49",
+    "decoder.layers.26.mlp.linear_fc2": "af08ac53d3a89c690b634964b48f3f2b2d465d6c5751929569ebee5258073a49",
+    "decoder.layers.27.self_attention.linear_proj": "c557d1a0de46e07f7595bfe18f0fb4b5c21f8441bda5c6189775c85e79031a57",
+    "decoder.layers.27.mlp.linear_fc2": "f50984300252ab0c7d465c8f299d474bf6051e2cba1f6e51d34cb56dcb33c387",
+    "decoder.layers.28.self_attention.linear_proj": "a2c3ed93028cdb0f8f91876eaa215d98dde7936ccc400799439a196609fff480",
+    "decoder.layers.28.mlp.linear_fc2": "13967b33b6895b5155179da16f5230f98e9b09f34d87374f2c56cd89962c9d4c",
+    "decoder.layers.29.self_attention.linear_proj": "a52289d205966d57b5ce9b0a13bc4716387671682ab8b84766a39bfb54501524",
+    "decoder.layers.29.mlp.linear_fc2": "4173d6f4e5e4f315df64dfc0581f6a8a08278b9dde6f043b6c11de44f7f9d10a",
+    "decoder.layers.30.self_attention.linear_proj": "82b41b4c1297212138741f5a7e3826fa075898d32816d45b352cde4dcdcbc221",
+    "decoder.layers.30.mlp.linear_fc2": "96d7e8e81f3772eda884605738d1bef55723a1b01078785dd079524640590c5e",
+    "decoder.layers.31.self_attention.linear_proj": "8e69955361753a1e395d20d90749314856ff4db4eabfdb282c3d15b7418d654b",
+    "decoder.layers.31.mlp.linear_fc2": "0eb63a947be9da2b3afe57ce69a5000bf8e6d3242d21df83a039a07f3bd2dbf9"
+  },
+  "retained_output_checks": {
+    "attn": {
+      "module": "decoder.layers.0.self_attention.linear_proj",
+      "outputs": 6,
+      "independent_storage": true,
+      "unchanged_after_subsequent_call": true,
+      "passed": true
+    },
+    "mlp": {
+      "module": "decoder.layers.0.mlp.linear_fc2",
+      "outputs": 6,
+      "independent_storage": true,
+      "unchanged_after_subsequent_call": true,
+      "passed": true
+    }
+  },
+  "shared_environment": {
+    "CUDA_DEVICE_MAX_CONNECTIONS": "1",
+    "FLUX_GEMM_RS_GEMM_ONLY": "1"
+  },
+  "post_audit_routes": {
+    "decoder.layers.0.self_attention.linear_proj": "flux_tensor",
+    "decoder.layers.0.mlp.linear_fc2": "flux_tensor",
+    "decoder.layers.1.self_attention.linear_proj": "flux_tensor",
+    "decoder.layers.1.mlp.linear_fc2": "flux_tensor",
+    "decoder.layers.2.self_attention.linear_proj": "flux_tensor",
+    "decoder.layers.2.mlp.linear_fc2": "flux_tensor",
+    "decoder.layers.3.self_attention.linear_proj": "flux_tensor",
+    "decoder.layers.3.mlp.linear_fc2": "flux_tensor",
+    "decoder.layers.4.self_attention.linear_proj": "flux_tensor",
+    "decoder.layers.4.mlp.linear_fc2": "flux_tensor",
+    "decoder.layers.5.self_attention.linear_proj": "flux_tensor",
+    "decoder.layers.5.mlp.linear_fc2": "flux_tensor",
+    "decoder.layers.6.self_attention.linear_proj": "flux_tensor",
+    "decoder.layers.6.mlp.linear_fc2": "flux_tensor",
+    "decoder.layers.7.self_attention.linear_proj": "flux_tensor",
+    "decoder.layers.7.mlp.linear_fc2": "flux_tensor",
+    "decoder.layers.8.self_attention.linear_proj": "flux_tensor",
+    "decoder.layers.8.mlp.linear_fc2": "flux_tensor",
+    "decoder.layers.9.self_attention.linear_proj": "flux_tensor",
+    "decoder.layers.9.mlp.linear_fc2": "flux_tensor",
+    "decoder.layers.10.self_attention.linear_proj": "flux_tensor",
+    "decoder.layers.10.mlp.linear_fc2": "flux_tensor",
+    "decoder.layers.11.self_attention.linear_proj": "flux_tensor",
+    "decoder.layers.11.mlp.linear_fc2": "flux_tensor",
+    "decoder.layers.12.self_attention.linear_proj": "flux_tensor",
+    "decoder.layers.12.mlp.linear_fc2": "flux_tensor",
+    "decoder.layers.13.self_attention.linear_proj": "flux_tensor",
+    "decoder.layers.13.mlp.linear_fc2": "flux_tensor",
+    "decoder.layers.14.self_attention.linear_proj": "flux_tensor",
+    "decoder.layers.14.mlp.linear_fc2": "flux_tensor",
+    "decoder.layers.15.self_attention.linear_proj": "flux_tensor",
+    "decoder.layers.15.mlp.linear_fc2": "flux_tensor",
+    "decoder.layers.16.self_attention.linear_proj": "flux_tensor",
+    "decoder.layers.16.mlp.linear_fc2": "flux_tensor",
+    "decoder.layers.17.self_attention.linear_proj": "flux_tensor",
+    "decoder.layers.17.mlp.linear_fc2": "flux_tensor",
+    "decoder.layers.18.self_attention.linear_proj": "flux_tensor",
+    "decoder.layers.18.mlp.linear_fc2": "flux_tensor",
+    "decoder.layers.19.self_attention.linear_proj": "flux_tensor",
+    "decoder.layers.19.mlp.linear_fc2": "flux_tensor",
+    "decoder.layers.20.self_attention.linear_proj": "flux_tensor",
+    "decoder.layers.20.mlp.linear_fc2": "flux_tensor",
+    "decoder.layers.21.self_attention.linear_proj": "flux_tensor",
+    "decoder.layers.21.mlp.linear_fc2": "flux_tensor",
+    "decoder.layers.22.self_attention.linear_proj": "flux_tensor",
+    "decoder.layers.22.mlp.linear_fc2": "flux_tensor",
+    "decoder.layers.23.self_attention.linear_proj": "flux_tensor",
+    "decoder.layers.23.mlp.linear_fc2": "flux_tensor",
+    "decoder.layers.24.self_attention.linear_proj": "flux_tensor",
+    "decoder.layers.24.mlp.linear_fc2": "flux_tensor",
+    "decoder.layers.25.self_attention.linear_proj": "flux_tensor",
+    "decoder.layers.25.mlp.linear_fc2": "flux_tensor",
+    "decoder.layers.26.self_attention.linear_proj": "flux_tensor",
+    "decoder.layers.26.mlp.linear_fc2": "flux_tensor",
+    "decoder.layers.27.self_attention.linear_proj": "flux_tensor",
+    "decoder.layers.27.mlp.linear_fc2": "flux_tensor",
+    "decoder.layers.28.self_attention.linear_proj": "flux_tensor",
+    "decoder.layers.28.mlp.linear_fc2": "flux_tensor",
+    "decoder.layers.29.self_attention.linear_proj": "flux_tensor",
+    "decoder.layers.29.mlp.linear_fc2": "flux_tensor",
+    "decoder.layers.30.self_attention.linear_proj": "flux_tensor",
+    "decoder.layers.30.mlp.linear_fc2": "flux_tensor",
+    "decoder.layers.31.self_attention.linear_proj": "flux_tensor",
+    "decoder.layers.31.mlp.linear_fc2": "flux_tensor"
+  },
+  "timed_calls": {
+    "decoder.layers.0.self_attention.linear_proj": 12,
+    "decoder.layers.0.mlp.linear_fc2": 12,
+    "decoder.layers.1.self_attention.linear_proj": 12,
+    "decoder.layers.1.mlp.linear_fc2": 12,
+    "decoder.layers.2.self_attention.linear_proj": 12,
+    "decoder.layers.2.mlp.linear_fc2": 12,
+    "decoder.layers.3.self_attention.linear_proj": 12,
+    "decoder.layers.3.mlp.linear_fc2": 12,
+    "decoder.layers.4.self_attention.linear_proj": 12,
+    "decoder.layers.4.mlp.linear_fc2": 12,
+    "decoder.layers.5.self_attention.linear_proj": 12,
+    "decoder.layers.5.mlp.linear_fc2": 12,
+    "decoder.layers.6.self_attention.linear_proj": 12,
+    "decoder.layers.6.mlp.linear_fc2": 12,
+    "decoder.layers.7.self_attention.linear_proj": 12,
+    "decoder.layers.7.mlp.linear_fc2": 12,
+    "decoder.layers.8.self_attention.linear_proj": 12,
+    "decoder.layers.8.mlp.linear_fc2": 12,
+    "decoder.layers.9.self_attention.linear_proj": 12,
+    "decoder.layers.9.mlp.linear_fc2": 12,
+    "decoder.layers.10.self_attention.linear_proj": 12,
+    "decoder.layers.10.mlp.linear_fc2": 12,
+    "decoder.layers.11.self_attention.linear_proj": 12,
+    "decoder.layers.11.mlp.linear_fc2": 12,
+    "decoder.layers.12.self_attention.linear_proj": 12,
+    "decoder.layers.12.mlp.linear_fc2": 12,
+    "decoder.layers.13.self_attention.linear_proj": 12,
+    "decoder.layers.13.mlp.linear_fc2": 12,
+    "decoder.layers.14.self_attention.linear_proj": 12,
+    "decoder.layers.14.mlp.linear_fc2": 12,
+    "decoder.layers.15.self_attention.linear_proj": 12,
+    "decoder.layers.15.mlp.linear_fc2": 12,
+    "decoder.layers.16.self_attention.linear_proj": 12,
+    "decoder.layers.16.mlp.linear_fc2": 12,
+    "decoder.layers.17.self_attention.linear_proj": 12,
+    "decoder.layers.17.mlp.linear_fc2": 12,
+    "decoder.layers.18.self_attention.linear_proj": 12,
+    "decoder.layers.18.mlp.linear_fc2": 12,
+    "decoder.layers.19.self_attention.linear_proj": 12,
+    "decoder.layers.19.mlp.linear_fc2": 12,
+    "decoder.layers.20.self_attention.linear_proj": 12,
+    "decoder.layers.20.mlp.linear_fc2": 12,
+    "decoder.layers.21.self_attention.linear_proj": 12,
+    "decoder.layers.21.mlp.linear_fc2": 12,
+    "decoder.layers.22.self_attention.linear_proj": 12,
+    "decoder.layers.22.mlp.linear_fc2": 12,
+    "decoder.layers.23.self_attention.linear_proj": 12,
+    "decoder.layers.23.mlp.linear_fc2": 12,
+    "decoder.layers.24.self_attention.linear_proj": 12,
+    "decoder.layers.24.mlp.linear_fc2": 12,
+    "decoder.layers.25.self_attention.linear_proj": 12,
+    "decoder.layers.25.mlp.linear_fc2": 12,
+    "decoder.layers.26.self_attention.linear_proj": 12,
+    "decoder.layers.26.mlp.linear_fc2": 12,
+    "decoder.layers.27.self_attention.linear_proj": 12,
+    "decoder.layers.27.mlp.linear_fc2": 12,
+    "decoder.layers.28.self_attention.linear_proj": 12,
+    "decoder.layers.28.mlp.linear_fc2": 12,
+    "decoder.layers.29.self_attention.linear_proj": 12,
+    "decoder.layers.29.mlp.linear_fc2": 12,
+    "decoder.layers.30.self_attention.linear_proj": 12,
+    "decoder.layers.30.mlp.linear_fc2": 12,
+    "decoder.layers.31.self_attention.linear_proj": 12,
+    "decoder.layers.31.mlp.linear_fc2": 12
+  },
+  "forward_preserved": {
+    "decoder.layers.0.self_attention.linear_proj": false,
+    "decoder.layers.0.mlp.linear_fc2": false,
+    "decoder.layers.1.self_attention.linear_proj": false,
+    "decoder.layers.1.mlp.linear_fc2": false,
+    "decoder.layers.2.self_attention.linear_proj": false,
+    "decoder.layers.2.mlp.linear_fc2": false,
+    "decoder.layers.3.self_attention.linear_proj": false,
+    "decoder.layers.3.mlp.linear_fc2": false,
+    "decoder.layers.4.self_attention.linear_proj": false,
+    "decoder.layers.4.mlp.linear_fc2": false,
+    "decoder.layers.5.self_attention.linear_proj": false,
+    "decoder.layers.5.mlp.linear_fc2": false,
+    "decoder.layers.6.self_attention.linear_proj": false,
+    "decoder.layers.6.mlp.linear_fc2": false,
+    "decoder.layers.7.self_attention.linear_proj": false,
+    "decoder.layers.7.mlp.linear_fc2": false,
+    "decoder.layers.8.self_attention.linear_proj": false,
+    "decoder.layers.8.mlp.linear_fc2": false,
+    "decoder.layers.9.self_attention.linear_proj": false,
+    "decoder.layers.9.mlp.linear_fc2": false,
+    "decoder.layers.10.self_attention.linear_proj": false,
+    "decoder.layers.10.mlp.linear_fc2": false,
+    "decoder.layers.11.self_attention.linear_proj": false,
+    "decoder.layers.11.mlp.linear_fc2": false,
+    "decoder.layers.12.self_attention.linear_proj": false,
+    "decoder.layers.12.mlp.linear_fc2": false,
+    "decoder.layers.13.self_attention.linear_proj": false,
+    "decoder.layers.13.mlp.linear_fc2": false,
+    "decoder.layers.14.self_attention.linear_proj": false,
+    "decoder.layers.14.mlp.linear_fc2": false,
+    "decoder.layers.15.self_attention.linear_proj": false,
+    "decoder.layers.15.mlp.linear_fc2": false,
+    "decoder.layers.16.self_attention.linear_proj": false,
+    "decoder.layers.16.mlp.linear_fc2": false,
+    "decoder.layers.17.self_attention.linear_proj": false,
+    "decoder.layers.17.mlp.linear_fc2": false,
+    "decoder.layers.18.self_attention.linear_proj": false,
+    "decoder.layers.18.mlp.linear_fc2": false,
+    "decoder.layers.19.self_attention.linear_proj": false,
+    "decoder.layers.19.mlp.linear_fc2": false,
+    "decoder.layers.20.self_attention.linear_proj": false,
+    "decoder.layers.20.mlp.linear_fc2": false,
+    "decoder.layers.21.self_attention.linear_proj": false,
+    "decoder.layers.21.mlp.linear_fc2": false,
+    "decoder.layers.22.self_attention.linear_proj": false,
+    "decoder.layers.22.mlp.linear_fc2": false,
+    "decoder.layers.23.self_attention.linear_proj": false,
+    "decoder.layers.23.mlp.linear_fc2": false,
+    "decoder.layers.24.self_attention.linear_proj": false,
+    "decoder.layers.24.mlp.linear_fc2": false,
+    "decoder.layers.25.self_attention.linear_proj": false,
+    "decoder.layers.25.mlp.linear_fc2": false,
+    "decoder.layers.26.self_attention.linear_proj": false,
+    "decoder.layers.26.mlp.linear_fc2": false,
+    "decoder.layers.27.self_attention.linear_proj": false,
+    "decoder.layers.27.mlp.linear_fc2": false,
+    "decoder.layers.28.self_attention.linear_proj": false,
+    "decoder.layers.28.mlp.linear_fc2": false,
+    "decoder.layers.29.self_attention.linear_proj": false,
+    "decoder.layers.29.mlp.linear_fc2": false,
+    "decoder.layers.30.self_attention.linear_proj": false,
+    "decoder.layers.30.mlp.linear_fc2": false,
+    "decoder.layers.31.self_attention.linear_proj": false,
+    "decoder.layers.31.mlp.linear_fc2": false
+  },
+  "enabled_modules": [
+    "decoder.layers.0.mlp.linear_fc2",
+    "decoder.layers.0.self_attention.linear_proj",
+    "decoder.layers.1.mlp.linear_fc2",
+    "decoder.layers.1.self_attention.linear_proj",
+    "decoder.layers.10.mlp.linear_fc2",
+    "decoder.layers.10.self_attention.linear_proj",
+    "decoder.layers.11.mlp.linear_fc2",
+    "decoder.layers.11.self_attention.linear_proj",
+    "decoder.layers.12.mlp.linear_fc2",
+    "decoder.layers.12.self_attention.linear_proj",
+    "decoder.layers.13.mlp.linear_fc2",
+    "decoder.layers.13.self_attention.linear_proj",
+    "decoder.layers.14.mlp.linear_fc2",
+    "decoder.layers.14.self_attention.linear_proj",
+    "decoder.layers.15.mlp.linear_fc2",
+    "decoder.layers.15.self_attention.linear_proj",
+    "decoder.layers.16.mlp.linear_fc2",
+    "decoder.layers.16.self_attention.linear_proj",
+    "decoder.layers.17.mlp.linear_fc2",
+    "decoder.layers.17.self_attention.linear_proj",
+    "decoder.layers.18.mlp.linear_fc2",
+    "decoder.layers.18.self_attention.linear_proj",
+    "decoder.layers.19.mlp.linear_fc2",
+    "decoder.layers.19.self_attention.linear_proj",
+    "decoder.layers.2.mlp.linear_fc2",
+    "decoder.layers.2.self_attention.linear_proj",
+    "decoder.layers.20.mlp.linear_fc2",
+    "decoder.layers.20.self_attention.linear_proj",
+    "decoder.layers.21.mlp.linear_fc2",
+    "decoder.layers.21.self_attention.linear_proj",
+    "decoder.layers.22.mlp.linear_fc2",
+    "decoder.layers.22.self_attention.linear_proj",
+    "decoder.layers.23.mlp.linear_fc2",
+    "decoder.layers.23.self_attention.linear_proj",
+    "decoder.layers.24.mlp.linear_fc2",
+    "decoder.layers.24.self_attention.linear_proj",
+    "decoder.layers.25.mlp.linear_fc2",
+    "decoder.layers.25.self_attention.linear_proj",
+    "decoder.layers.26.mlp.linear_fc2",
+    "decoder.layers.26.self_attention.linear_proj",
+    "decoder.layers.27.mlp.linear_fc2",
+    "decoder.layers.27.self_attention.linear_proj",
+    "decoder.layers.28.mlp.linear_fc2",
+    "decoder.layers.28.self_attention.linear_proj",
+    "decoder.layers.29.mlp.linear_fc2",
+    "decoder.layers.29.self_attention.linear_proj",
+    "decoder.layers.3.mlp.linear_fc2",
+    "decoder.layers.3.self_attention.linear_proj",
+    "decoder.layers.30.mlp.linear_fc2",
+    "decoder.layers.30.self_attention.linear_proj",
+    "decoder.layers.31.mlp.linear_fc2",
+    "decoder.layers.31.self_attention.linear_proj",
+    "decoder.layers.4.mlp.linear_fc2",
+    "decoder.layers.4.self_attention.linear_proj",
+    "decoder.layers.5.mlp.linear_fc2",
+    "decoder.layers.5.self_attention.linear_proj",
+    "decoder.layers.6.mlp.linear_fc2",
+    "decoder.layers.6.self_attention.linear_proj",
+    "decoder.layers.7.mlp.linear_fc2",
+    "decoder.layers.7.self_attention.linear_proj",
+    "decoder.layers.8.mlp.linear_fc2",
+    "decoder.layers.8.self_attention.linear_proj",
+    "decoder.layers.9.mlp.linear_fc2",
+    "decoder.layers.9.self_attention.linear_proj"
+  ],
+  "independent_scope_instances": 64,
+  "workspace_checks": {
+    "decoder.layers.0.self_attention.linear_proj": [
+      {
+        "shape": [
+          2048,
+          4096,
+          4096
+        ],
+        "gemm_output_ptr": 140665950306304
+      }
+    ],
+    "decoder.layers.0.mlp.linear_fc2": [
+      {
+        "shape": [
+          2048,
+          4096,
+          16384
+        ],
+        "gemm_output_ptr": 140665228886016
+      }
+    ],
+    "decoder.layers.1.self_attention.linear_proj": [
+      {
+        "shape": [
+          2048,
+          4096,
+          4096
+        ],
+        "gemm_output_ptr": 140673667825664
+      }
+    ],
+    "decoder.layers.1.mlp.linear_fc2": [
+      {
+        "shape": [
+          2048,
+          4096,
+          16384
+        ],
+        "gemm_output_ptr": 140673701380096
+      }
+    ],
+    "decoder.layers.2.self_attention.linear_proj": [
+      {
+        "shape": [
+          2048,
+          4096,
+          4096
+        ],
+        "gemm_output_ptr": 140673734934528
+      }
+    ],
+    "decoder.layers.2.mlp.linear_fc2": [
+      {
+        "shape": [
+          2048,
+          4096,
+          16384
+        ],
+        "gemm_output_ptr": 140673768488960
+      }
+    ],
+    "decoder.layers.3.self_attention.linear_proj": [
+      {
+        "shape": [
+          2048,
+          4096,
+          4096
+        ],
+        "gemm_output_ptr": 140673785266176
+      }
+    ],
+    "decoder.layers.3.mlp.linear_fc2": [
+      {
+        "shape": [
+          2048,
+          4096,
+          16384
+        ],
+        "gemm_output_ptr": 140673911095296
+      }
+    ],
+    "decoder.layers.4.self_attention.linear_proj": [
+      {
+        "shape": [
+          2048,
+          4096,
+          4096
+        ],
+        "gemm_output_ptr": 140673969815552
+      }
+    ],
+    "decoder.layers.4.mlp.linear_fc2": [
+      {
+        "shape": [
+          2048,
+          4096,
+          16384
+        ],
+        "gemm_output_ptr": 140664448155648
+      }
+    ],
+    "decoder.layers.5.self_attention.linear_proj": [
+      {
+        "shape": [
+          2048,
+          4096,
+          4096
+        ],
+        "gemm_output_ptr": 140664554520576
+      }
+    ],
+    "decoder.layers.5.mlp.linear_fc2": [
+      {
+        "shape": [
+          2048,
+          4096,
+          16384
+        ],
+        "gemm_output_ptr": 140664504188928
+      }
+    ],
+    "decoder.layers.6.self_attention.linear_proj": [
+      {
+        "shape": [
+          2048,
+          4096,
+          4096
+        ],
+        "gemm_output_ptr": 140664194400256
+      }
+    ],
+    "decoder.layers.6.mlp.linear_fc2": [
+      {
+        "shape": [
+          2048,
+          4096,
+          16384
+        ],
+        "gemm_output_ptr": 140664269307904
+      }
+    ],
+    "decoder.layers.7.self_attention.linear_proj": [
+      {
+        "shape": [
+          2048,
+          4096,
+          4096
+        ],
+        "gemm_output_ptr": 140664313937920
+      }
+    ],
+    "decoder.layers.7.mlp.linear_fc2": [
+      {
+        "shape": [
+          2048,
+          4096,
+          16384
+        ],
+        "gemm_output_ptr": 140664388845568
+      }
+    ],
+    "decoder.layers.8.self_attention.linear_proj": [
+      {
+        "shape": [
+          2048,
+          4096,
+          4096
+        ],
+        "gemm_output_ptr": 140663903485952
+      }
+    ],
+    "decoder.layers.8.mlp.linear_fc2": [
+      {
+        "shape": [
+          2048,
+          4096,
+          16384
+        ],
+        "gemm_output_ptr": 140663970594816
+      }
+    ],
+    "decoder.layers.9.self_attention.linear_proj": [
+      {
+        "shape": [
+          2048,
+          4096,
+          4096
+        ],
+        "gemm_output_ptr": 140664009850880
+      }
+    ],
+    "decoder.layers.9.mlp.linear_fc2": [
+      {
+        "shape": [
+          2048,
+          4096,
+          16384
+        ],
+        "gemm_output_ptr": 140664054480896
+      }
+    ],
+    "decoder.layers.10.self_attention.linear_proj": [
+      {
+        "shape": [
+          2048,
+          4096,
+          4096
+        ],
+        "gemm_output_ptr": 140664127291392
+      }
+    ],
+    "decoder.layers.10.mlp.linear_fc2": [
+      {
+        "shape": [
+          2048,
+          4096,
+          16384
+        ],
+        "gemm_output_ptr": 140663811211264
+      }
+    ],
+    "decoder.layers.11.self_attention.linear_proj": [
+      {
+        "shape": [
+          2048,
+          4096,
+          4096
+        ],
+        "gemm_output_ptr": 140663850467328
+      }
+    ],
+    "decoder.layers.11.mlp.linear_fc2": [
+      {
+        "shape": [
+          2048,
+          4096,
+          16384
+        ],
+        "gemm_output_ptr": 140663884021760
+      }
+    ],
+    "decoder.layers.12.self_attention.linear_proj": [
+      {
+        "shape": [
+          2048,
+          4096,
+          4096
+        ],
+        "gemm_output_ptr": 140663691083776
+      }
+    ],
+    "decoder.layers.12.mlp.linear_fc2": [
+      {
+        "shape": [
+          2048,
+          4096,
+          16384
+        ],
+        "gemm_output_ptr": 140663366615040
+      }
+    ],
+    "decoder.layers.13.self_attention.linear_proj": [
+      {
+        "shape": [
+          2048,
+          4096,
+          4096
+        ],
+        "gemm_output_ptr": 140663472979968
+      }
+    ],
+    "decoder.layers.13.mlp.linear_fc2": [
+      {
+        "shape": [
+          2048,
+          4096,
+          16384
+        ],
+        "gemm_output_ptr": 140663422648320
+      }
+    ],
+    "decoder.layers.14.self_attention.linear_proj": [
+      {
+        "shape": [
+          2048,
+          4096,
+          4096
+        ],
+        "gemm_output_ptr": 140663254876160
+      }
+    ],
+    "decoder.layers.14.mlp.linear_fc2": [
+      {
+        "shape": [
+          2048,
+          4096,
+          16384
+        ],
+        "gemm_output_ptr": 140663329783808
+      }
+    ],
+    "decoder.layers.15.self_attention.linear_proj": [
+      {
+        "shape": [
+          2048,
+          4096,
+          4096
+        ],
+        "gemm_output_ptr": 140663508631552
+      }
+    ],
+    "decoder.layers.15.mlp.linear_fc2": [
+      {
+        "shape": [
+          2048,
+          4096,
+          16384
+        ],
+        "gemm_output_ptr": 140663583539200
+      }
+    ],
+    "decoder.layers.16.self_attention.linear_proj": [
+      {
+        "shape": [
+          2048,
+          4096,
+          4096
+        ],
+        "gemm_output_ptr": 140662963961856
+      }
+    ],
+    "decoder.layers.16.mlp.linear_fc2": [
+      {
+        "shape": [
+          2048,
+          4096,
+          16384
+        ],
+        "gemm_output_ptr": 140663031070720
+      }
+    ],
+    "decoder.layers.17.self_attention.linear_proj": [
+      {
+        "shape": [
+          2048,
+          4096,
+          4096
+        ],
+        "gemm_output_ptr": 140663070326784
+      }
+    ],
+    "decoder.layers.17.mlp.linear_fc2": [
+      {
+        "shape": [
+          2048,
+          4096,
+          16384
+        ],
+        "gemm_output_ptr": 140663114956800
+      }
+    ],
+    "decoder.layers.18.self_attention.linear_proj": [
+      {
+        "shape": [
+          2048,
+          4096,
+          4096
+        ],
+        "gemm_output_ptr": 140663187767296
+      }
+    ],
+    "decoder.layers.18.mlp.linear_fc2": [
+      {
+        "shape": [
+          2048,
+          4096,
+          16384
+        ],
+        "gemm_output_ptr": 140662871687168
+      }
+    ],
+    "decoder.layers.19.self_attention.linear_proj": [
+      {
+        "shape": [
+          2048,
+          4096,
+          4096
+        ],
+        "gemm_output_ptr": 140662910943232
+      }
+    ],
+    "decoder.layers.19.mlp.linear_fc2": [
+      {
+        "shape": [
+          2048,
+          4096,
+          16384
+        ],
+        "gemm_output_ptr": 140662944497664
+      }
+    ],
+    "decoder.layers.20.self_attention.linear_proj": [
+      {
+        "shape": [
+          2048,
+          4096,
+          4096
+        ],
+        "gemm_output_ptr": 140662751559680
+      }
+    ],
+    "decoder.layers.20.mlp.linear_fc2": [
+      {
+        "shape": [
+          2048,
+          4096,
+          16384
+        ],
+        "gemm_output_ptr": 140662427090944
+      }
+    ],
+    "decoder.layers.21.self_attention.linear_proj": [
+      {
+        "shape": [
+          2048,
+          4096,
+          4096
+        ],
+        "gemm_output_ptr": 140662533455872
+      }
+    ],
+    "decoder.layers.21.mlp.linear_fc2": [
+      {
+        "shape": [
+          2048,
+          4096,
+          16384
+        ],
+        "gemm_output_ptr": 140662483124224
+      }
+    ],
+    "decoder.layers.22.self_attention.linear_proj": [
+      {
+        "shape": [
+          2048,
+          4096,
+          4096
+        ],
+        "gemm_output_ptr": 140662315352064
+      }
+    ],
+    "decoder.layers.22.mlp.linear_fc2": [
+      {
+        "shape": [
+          2048,
+          4096,
+          16384
+        ],
+        "gemm_output_ptr": 140662390259712
+      }
+    ],
+    "decoder.layers.23.self_attention.linear_proj": [
+      {
+        "shape": [
+          2048,
+          4096,
+          4096
+        ],
+        "gemm_output_ptr": 140662569107456
+      }
+    ],
+    "decoder.layers.23.mlp.linear_fc2": [
+      {
+        "shape": [
+          2048,
+          4096,
+          16384
+        ],
+        "gemm_output_ptr": 140662644015104
+      }
+    ],
+    "decoder.layers.24.self_attention.linear_proj": [
+      {
+        "shape": [
+          2048,
+          4096,
+          4096
+        ],
+        "gemm_output_ptr": 140662024437760
+      }
+    ],
+    "decoder.layers.24.mlp.linear_fc2": [
+      {
+        "shape": [
+          2048,
+          4096,
+          16384
+        ],
+        "gemm_output_ptr": 140662091546624
+      }
+    ],
+    "decoder.layers.25.self_attention.linear_proj": [
+      {
+        "shape": [
+          2048,
+          4096,
+          4096
+        ],
+        "gemm_output_ptr": 140662125101056
+      }
+    ],
+    "decoder.layers.25.mlp.linear_fc2": [
+      {
+        "shape": [
+          2048,
+          4096,
+          16384
+        ],
+        "gemm_output_ptr": 140662200008704
+      }
+    ],
+    "decoder.layers.26.self_attention.linear_proj": [
+      {
+        "shape": [
+          2048,
+          4096,
+          4096
+        ],
+        "gemm_output_ptr": 140662245556224
+      }
+    ],
+    "decoder.layers.26.mlp.linear_fc2": [
+      {
+        "shape": [
+          2048,
+          4096,
+          16384
+        ],
+        "gemm_output_ptr": 140661923774464
+      }
+    ],
+    "decoder.layers.27.self_attention.linear_proj": [
+      {
+        "shape": [
+          2048,
+          4096,
+          4096
+        ],
+        "gemm_output_ptr": 140661957328896
+      }
+    ],
+    "decoder.layers.27.mlp.linear_fc2": [
+      {
+        "shape": [
+          2048,
+          4096,
+          16384
+        ],
+        "gemm_output_ptr": 140661763801088
+      }
+    ],
+    "decoder.layers.28.self_attention.linear_proj": [
+      {
+        "shape": [
+          2048,
+          4096,
+          4096
+        ],
+        "gemm_output_ptr": 140661809348608
+      }
+    ],
+    "decoder.layers.28.mlp.linear_fc2": [
+      {
+        "shape": [
+          2048,
+          4096,
+          16384
+        ],
+        "gemm_output_ptr": 140661487566848
+      }
+    ],
+    "decoder.layers.29.self_attention.linear_proj": [
+      {
+        "shape": [
+          2048,
+          4096,
+          4096
+        ],
+        "gemm_output_ptr": 140661521121280
+      }
+    ],
+    "decoder.layers.29.mlp.linear_fc2": [
+      {
+        "shape": [
+          2048,
+          4096,
+          16384
+        ],
+        "gemm_output_ptr": 140661596028928
+      }
+    ],
+    "decoder.layers.30.self_attention.linear_proj": [
+      {
+        "shape": [
+          2048,
+          4096,
+          4096
+        ],
+        "gemm_output_ptr": 140661370126336
+      }
+    ],
+    "decoder.layers.30.mlp.linear_fc2": [
+      {
+        "shape": [
+          2048,
+          4096,
+          16384
+        ],
+        "gemm_output_ptr": 140661445033984
+      }
+    ],
+    "decoder.layers.31.self_attention.linear_proj": [
+      {
+        "shape": [
+          2048,
+          4096,
+          4096
+        ],
+        "gemm_output_ptr": 140661219131392
+      }
+    ],
+    "decoder.layers.31.mlp.linear_fc2": [
+      {
+        "shape": [
+          2048,
+          4096,
+          16384
+        ],
+        "gemm_output_ptr": 140661294039040
+      }
+    ]
+  },
+  "peak_allocated_gib": 17.903626918792725,
+  "peak_reserved_gib": 18.328125,
+  "completed": true,
+  "target_modules": [
+    "decoder.layers.0.self_attention.linear_proj",
+    "decoder.layers.0.mlp.linear_fc2",
+    "decoder.layers.1.self_attention.linear_proj",
+    "decoder.layers.1.mlp.linear_fc2",
+    "decoder.layers.2.self_attention.linear_proj",
+    "decoder.layers.2.mlp.linear_fc2",
+    "decoder.layers.3.self_attention.linear_proj",
+    "decoder.layers.3.mlp.linear_fc2",
+    "decoder.layers.4.self_attention.linear_proj",
+    "decoder.layers.4.mlp.linear_fc2",
+    "decoder.layers.5.self_attention.linear_proj",
+    "decoder.layers.5.mlp.linear_fc2",
+    "decoder.layers.6.self_attention.linear_proj",
+    "decoder.layers.6.mlp.linear_fc2",
+    "decoder.layers.7.self_attention.linear_proj",
+    "decoder.layers.7.mlp.linear_fc2",
+    "decoder.layers.8.self_attention.linear_proj",
+    "decoder.layers.8.mlp.linear_fc2",
+    "decoder.layers.9.self_attention.linear_proj",
+    "decoder.layers.9.mlp.linear_fc2",
+    "decoder.layers.10.self_attention.linear_proj",
+    "decoder.layers.10.mlp.linear_fc2",
+    "decoder.layers.11.self_attention.linear_proj",
+    "decoder.layers.11.mlp.linear_fc2",
+    "decoder.layers.12.self_attention.linear_proj",
+    "decoder.layers.12.mlp.linear_fc2",
+    "decoder.layers.13.self_attention.linear_proj",
+    "decoder.layers.13.mlp.linear_fc2",
+    "decoder.layers.14.self_attention.linear_proj",
+    "decoder.layers.14.mlp.linear_fc2",
+    "decoder.layers.15.self_attention.linear_proj",
+    "decoder.layers.15.mlp.linear_fc2",
+    "decoder.layers.16.self_attention.linear_proj",
+    "decoder.layers.16.mlp.linear_fc2",
+    "decoder.layers.17.self_attention.linear_proj",
+    "decoder.layers.17.mlp.linear_fc2",
+    "decoder.layers.18.self_attention.linear_proj",
+    "decoder.layers.18.mlp.linear_fc2",
+    "decoder.layers.19.self_attention.linear_proj",
+    "decoder.layers.19.mlp.linear_fc2",
+    "decoder.layers.20.self_attention.linear_proj",
+    "decoder.layers.20.mlp.linear_fc2",
+    "decoder.layers.21.self_attention.linear_proj",
+    "decoder.layers.21.mlp.linear_fc2",
+    "decoder.layers.22.self_attention.linear_proj",
+    "decoder.layers.22.mlp.linear_fc2",
+    "decoder.layers.23.self_attention.linear_proj",
+    "decoder.layers.23.mlp.linear_fc2",
+    "decoder.layers.24.self_attention.linear_proj",
+    "decoder.layers.24.mlp.linear_fc2",
+    "decoder.layers.25.self_attention.linear_proj",
+    "decoder.layers.25.mlp.linear_fc2",
+    "decoder.layers.26.self_attention.linear_proj",
+    "decoder.layers.26.mlp.linear_fc2",
+    "decoder.layers.27.self_attention.linear_proj",
+    "decoder.layers.27.mlp.linear_fc2",
+    "decoder.layers.28.self_attention.linear_proj",
+    "decoder.layers.28.mlp.linear_fc2",
+    "decoder.layers.29.self_attention.linear_proj",
+    "decoder.layers.29.mlp.linear_fc2",
+    "decoder.layers.30.self_attention.linear_proj",
+    "decoder.layers.30.mlp.linear_fc2",
+    "decoder.layers.31.self_attention.linear_proj",
+    "decoder.layers.31.mlp.linear_fc2"
+  ],
+  "target_calls": {
+    "decoder.layers.0.self_attention.linear_proj": 8,
+    "decoder.layers.0.mlp.linear_fc2": 8,
+    "decoder.layers.1.self_attention.linear_proj": 8,
+    "decoder.layers.1.mlp.linear_fc2": 8,
+    "decoder.layers.2.self_attention.linear_proj": 8,
+    "decoder.layers.2.mlp.linear_fc2": 8,
+    "decoder.layers.3.self_attention.linear_proj": 8,
+    "decoder.layers.3.mlp.linear_fc2": 8,
+    "decoder.layers.4.self_attention.linear_proj": 8,
+    "decoder.layers.4.mlp.linear_fc2": 8,
+    "decoder.layers.5.self_attention.linear_proj": 8,
+    "decoder.layers.5.mlp.linear_fc2": 8,
+    "decoder.layers.6.self_attention.linear_proj": 8,
+    "decoder.layers.6.mlp.linear_fc2": 8,
+    "decoder.layers.7.self_attention.linear_proj": 8,
+    "decoder.layers.7.mlp.linear_fc2": 8,
+    "decoder.layers.8.self_attention.linear_proj": 8,
+    "decoder.layers.8.mlp.linear_fc2": 8,
+    "decoder.layers.9.self_attention.linear_proj": 8,
+    "decoder.layers.9.mlp.linear_fc2": 8,
+    "decoder.layers.10.self_attention.linear_proj": 8,
+    "decoder.layers.10.mlp.linear_fc2": 8,
+    "decoder.layers.11.self_attention.linear_proj": 8,
+    "decoder.layers.11.mlp.linear_fc2": 8,
+    "decoder.layers.12.self_attention.linear_proj": 8,
+    "decoder.layers.12.mlp.linear_fc2": 8,
+    "decoder.layers.13.self_attention.linear_proj": 8,
+    "decoder.layers.13.mlp.linear_fc2": 8,
+    "decoder.layers.14.self_attention.linear_proj": 8,
+    "decoder.layers.14.mlp.linear_fc2": 8,
+    "decoder.layers.15.self_attention.linear_proj": 8,
+    "decoder.layers.15.mlp.linear_fc2": 8,
+    "decoder.layers.16.self_attention.linear_proj": 8,
+    "decoder.layers.16.mlp.linear_fc2": 8,
+    "decoder.layers.17.self_attention.linear_proj": 8,
+    "decoder.layers.17.mlp.linear_fc2": 8,
+    "decoder.layers.18.self_attention.linear_proj": 8,
+    "decoder.layers.18.mlp.linear_fc2": 8,
+    "decoder.layers.19.self_attention.linear_proj": 8,
+    "decoder.layers.19.mlp.linear_fc2": 8,
+    "decoder.layers.20.self_attention.linear_proj": 8,
+    "decoder.layers.20.mlp.linear_fc2": 8,
+    "decoder.layers.21.self_attention.linear_proj": 8,
+    "decoder.layers.21.mlp.linear_fc2": 8,
+    "decoder.layers.22.self_attention.linear_proj": 8,
+    "decoder.layers.22.mlp.linear_fc2": 8,
+    "decoder.layers.23.self_attention.linear_proj": 8,
+    "decoder.layers.23.mlp.linear_fc2": 8,
+    "decoder.layers.24.self_attention.linear_proj": 8,
+    "decoder.layers.24.mlp.linear_fc2": 8,
+    "decoder.layers.25.self_attention.linear_proj": 8,
+    "decoder.layers.25.mlp.linear_fc2": 8,
+    "decoder.layers.26.self_attention.linear_proj": 8,
+    "decoder.layers.26.mlp.linear_fc2": 8,
+    "decoder.layers.27.self_attention.linear_proj": 8,
+    "decoder.layers.27.mlp.linear_fc2": 8,
+    "decoder.layers.28.self_attention.linear_proj": 8,
+    "decoder.layers.28.mlp.linear_fc2": 8,
+    "decoder.layers.29.self_attention.linear_proj": 8,
+    "decoder.layers.29.mlp.linear_fc2": 8,
+    "decoder.layers.30.self_attention.linear_proj": 8,
+    "decoder.layers.30.mlp.linear_fc2": 8,
+    "decoder.layers.31.self_attention.linear_proj": 8,
+    "decoder.layers.31.mlp.linear_fc2": 8
+  },
+  "fallback_calls": 0,
+  "replaced_modules": 64
+}

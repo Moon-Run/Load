@@ -1,0 +1,16 @@
+Batch: /workspace/TempName-New/logs/h100/phase6/mav2-then-ma14-ma18-20261031-014137-056456/mav2
+Flux basic H8 / MAV2 selective D8-H8 / forced D8; shared GemmOnly, full remote quantization, 136-byte packets and NCCL; Attention + MLP.
+Quality failures will be retained while performance measurement continues; codec, finite-value, execution-path and provenance checks remain required.
+/workspace/conda-envs/tempname-h100/bin/python /workspace/TempName-New/tools/h100/phase6/mav2.py codec-prepare /workspace/TempName-New/logs/h100/phase6/mav2-then-ma14-ma18-20261031-014137-056456/mav2/codec-build
+Log: /workspace/TempName-New/logs/h100/phase6/mav2-then-ma14-ma18-20261031-014137-056456/mav2/codec-prepare.log
+/workspace/conda-envs/tempname-h100/bin/python /workspace/TempName-New/tools/h100/phase6/mav2.py codec-compile /workspace/TempName-New/logs/h100/phase6/mav2-then-ma14-ma18-20261031-014137-056456/mav2/codec-build --cuda-home /usr/local/cuda-12.8
+Log: /workspace/TempName-New/logs/h100/phase6/mav2-then-ma14-ma18-20261031-014137-056456/mav2/codec-compile.log
+/workspace/conda-envs/tempname-h100/bin/python /workspace/TempName-New/tools/h100/phase6/mav2.py prepare /workspace/TempName-New/logs/h100/phase6/mav2-then-ma14-ma18-20261031-014137-056456/mav2/compare1 --flux-build /workspace/TempName-New/logs/h100/phase6/mav2-three-arm-1x-50steps-20261030-215237-552847/flux-build --codec-build /workspace/TempName-New/logs/h100/phase6/mav2-then-ma14-ma18-20261031-014137-056456/mav2/codec-build --megatron /workspace/Megatron-LM --blocks 6 --rounds 2 --nvls-enable 0 --allow-quality-failure
+Log: /workspace/TempName-New/logs/h100/phase6/mav2-then-ma14-ma18-20261031-014137-056456/mav2/compare1-prepare.log
+/workspace/conda-envs/tempname-h100/bin/python /workspace/TempName-New/tools/h100/phase6/mav2.py run /workspace/TempName-New/logs/h100/phase6/mav2-then-ma14-ma18-20261031-014137-056456/mav2/compare1 --python /workspace/conda-envs/tempname-h100/bin/python --cuda-home /usr/local/cuda-12.4 --worker-timeout 1800
+Log: /workspace/TempName-New/logs/h100/phase6/mav2-then-ma14-ma18-20261031-014137-056456/mav2/compare1-dry-run.log
+/workspace/conda-envs/tempname-h100/bin/python /workspace/TempName-New/tools/h100/phase6/mav2.py run /workspace/TempName-New/logs/h100/phase6/mav2-then-ma14-ma18-20261031-014137-056456/mav2/compare1 --python /workspace/conda-envs/tempname-h100/bin/python --cuda-home /usr/local/cuda-12.4 --worker-timeout 1800 --stage all --execute
+Log: /workspace/TempName-New/logs/h100/phase6/mav2-then-ma14-ma18-20261031-014137-056456/mav2/compare1-controller.log
+/workspace/conda-envs/tempname-h100/bin/python /workspace/TempName-New/tools/h100/phase6/mav2.py report /workspace/TempName-New/logs/h100/phase6/mav2-then-ma14-ma18-20261031-014137-056456/mav2/compare1
+Log: /workspace/TempName-New/logs/h100/phase6/mav2-then-ma14-ma18-20261031-014137-056456/mav2/compare1-report.log
+completed_with_quality_failure: 1 comparison(s), 36 windows / 1800 formal optimizer steps.

@@ -1,0 +1,38 @@
+{
+  "status": "completed_with_quality_failure",
+  "protocol": "h100-mav2-selective-transform-three-arm-v2",
+  "allow_quality_failure": true,
+  "trials": 1,
+  "expected_timing_windows": 36,
+  "expected_formal_optimizer_steps": 1800,
+  "execution_timing": {
+    "warmup_steps": 10,
+    "timed_steps": 50
+  },
+  "comparisons": {
+    "compare1": {
+      "status": "completed_with_quality_failure",
+      "run_id": "c6965685f9fe470185150109eec7d770",
+      "quality_within_pairs": false,
+      "quality_by_candidate": {
+        "mav2": false,
+        "d8": false
+      },
+      "timing_windows": 36,
+      "formal_optimizer_steps": 1800,
+      "report": "/workspace/TempName-New/logs/h100/phase6/mav2-then-ma14-ma18-20261031-014137-056456/mav2/compare1/report.json",
+      "report_sha256": "f78479f2e997edd482f10494294df5954ff13dc4a69851b61f827b6aa3e928a8"
+    }
+  },
+  "comparisons_to_evaluate": [
+    "mav2/basic",
+    "d8/basic",
+    "d8/mav2"
+  ],
+  "performance_order": "Measured outcome; no required ordering among the three arms",
+  "stage": "done",
+  "quality_within_pairs": false,
+  "timing_windows": 36,
+  "timing_rank_records": 288,
+  "formal_optimizer_steps": 1800
+}

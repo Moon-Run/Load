@@ -1,0 +1,9 @@
+{
+  "status": "completed_with_quality_failure",
+  "run_id": "c6965685f9fe470185150109eec7d770",
+  "allow_quality_failure": true,
+  "quality_by_candidate": {
+    "mav2": false,
+    "d8": false
+  }
+}

@@ -1,0 +1,43 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/workspace/TempName-New/logs/h100/phase6/ma15-v1-attention-graph-1x-50steps-20261031-044305-267152/build/F4-cache-zcount-csoftmax/build/src/CMakeFiles/FLUX_GENERATOR"
+		},
+		{
+			"file" : "/workspace/TempName-New/logs/h100/phase6/ma15-v1-attention-graph-1x-50steps-20261031-044305-267152/build/F4-cache-zcount-csoftmax/build/src/CMakeFiles/FLUX_GENERATOR.rule"
+		},
+		{
+			"file" : "/workspace/TempName-New/logs/h100/phase6/ma15-v1-attention-graph-1x-50steps-20261031-044305-267152/build/F4-cache-zcount-csoftmax/build/src/CMakeFiles/FLUX_GENERATOR-complete.rule"
+		},
+		{
+			"file" : "/workspace/TempName-New/logs/h100/phase6/ma15-v1-attention-graph-1x-50steps-20261031-044305-267152/build/F4-cache-zcount-csoftmax/build/src/FLUX_GENERATOR-prefix/src/FLUX_GENERATOR-stamp/FLUX_GENERATOR-build.rule"
+		},
+		{
+			"file" : "/workspace/TempName-New/logs/h100/phase6/ma15-v1-attention-graph-1x-50steps-20261031-044305-267152/build/F4-cache-zcount-csoftmax/build/src/FLUX_GENERATOR-prefix/src/FLUX_GENERATOR-stamp/FLUX_GENERATOR-configure.rule"
+		},
+		{
+			"file" : "/workspace/TempName-New/logs/h100/phase6/ma15-v1-attention-graph-1x-50steps-20261031-044305-267152/build/F4-cache-zcount-csoftmax/build/src/FLUX_GENERATOR-prefix/src/FLUX_GENERATOR-stamp/FLUX_GENERATOR-download.rule"
+		},
+		{
+			"file" : "/workspace/TempName-New/logs/h100/phase6/ma15-v1-attention-graph-1x-50steps-20261031-044305-267152/build/F4-cache-zcount-csoftmax/build/src/FLUX_GENERATOR-prefix/src/FLUX_GENERATOR-stamp/FLUX_GENERATOR-install.rule"
+		},
+		{
+			"file" : "/workspace/TempName-New/logs/h100/phase6/ma15-v1-attention-graph-1x-50steps-20261031-044305-267152/build/F4-cache-zcount-csoftmax/build/src/FLUX_GENERATOR-prefix/src/FLUX_GENERATOR-stamp/FLUX_GENERATOR-mkdir.rule"
+		},
+		{
+			"file" : "/workspace/TempName-New/logs/h100/phase6/ma15-v1-attention-graph-1x-50steps-20261031-044305-267152/build/F4-cache-zcount-csoftmax/build/src/FLUX_GENERATOR-prefix/src/FLUX_GENERATOR-stamp/FLUX_GENERATOR-patch.rule"
+		},
+		{
+			"file" : "/workspace/TempName-New/logs/h100/phase6/ma15-v1-attention-graph-1x-50steps-20261031-044305-267152/build/F4-cache-zcount-csoftmax/build/src/FLUX_GENERATOR-prefix/src/FLUX_GENERATOR-stamp/FLUX_GENERATOR-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"FLUX_GENERATOR"
+		],
+		"name" : "FLUX_GENERATOR"
+	}
+}

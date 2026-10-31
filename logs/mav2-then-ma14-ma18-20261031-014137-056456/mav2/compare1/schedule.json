@@ -1,0 +1,254 @@
+[
+  {
+    "round": 1,
+    "block": 0,
+    "index": 0,
+    "policy": "mav2",
+    "directory": "round1/window-000-mav2"
+  },
+  {
+    "round": 1,
+    "block": 0,
+    "index": 1,
+    "policy": "d8",
+    "directory": "round1/window-001-d8"
+  },
+  {
+    "round": 1,
+    "block": 0,
+    "index": 2,
+    "policy": "basic",
+    "directory": "round1/window-002-basic"
+  },
+  {
+    "round": 1,
+    "block": 1,
+    "index": 3,
+    "policy": "basic",
+    "directory": "round1/window-003-basic"
+  },
+  {
+    "round": 1,
+    "block": 1,
+    "index": 4,
+    "policy": "mav2",
+    "directory": "round1/window-004-mav2"
+  },
+  {
+    "round": 1,
+    "block": 1,
+    "index": 5,
+    "policy": "d8",
+    "directory": "round1/window-005-d8"
+  },
+  {
+    "round": 1,
+    "block": 2,
+    "index": 6,
+    "policy": "d8",
+    "directory": "round1/window-006-d8"
+  },
+  {
+    "round": 1,
+    "block": 2,
+    "index": 7,
+    "policy": "mav2",
+    "directory": "round1/window-007-mav2"
+  },
+  {
+    "round": 1,
+    "block": 2,
+    "index": 8,
+    "policy": "basic",
+    "directory": "round1/window-008-basic"
+  },
+  {
+    "round": 1,
+    "block": 3,
+    "index": 9,
+    "policy": "mav2",
+    "directory": "round1/window-009-mav2"
+  },
+  {
+    "round": 1,
+    "block": 3,
+    "index": 10,
+    "policy": "basic",
+    "directory": "round1/window-010-basic"
+  },
+  {
+    "round": 1,
+    "block": 3,
+    "index": 11,
+    "policy": "d8",
+    "directory": "round1/window-011-d8"
+  },
+  {
+    "round": 1,
+    "block": 4,
+    "index": 12,
+    "policy": "basic",
+    "directory": "round1/window-012-basic"
+  },
+  {
+    "round": 1,
+    "block": 4,
+    "index": 13,
+    "policy": "d8",
+    "directory": "round1/window-013-d8"
+  },
+  {
+    "round": 1,
+    "block": 4,
+    "index": 14,
+    "policy": "mav2",
+    "directory": "round1/window-014-mav2"
+  },
+  {
+    "round": 1,
+    "block": 5,
+    "index": 15,
+    "policy": "d8",
+    "directory": "round1/window-015-d8"
+  },
+  {
+    "round": 1,
+    "block": 5,
+    "index": 16,
+    "policy": "basic",
+    "directory": "round1/window-016-basic"
+  },
+  {
+    "round": 1,
+    "block": 5,
+    "index": 17,
+    "policy": "mav2",
+    "directory": "round1/window-017-mav2"
+  },
+  {
+    "round": 2,
+    "block": 0,
+    "index": 0,
+    "policy": "mav2",
+    "directory": "round2/window-000-mav2"
+  },
+  {
+    "round": 2,
+    "block": 0,
+    "index": 1,
+    "policy": "basic",
+    "directory": "round2/window-001-basic"
+  },
+  {
+    "round": 2,
+    "block": 0,
+    "index": 2,
+    "policy": "d8",
+    "directory": "round2/window-002-d8"
+  },
+  {
+    "round": 2,
+    "block": 1,
+    "index": 3,
+    "policy": "mav2",
+    "directory": "round2/window-003-mav2"
+  },
+  {
+    "round": 2,
+    "block": 1,
+    "index": 4,
+    "policy": "d8",
+    "directory": "round2/window-004-d8"
+  },
+  {
+    "round": 2,
+    "block": 1,
+    "index": 5,
+    "policy": "basic",
+    "directory": "round2/window-005-basic"
+  },
+  {
+    "round": 2,
+    "block": 2,
+    "index": 6,
+    "policy": "d8",
+    "directory": "round2/window-006-d8"
+  },
+  {
+    "round": 2,
+    "block": 2,
+    "index": 7,
+    "policy": "basic",
+    "directory": "round2/window-007-basic"
+  },
+  {
+    "round": 2,
+    "block": 2,
+    "index": 8,
+    "policy": "mav2",
+    "directory": "round2/window-008-mav2"
+  },
+  {
+    "round": 2,
+    "block": 3,
+    "index": 9,
+    "policy": "basic",
+    "directory": "round2/window-009-basic"
+  },
+  {
+    "round": 2,
+    "block": 3,
+    "index": 10,
+    "policy": "mav2",
+    "directory": "round2/window-010-mav2"
+  },
+  {
+    "round": 2,
+    "block": 3,
+    "index": 11,
+    "policy": "d8",
+    "directory": "round2/window-011-d8"
+  },
+  {
+    "round": 2,
+    "block": 4,
+    "index": 12,
+    "policy": "d8",
+    "directory": "round2/window-012-d8"
+  },
+  {
+    "round": 2,
+    "block": 4,
+    "index": 13,
+    "policy": "mav2",
+    "directory": "round2/window-013-mav2"
+  },
+  {
+    "round": 2,
+    "block": 4,
+    "index": 14,
+    "policy": "basic",
+    "directory": "round2/window-014-basic"
+  },
+  {
+    "round": 2,
+    "block": 5,
+    "index": 15,
+    "policy": "basic",
+    "directory": "round2/window-015-basic"
+  },
+  {
+    "round": 2,
+    "block": 5,
+    "index": 16,
+    "policy": "d8",
+    "directory": "round2/window-016-d8"
+  },
+  {
+    "round": 2,
+    "block": 5,
+    "index": 17,
+    "policy": "mav2",
+    "directory": "round2/window-017-mav2"
+  }
+]

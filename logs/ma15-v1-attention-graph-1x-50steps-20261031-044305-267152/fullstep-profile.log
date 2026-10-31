@@ -1,0 +1,24 @@
+START profile-F4-cache-zcount-csoftmax
+START profile-F4-cache-zcount-csoftmax-agraph
+Traceback (most recent call last):
+  File "/workspace/TempName-New/tools/h100/phase6/ma15_fullstep.py", line 450, in <module>
+    if __name__=='__main__':main()
+  File "/workspace/TempName-New/tools/h100/phase6/ma5_fullstep.py", line 628, in main
+    if __name__ == "__main__":
+  File "/workspace/TempName-New/tools/h100/phase6/ma5_fullstep.py", line 280, in run
+    
+  File "/workspace/TempName-New/tools/h100/phase6/ma5_fullstep.py", line 597, in profile_summary
+    return dict(protocol=PROTOCOL, run_id=plan["run_id"], completed=True, execution_validated=True,
+  File "/workspace/TempName-New/tools/h100/phase6/ma15_fullstep.py", line 390, in trace_projection_records
+    evidence=ma15_profile.trace_composed_records(events,arm)
+  File "/workspace/TempName-New/tools/h100/phase6/ma15_profile.py", line 258, in trace_composed_records
+    graph = trace_attention_graph_records(events, arm)
+  File "/workspace/TempName-New/tools/h100/phase6/ma15_profile.py", line 202, in trace_attention_graph_records
+    streams.add(_same_stream_order(work))
+  File "/workspace/TempName-New/tools/h100/phase6/ma15_profile.py", line 63, in _same_stream_order
+    return ma11_profile._stream_path(work, 'MA15 attention graph and staging copies')
+  File "/workspace/TempName-New/tools/h100/phase6/ma11_profile.py", line 41, in _stream_path
+    require(all(end(a) <= b['ts'] + .01 for a, b in zip(events, events[1:])),
+  File "/workspace/TempName-New/tools/h100/phase6/ma9_profile.py", line 18, in require
+    raise ValueError(message)
+ValueError: MA15 attention graph and staging copies: GPU dependency order changed

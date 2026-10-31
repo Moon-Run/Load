@@ -1,0 +1,420 @@
+{
+  "protocol": "h100-ma14-epoch-reuse-v2-operator",
+  "run_id": "8796e2264125416b9b00635d122186c3",
+  "completed": true,
+  "correctness_passed": true,
+  "bitwise_equal_within_pairs": true,
+  "equivalence_pairs": [
+    [
+      "F4-cache-zcount-csoftmax-epoch",
+      "F4-cache-zcount-csoftmax"
+    ]
+  ],
+  "consumer_gradients_validated": true,
+  "roles": {
+    "attn": {
+      "mean_us": {
+        "F4-cache-zcount-csoftmax": 111.56311607919633,
+        "F4-cache-zcount-csoftmax-epoch": 89.15151935070753
+      },
+      "comparisons": {
+        "F4-cache-zcount-csoftmax-epoch/F4-cache-zcount-csoftmax": {
+          "percent": 17.140092952132115,
+          "ci95": [
+            3.875950475621215,
+            32.43478735631555
+          ],
+          "paired_blocks": 8
+        }
+      }
+    },
+    "mlp": {
+      "mean_us": {
+        "F4-cache-zcount-csoftmax": 153.16345845349133,
+        "F4-cache-zcount-csoftmax-epoch": 137.08185171708465
+      },
+      "comparisons": {
+        "F4-cache-zcount-csoftmax-epoch/F4-cache-zcount-csoftmax": {
+          "percent": 8.93966908303685,
+          "ci95": [
+            2.522646064827838,
+            20.275462202703608
+          ],
+          "paired_blocks": 8
+        }
+      }
+    }
+  },
+  "all_samples": [
+    {
+      "block": 0,
+      "arm": "F4-cache-zcount-csoftmax",
+      "index": 0,
+      "directory": "block00-F4-cache-zcount-csoftmax",
+      "rankmax_wall_us": {
+        "attn": 92.91384369134903,
+        "mlp": 141.07193797826767
+      }
+    },
+    {
+      "block": 0,
+      "arm": "F4-cache-zcount-csoftmax-epoch",
+      "index": 1,
+      "directory": "block00-F4-cache-zcount-csoftmax-epoch",
+      "rankmax_wall_us": {
+        "attn": 89.37917649745941,
+        "mlp": 137.44487427175045
+      }
+    },
+    {
+      "block": 1,
+      "arm": "F4-cache-zcount-csoftmax-epoch",
+      "index": 2,
+      "directory": "block01-F4-cache-zcount-csoftmax-epoch",
+      "rankmax_wall_us": {
+        "attn": 89.17259983718395,
+        "mlp": 136.54904440045357
+      }
+    },
+    {
+      "block": 1,
+      "arm": "F4-cache-zcount-csoftmax",
+      "index": 3,
+      "directory": "block01-F4-cache-zcount-csoftmax",
+      "rankmax_wall_us": {
+        "attn": 92.90671907365322,
+        "mlp": 140.85560105741024
+      }
+    },
+    {
+      "block": 2,
+      "arm": "F4-cache-zcount-csoftmax",
+      "index": 4,
+      "directory": "block02-F4-cache-zcount-csoftmax",
+      "rankmax_wall_us": {
+        "attn": 92.72463619709015,
+        "mlp": 140.0986034423113
+      }
+    },
+    {
+      "block": 2,
+      "arm": "F4-cache-zcount-csoftmax-epoch",
+      "index": 5,
+      "directory": "block02-F4-cache-zcount-csoftmax-epoch",
+      "rankmax_wall_us": {
+        "attn": 89.14591744542122,
+        "mlp": 137.38442212343216
+      }
+    },
+    {
+      "block": 3,
+      "arm": "F4-cache-zcount-csoftmax-epoch",
+      "index": 6,
+      "directory": "block03-F4-cache-zcount-csoftmax-epoch",
+      "rankmax_wall_us": {
+        "attn": 89.00849148631096,
+        "mlp": 136.911328881979
+      }
+    },
+    {
+      "block": 3,
+      "arm": "F4-cache-zcount-csoftmax",
+      "index": 7,
+      "directory": "block03-F4-cache-zcount-csoftmax",
+      "rankmax_wall_us": {
+        "attn": 92.65830740332603,
+        "mlp": 141.20638370513916
+      }
+    },
+    {
+      "block": 4,
+      "arm": "F4-cache-zcount-csoftmax",
+      "index": 8,
+      "directory": "block04-F4-cache-zcount-csoftmax",
+      "rankmax_wall_us": {
+        "attn": 92.77350269258022,
+        "mlp": 141.2419229745865
+      }
+    },
+    {
+      "block": 4,
+      "arm": "F4-cache-zcount-csoftmax-epoch",
+      "index": 9,
+      "directory": "block04-F4-cache-zcount-csoftmax-epoch",
+      "rankmax_wall_us": {
+        "attn": 89.25456553697586,
+        "mlp": 137.08063401281834
+      }
+    },
+    {
+      "block": 5,
+      "arm": "F4-cache-zcount-csoftmax-epoch",
+      "index": 10,
+      "directory": "block05-F4-cache-zcount-csoftmax-epoch",
+      "rankmax_wall_us": {
+        "attn": 89.27317336201668,
+        "mlp": 137.0528806000948
+      }
+    },
+    {
+      "block": 5,
+      "arm": "F4-cache-zcount-csoftmax",
+      "index": 11,
+      "directory": "block05-F4-cache-zcount-csoftmax",
+      "rankmax_wall_us": {
+        "attn": 160.1395197212696,
+        "mlp": 140.91894030570984
+      }
+    },
+    {
+      "block": 6,
+      "arm": "F4-cache-zcount-csoftmax",
+      "index": 12,
+      "directory": "block06-F4-cache-zcount-csoftmax",
+      "rankmax_wall_us": {
+        "attn": 175.54509453475475,
+        "mlp": 238.67527954280376
+      }
+    },
+    {
+      "block": 6,
+      "arm": "F4-cache-zcount-csoftmax-epoch",
+      "index": 13,
+      "directory": "block06-F4-cache-zcount-csoftmax-epoch",
+      "rankmax_wall_us": {
+        "attn": 88.82279507815838,
+        "mlp": 136.84328645467758
+      }
+    },
+    {
+      "block": 7,
+      "arm": "F4-cache-zcount-csoftmax-epoch",
+      "index": 14,
+      "directory": "block07-F4-cache-zcount-csoftmax-epoch",
+      "rankmax_wall_us": {
+        "attn": 89.15543556213379,
+        "mlp": 137.3883429914713
+      }
+    },
+    {
+      "block": 7,
+      "arm": "F4-cache-zcount-csoftmax",
+      "index": 15,
+      "directory": "block07-F4-cache-zcount-csoftmax",
+      "rankmax_wall_us": {
+        "attn": 92.84330531954765,
+        "mlp": 141.2389986217022
+      }
+    }
+  ],
+  "measurement_identity": {
+    "hardware": {
+      "host": "10-118-122-131",
+      "devices": [
+        {
+          "name": "NVIDIA H100 80GB HBM3",
+          "uuid": "26e67438-f877-3123-29e0-d33d473c8141",
+          "sm_count": 132
+        },
+        {
+          "name": "NVIDIA H100 80GB HBM3",
+          "uuid": "7f7217aa-30c6-c324-7a2a-47b3da64ed90",
+          "sm_count": 132
+        },
+        {
+          "name": "NVIDIA H100 80GB HBM3",
+          "uuid": "aea7e493-405c-304c-b5c5-28cd9624699e",
+          "sm_count": 132
+        },
+        {
+          "name": "NVIDIA H100 80GB HBM3",
+          "uuid": "3e7023fb-d34e-400f-6e3e-666145b657cf",
+          "sm_count": 132
+        },
+        {
+          "name": "NVIDIA H100 80GB HBM3",
+          "uuid": "00c0a7d8-cbb2-4acb-3fa0-5a7d4e0f899d",
+          "sm_count": 132
+        },
+        {
+          "name": "NVIDIA H100 80GB HBM3",
+          "uuid": "7f399bc6-8077-f309-92c7-538dccc06f42",
+          "sm_count": 132
+        },
+        {
+          "name": "NVIDIA H100 80GB HBM3",
+          "uuid": "0d74eef5-ceef-e92e-242e-36ee582fac83",
+          "sm_count": 132
+        },
+        {
+          "name": "NVIDIA H100 80GB HBM3",
+          "uuid": "9da6bcea-1b20-252e-4819-eb5699a9b1a1",
+          "sm_count": 132
+        }
+      ]
+    },
+    "software": {
+      "torch": "2.6.0+cu124",
+      "cuda": "12.4",
+      "nccl": [
+        2,
+        21,
+        5
+      ]
+    }
+  },
+  "evidence_files": {
+    "results/block00-F4-cache-zcount-csoftmax/rank0.json": "da362e86a5972b3ad9d28c9dcb046282caee2ea0896c538059c448fcc023ddc7",
+    "results/block00-F4-cache-zcount-csoftmax/rank1.json": "21c42d9fac8d9b3def0055ae2bd840d543b6b76f3a7b56db3e1024d11a7669ec",
+    "results/block00-F4-cache-zcount-csoftmax/rank2.json": "fc3881b9261c5e424160cd88c92d7db71dc27f39eb5178bd5d5a5fa0ace7797d",
+    "results/block00-F4-cache-zcount-csoftmax/rank3.json": "1162d127d458ad815536b354ea329a614ab3df3bf993ffccf080198b226e552d",
+    "results/block00-F4-cache-zcount-csoftmax/rank4.json": "410f10cf66aabd4b185d0e41baecf485ed59cb425548a47f912e849ce58d4aff",
+    "results/block00-F4-cache-zcount-csoftmax/rank5.json": "5ab04ee1ff4db3744b915b96a3374378ed348760cdd69e7cf15e895ef73339f2",
+    "results/block00-F4-cache-zcount-csoftmax/rank6.json": "739010aabd72a08595955098e1ab042369ef9a4d80bfe01a871e749c36308beb",
+    "results/block00-F4-cache-zcount-csoftmax/rank7.json": "d99f5fa4f996848c24e4f5120841a221a62603767dd402f8f297add20d97d022",
+    "results/block00-F4-cache-zcount-csoftmax-epoch/rank0.json": "4a11a30a9cd8546315805391879522a4b9c1a4f8965cfa4b9886a70809a35f04",
+    "results/block00-F4-cache-zcount-csoftmax-epoch/rank1.json": "e5c80dbdcc871add0b4a59816fab924ea4f807a05cb01d134fac21e31e5ebc39",
+    "results/block00-F4-cache-zcount-csoftmax-epoch/rank2.json": "3236694fac4f769ade6746cb201dcae6d703189130d23c9cf02e8e0229bfc55a",
+    "results/block00-F4-cache-zcount-csoftmax-epoch/rank3.json": "5388372aa7842bf111b98ed72b60823c91626f0e1f962cf95000fd92bda3a778",
+    "results/block00-F4-cache-zcount-csoftmax-epoch/rank4.json": "c1cdb62c2076dc190e2ca5d6bc642ac9f42ae9c359c3dae1169ff917391beb1f",
+    "results/block00-F4-cache-zcount-csoftmax-epoch/rank5.json": "56f40ea6dc4f0bbe69f992e717b31148098302c750ea23a1e6ed2cbb54286fd1",
+    "results/block00-F4-cache-zcount-csoftmax-epoch/rank6.json": "51d5e78871bb0e0a8dc269b4f31d5c3bdb53f186d0da85d65c573dd29c86c408",
+    "results/block00-F4-cache-zcount-csoftmax-epoch/rank7.json": "17c7f3af5ab12fa0d416375befb5f207ca2cf9c08364209d643f71146f1ddccf",
+    "results/block01-F4-cache-zcount-csoftmax-epoch/rank0.json": "eaf524ebc6a2e17f0267d7cd0e3e9e18011a0c339f0c63cd9eece9e07bdde948",
+    "results/block01-F4-cache-zcount-csoftmax-epoch/rank1.json": "aac3c0fb1b9e5e1c321366dc937acfa1d9d77235d51ecfde663b59a9593fc883",
+    "results/block01-F4-cache-zcount-csoftmax-epoch/rank2.json": "1184205e55949f3fda20592df6187ce35e4942b3d981ec7242ff14281d6f20b2",
+    "results/block01-F4-cache-zcount-csoftmax-epoch/rank3.json": "c8409dfd1708e0210c5b02c4839e214c5744d4f978fd346475adce9cc1e816e8",
+    "results/block01-F4-cache-zcount-csoftmax-epoch/rank4.json": "2aa9e7b4c0a4a0bb13369ea64829a0e552cfe675d1167c303e375c6780246cb5",
+    "results/block01-F4-cache-zcount-csoftmax-epoch/rank5.json": "d7956356e720b301a6a5b008972d7145be2781e5f8cc8ec981f02c011e36f1d4",
+    "results/block01-F4-cache-zcount-csoftmax-epoch/rank6.json": "869cfd1d3373d0783562a28d0433e8487c38c2f059a9eee37a5c56e232eed39f",
+    "results/block01-F4-cache-zcount-csoftmax-epoch/rank7.json": "e75c52766bcd62fd400240a589bd6412dff79931d9782676577c007ba08772b0",
+    "results/block01-F4-cache-zcount-csoftmax/rank0.json": "90fa3147b1ebc579db042cd393971c5aeac3e88622f2e9be2b61f17af458aa8a",
+    "results/block01-F4-cache-zcount-csoftmax/rank1.json": "1a2add1557cf419663060c2caaf1198f25bff2657bf9bfbf77964b8be06c3405",
+    "results/block01-F4-cache-zcount-csoftmax/rank2.json": "8aaaecbca291b4f94060b859074a0bbbffe879ec65cb2ea76c8a179cba653939",
+    "results/block01-F4-cache-zcount-csoftmax/rank3.json": "c705e6b66e7c2e5bfabab10f235cd2484c1a56d409a1cf7d73f1d1a4fc229194",
+    "results/block01-F4-cache-zcount-csoftmax/rank4.json": "65ffa971663d3392b7e9d62adf1a89c8bbd51351952974f9e90a747862877585",
+    "results/block01-F4-cache-zcount-csoftmax/rank5.json": "183f0e00e631d4842919a8053f7d655074b97e1bc33653fe91c700d11da03c62",
+    "results/block01-F4-cache-zcount-csoftmax/rank6.json": "b3fa5aca8a1d1bcd3ff06460580f249640f60d97b5d323d89f6a73fecbd8d449",
+    "results/block01-F4-cache-zcount-csoftmax/rank7.json": "0e0b29995dcfdf5ee34c331560f98ab0c8cf2a53f3764bf8616dc2a76196f664",
+    "results/block02-F4-cache-zcount-csoftmax/rank0.json": "5c12630f61eabcd6c9b2a2d77363b797eafbec6574986e58c38fbf634d725c73",
+    "results/block02-F4-cache-zcount-csoftmax/rank1.json": "951a3fe8d17c8e1763e7de9eea882a328824eb57d8a6b1f23a2f536c239d1e60",
+    "results/block02-F4-cache-zcount-csoftmax/rank2.json": "cfb1877f7287a4b6a29efedd624582cdbd0c8b99040f82f04a566fbc5b483bd2",
+    "results/block02-F4-cache-zcount-csoftmax/rank3.json": "82d33644e4a4713dcccda677c5b80228418ca410953292071d6ef6dee9e67289",
+    "results/block02-F4-cache-zcount-csoftmax/rank4.json": "161af487b62c88dd9c3267046eb44680de179590e8b1e5054641a91af7d650b7",
+    "results/block02-F4-cache-zcount-csoftmax/rank5.json": "6e2902b35f46fba9e6e3329419d56d2fcb5b77aa4d1d9864c42d562a985d82b9",
+    "results/block02-F4-cache-zcount-csoftmax/rank6.json": "b07f32adee099e9ccd66e114f3c549a7e101b28126a8c3c40296defb8924dd77",
+    "results/block02-F4-cache-zcount-csoftmax/rank7.json": "1e4ffa24271481dcaaaa5de5797fb3401b129578ff1c6be648707af6aaa66fee",
+    "results/block02-F4-cache-zcount-csoftmax-epoch/rank0.json": "896bbe7084f0979598f063f7e8caf914ffcdb7601aa52ffcbdad52f5ab81c42b",
+    "results/block02-F4-cache-zcount-csoftmax-epoch/rank1.json": "3f04f947f429dd446eb149f5217c2dcefe1bc3bc47a7c0ba890e62ac8a3bf4c7",
+    "results/block02-F4-cache-zcount-csoftmax-epoch/rank2.json": "46a429635548f73cb4ca46f5225be600ed0f3fe1352b32aadafd0890a5569374",
+    "results/block02-F4-cache-zcount-csoftmax-epoch/rank3.json": "0e88bb28f9b40c22246c125f56e1094670c403af8102bc59ff148a20e4ea9916",
+    "results/block02-F4-cache-zcount-csoftmax-epoch/rank4.json": "6f5e34c8d5cf5d9a8baef1cafe362096c4f7e7383fc15a6053a373d88180c12d",
+    "results/block02-F4-cache-zcount-csoftmax-epoch/rank5.json": "e6c9142b282f9073a96ee1376bb03c517fa8cce07deca7b9fdb50bd176a7e6e0",
+    "results/block02-F4-cache-zcount-csoftmax-epoch/rank6.json": "7a476288dd9ac620bb7a7877ed129e413eef77d2b61fdc6e1a9ffe2d39a839a0",
+    "results/block02-F4-cache-zcount-csoftmax-epoch/rank7.json": "597c7c930e9de5b5fe478c6617b03289b26e176eb75a9a509429e00bdce59aa3",
+    "results/block03-F4-cache-zcount-csoftmax-epoch/rank0.json": "a30cfc1ed66f90d76c2460c595b9428e2b9141755eeff23ee26001895c6a8f6c",
+    "results/block03-F4-cache-zcount-csoftmax-epoch/rank1.json": "c3f41bf2613078733c692961e15def8548ecf05ef6f7d4986e24e28c3fa1cdda",
+    "results/block03-F4-cache-zcount-csoftmax-epoch/rank2.json": "87bb40767d59e2a13e06d40186da947033714b6f0f7f7c0225188c27994d1574",
+    "results/block03-F4-cache-zcount-csoftmax-epoch/rank3.json": "4c608d32624f845cd9d9c266fb0f5bb1a379ff288f84112dbd6421f6ae74c701",
+    "results/block03-F4-cache-zcount-csoftmax-epoch/rank4.json": "3da2bb547088e0acc75b38fa7ebf04cf56f7a029493f8e575706999716de67a9",
+    "results/block03-F4-cache-zcount-csoftmax-epoch/rank5.json": "a05a2fc1c3035088a7f81968b0c15de2cd67d0dc202e2343b5b73e5f78c22cb5",
+    "results/block03-F4-cache-zcount-csoftmax-epoch/rank6.json": "3a56905e41c3a05ed4a7a2902cb9a53cc201dd7ab105c00847048b81b25800fe",
+    "results/block03-F4-cache-zcount-csoftmax-epoch/rank7.json": "4bb9a9e446953f31da8ad081985ee9b3ad5d3f170042cb204cc4bf927aaed2cb",
+    "results/block03-F4-cache-zcount-csoftmax/rank0.json": "aaea9578d01325e163379fe9487fad9883bcbc27ba91d034e644b078eec8d386",
+    "results/block03-F4-cache-zcount-csoftmax/rank1.json": "e9bfa217e42c17eac35fc13c5f6cc80be1066973fd0b95c3359b7b7220b414f2",
+    "results/block03-F4-cache-zcount-csoftmax/rank2.json": "6831034870d135f972ce3efd49b8770dde784e89c14cb9cc6213ab072502fc38",
+    "results/block03-F4-cache-zcount-csoftmax/rank3.json": "c5c95d88a514e41ea54754c0e6c4013f011a076e6228e68e1e9e26985d9db7a6",
+    "results/block03-F4-cache-zcount-csoftmax/rank4.json": "f6f760b28dd8e2d38dec6fdd882a39f17402e9a1cb4e00f8ab450d8c15f39f3e",
+    "results/block03-F4-cache-zcount-csoftmax/rank5.json": "af5e992fff3fc3d5b05f69555d788f25565efe16cec8a0c05bc77368be25bc94",
+    "results/block03-F4-cache-zcount-csoftmax/rank6.json": "ff5dddf46b3a160037ffb01b78ce016fad88c9501e641375c5d48cc47667d307",
+    "results/block03-F4-cache-zcount-csoftmax/rank7.json": "fb7587461e17d268a5a3bd4e7e8d72843decadac82acecc7fff53200ee950bc5",
+    "results/block04-F4-cache-zcount-csoftmax/rank0.json": "5266e8c948828bde54b0c1056313269dd77bc93c061c6626f0b0c9a4bae75a80",
+    "results/block04-F4-cache-zcount-csoftmax/rank1.json": "be2ef6b8efcf869a224e9c5b89818ff973248d4609a4d524dd6835d75fa1046c",
+    "results/block04-F4-cache-zcount-csoftmax/rank2.json": "f104a5981ee2997026262f68df5478e047f05645fae230cbb86c733bcd0a6d5b",
+    "results/block04-F4-cache-zcount-csoftmax/rank3.json": "d5b819cd841d754586bead691b0d18ad028d79735f1faccab57dcce37628a9b3",
+    "results/block04-F4-cache-zcount-csoftmax/rank4.json": "4adb91b4867590afe66a2a6f111fe4355bd52a42280411529ed8d483c7f65135",
+    "results/block04-F4-cache-zcount-csoftmax/rank5.json": "29c779ab09ed76c2b1449c50b533f332481053da7f45a685541a3f3e6d927ec3",
+    "results/block04-F4-cache-zcount-csoftmax/rank6.json": "440303e524db4cbfa7f8e29f6d1c829e4984951fd2d0dcb0ac6cff3dd140926e",
+    "results/block04-F4-cache-zcount-csoftmax/rank7.json": "414fab2992d67d4b50b8165f7ed457dc63ca29c308ab58f10991f72faab1e416",
+    "results/block04-F4-cache-zcount-csoftmax-epoch/rank0.json": "a9cac138edeb2d85e00a0cf3b4715784da01e58f866c7c704cfa350fa0b91b1e",
+    "results/block04-F4-cache-zcount-csoftmax-epoch/rank1.json": "9d0dcc172738a7851ec9fdab547eb6728b22e2a213490d04dc05157ac8267a93",
+    "results/block04-F4-cache-zcount-csoftmax-epoch/rank2.json": "37ac5d2e1a3dd7287e8c92163bbb9632bc6d989981df6e8df1da2ef2aea30c93",
+    "results/block04-F4-cache-zcount-csoftmax-epoch/rank3.json": "28925ca26ff535fcb5f6c5bb8bd20a1a5ff88285b37470d79c5a2b311a0fdcbb",
+    "results/block04-F4-cache-zcount-csoftmax-epoch/rank4.json": "86bbc443ed4c992153d4c5073973addde64b0149cf92558db9c8b3dd6580a70a",
+    "results/block04-F4-cache-zcount-csoftmax-epoch/rank5.json": "a52d26811cd91f0569f6ad808ed27ae8b73930ef5470dedccb1bfbcc0f143b21",
+    "results/block04-F4-cache-zcount-csoftmax-epoch/rank6.json": "db5e6686b1c1b801a8b999276cf62ea37a9d07bd2bfc4b63a7c4447bf96a3eb1",
+    "results/block04-F4-cache-zcount-csoftmax-epoch/rank7.json": "bc7490334670ecf49839aa070ccb86af908d73902cb3bacc513a04d6da784b60",
+    "results/block05-F4-cache-zcount-csoftmax-epoch/rank0.json": "bee373a6ba51fdf5bbd9a976ac09e2f5b4ef3ee767af60dbfb3c433b869c0fe8",
+    "results/block05-F4-cache-zcount-csoftmax-epoch/rank1.json": "c988ff9bd409e05cd5b8e07bcadafe1a226d3a66e171e8ce9e62cbb1db8ba6fa",
+    "results/block05-F4-cache-zcount-csoftmax-epoch/rank2.json": "3df42e509430838537ee9254c0dfb4f6c26007b233500d43e5fe79ecf043402f",
+    "results/block05-F4-cache-zcount-csoftmax-epoch/rank3.json": "f98a9913dba6d6167c1bcf2277dbc30ea19385640c199bc72d380f4b45e36087",
+    "results/block05-F4-cache-zcount-csoftmax-epoch/rank4.json": "724bd2ba34c5439830bc189e248e9dc430e95ec1ff62733a16f23639ff97a268",
+    "results/block05-F4-cache-zcount-csoftmax-epoch/rank5.json": "0ef95aa994f58798ce87d0c44c0e52dff4778be212bc30786d60040ca2ff3042",
+    "results/block05-F4-cache-zcount-csoftmax-epoch/rank6.json": "0eaf70df62f6425c23855309caca9907825a4a230afe6239c02929101919e2e2",
+    "results/block05-F4-cache-zcount-csoftmax-epoch/rank7.json": "fb6e6ecfa929f0cdd8fca6d686f5c5e6f1294d67671ff2922ebfe6263d027a7f",
+    "results/block05-F4-cache-zcount-csoftmax/rank0.json": "1f8b28adda40edae823f93e2edd9cdd49db155b8cdd4f5378ca773cc2e295a00",
+    "results/block05-F4-cache-zcount-csoftmax/rank1.json": "751e1690020885577d199bd86a6b5995283e8b58fd1d8be044a0a4fc1d7d4d31",
+    "results/block05-F4-cache-zcount-csoftmax/rank2.json": "b6aacccf24804bc059efe1b7d9bd410bb97d20e97f4c08241e0faf4b7a208f81",
+    "results/block05-F4-cache-zcount-csoftmax/rank3.json": "0d76cd691fdc991c25e864d9bbd252b639cc99f6e70a4f74652b1c7d97c60eb5",
+    "results/block05-F4-cache-zcount-csoftmax/rank4.json": "385e0bbd9982d0e11e21c1a7e530c8359199d9d61a22e461124ca77469ab2957",
+    "results/block05-F4-cache-zcount-csoftmax/rank5.json": "24ad168a3df3b16d5b7a986eafc77994b610335f8d557c7571c22d96aee703c5",
+    "results/block05-F4-cache-zcount-csoftmax/rank6.json": "6f473cf5dc0cb87d6413860349aa533b6fc69f8ff1d16d36dd36e898ec72effd",
+    "results/block05-F4-cache-zcount-csoftmax/rank7.json": "8ef3c58c6f41b88bccc78a0eafaa0a9929a7130a94e3371220c24903b193febb",
+    "results/block06-F4-cache-zcount-csoftmax/rank0.json": "125109addcb6507df3987d926bdc5f4774e0e0341e7d8ca6a80ddcbea01175cb",
+    "results/block06-F4-cache-zcount-csoftmax/rank1.json": "46a16fc5fbf187406efe012aa8fe506e1239c11ca60866fdd2adb83b637c0d36",
+    "results/block06-F4-cache-zcount-csoftmax/rank2.json": "69401f6b4beb017f2063819edb732003b8e40e27ddcccca2cb1f5edcffe42277",
+    "results/block06-F4-cache-zcount-csoftmax/rank3.json": "36a19ce7ce360fe30d4557ce03dceb3a9e3c2e614824540786280e02c516959a",
+    "results/block06-F4-cache-zcount-csoftmax/rank4.json": "ce0f4be358efc8bbc4c2dc31ad7ad85c796626df98cc80e287393fedfc2cfdca",
+    "results/block06-F4-cache-zcount-csoftmax/rank5.json": "df5019b9750c36358bb89f6d1204f8800cacf6115fcd002f8f50841faeb8d757",
+    "results/block06-F4-cache-zcount-csoftmax/rank6.json": "51ae73f10f4bced6b91832ea87e34ed0d37442aa22c48589447ac5075f2aa403",
+    "results/block06-F4-cache-zcount-csoftmax/rank7.json": "482eb696847ed9e21ddec97a50c7b0ec41c508af31e86ff33318801e2fa21f22",
+    "results/block06-F4-cache-zcount-csoftmax-epoch/rank0.json": "3036834b3d8352dc4c335cdb1f20f073a8e65729fcde7edb4c73981fda95fe0c",
+    "results/block06-F4-cache-zcount-csoftmax-epoch/rank1.json": "e62aefc9a72319728a088adfaa48e97b2998a1fb118d96156da1549c96068e56",
+    "results/block06-F4-cache-zcount-csoftmax-epoch/rank2.json": "e3ad766354088cb0ce8e6f58da68d6cc6f3e9fca2c881fedcfcac3b563110165",
+    "results/block06-F4-cache-zcount-csoftmax-epoch/rank3.json": "9fc10e14b55073d11426612982e47d6864410fe6c70911ae54a16d053111c677",
+    "results/block06-F4-cache-zcount-csoftmax-epoch/rank4.json": "53cf3880e3f34e6a29cb12ee799acc16c428ee899fa411e2277fbcf00256e07b",
+    "results/block06-F4-cache-zcount-csoftmax-epoch/rank5.json": "5d21c30fa701dc79d904299e8e1e73f2010515c50fe0a27af6439c4d842e9c9f",
+    "results/block06-F4-cache-zcount-csoftmax-epoch/rank6.json": "08ea432ae2c478623c6715c4cb1e4edc4c1f195f1c1e2a91cfc8264b3b0ac47f",
+    "results/block06-F4-cache-zcount-csoftmax-epoch/rank7.json": "d6bca0e9a981046585bfffea02b7a98afcc6adb3f9aa9b7e2c9ceecb72e6094f",
+    "results/block07-F4-cache-zcount-csoftmax-epoch/rank0.json": "70b94910fd7d72b27a5df745df375a40ebabfad1f28527904fe5cc5dbc80b6c6",
+    "results/block07-F4-cache-zcount-csoftmax-epoch/rank1.json": "af9ff62e37e5b0187ca20bb4778e0a732b1fda161b5a4ab0a541b4a8f932ebb1",
+    "results/block07-F4-cache-zcount-csoftmax-epoch/rank2.json": "1767b1e5b625c7a98c003fd15db0659816e97a2dcc15547cb105b2f8e93b4d01",
+    "results/block07-F4-cache-zcount-csoftmax-epoch/rank3.json": "ede3cd6d9ca196de12b58a588fb53a295ec2bfa8189fff88398ef26bc3a6876a",
+    "results/block07-F4-cache-zcount-csoftmax-epoch/rank4.json": "0686890e4fb426572931e270102423ae8d28941e4c54673591627349be007ffa",
+    "results/block07-F4-cache-zcount-csoftmax-epoch/rank5.json": "92106ef60455646778a267dd4c04466ee62d5d152bd79f3b3e41ae00825efbc6",
+    "results/block07-F4-cache-zcount-csoftmax-epoch/rank6.json": "3ac818744b44f0c2cf8af0b071615fbc854f5864eedbd546b097e0d819f1e8a0",
+    "results/block07-F4-cache-zcount-csoftmax-epoch/rank7.json": "6e1882f47c59ba19728b9d5c24a88310c852caec7e76af9cb4dfa220f26efb35",
+    "results/block07-F4-cache-zcount-csoftmax/rank0.json": "cf686d10e7836850ef7189b406be5d7401e67f20cd69dea57aa881f5bbbcd965",
+    "results/block07-F4-cache-zcount-csoftmax/rank1.json": "54c18fd589afe1a9461b7dec09baa444fcb38aa0dd759129a0ccffd20140eb67",
+    "results/block07-F4-cache-zcount-csoftmax/rank2.json": "d01cb107f80cc5a8e181a8367f7d69dc1bf99fb6bc4011fd6053a0d71e02f753",
+    "results/block07-F4-cache-zcount-csoftmax/rank3.json": "bd0b439b88e8fd6af0c26ed5e19a3ba7a76dacd06d566039fbb98d7e20291367",
+    "results/block07-F4-cache-zcount-csoftmax/rank4.json": "206099e6d1d00e63cf0c823143b890b10b285cdf83354dfff0ee71b24e65a3b5",
+    "results/block07-F4-cache-zcount-csoftmax/rank5.json": "0efb274fb57a7b060a547ef63064d1beeb51aad7f187da5e167d857f5f398545",
+    "results/block07-F4-cache-zcount-csoftmax/rank6.json": "7138db0114bc0c8c9c9236b5d9217a73c7cf5e155d51955d3b14e1848039c82c",
+    "results/block07-F4-cache-zcount-csoftmax/rank7.json": "7da52ae8278073b8cb309d331c2601699ce6ca42f4abd127e10e5ba98c1a3487",
+    "results/preflight-F4-cache-zcount-csoftmax/rank0.json": "885ff19117c4e20a50f4ec89819b999ccdc1e31cb80d98f674d36a95b7b25243",
+    "results/preflight-F4-cache-zcount-csoftmax/rank1.json": "05421332865e2df0a566753c270ac523a7e4f01d260e5e0b52a5bb5147848435",
+    "results/preflight-F4-cache-zcount-csoftmax/rank2.json": "a46967472e6dab7f44360f4bd1627966bdf0ab801f4cdd23b2263702673de902",
+    "results/preflight-F4-cache-zcount-csoftmax/rank3.json": "e255070e4d0b366ef4f67f221d9925ab7c63ca36c7f06e79307a2fc0c87dd94a",
+    "results/preflight-F4-cache-zcount-csoftmax/rank4.json": "55e3c5e9c258d2790f48a4e56252bef751e4fdae0da25a2634a811664d19bd1b",
+    "results/preflight-F4-cache-zcount-csoftmax/rank5.json": "1fb79ec66a4524b88ebef702e05e471d3e99b7f41101ad1e99366aab500fb9ee",
+    "results/preflight-F4-cache-zcount-csoftmax/rank6.json": "40a312e6bfbf6bb39ff53813a3e87e830ad410470e4bd061fa53eadb1c4e9a91",
+    "results/preflight-F4-cache-zcount-csoftmax/rank7.json": "6e35081b26d174f59220284ce22c0f829fa0ce7d4080b8f7bcb7eb990af1d138",
+    "results/preflight-F4-cache-zcount-csoftmax-epoch/rank0.json": "32d6a48ddf44febae3d5c52c04beeb01d24df813f52452258e795a774b21c219",
+    "results/preflight-F4-cache-zcount-csoftmax-epoch/rank1.json": "f6c812663c7f6522547a7dbc0f9828ffc46edaf5a615ac6135bd4240565df49a",
+    "results/preflight-F4-cache-zcount-csoftmax-epoch/rank2.json": "d0e4a2ecc8938d585672f6867543c3ad8f082a4dad233b3e7519fbac39f3e8f4",
+    "results/preflight-F4-cache-zcount-csoftmax-epoch/rank3.json": "e673a5559f3b42dc8a5c68d51db47d0d676c0d5f45a5cf8754b9fa86891e226f",
+    "results/preflight-F4-cache-zcount-csoftmax-epoch/rank4.json": "788e0d8ecb26a445b5f81969194ccdf642ee4dfdf1faf91eb01c1a8f74b1118d",
+    "results/preflight-F4-cache-zcount-csoftmax-epoch/rank5.json": "0730ae212a0bcb0ae841b374690a7e47ac660c689e1ac41f6afb6564953c4008",
+    "results/preflight-F4-cache-zcount-csoftmax-epoch/rank6.json": "60d9768bee8a5cea5d7b9cb13a241d69a8dadd5f7ac3217492898d54304192ae",
+    "results/preflight-F4-cache-zcount-csoftmax-epoch/rank7.json": "f49d503946b41be8433a0c37b45989a0cc8b7fb064b2498eba723a1bc3cf5c9e",
+    "results/mapping-F4-cache-zcount-csoftmax-attn.csv": "a32868e4530590edd04e6c3afe621289463f8fa76e2c1f0f76293821e7154efb",
+    "results/mapping-F4-cache-zcount-csoftmax-mlp.csv": "f37ae5922e4e6459ceba3c5b466c831347d0ac4cf345b030de79f71dac2f47b7",
+    "results/mapping-F4-cache-zcount-csoftmax-epoch-attn.csv": "a32868e4530590edd04e6c3afe621289463f8fa76e2c1f0f76293821e7154efb",
+    "results/mapping-F4-cache-zcount-csoftmax-epoch-mlp.csv": "f37ae5922e4e6459ceba3c5b466c831347d0ac4cf345b030de79f71dac2f47b7"
+  },
+  "target_validated": false,
+  "limitation": "Complete row projection and publication measurement. GPU profile spans are perturbed and cannot substitute for paired unprofiled optimizer-step wall time.",
+  "zero_count_policy": "fused_optimizer_zero_count",
+  "activation_policy": "retain_owned_column_input_uninstrumented"
+}

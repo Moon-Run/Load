@@ -1,0 +1,2 @@
+/workspace/TempName-New/logs/h100/phase6/ma15-v1-attention-graph-1x-50steps-20261031-044305-267152/build/F4-cache-zcount-csoftmax-agraph/build/src/gemm_rs/registers/flux_bf16_bf16_void_bf16_fp32_fp32_sm80_a100_reducescatter_rcr_gemmv2_false_false_intranode.cu
+/workspace/TempName-New/logs/h100/phase6/ma15-v1-attention-graph-1x-50steps-20261031-044305-267152/build/F4-cache-zcount-csoftmax-agraph/build/src/gemm_rs/registers/flux_bf16_bf16_void_bf16_fp32_fp32_sm90_h800_reducescatter_rcr_gemmv3_false_false_false_intranode.cu

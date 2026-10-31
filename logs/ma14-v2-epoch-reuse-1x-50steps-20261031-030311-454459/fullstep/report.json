@@ -1,0 +1,1229 @@
+{
+  "protocol": "h100-ma14-epoch-reuse-v2-fullstep",
+  "run_id": "cb7887d1db5f4245bb22076ed870fe0e",
+  "completed": true,
+  "correctness_passed": true,
+  "identical_trajectories_within_pairs": true,
+  "equivalence_pairs": [
+    [
+      "F4-cache-zcount-csoftmax-epoch",
+      "F4-cache-zcount-csoftmax"
+    ]
+  ],
+  "full_optimizer_steps_measured": true,
+  "increment_over_MA11_validated": {
+    "F4-cache-zcount-csoftmax-epoch": false
+  },
+  "target_point_observed": false,
+  "target_validated": false,
+  "trials": 1,
+  "tuning": {
+    "attn": {
+      "decoder_threads": 128,
+      "decoder_blocks": 2048,
+      "decoder_rows": 1
+    },
+    "mlp": {
+      "decoder_threads": 128,
+      "decoder_blocks": 2048,
+      "decoder_rows": 1
+    }
+  },
+  "exploratory": true,
+  "acceptance_status": {
+    "F4-cache-zcount-csoftmax-epoch": "MA11_increment_not_validated"
+  },
+  "acceptance_rule": "Within every requested independent trial, positive increment requires paired point>0 and CI95 lower>0. The 2% incremental target over MA11 is validated only when paired point>=2 and CI95 lower>=2 in every trial; point>=2 alone is reported separately. Require exact full-model gradient/update fingerprints, identical trajectories, shared MA8-v2/MA9 paths, exact softmax smoke and independent launch-correlated profile. All balanced blocks retained; one trial is exploratory.",
+  "comparisons": {
+    "compare1": {
+      "run_id": "7e087d20e7d04a2fad230638cf045fc3",
+      "rounds": {
+        "round1": {
+          "mean_ms": {
+            "F4-cache-zcount-csoftmax": 593.2885745819658,
+            "F4-cache-zcount-csoftmax-epoch": 593.5260076448321
+          },
+          "median_ms": {
+            "F4-cache-zcount-csoftmax": 592.7444404922426,
+            "F4-cache-zcount-csoftmax-epoch": 592.5118247792125
+          },
+          "comparisons": {
+            "F4-cache-zcount-csoftmax-epoch/F4-cache-zcount-csoftmax": {
+              "percent": -0.03340748494919943,
+              "ci95": [
+                -1.3441836714573885,
+                0.9259139012377182
+              ],
+              "paired_blocks": 4
+            }
+          }
+        },
+        "round2": {
+          "mean_ms": {
+            "F4-cache-zcount-csoftmax": 598.4224616363645,
+            "F4-cache-zcount-csoftmax-epoch": 600.8205812610686
+          },
+          "median_ms": {
+            "F4-cache-zcount-csoftmax": 599.7876452840865,
+            "F4-cache-zcount-csoftmax-epoch": 601.2967622466385
+          },
+          "comparisons": {
+            "F4-cache-zcount-csoftmax-epoch/F4-cache-zcount-csoftmax": {
+              "percent": -0.400470766901484,
+              "ci95": [
+                -1.1011210435249108,
+                0.2957202695234473
+              ],
+              "paired_blocks": 4
+            }
+          }
+        },
+        "combined": {
+          "mean_ms": {
+            "F4-cache-zcount-csoftmax": 595.8555181091651,
+            "F4-cache-zcount-csoftmax-epoch": 597.1732944529504
+          },
+          "median_ms": {
+            "F4-cache-zcount-csoftmax": 596.3970885425806,
+            "F4-cache-zcount-csoftmax-epoch": 599.8794197291136
+          },
+          "comparisons": {
+            "F4-cache-zcount-csoftmax-epoch/F4-cache-zcount-csoftmax": {
+              "percent": -0.21677107104471904,
+              "ci95": [
+                -0.9505232629549276,
+                0.4441083185450778
+              ],
+              "paired_blocks": 8
+            }
+          }
+        }
+      },
+      "increment_over_MA11_validated": {
+        "F4-cache-zcount-csoftmax-epoch": false
+      },
+      "target_point_observed": false,
+      "target_validated": false
+    }
+  },
+  "all_samples": [
+    {
+      "block": 0,
+      "arm": "F4-cache-zcount-csoftmax",
+      "index": 0,
+      "directory": "compare1/block00-F4-cache-zcount-csoftmax",
+      "trial": 1,
+      "round": 1,
+      "mode": "timing",
+      "ms_per_step": 588.2560769468546
+    },
+    {
+      "block": 0,
+      "arm": "F4-cache-zcount-csoftmax-epoch",
+      "index": 1,
+      "directory": "compare1/block00-F4-cache-zcount-csoftmax-epoch",
+      "trial": 1,
+      "round": 1,
+      "mode": "timing",
+      "ms_per_step": 585.3421586379409
+    },
+    {
+      "block": 1,
+      "arm": "F4-cache-zcount-csoftmax-epoch",
+      "index": 2,
+      "directory": "compare1/block01-F4-cache-zcount-csoftmax-epoch",
+      "trial": 1,
+      "round": 1,
+      "mode": "timing",
+      "ms_per_step": 586.2913437187672
+    },
+    {
+      "block": 1,
+      "arm": "F4-cache-zcount-csoftmax",
+      "index": 3,
+      "directory": "compare1/block01-F4-cache-zcount-csoftmax",
+      "trial": 1,
+      "round": 1,
+      "mode": "timing",
+      "ms_per_step": 593.3848366886377
+    },
+    {
+      "block": 2,
+      "arm": "F4-cache-zcount-csoftmax",
+      "index": 4,
+      "directory": "compare1/block02-F4-cache-zcount-csoftmax",
+      "trial": 1,
+      "round": 1,
+      "mode": "timing",
+      "ms_per_step": 592.1040442958474
+    },
+    {
+      "block": 2,
+      "arm": "F4-cache-zcount-csoftmax-epoch",
+      "index": 5,
+      "directory": "compare1/block02-F4-cache-zcount-csoftmax-epoch",
+      "trial": 1,
+      "round": 1,
+      "mode": "timing",
+      "ms_per_step": 603.7382223829627
+    },
+    {
+      "block": 3,
+      "arm": "F4-cache-zcount-csoftmax-epoch",
+      "index": 6,
+      "directory": "compare1/block03-F4-cache-zcount-csoftmax-epoch",
+      "trial": 1,
+      "round": 1,
+      "mode": "timing",
+      "ms_per_step": 598.7323058396578
+    },
+    {
+      "block": 3,
+      "arm": "F4-cache-zcount-csoftmax",
+      "index": 7,
+      "directory": "compare1/block03-F4-cache-zcount-csoftmax",
+      "trial": 1,
+      "round": 1,
+      "mode": "timing",
+      "ms_per_step": 599.4093403965235
+    },
+    {
+      "block": 4,
+      "arm": "F4-cache-zcount-csoftmax",
+      "index": 8,
+      "directory": "compare1/block04-F4-cache-zcount-csoftmax",
+      "trial": 1,
+      "round": 2,
+      "mode": "timing",
+      "ms_per_step": 593.0910556018353
+    },
+    {
+      "block": 4,
+      "arm": "F4-cache-zcount-csoftmax-epoch",
+      "index": 9,
+      "directory": "compare1/block04-F4-cache-zcount-csoftmax-epoch",
+      "trial": 1,
+      "round": 2,
+      "mode": "timing",
+      "ms_per_step": 601.0265336185694
+    },
+    {
+      "block": 5,
+      "arm": "F4-cache-zcount-csoftmax-epoch",
+      "index": 10,
+      "directory": "compare1/block05-F4-cache-zcount-csoftmax-epoch",
+      "trial": 1,
+      "round": 2,
+      "mode": "timing",
+      "ms_per_step": 595.5457087606192
+    },
+    {
+      "block": 5,
+      "arm": "F4-cache-zcount-csoftmax",
+      "index": 11,
+      "directory": "compare1/block05-F4-cache-zcount-csoftmax",
+      "trial": 1,
+      "round": 2,
+      "mode": "timing",
+      "ms_per_step": 599.6206620335579
+    },
+    {
+      "block": 6,
+      "arm": "F4-cache-zcount-csoftmax",
+      "index": 12,
+      "directory": "compare1/block06-F4-cache-zcount-csoftmax",
+      "trial": 1,
+      "round": 2,
+      "mode": "timing",
+      "ms_per_step": 601.0235003754497
+    },
+    {
+      "block": 6,
+      "arm": "F4-cache-zcount-csoftmax-epoch",
+      "index": 13,
+      "directory": "compare1/block06-F4-cache-zcount-csoftmax-epoch",
+      "trial": 1,
+      "round": 2,
+      "mode": "timing",
+      "ms_per_step": 601.5669908747077
+    },
+    {
+      "block": 7,
+      "arm": "F4-cache-zcount-csoftmax-epoch",
+      "index": 14,
+      "directory": "compare1/block07-F4-cache-zcount-csoftmax-epoch",
+      "trial": 1,
+      "round": 2,
+      "mode": "timing",
+      "ms_per_step": 605.1430917903781
+    },
+    {
+      "block": 7,
+      "arm": "F4-cache-zcount-csoftmax",
+      "index": 15,
+      "directory": "compare1/block07-F4-cache-zcount-csoftmax",
+      "trial": 1,
+      "round": 2,
+      "mode": "timing",
+      "ms_per_step": 599.954628534615
+    }
+  ],
+  "formal_optimizer_steps": 800,
+  "timing_rank_records": 128,
+  "model": {
+    "layers": 32,
+    "hidden": 4096,
+    "ffn": 16384,
+    "heads": 32,
+    "sequence": 2048,
+    "micro_batch": 1,
+    "global_batch": 4,
+    "tp": 8,
+    "sm_count": 132,
+    "seed": 1234,
+    "token_seed": 4321,
+    "vocab": 32768
+  },
+  "rank_identities": [
+    {
+      "hardware": {
+        "host": "10-118-122-131",
+        "devices": [
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "26e67438-f877-3123-29e0-d33d473c8141",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          },
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "7f7217aa-30c6-c324-7a2a-47b3da64ed90",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          },
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "aea7e493-405c-304c-b5c5-28cd9624699e",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          },
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "3e7023fb-d34e-400f-6e3e-666145b657cf",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          },
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "00c0a7d8-cbb2-4acb-3fa0-5a7d4e0f899d",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          },
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "7f399bc6-8077-f309-92c7-538dccc06f42",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          },
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "0d74eef5-ceef-e92e-242e-36ee582fac83",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          },
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "9da6bcea-1b20-252e-4819-eb5699a9b1a1",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          }
+        ]
+      },
+      "torch": "2.6.0+cu124",
+      "cuda": "12.4",
+      "nccl": [
+        2,
+        21,
+        5
+      ],
+      "python": "/workspace/conda-envs/tempname-h100/bin/python",
+      "initial_parameters_sha256": "975b4a8dbe535374becfea2d39fd691c347f8cfcc61c3b2d47a05ac289d4f9fe",
+      "initial_rng_sha256": "dd05b32d5eff4cc063a1e1032ed7f912fffd5feef5094a5aefbcd7e124e9e236",
+      "tokens_sha256": "76bccbfe59a3a7e94f23af97e92c0803b36a1deeeabc796fdebd0ccbb2d1f114"
+    },
+    {
+      "hardware": {
+        "host": "10-118-122-131",
+        "devices": [
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "26e67438-f877-3123-29e0-d33d473c8141",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          },
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "7f7217aa-30c6-c324-7a2a-47b3da64ed90",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          },
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "aea7e493-405c-304c-b5c5-28cd9624699e",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          },
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "3e7023fb-d34e-400f-6e3e-666145b657cf",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          },
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "00c0a7d8-cbb2-4acb-3fa0-5a7d4e0f899d",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          },
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "7f399bc6-8077-f309-92c7-538dccc06f42",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          },
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "0d74eef5-ceef-e92e-242e-36ee582fac83",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          },
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "9da6bcea-1b20-252e-4819-eb5699a9b1a1",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          }
+        ]
+      },
+      "torch": "2.6.0+cu124",
+      "cuda": "12.4",
+      "nccl": [
+        2,
+        21,
+        5
+      ],
+      "python": "/workspace/conda-envs/tempname-h100/bin/python",
+      "initial_parameters_sha256": "0fabd43d03a7ef7890e6aceb6359ae650664bd41805b1126ba6fa42504a4f8d1",
+      "initial_rng_sha256": "3fb18e2b6d8b68ba12f95c6d3165e45e395a259e29de6c75eef80f5e820a8dd6",
+      "tokens_sha256": "76bccbfe59a3a7e94f23af97e92c0803b36a1deeeabc796fdebd0ccbb2d1f114"
+    },
+    {
+      "hardware": {
+        "host": "10-118-122-131",
+        "devices": [
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "26e67438-f877-3123-29e0-d33d473c8141",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          },
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "7f7217aa-30c6-c324-7a2a-47b3da64ed90",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          },
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "aea7e493-405c-304c-b5c5-28cd9624699e",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          },
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "3e7023fb-d34e-400f-6e3e-666145b657cf",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          },
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "00c0a7d8-cbb2-4acb-3fa0-5a7d4e0f899d",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          },
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "7f399bc6-8077-f309-92c7-538dccc06f42",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          },
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "0d74eef5-ceef-e92e-242e-36ee582fac83",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          },
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "9da6bcea-1b20-252e-4819-eb5699a9b1a1",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          }
+        ]
+      },
+      "torch": "2.6.0+cu124",
+      "cuda": "12.4",
+      "nccl": [
+        2,
+        21,
+        5
+      ],
+      "python": "/workspace/conda-envs/tempname-h100/bin/python",
+      "initial_parameters_sha256": "280a74554c814072ee9307073b4c9970cd2b09d8c14e304afec57fda077dc401",
+      "initial_rng_sha256": "38c3cb573d464853a5bad59524131695ba5aed411568238c0fc26505e8a7a817",
+      "tokens_sha256": "76bccbfe59a3a7e94f23af97e92c0803b36a1deeeabc796fdebd0ccbb2d1f114"
+    },
+    {
+      "hardware": {
+        "host": "10-118-122-131",
+        "devices": [
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "26e67438-f877-3123-29e0-d33d473c8141",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          },
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "7f7217aa-30c6-c324-7a2a-47b3da64ed90",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          },
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "aea7e493-405c-304c-b5c5-28cd9624699e",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          },
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "3e7023fb-d34e-400f-6e3e-666145b657cf",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          },
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "00c0a7d8-cbb2-4acb-3fa0-5a7d4e0f899d",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          },
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "7f399bc6-8077-f309-92c7-538dccc06f42",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          },
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "0d74eef5-ceef-e92e-242e-36ee582fac83",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          },
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "9da6bcea-1b20-252e-4819-eb5699a9b1a1",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          }
+        ]
+      },
+      "torch": "2.6.0+cu124",
+      "cuda": "12.4",
+      "nccl": [
+        2,
+        21,
+        5
+      ],
+      "python": "/workspace/conda-envs/tempname-h100/bin/python",
+      "initial_parameters_sha256": "d4fcf2ebd835a4da92305aa0299baab68ce0f54e12e29832413323501e96f94a",
+      "initial_rng_sha256": "3f5aa95913eff14cc922509876b371be3a7c763376cfa834a0019e8583bf9714",
+      "tokens_sha256": "76bccbfe59a3a7e94f23af97e92c0803b36a1deeeabc796fdebd0ccbb2d1f114"
+    },
+    {
+      "hardware": {
+        "host": "10-118-122-131",
+        "devices": [
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "26e67438-f877-3123-29e0-d33d473c8141",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          },
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "7f7217aa-30c6-c324-7a2a-47b3da64ed90",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          },
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "aea7e493-405c-304c-b5c5-28cd9624699e",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          },
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "3e7023fb-d34e-400f-6e3e-666145b657cf",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          },
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "00c0a7d8-cbb2-4acb-3fa0-5a7d4e0f899d",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          },
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "7f399bc6-8077-f309-92c7-538dccc06f42",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          },
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "0d74eef5-ceef-e92e-242e-36ee582fac83",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          },
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "9da6bcea-1b20-252e-4819-eb5699a9b1a1",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          }
+        ]
+      },
+      "torch": "2.6.0+cu124",
+      "cuda": "12.4",
+      "nccl": [
+        2,
+        21,
+        5
+      ],
+      "python": "/workspace/conda-envs/tempname-h100/bin/python",
+      "initial_parameters_sha256": "aa9c3c033206694c2bdd90afc21e1c893cc543e3c1eb877de9aa452b62413ff0",
+      "initial_rng_sha256": "3f650fd1a9619edd0245269fe42b9bc220bbe3ad675522c35d9c50b911013c24",
+      "tokens_sha256": "76bccbfe59a3a7e94f23af97e92c0803b36a1deeeabc796fdebd0ccbb2d1f114"
+    },
+    {
+      "hardware": {
+        "host": "10-118-122-131",
+        "devices": [
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "26e67438-f877-3123-29e0-d33d473c8141",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          },
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "7f7217aa-30c6-c324-7a2a-47b3da64ed90",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          },
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "aea7e493-405c-304c-b5c5-28cd9624699e",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          },
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "3e7023fb-d34e-400f-6e3e-666145b657cf",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          },
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "00c0a7d8-cbb2-4acb-3fa0-5a7d4e0f899d",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          },
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "7f399bc6-8077-f309-92c7-538dccc06f42",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          },
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "0d74eef5-ceef-e92e-242e-36ee582fac83",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          },
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "9da6bcea-1b20-252e-4819-eb5699a9b1a1",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          }
+        ]
+      },
+      "torch": "2.6.0+cu124",
+      "cuda": "12.4",
+      "nccl": [
+        2,
+        21,
+        5
+      ],
+      "python": "/workspace/conda-envs/tempname-h100/bin/python",
+      "initial_parameters_sha256": "c7049a00afa0156962af2d6886f0863d0f0a9fc4393927bcce26478032bfc2f2",
+      "initial_rng_sha256": "ead0461a0ef2ac3d371e278e0e9e5857a3a0a60d5da3f63aedc8e39d89544fd2",
+      "tokens_sha256": "76bccbfe59a3a7e94f23af97e92c0803b36a1deeeabc796fdebd0ccbb2d1f114"
+    },
+    {
+      "hardware": {
+        "host": "10-118-122-131",
+        "devices": [
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "26e67438-f877-3123-29e0-d33d473c8141",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          },
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "7f7217aa-30c6-c324-7a2a-47b3da64ed90",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          },
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "aea7e493-405c-304c-b5c5-28cd9624699e",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          },
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "3e7023fb-d34e-400f-6e3e-666145b657cf",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          },
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "00c0a7d8-cbb2-4acb-3fa0-5a7d4e0f899d",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          },
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "7f399bc6-8077-f309-92c7-538dccc06f42",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          },
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "0d74eef5-ceef-e92e-242e-36ee582fac83",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          },
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "9da6bcea-1b20-252e-4819-eb5699a9b1a1",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          }
+        ]
+      },
+      "torch": "2.6.0+cu124",
+      "cuda": "12.4",
+      "nccl": [
+        2,
+        21,
+        5
+      ],
+      "python": "/workspace/conda-envs/tempname-h100/bin/python",
+      "initial_parameters_sha256": "c3aa37b7e10bc44e0e9330e9bbe542baf91c4ea6b38abf580d22cd27a3114ecd",
+      "initial_rng_sha256": "3354e964b28f2c3951a481253061bc9da93f0b639f030aa77efcbb05ce243e40",
+      "tokens_sha256": "76bccbfe59a3a7e94f23af97e92c0803b36a1deeeabc796fdebd0ccbb2d1f114"
+    },
+    {
+      "hardware": {
+        "host": "10-118-122-131",
+        "devices": [
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "26e67438-f877-3123-29e0-d33d473c8141",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          },
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "7f7217aa-30c6-c324-7a2a-47b3da64ed90",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          },
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "aea7e493-405c-304c-b5c5-28cd9624699e",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          },
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "3e7023fb-d34e-400f-6e3e-666145b657cf",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          },
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "00c0a7d8-cbb2-4acb-3fa0-5a7d4e0f899d",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          },
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "7f399bc6-8077-f309-92c7-538dccc06f42",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          },
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "0d74eef5-ceef-e92e-242e-36ee582fac83",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          },
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "9da6bcea-1b20-252e-4819-eb5699a9b1a1",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          }
+        ]
+      },
+      "torch": "2.6.0+cu124",
+      "cuda": "12.4",
+      "nccl": [
+        2,
+        21,
+        5
+      ],
+      "python": "/workspace/conda-envs/tempname-h100/bin/python",
+      "initial_parameters_sha256": "4f2adbf1ecd24d298053b40fe47532097e449681233663934dff60aab29fcc23",
+      "initial_rng_sha256": "f640050bd6686e49d57d7c0d58e09253258cfda2d4cee4f6b7b1c0413161be96",
+      "tokens_sha256": "76bccbfe59a3a7e94f23af97e92c0803b36a1deeeabc796fdebd0ccbb2d1f114"
+    }
+  ],
+  "evidence_files": {
+    "results/smoke-F4-cache-zcount-csoftmax/rank0.json": "575615307131b0be3b28c6e24bfd033b4078284f4e239a94dc712bb7f448c8e9",
+    "results/smoke-F4-cache-zcount-csoftmax/rank1.json": "364433351e5e05f4096186eb1ec1a9384c9fd1cdafef5136839514f96e8e7ea3",
+    "results/smoke-F4-cache-zcount-csoftmax/rank2.json": "a6f49d34b567163146c59bf296b4f7681dd48153ea07f7351622884653baa7cf",
+    "results/smoke-F4-cache-zcount-csoftmax/rank3.json": "4ea75b47e80c6b0b0ecf8979512a582fbdd277f38b46f951b345720c48ab5114",
+    "results/smoke-F4-cache-zcount-csoftmax/rank4.json": "ed16d04df062e92bc00e3134483c7ae27ee3cbc85ea0e7558188b5b33e7dfb74",
+    "results/smoke-F4-cache-zcount-csoftmax/rank5.json": "868ff3b527da6893628aa267428f9b8141cb666122cd626501b8caf37494282c",
+    "results/smoke-F4-cache-zcount-csoftmax/rank6.json": "ac01d0fbb22265d41bc297abd9f2d2e1e3b1ba41e416afd6cfe131d39098295f",
+    "results/smoke-F4-cache-zcount-csoftmax/rank7.json": "72471419029b8120fa1a0dc31987fa81793f92a22a3084ae1297f3c90eae4bb8",
+    "results/smoke-F4-cache-zcount-csoftmax-epoch/rank0.json": "84c492899b80dc6a757c9ad65baf7afea5815e067573d69300d682f8a90a4e6f",
+    "results/smoke-F4-cache-zcount-csoftmax-epoch/rank1.json": "6bc1371fd77bf065e5994bd781cf4891e67e8ce88df7c0bfba27778d04cae6ab",
+    "results/smoke-F4-cache-zcount-csoftmax-epoch/rank2.json": "f6ac5570561fbca145b68d222d58d55a3ff7d897e51aa197cd614c7e42abf32b",
+    "results/smoke-F4-cache-zcount-csoftmax-epoch/rank3.json": "449cb7bbd0117566108eebd668f4cbb0126241b96f25593aafce83a66f52abcc",
+    "results/smoke-F4-cache-zcount-csoftmax-epoch/rank4.json": "47085957cb65d0bf2856eb5051f0a16e8f4fe2211f394d8c473985be1edcd88c",
+    "results/smoke-F4-cache-zcount-csoftmax-epoch/rank5.json": "4ad750d37fcf89689a5985bb96fdbe7b5e89b4db8761087bb0c51b0f8e6a2eb3",
+    "results/smoke-F4-cache-zcount-csoftmax-epoch/rank6.json": "b6e757e5e80fac080ef7f626b53f7ebac212fd41856c02b4da45486c4543e16e",
+    "results/smoke-F4-cache-zcount-csoftmax-epoch/rank7.json": "14cb98441d2c9b99566096e2ea8c3d62b394c387afb5c17a03b3f5af3639dfe7",
+    "results/compare1/block00-F4-cache-zcount-csoftmax/rank0.json": "917bb81f6e7c74b3cad396fd6add77749c81a78ff250268e86db163dedf9e0b4",
+    "results/compare1/block00-F4-cache-zcount-csoftmax/rank1.json": "c02b22879b4fa07c555a16445af5f310477979deecdae19d4dbcaf1bda717fdb",
+    "results/compare1/block00-F4-cache-zcount-csoftmax/rank2.json": "1ba10034ccacd9750f518c167f78f6b9484049c8e7f50d725b18a41d0c28077e",
+    "results/compare1/block00-F4-cache-zcount-csoftmax/rank3.json": "530cf152e24f87aae325dd9371cc48d5a8cfaea177f19850a9288ae0abc18832",
+    "results/compare1/block00-F4-cache-zcount-csoftmax/rank4.json": "626de8128e17ac751a68c90ba9cc0191322114d5619afbd204b16d319b3184c2",
+    "results/compare1/block00-F4-cache-zcount-csoftmax/rank5.json": "1255f3d48de7561f1613980285614921c7ea1f1614f08244e0c158770fdb0956",
+    "results/compare1/block00-F4-cache-zcount-csoftmax/rank6.json": "d9a3857146b25355f5a6fcf091d653a33717c44afc1318058136ff4a361a071d",
+    "results/compare1/block00-F4-cache-zcount-csoftmax/rank7.json": "9d0aaeaa1855c4996a642f084731b9926ec8f38121f88fea0aa78aed0be1802f",
+    "results/compare1/block00-F4-cache-zcount-csoftmax-epoch/rank0.json": "f1f6be5d531b6692e55108d799e695fa13046cf365e020fca9ffa6d4f6b512a2",
+    "results/compare1/block00-F4-cache-zcount-csoftmax-epoch/rank1.json": "ebbf8c146d986b983c44db5cf25eeb1fc7298d1a27a1197b8b014d38505f84a1",
+    "results/compare1/block00-F4-cache-zcount-csoftmax-epoch/rank2.json": "09c1107ea5aaf0f8894f78a0c9f47845545cec571557bbcf399741fe09ffc6c5",
+    "results/compare1/block00-F4-cache-zcount-csoftmax-epoch/rank3.json": "13f53835dc0b6725f8de346d430495e24ebc8421806da279f05bd0076906305e",
+    "results/compare1/block00-F4-cache-zcount-csoftmax-epoch/rank4.json": "5f01a0df739d19e24cae5c7da3098241f57fe2c8c4f8fb7ba4b2f6262f84cf6b",
+    "results/compare1/block00-F4-cache-zcount-csoftmax-epoch/rank5.json": "beee245a6b77da7e687058f71dc4402287892c77daea2ac11f1ebd7c72047577",
+    "results/compare1/block00-F4-cache-zcount-csoftmax-epoch/rank6.json": "7b136712017f04ebf32705b72f11bb90624ac3d0c24bdefc0e7cb6591cdc2202",
+    "results/compare1/block00-F4-cache-zcount-csoftmax-epoch/rank7.json": "65554513e090afdb24acbd26adef40620871aca79341c405caac063eaa2a9266",
+    "results/compare1/block01-F4-cache-zcount-csoftmax-epoch/rank0.json": "3b67f75870d3b6bfa15d8696c56b5f921bf00851de5c1beb5887a471124d11f6",
+    "results/compare1/block01-F4-cache-zcount-csoftmax-epoch/rank1.json": "7805d2b9f13f37bd9ca174186aff90110d03f0e2e06a0b12c65e298695d9292a",
+    "results/compare1/block01-F4-cache-zcount-csoftmax-epoch/rank2.json": "0ed365cb60c85541dee1a7bdcd1f37f89d6381616e0dc62c485cf359bdd25501",
+    "results/compare1/block01-F4-cache-zcount-csoftmax-epoch/rank3.json": "53b69b469526bb409f9e6b6adbd8affe08bb74f4b0075e7dd5e5384e31318020",
+    "results/compare1/block01-F4-cache-zcount-csoftmax-epoch/rank4.json": "27d3e4943127435492a4cd0670df80a6b2efa4974f36e25831984822793702f3",
+    "results/compare1/block01-F4-cache-zcount-csoftmax-epoch/rank5.json": "4da974e7002e8f9add7e285771e5b0aa62eb466ec198fd2f355c0b5c3d324fcf",
+    "results/compare1/block01-F4-cache-zcount-csoftmax-epoch/rank6.json": "73cfe4eea4ad1adceb3f49467c43d5ebec7a68aa46bd5f1773474e8dd8ea15fd",
+    "results/compare1/block01-F4-cache-zcount-csoftmax-epoch/rank7.json": "4a177e6f0bd85bcea8b14a7d24620f97de4379c22e05cbaf6bb0d3dfec32f7b1",
+    "results/compare1/block01-F4-cache-zcount-csoftmax/rank0.json": "85545453151e1f19dffd9ba27ffdbb6fcd0153dcff1bf9b2ffb944b06e5ff244",
+    "results/compare1/block01-F4-cache-zcount-csoftmax/rank1.json": "824a829d30518e2d98f723518610049182e5fc9e61d76eb0856ca44101a8b3f9",
+    "results/compare1/block01-F4-cache-zcount-csoftmax/rank2.json": "3c4288fcfaf256af41cfe08da583f7953b9407aa775f1860292189c0bd8624ff",
+    "results/compare1/block01-F4-cache-zcount-csoftmax/rank3.json": "777540de8799bf5b310c0ba1f18bbba98d25ce8ea4d4008c9685e74eb7f66a33",
+    "results/compare1/block01-F4-cache-zcount-csoftmax/rank4.json": "a6d6700fd67a0bd95c8a49f9569f376580c59aa0ef1d604e516e30f96725830a",
+    "results/compare1/block01-F4-cache-zcount-csoftmax/rank5.json": "20e114604936600ae238347e4dc3537ee4c3ea5cc2cee91e7dcaaba3f9fa18b9",
+    "results/compare1/block01-F4-cache-zcount-csoftmax/rank6.json": "28814193973c500b17c08b5a352a943328fdacae01ec569f5ee60d049b9a7f6a",
+    "results/compare1/block01-F4-cache-zcount-csoftmax/rank7.json": "4f2a4cf2daa2b8794bf7fdb829cbc81d4f4d6fb8ddcb78c5dbaf5d9d0299c609",
+    "results/compare1/block02-F4-cache-zcount-csoftmax/rank0.json": "6761698625969a8e1b92a444f1ad25c36e591ad91d38e0ab0f2d408461669455",
+    "results/compare1/block02-F4-cache-zcount-csoftmax/rank1.json": "0a9b104b2c5d62b02e1172e7f51a0ce91bfa9429cb9d8dc83dc0b2fc6b2a8926",
+    "results/compare1/block02-F4-cache-zcount-csoftmax/rank2.json": "6376c9105bffdb10d7ad1048a1e9a09d4543476c84aad5e1c5d8e459a50c090c",
+    "results/compare1/block02-F4-cache-zcount-csoftmax/rank3.json": "951c5891019cb269991933a81b79bd70b7c70826ef3c16edb2f1b5d16e8900c3",
+    "results/compare1/block02-F4-cache-zcount-csoftmax/rank4.json": "69484a478dfbd3c428636680e26ac4666122d6e60dfc120822f51405f8fed6bf",
+    "results/compare1/block02-F4-cache-zcount-csoftmax/rank5.json": "5413c1600e31b20e8f6707ffff455e25e4635777c60095f48f3f9e0f42b09feb",
+    "results/compare1/block02-F4-cache-zcount-csoftmax/rank6.json": "64461f5a186f680ac59de92582fc3a4efeeb1a3bce4ce8857d2a48984d3f84db",
+    "results/compare1/block02-F4-cache-zcount-csoftmax/rank7.json": "b3cd6b6f0d1f67ce68eb12fd7347d7af1c6a1b42fdfc7dd9aa46823007f9815a",
+    "results/compare1/block02-F4-cache-zcount-csoftmax-epoch/rank0.json": "68cc6803a1310803c58f7760eb2cd928cbb26396b1962e0bb4d4eede83ce98f6",
+    "results/compare1/block02-F4-cache-zcount-csoftmax-epoch/rank1.json": "eef6a1281a8f1bc482ef448bdb33936abfc18bc640e378bd209b1f90e504b479",
+    "results/compare1/block02-F4-cache-zcount-csoftmax-epoch/rank2.json": "50c1e8bb175c68e642de996205a7b8af5482cb35ecc77ef158a2bc379ed4aefe",
+    "results/compare1/block02-F4-cache-zcount-csoftmax-epoch/rank3.json": "3a361aa987f93ea7f9e42b024ef115cffcd0bcdfd2e3b590052f93df70500da8",
+    "results/compare1/block02-F4-cache-zcount-csoftmax-epoch/rank4.json": "c69547532db6af341b31f3d07c67ebc352bbfb93e8400bd0ccc5120cd8933d57",
+    "results/compare1/block02-F4-cache-zcount-csoftmax-epoch/rank5.json": "b1dd1bea11889a5b3fc01598af2add93e39d5336fd9ecad05029cf27931ad741",
+    "results/compare1/block02-F4-cache-zcount-csoftmax-epoch/rank6.json": "a98f2ab2115cd3dfc315bfa3da290ff7f45d3f95279b8ca029b5f72b5307334a",
+    "results/compare1/block02-F4-cache-zcount-csoftmax-epoch/rank7.json": "4437fbf0f664d0157c5182d5f9a090a93f186d5f8ef7bcf220e5a01a44efff1a",
+    "results/compare1/block03-F4-cache-zcount-csoftmax-epoch/rank0.json": "8a2280e9a5ac70900fa1e8f2167facf1570406505c5468cbf2becea0af10d474",
+    "results/compare1/block03-F4-cache-zcount-csoftmax-epoch/rank1.json": "f51c8f46a35b08e7f68cdb13e5d065affd107c3f39d0b716b650e736a599571e",
+    "results/compare1/block03-F4-cache-zcount-csoftmax-epoch/rank2.json": "0271eb88eb16e710a7bd332aeb2aa85fef78d397ce0b233cb5081bbf77fa69ab",
+    "results/compare1/block03-F4-cache-zcount-csoftmax-epoch/rank3.json": "6150cb1895893fb6fb038fe5727e439a2c1e26389e15e47d51bf860915167f1d",
+    "results/compare1/block03-F4-cache-zcount-csoftmax-epoch/rank4.json": "3054053e6fd43a0e4c4d4e47e4ea4f7da0e2bee6a1b9f04a6f1000443d882577",
+    "results/compare1/block03-F4-cache-zcount-csoftmax-epoch/rank5.json": "77898a7afc9d3b255c86c8203a1faf0061f45f956b8d57580f47c2d94f049696",
+    "results/compare1/block03-F4-cache-zcount-csoftmax-epoch/rank6.json": "fb56fe6e205db051f722e548bc3bec3871c9e7df68fb4fc39c6e00cc4c06cc64",
+    "results/compare1/block03-F4-cache-zcount-csoftmax-epoch/rank7.json": "697b582d0b23b34792c87b87b878b60730b648f9294e05edf8817262fa28756d",
+    "results/compare1/block03-F4-cache-zcount-csoftmax/rank0.json": "b581ea344e6c8a07684583d37a72c44a000a65c2970feba8e5e53136902afb38",
+    "results/compare1/block03-F4-cache-zcount-csoftmax/rank1.json": "0383268146a302e631a3eea803e27f07a083c1960286677fc89d0f95aac47968",
+    "results/compare1/block03-F4-cache-zcount-csoftmax/rank2.json": "1d684a3178467ffc06a3ad2c04cadc5e069a03e53d80d333bbde06aad3c3b2ba",
+    "results/compare1/block03-F4-cache-zcount-csoftmax/rank3.json": "1f69eed17b17c3fa7bb2ade4ec3b8c412dbd0512f6fab1ed2b062af5b45802a2",
+    "results/compare1/block03-F4-cache-zcount-csoftmax/rank4.json": "4a79596b71521db977bb3090a23d5d5711231494087bce5939f1abaf840ff483",
+    "results/compare1/block03-F4-cache-zcount-csoftmax/rank5.json": "53263be25272edf5fdaeb9f90921ef7c67e49cf7dfd3e764ef19ae88cd082b83",
+    "results/compare1/block03-F4-cache-zcount-csoftmax/rank6.json": "f8a9ef5b619e9b3fc5be3b7ff87e71e283f426c581a9c907886729b1b7797ba4",
+    "results/compare1/block03-F4-cache-zcount-csoftmax/rank7.json": "68f86fc88f806c6c12e7009587a45ce43e95e17367643c68e14bdf1342cb2ffc",
+    "results/compare1/block04-F4-cache-zcount-csoftmax/rank0.json": "f0b9a2a48b6f7e5ee93fb3466e0ab762ce5697751739faadefbf9ab3d755923f",
+    "results/compare1/block04-F4-cache-zcount-csoftmax/rank1.json": "a2070eb05ae4670046d7f2329f2e86c560e370368b5380ca82af7b58c60c9f8f",
+    "results/compare1/block04-F4-cache-zcount-csoftmax/rank2.json": "ef93d5c44f1a9957819933421acf2caefec4f4a421a4a40874556943cdcd3a4e",
+    "results/compare1/block04-F4-cache-zcount-csoftmax/rank3.json": "e76ed81c0e68bf85b57448ee5c931762e9a48d86865a0e42376c6848bac50d60",
+    "results/compare1/block04-F4-cache-zcount-csoftmax/rank4.json": "502efd9a131a9b5408f79f0be1c7d373e3c35b28563e2fcd7aea4659dc81a8bf",
+    "results/compare1/block04-F4-cache-zcount-csoftmax/rank5.json": "28a58605568f06b58978b0e7cb30cf342ef901a5519598b171bda97880546ac4",
+    "results/compare1/block04-F4-cache-zcount-csoftmax/rank6.json": "a292492e009d63358a6378cbd1cf2432fa76cbcf1335f27ff92aefc772147d67",
+    "results/compare1/block04-F4-cache-zcount-csoftmax/rank7.json": "1bb94b8805cf4afe387b78faad739fdb43e3eed0b0d52f15380642347c453027",
+    "results/compare1/block04-F4-cache-zcount-csoftmax-epoch/rank0.json": "ab3b1a7ca868f1fdb4163355a06ba5fd9c71f62a1b3b5c278c96cf2e3e559788",
+    "results/compare1/block04-F4-cache-zcount-csoftmax-epoch/rank1.json": "bf62832702a883ed007141dd7315375c95b51f5ed6944d6f75bc787f1056596e",
+    "results/compare1/block04-F4-cache-zcount-csoftmax-epoch/rank2.json": "0a9846923718c5f4035799c1d7fb85542569e8ed588f490dbaff854ac02d88a9",
+    "results/compare1/block04-F4-cache-zcount-csoftmax-epoch/rank3.json": "b3307855386673249f1e494ba721b5332c000de3ecc1deb5f4823b8b1cfc3aee",
+    "results/compare1/block04-F4-cache-zcount-csoftmax-epoch/rank4.json": "e0ec9befb6d275f0897f8edabc35fd470b1e76d2be382fa43f15ea212b6b3531",
+    "results/compare1/block04-F4-cache-zcount-csoftmax-epoch/rank5.json": "03be18392af6398fa35e83c6daed741bd03e3d6a52733fab817afb628bcd8a0b",
+    "results/compare1/block04-F4-cache-zcount-csoftmax-epoch/rank6.json": "cfdc55b46c677ee731e0355cecfab3fbe561ea88062aa87b2e8665075895643a",
+    "results/compare1/block04-F4-cache-zcount-csoftmax-epoch/rank7.json": "fc7031e5c8de564691604a5eebdb750c707965fd8fe509131b785c408ece797e",
+    "results/compare1/block05-F4-cache-zcount-csoftmax-epoch/rank0.json": "60e2a0538554d2d575cbb2b93830d13fcdd7432e4a98ad1fcd9a3ea994e0dca4",
+    "results/compare1/block05-F4-cache-zcount-csoftmax-epoch/rank1.json": "a945ff3c96cd5e5af762ddafe374e8db9a9f6c55d7943d35ffcc4d9dab0c32dc",
+    "results/compare1/block05-F4-cache-zcount-csoftmax-epoch/rank2.json": "ef4907a5bc1cb54e7624a7084fe170d4b805cfaa2d15d234334e35166a12fe7b",
+    "results/compare1/block05-F4-cache-zcount-csoftmax-epoch/rank3.json": "4b05d6de2d9a2ab6aa5d8910386588e1c7f964ae78e67d3944f491c95d818068",
+    "results/compare1/block05-F4-cache-zcount-csoftmax-epoch/rank4.json": "7c3d87a9fa4da25162b39954e5d2b8faec60215b2fcf4e04d5ab0b78edde9b36",
+    "results/compare1/block05-F4-cache-zcount-csoftmax-epoch/rank5.json": "34a24a47508720f6b169f862040af229daa325766167fafa4b96ec09dc63a79c",
+    "results/compare1/block05-F4-cache-zcount-csoftmax-epoch/rank6.json": "81331b5dd9f73bafac98d446b1fd239c7f9c6844ea59107b2540176723e850c5",
+    "results/compare1/block05-F4-cache-zcount-csoftmax-epoch/rank7.json": "2ef52f9163d8a4a121bcb7b1bb92edb523bb8d1b0ea4f9920ab42ca856d3f0d9",
+    "results/compare1/block05-F4-cache-zcount-csoftmax/rank0.json": "189adecc4831c7e79801be1649040c7c9fca83f9bf9afdac65a4b22ce8f9d6c3",
+    "results/compare1/block05-F4-cache-zcount-csoftmax/rank1.json": "c57d9aa2772fa9e33c804d6ae847364e54890586a914bac3a9f1c6db135e3146",
+    "results/compare1/block05-F4-cache-zcount-csoftmax/rank2.json": "4066e65e3dce0f52da2792c655e1aafb74a940eff60ce1373300ff9765ef3b41",
+    "results/compare1/block05-F4-cache-zcount-csoftmax/rank3.json": "74e7ab4d5d767cce6f5176924e74d49f9c890ab0335af222c4c88bc267d1ccff",
+    "results/compare1/block05-F4-cache-zcount-csoftmax/rank4.json": "74e6587192516dea90f5b4c1db708586b7fa612bb2f2078ea5bb6a2faace1d4c",
+    "results/compare1/block05-F4-cache-zcount-csoftmax/rank5.json": "f75794b9716a1deaf7e687c8e0027a5e9fe5b56ceb5fbad4575195df440ec483",
+    "results/compare1/block05-F4-cache-zcount-csoftmax/rank6.json": "bc7938243e4b7fdf94d163ac78f080f4a5ea4c68513816e6ebb3f8ef04d94771",
+    "results/compare1/block05-F4-cache-zcount-csoftmax/rank7.json": "87bf5349da8d0519777ff7f8f844194544c81ed1e4b423d4c5490b5b78af69b1",
+    "results/compare1/block06-F4-cache-zcount-csoftmax/rank0.json": "27b9cf8f32a75bd3f1c5ac59d1d2cd6d0e030b3124c29eddc00b1e32928e0d49",
+    "results/compare1/block06-F4-cache-zcount-csoftmax/rank1.json": "4a58392f0c790633f0de2df239042d6edce7be154673abd8ffce8cdeb8b94b8a",
+    "results/compare1/block06-F4-cache-zcount-csoftmax/rank2.json": "7f263e05a28c29e52f8aa3ae504947a3e28e33552252051c0eff82fabc98f992",
+    "results/compare1/block06-F4-cache-zcount-csoftmax/rank3.json": "080f3a79ae97b8531e5935fdf35efd0b167eb148b9376f5709c64b76b406183a",
+    "results/compare1/block06-F4-cache-zcount-csoftmax/rank4.json": "d0794eb7ab1ae8d889ad3beeb410ce8d704b63f86410d6cc0343ad03b0472653",
+    "results/compare1/block06-F4-cache-zcount-csoftmax/rank5.json": "2fdc631fa09126f431be8c29e1ae5a1998d47059ffada595cb31abd332979365",
+    "results/compare1/block06-F4-cache-zcount-csoftmax/rank6.json": "d3bdd11b987a917d977be5c0924d63b81ed27861b5eae6c8ac726e40d0ebf73d",
+    "results/compare1/block06-F4-cache-zcount-csoftmax/rank7.json": "658ebd782cd9e15b56b3469377bdfb1be92d3efc7e7a2a01daa9b3415c80dfea",
+    "results/compare1/block06-F4-cache-zcount-csoftmax-epoch/rank0.json": "c1cedb3ee53c985a7c6cf3adadd96adb489546648ebff3e2e6a727a8b261a48b",
+    "results/compare1/block06-F4-cache-zcount-csoftmax-epoch/rank1.json": "c8a54aeb925cecbb168b2abc51f77adc125206b3a7baa7d709a163129e880b01",
+    "results/compare1/block06-F4-cache-zcount-csoftmax-epoch/rank2.json": "22a248d5864d397ee617e5b82a8d4360395151278f14c1fca8f8a852003f3fe3",
+    "results/compare1/block06-F4-cache-zcount-csoftmax-epoch/rank3.json": "5bd8d3d935695722ce48d3ca510f032dda45c75fa577a96fea7927b1472e9d18",
+    "results/compare1/block06-F4-cache-zcount-csoftmax-epoch/rank4.json": "f671844b6ba07c9cb25b3db3cffcb55f61474eb93236ba2578838c5ad8938e53",
+    "results/compare1/block06-F4-cache-zcount-csoftmax-epoch/rank5.json": "19d9c18395a11dd278c42700582e7415758e5d347099082698f1678ccbfd48a1",
+    "results/compare1/block06-F4-cache-zcount-csoftmax-epoch/rank6.json": "f055cb3cda598c5b087cff392bfc971e549febadf426f88f43b8189fdb8f6ce1",
+    "results/compare1/block06-F4-cache-zcount-csoftmax-epoch/rank7.json": "e4b523a5a1634ecc9dd7b22685a02c7173563e9c65812b0d053e0e6f0927c7e5",
+    "results/compare1/block07-F4-cache-zcount-csoftmax-epoch/rank0.json": "fc3e6cc80d4cb7ad44dd55bd5cc7b2fbb150cf8f0f63948de3df4a1a45ee4706",
+    "results/compare1/block07-F4-cache-zcount-csoftmax-epoch/rank1.json": "fd835e11549f8b399a1ec533cecc0b72588497222e8de0af2bfb8f2d373e5a71",
+    "results/compare1/block07-F4-cache-zcount-csoftmax-epoch/rank2.json": "ad6cd8334b1a201f5c777c3a23b141c89a1f0791970f1c983027d39fab28f8bb",
+    "results/compare1/block07-F4-cache-zcount-csoftmax-epoch/rank3.json": "44b634ca4c0ec015bcf4014cf34ed2e402d3a2f779b6656f93080d31cb0150f2",
+    "results/compare1/block07-F4-cache-zcount-csoftmax-epoch/rank4.json": "f3100eae591edfcad660d2ef4114e9cd950c7ce2a88856452cb0c011a6795052",
+    "results/compare1/block07-F4-cache-zcount-csoftmax-epoch/rank5.json": "ab6f59fec7ab0ee7618859cb22028cec0717e7879daec801a2a4eeedb1a2a238",
+    "results/compare1/block07-F4-cache-zcount-csoftmax-epoch/rank6.json": "c7bf1492d8d57ab1b80cae22fdf1f86ec7b99c7f1ec2daaf8ba0fe6c38102f29",
+    "results/compare1/block07-F4-cache-zcount-csoftmax-epoch/rank7.json": "a278b5b7ef5d1cf3f06adf74bafe4c025017cd28baa4b40fb79c530560aff5ae",
+    "results/compare1/block07-F4-cache-zcount-csoftmax/rank0.json": "976f3973a77cc51b648e924f794b70a9370ec186be33dde181c6302f8e7e7ac1",
+    "results/compare1/block07-F4-cache-zcount-csoftmax/rank1.json": "98044040d5518501a464e161ade465f3786682c56a3ffcb8adb8449563e9258e",
+    "results/compare1/block07-F4-cache-zcount-csoftmax/rank2.json": "b2052a3c32c8b8994d110c0eec127a78b8647d0ef96b4f9293ab0908da639fa4",
+    "results/compare1/block07-F4-cache-zcount-csoftmax/rank3.json": "568c25c330fcf3fe938d2551addd9e426e68bfa8584334c0f201a3e7979c62c3",
+    "results/compare1/block07-F4-cache-zcount-csoftmax/rank4.json": "2f1633250cfa195555b81500443d194b35895a665c46b195faf533eda816a3c2",
+    "results/compare1/block07-F4-cache-zcount-csoftmax/rank5.json": "22870a55a786b11f0b4b6a1d82c4aa832d8d3738849e7b19837c2c34552e965e",
+    "results/compare1/block07-F4-cache-zcount-csoftmax/rank6.json": "9eb5c391e970c538579939633521b994678f80555a3b50def77b88c6e3ffd92b",
+    "results/compare1/block07-F4-cache-zcount-csoftmax/rank7.json": "04fb1113a70c2e20fb70f568f82d6e87dc07ab07ee2b9d5518c7160e02925400"
+  },
+  "numeric_summary": {
+    "F4-cache-zcount-csoftmax": {
+      "mean_loss": 3.793363792030723,
+      "final_loss": 0.00030573460389859974,
+      "final_grad_norm": 0.01800245891878419
+    },
+    "F4-cache-zcount-csoftmax-epoch": {
+      "mean_loss": 3.793363792030723,
+      "final_loss": 0.00030573460389859974,
+      "final_grad_norm": 0.01800245891878419
+    }
+  },
+  "shared_environment": {
+    "CUDA_DEVICE_MAX_CONNECTIONS": "1",
+    "FLUX_GEMM_RS_GEMM_ONLY": "1"
+  },
+  "bootstrap": {
+    "unit": "complete fresh-process F4-cache-zcount-csoftmax/F4-cache-zcount-csoftmax-epoch block",
+    "samples": 10000,
+    "seed": 20261021
+  },
+  "historical_hardware_reused": false,
+  "historical_timings_used": false,
+  "limitation": "Fixed synthetic inputs and this configuration only; no long-term convergence claim.",
+  "target_evaluated": true,
+  "target_percent": 2.0,
+  "consumer_parameter_gradients_validated": true,
+  "baseline_identity": {
+    "original_adapter_sha256": "a66c0124e514bc222a6b48eb2cd3da47263205ce393fb0ca6d1a0625073597c9",
+    "original_taco_sha256": "d994d174d2a367d2171f45f5c6dd977c84f697e20ee0728fb018b07728f66755",
+    "original_training_functions": true,
+    "original_timing_loop": true,
+    "native_candidate_only_installation": true,
+    "shared_softmax_installation": true,
+    "shared_cache_installation": true,
+    "shared_zero_count_installation": true,
+    "control": "F4-cache-zcount-csoftmax",
+    "candidate": "F4-cache-zcount-csoftmax-epoch"
+  },
+  "activation_policy": "retain_owned_column_input_uninstrumented",
+  "zero_count_policy": "fused_optimizer_zero_count",
+  "peak_cuda_memory_gib": {
+    "F4-cache-zcount-csoftmax": {
+      "peak_allocated_gib": {
+        "mean_window_rank_max": 17.423662662506104,
+        "max_window_rank_max": 17.423662662506104
+      },
+      "peak_reserved_gib": {
+        "mean_window_rank_max": 17.478515625,
+        "max_window_rank_max": 17.478515625
+      }
+    },
+    "F4-cache-zcount-csoftmax-epoch": {
+      "peak_allocated_gib": {
+        "mean_window_rank_max": 17.423662662506104,
+        "max_window_rank_max": 17.423662662506104
+      },
+      "peak_reserved_gib": {
+        "mean_window_rank_max": 17.478515625,
+        "max_window_rank_max": 17.478515625
+      }
+    }
+  },
+  "main_contrasts": [
+    "F4-cache-zcount-csoftmax-epoch/F4-cache-zcount-csoftmax"
+  ],
+  "zero_count_counters_validated": true,
+  "zero_statistics_exact_smoke_validated": true,
+  "activation_setup_validated": true,
+  "softmax_setup_validated": true,
+  "softmax_exact_smoke_validated": true,
+  "epoch_counters_validated": true,
+  "column_per_call_instrumentation": false,
+  "target_reference": "F4-cache-zcount-csoftmax"
+}

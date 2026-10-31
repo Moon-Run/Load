@@ -1,0 +1,14 @@
+bash /workspace/TempName-New/tools/h100/phase6/run_mav2.sh --flux-build /workspace/TempName-New/logs/h100/phase6/mav2-three-arm-1x-50steps-20261030-215237-552847/flux-build --allow-quality-failure --foreground --trials 1 --out /workspace/TempName-New/logs/h100/phase6/mav2-then-ma14-ma18-20261031-014137-056456/mav2 --execute
+Log: /workspace/TempName-New/logs/h100/phase6/mav2-then-ma14-ma18-20261031-014137-056456/mav2.log
+bash /workspace/TempName-New/tools/h100/phase6/run_ma14_ma15_ma16_ma17_ma18.sh --trials 1 --execute
+Log: /workspace/TempName-New/logs/h100/phase6/mav2-then-ma14-ma18-20261031-014137-056456/ma14-ma18.log
+Traceback (most recent call last):
+  File "/workspace/TempName-New/tools/h100/phase6/detach_ablation5_run_two.py", line 164, in detach
+    (supervisor or supervise)(args)
+  File "/workspace/TempName-New/tools/h100/phase6/detach_mav2_then_ma14_ma18.py", line 69, in supervise
+    launcher.invoke(command, Path(stage['log']), env)
+  File "/workspace/TempName-New/tools/h100/phase6/detach_ablation5_run_two.py", line 67, in invoke
+    subprocess.run(cmd, cwd=REPO, env=env, stdout=f, stderr=subprocess.STDOUT, check=True)
+  File "/workspace/conda-envs/tempname-h100/lib/python3.10/subprocess.py", line 526, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['bash', '/workspace/TempName-New/tools/h100/phase6/run_ma14_ma15_ma16_ma17_ma18.sh', '--trials', '1', '--execute']' returned non-zero exit status 1.

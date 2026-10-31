@@ -1,0 +1,3 @@
+# ninja log v5
+3	56415	1793394501415969122	/workspace/TempName-New/logs/h100/phase6/ma15-v1-attention-graph-1x-50steps-20261031-044305-267152/build/F4-cache-zcount-csoftmax-agraph/build/temp.linux-x86_64-cpython-310/src/pybind/gemm_rs.o	fd53606b9bab067b
+3	59105	1793394504034673078	/workspace/TempName-New/logs/h100/phase6/ma15-v1-attention-graph-1x-50steps-20261031-044305-267152/build/F4-cache-zcount-csoftmax-agraph/build/temp.linux-x86_64-cpython-310/src/pybind/ths_op.o	eb42072024bf0005

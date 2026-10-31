@@ -1,0 +1,53 @@
+{
+  "protocol": "h100-ma15-attention-graph-detached-v1",
+  "status": "failed",
+  "trials": 1,
+  "arms": [
+    "F4-cache-zcount-csoftmax",
+    "F4-cache-zcount-csoftmax-agraph"
+  ],
+  "main_contrasts": [
+    "F4-cache-zcount-csoftmax-agraph/F4-cache-zcount-csoftmax"
+  ],
+  "tuning": {
+    "attn": {
+      "decoder_threads": 128,
+      "decoder_blocks": 2048,
+      "decoder_rows": 1
+    },
+    "mlp": {
+      "decoder_threads": 128,
+      "decoder_blocks": 2048,
+      "decoder_rows": 1
+    }
+  },
+  "activation_policy": "owned_forward_activation_cache",
+  "zero_count_policy": "common_fused_optimizer_zero_count",
+  "softmax_policy": "ma11_in_both_arms",
+  "attention_policy": "candidate_attention_graph_replay",
+  "fullstep_execution_path_validated": false,
+  "acceptance_status": {
+    "F4-cache-zcount-csoftmax-agraph": "pending_execution_evidence"
+  },
+  "target_evaluated": false,
+  "target_validated": false,
+  "target_percent": 2.0,
+  "target_point_observed": false,
+  "increment_over_MA11_validated": {
+    "F4-cache-zcount-csoftmax-agraph": false
+  },
+  "expected_timing_windows": 16,
+  "expected_formal_optimizer_steps": 800,
+  "reports": {
+    "operator": "/workspace/TempName-New/logs/h100/phase6/ma15-v1-attention-graph-1x-50steps-20261031-044305-267152/operator/report.json",
+    "fullstep": "/workspace/TempName-New/logs/h100/phase6/ma15-v1-attention-graph-1x-50steps-20261031-044305-267152/fullstep/report.json"
+  },
+  "stage": "fullstep-profile",
+  "operator_correctness_validated": true,
+  "operator_execution_path_validated": true,
+  "timing_report_verified": true,
+  "statistical_acceptance_status": {
+    "F4-cache-zcount-csoftmax-agraph": "positive_MA11_increment"
+  },
+  "error": "CalledProcessError: Command '['/workspace/conda-envs/tempname-h100/bin/python', '/workspace/TempName-New/tools/h100/phase6/ma15_fullstep.py', 'run', '/workspace/TempName-New/logs/h100/phase6/ma15-v1-attention-graph-1x-50steps-20261031-044305-267152/fullstep', '--stage', 'profile', '--python', '/workspace/conda-envs/tempname-h100/bin/python', '--cuda-home', '/usr/local/cuda-12.4', '--worker-timeout', '1800', '--execute']' returned non-zero exit status 1."
+}

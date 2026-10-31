@@ -1,0 +1,3 @@
+# ninja log v5
+4	55922	1793388515706807254	/workspace/TempName-New/logs/h100/phase6/ma14-v2-epoch-reuse-1x-50steps-20261031-030311-454459/build/F4-cache-zcount-csoftmax-epoch/build/temp.linux-x86_64-cpython-310/src/pybind/gemm_rs.o	e70a9a92c7ef48b7
+4	58567	1793388518286865024	/workspace/TempName-New/logs/h100/phase6/ma14-v2-epoch-reuse-1x-50steps-20261031-030311-454459/build/F4-cache-zcount-csoftmax-epoch/build/temp.linux-x86_64-cpython-310/src/pybind/ths_op.o	f94ddf197b0f9ae

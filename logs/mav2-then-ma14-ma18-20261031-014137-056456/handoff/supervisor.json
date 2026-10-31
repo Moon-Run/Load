@@ -1,0 +1,10 @@
+{
+  "ready": true,
+  "pid": 1300236,
+  "ppid": 1,
+  "sid": 1300235,
+  "pgid": 1300235,
+  "cgroup": "0::/\n",
+  "repo": "/workspace/TempName-New",
+  "batch": "/workspace/TempName-New/logs/h100/phase6/mav2-then-ma14-ma18-20261031-014137-056456"
+}

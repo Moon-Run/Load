@@ -1,0 +1,53 @@
+
+[MA14] execute, trials=1
+Batch: /workspace/TempName-New/logs/h100/phase6/ma14-v2-epoch-reuse-1x-50steps-20261031-030311-454459
+/workspace/conda-envs/tempname-h100/bin/python /workspace/TempName-New/tools/h100/phase6/ma14_build.py prepare --out /workspace/TempName-New/logs/h100/phase6/ma14-v2-epoch-reuse-1x-50steps-20261031-030311-454459/build
+Log: /workspace/TempName-New/logs/h100/phase6/ma14-v2-epoch-reuse-1x-50steps-20261031-030311-454459/build-prepare.log
+/workspace/conda-envs/tempname-h100/bin/python /workspace/TempName-New/tools/h100/phase6/ma14_build.py build --build /workspace/TempName-New/logs/h100/phase6/ma14-v2-epoch-reuse-1x-50steps-20261031-030311-454459/build --cuda-home /usr/local/cuda-12.8 --jobs 2
+Log: /workspace/TempName-New/logs/h100/phase6/ma14-v2-epoch-reuse-1x-50steps-20261031-030311-454459/compile.log
+/workspace/conda-envs/tempname-h100/bin/python /workspace/TempName-New/tools/h100/phase6/ma14_bench.py prepare /workspace/TempName-New/logs/h100/phase6/ma14-v2-epoch-reuse-1x-50steps-20261031-030311-454459/operator --build /workspace/TempName-New/logs/h100/phase6/ma14-v2-epoch-reuse-1x-50steps-20261031-030311-454459/build --blocks 8
+Log: /workspace/TempName-New/logs/h100/phase6/ma14-v2-epoch-reuse-1x-50steps-20261031-030311-454459/operator-prepare.log
+/workspace/conda-envs/tempname-h100/bin/python /workspace/TempName-New/tools/h100/phase6/ma14_bench.py run /workspace/TempName-New/logs/h100/phase6/ma14-v2-epoch-reuse-1x-50steps-20261031-030311-454459/operator --python /workspace/conda-envs/tempname-h100/bin/python --cuda-home /usr/local/cuda-12.4 --worker-timeout 1800 --execute
+Log: /workspace/TempName-New/logs/h100/phase6/ma14-v2-epoch-reuse-1x-50steps-20261031-030311-454459/operator-timing.log
+/workspace/conda-envs/tempname-h100/bin/python /workspace/TempName-New/tools/h100/phase6/ma14_bench.py run /workspace/TempName-New/logs/h100/phase6/ma14-v2-epoch-reuse-1x-50steps-20261031-030311-454459/operator --python /workspace/conda-envs/tempname-h100/bin/python --cuda-home /usr/local/cuda-12.4 --worker-timeout 1800 --profile --execute
+Log: /workspace/TempName-New/logs/h100/phase6/ma14-v2-epoch-reuse-1x-50steps-20261031-030311-454459/operator-profile.log
+/workspace/conda-envs/tempname-h100/bin/python /workspace/TempName-New/tools/h100/phase6/ma14_fullstep.py prepare /workspace/TempName-New/logs/h100/phase6/ma14-v2-epoch-reuse-1x-50steps-20261031-030311-454459/fullstep --build /workspace/TempName-New/logs/h100/phase6/ma14-v2-epoch-reuse-1x-50steps-20261031-030311-454459/build --megatron /workspace/Megatron-LM --trials 1 --blocks 8
+Log: /workspace/TempName-New/logs/h100/phase6/ma14-v2-epoch-reuse-1x-50steps-20261031-030311-454459/fullstep-prepare.log
+/workspace/conda-envs/tempname-h100/bin/python /workspace/TempName-New/tools/h100/phase6/ma14_fullstep.py run /workspace/TempName-New/logs/h100/phase6/ma14-v2-epoch-reuse-1x-50steps-20261031-030311-454459/fullstep --stage all --python /workspace/conda-envs/tempname-h100/bin/python --cuda-home /usr/local/cuda-12.4 --worker-timeout 1800 --execute
+Log: /workspace/TempName-New/logs/h100/phase6/ma14-v2-epoch-reuse-1x-50steps-20261031-030311-454459/fullstep-run.log
+/workspace/conda-envs/tempname-h100/bin/python /workspace/TempName-New/tools/h100/phase6/ma14_fullstep.py run /workspace/TempName-New/logs/h100/phase6/ma14-v2-epoch-reuse-1x-50steps-20261031-030311-454459/fullstep --stage profile --python /workspace/conda-envs/tempname-h100/bin/python --cuda-home /usr/local/cuda-12.4 --worker-timeout 1800 --execute
+Log: /workspace/TempName-New/logs/h100/phase6/ma14-v2-epoch-reuse-1x-50steps-20261031-030311-454459/fullstep-profile.log
+{"protocol": "h100-ma14-epoch-reuse-detached-v2", "status": "completed", "trials": 1, "arms": ["F4-cache-zcount-csoftmax", "F4-cache-zcount-csoftmax-epoch"], "main_contrasts": ["F4-cache-zcount-csoftmax-epoch/F4-cache-zcount-csoftmax"], "tuning": {"attn": {"decoder_threads": 128, "decoder_blocks": 2048, "decoder_rows": 1}, "mlp": {"decoder_threads": 128, "decoder_blocks": 2048, "decoder_rows": 1}}, "activation_policy": "owned_forward_activation_cache", "zero_count_policy": "common_fused_optimizer_zero_count", "softmax_policy": "ma11_in_both_arms", "publication_policy": "candidate_epoch_barrier_native_pair_v2", "fullstep_execution_path_validated": true, "acceptance_status": {"F4-cache-zcount-csoftmax-epoch": "MA11_increment_not_validated"}, "target_evaluated": true, "target_validated": false, "target_percent": 2.0, "target_point_observed": false, "increment_over_MA11_validated": {"F4-cache-zcount-csoftmax-epoch": false}, "expected_timing_windows": 16, "expected_formal_optimizer_steps": 800, "reports": {"operator": "/workspace/TempName-New/logs/h100/phase6/ma14-v2-epoch-reuse-1x-50steps-20261031-030311-454459/operator/report.json", "fullstep": "/workspace/TempName-New/logs/h100/phase6/ma14-v2-epoch-reuse-1x-50steps-20261031-030311-454459/fullstep/report.json", "fullstep_profile": "/workspace/TempName-New/logs/h100/phase6/ma14-v2-epoch-reuse-1x-50steps-20261031-030311-454459/fullstep/profile-summary.json"}, "stage": "done", "operator_correctness_validated": true, "operator_execution_path_validated": true, "timing_report_verified": true, "statistical_acceptance_status": {"F4-cache-zcount-csoftmax-epoch": "MA11_increment_not_validated"}, "formal_optimizer_steps": 800, "timing_windows": 16}
+[MA14] execute finished.
+
+[MA15] execute, trials=1
+Batch: /workspace/TempName-New/logs/h100/phase6/ma15-v1-attention-graph-1x-50steps-20261031-044305-267152
+/workspace/conda-envs/tempname-h100/bin/python /workspace/TempName-New/tools/h100/phase6/ma15_build.py prepare --out /workspace/TempName-New/logs/h100/phase6/ma15-v1-attention-graph-1x-50steps-20261031-044305-267152/build
+Log: /workspace/TempName-New/logs/h100/phase6/ma15-v1-attention-graph-1x-50steps-20261031-044305-267152/build-prepare.log
+/workspace/conda-envs/tempname-h100/bin/python /workspace/TempName-New/tools/h100/phase6/ma15_build.py build --build /workspace/TempName-New/logs/h100/phase6/ma15-v1-attention-graph-1x-50steps-20261031-044305-267152/build --cuda-home /usr/local/cuda-12.8 --jobs 2
+Log: /workspace/TempName-New/logs/h100/phase6/ma15-v1-attention-graph-1x-50steps-20261031-044305-267152/compile.log
+/workspace/conda-envs/tempname-h100/bin/python /workspace/TempName-New/tools/h100/phase6/ma15_bench.py prepare /workspace/TempName-New/logs/h100/phase6/ma15-v1-attention-graph-1x-50steps-20261031-044305-267152/operator --build /workspace/TempName-New/logs/h100/phase6/ma15-v1-attention-graph-1x-50steps-20261031-044305-267152/build --blocks 8
+Log: /workspace/TempName-New/logs/h100/phase6/ma15-v1-attention-graph-1x-50steps-20261031-044305-267152/operator-prepare.log
+/workspace/conda-envs/tempname-h100/bin/python /workspace/TempName-New/tools/h100/phase6/ma15_bench.py run /workspace/TempName-New/logs/h100/phase6/ma15-v1-attention-graph-1x-50steps-20261031-044305-267152/operator --python /workspace/conda-envs/tempname-h100/bin/python --cuda-home /usr/local/cuda-12.4 --worker-timeout 1800 --execute
+Log: /workspace/TempName-New/logs/h100/phase6/ma15-v1-attention-graph-1x-50steps-20261031-044305-267152/operator-timing.log
+/workspace/conda-envs/tempname-h100/bin/python /workspace/TempName-New/tools/h100/phase6/ma15_bench.py run /workspace/TempName-New/logs/h100/phase6/ma15-v1-attention-graph-1x-50steps-20261031-044305-267152/operator --python /workspace/conda-envs/tempname-h100/bin/python --cuda-home /usr/local/cuda-12.4 --worker-timeout 1800 --profile --execute
+Log: /workspace/TempName-New/logs/h100/phase6/ma15-v1-attention-graph-1x-50steps-20261031-044305-267152/operator-profile.log
+/workspace/conda-envs/tempname-h100/bin/python /workspace/TempName-New/tools/h100/phase6/ma15_fullstep.py prepare /workspace/TempName-New/logs/h100/phase6/ma15-v1-attention-graph-1x-50steps-20261031-044305-267152/fullstep --build /workspace/TempName-New/logs/h100/phase6/ma15-v1-attention-graph-1x-50steps-20261031-044305-267152/build --megatron /workspace/Megatron-LM --trials 1 --blocks 8
+Log: /workspace/TempName-New/logs/h100/phase6/ma15-v1-attention-graph-1x-50steps-20261031-044305-267152/fullstep-prepare.log
+/workspace/conda-envs/tempname-h100/bin/python /workspace/TempName-New/tools/h100/phase6/ma15_fullstep.py run /workspace/TempName-New/logs/h100/phase6/ma15-v1-attention-graph-1x-50steps-20261031-044305-267152/fullstep --stage all --python /workspace/conda-envs/tempname-h100/bin/python --cuda-home /usr/local/cuda-12.4 --worker-timeout 1800 --execute
+Log: /workspace/TempName-New/logs/h100/phase6/ma15-v1-attention-graph-1x-50steps-20261031-044305-267152/fullstep-run.log
+/workspace/conda-envs/tempname-h100/bin/python /workspace/TempName-New/tools/h100/phase6/ma15_fullstep.py run /workspace/TempName-New/logs/h100/phase6/ma15-v1-attention-graph-1x-50steps-20261031-044305-267152/fullstep --stage profile --python /workspace/conda-envs/tempname-h100/bin/python --cuda-home /usr/local/cuda-12.4 --worker-timeout 1800 --execute
+Log: /workspace/TempName-New/logs/h100/phase6/ma15-v1-attention-graph-1x-50steps-20261031-044305-267152/fullstep-profile.log
+Traceback (most recent call last):
+  File "/workspace/TempName-New/tools/h100/phase6/detach_ma15.py", line 235, in <module>
+    main()
+  File "/workspace/TempName-New/tools/h100/phase6/detach_ma15.py", line 229, in main
+    return supervise(args)
+  File "/workspace/TempName-New/tools/h100/phase6/detach_ma15.py", line 169, in supervise
+    launcher.invoke(command, args.out/(label + '.log'), env)
+  File "/workspace/TempName-New/tools/h100/phase6/detach_ablation5_run_two.py", line 67, in invoke
+    subprocess.run(cmd, cwd=REPO, env=env, stdout=f, stderr=subprocess.STDOUT, check=True)
+  File "/workspace/conda-envs/tempname-h100/lib/python3.10/subprocess.py", line 526, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/workspace/conda-envs/tempname-h100/bin/python', '/workspace/TempName-New/tools/h100/phase6/ma15_fullstep.py', 'run', '/workspace/TempName-New/logs/h100/phase6/ma15-v1-attention-graph-1x-50steps-20261031-044305-267152/fullstep', '--stage', 'profile', '--python', '/workspace/conda-envs/tempname-h100/bin/python', '--cuda-home', '/usr/local/cuda-12.4', '--worker-timeout', '1800', '--execute']' returned non-zero exit status 1.
+[MA15] failed with exit code 1; sequence stopped.

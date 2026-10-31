@@ -1,0 +1,37 @@
+{
+  "arguments": {
+    "flux_build": "/workspace/TempName-New/logs/h100/phase6/mav2-three-arm-1x-50steps-20261030-215237-552847/flux-build",
+    "out": "/workspace/TempName-New/logs/h100/phase6/mav2-then-ma14-ma18-20261031-014137-056456",
+    "trials": 1,
+    "execute": true,
+    "foreground": false
+  },
+  "commands": [
+    [
+      "mav2",
+      [
+        "bash",
+        "/workspace/TempName-New/tools/h100/phase6/run_mav2.sh",
+        "--flux-build",
+        "/workspace/TempName-New/logs/h100/phase6/mav2-three-arm-1x-50steps-20261030-215237-552847/flux-build",
+        "--allow-quality-failure",
+        "--foreground",
+        "--trials",
+        "1",
+        "--out",
+        "/workspace/TempName-New/logs/h100/phase6/mav2-then-ma14-ma18-20261031-014137-056456/mav2",
+        "--execute"
+      ]
+    ],
+    [
+      "ma14-ma18",
+      [
+        "bash",
+        "/workspace/TempName-New/tools/h100/phase6/run_ma14_ma15_ma16_ma17_ma18.sh",
+        "--trials",
+        "1",
+        "--execute"
+      ]
+    ]
+  ]
+}
