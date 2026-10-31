@@ -1,0 +1,754 @@
+{
+  "protocol": "h100-ma15-attention-graph-v1-fullstep",
+  "completed": true,
+  "run_id": "a104514a563449afbe4cfc266914e401",
+  "plan_sha256": "9c9c57aed21c676ca0e10df2d43774f9c0f07d5544e277cd7e6b57b3da1e13e6",
+  "rank_identities": [
+    {
+      "hardware": {
+        "host": "10-118-122-131",
+        "devices": [
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "26e67438-f877-3123-29e0-d33d473c8141",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          },
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "7f7217aa-30c6-c324-7a2a-47b3da64ed90",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          },
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "aea7e493-405c-304c-b5c5-28cd9624699e",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          },
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "3e7023fb-d34e-400f-6e3e-666145b657cf",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          },
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "00c0a7d8-cbb2-4acb-3fa0-5a7d4e0f899d",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          },
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "7f399bc6-8077-f309-92c7-538dccc06f42",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          },
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "0d74eef5-ceef-e92e-242e-36ee582fac83",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          },
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "9da6bcea-1b20-252e-4819-eb5699a9b1a1",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          }
+        ]
+      },
+      "torch": "2.6.0+cu124",
+      "cuda": "12.4",
+      "nccl": [
+        2,
+        21,
+        5
+      ],
+      "python": "/workspace/conda-envs/tempname-h100/bin/python",
+      "initial_parameters_sha256": "975b4a8dbe535374becfea2d39fd691c347f8cfcc61c3b2d47a05ac289d4f9fe",
+      "initial_rng_sha256": "dd05b32d5eff4cc063a1e1032ed7f912fffd5feef5094a5aefbcd7e124e9e236",
+      "tokens_sha256": "76bccbfe59a3a7e94f23af97e92c0803b36a1deeeabc796fdebd0ccbb2d1f114"
+    },
+    {
+      "hardware": {
+        "host": "10-118-122-131",
+        "devices": [
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "26e67438-f877-3123-29e0-d33d473c8141",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          },
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "7f7217aa-30c6-c324-7a2a-47b3da64ed90",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          },
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "aea7e493-405c-304c-b5c5-28cd9624699e",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          },
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "3e7023fb-d34e-400f-6e3e-666145b657cf",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          },
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "00c0a7d8-cbb2-4acb-3fa0-5a7d4e0f899d",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          },
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "7f399bc6-8077-f309-92c7-538dccc06f42",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          },
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "0d74eef5-ceef-e92e-242e-36ee582fac83",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          },
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "9da6bcea-1b20-252e-4819-eb5699a9b1a1",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          }
+        ]
+      },
+      "torch": "2.6.0+cu124",
+      "cuda": "12.4",
+      "nccl": [
+        2,
+        21,
+        5
+      ],
+      "python": "/workspace/conda-envs/tempname-h100/bin/python",
+      "initial_parameters_sha256": "0fabd43d03a7ef7890e6aceb6359ae650664bd41805b1126ba6fa42504a4f8d1",
+      "initial_rng_sha256": "3fb18e2b6d8b68ba12f95c6d3165e45e395a259e29de6c75eef80f5e820a8dd6",
+      "tokens_sha256": "76bccbfe59a3a7e94f23af97e92c0803b36a1deeeabc796fdebd0ccbb2d1f114"
+    },
+    {
+      "hardware": {
+        "host": "10-118-122-131",
+        "devices": [
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "26e67438-f877-3123-29e0-d33d473c8141",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          },
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "7f7217aa-30c6-c324-7a2a-47b3da64ed90",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          },
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "aea7e493-405c-304c-b5c5-28cd9624699e",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          },
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "3e7023fb-d34e-400f-6e3e-666145b657cf",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          },
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "00c0a7d8-cbb2-4acb-3fa0-5a7d4e0f899d",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          },
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "7f399bc6-8077-f309-92c7-538dccc06f42",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          },
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "0d74eef5-ceef-e92e-242e-36ee582fac83",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          },
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "9da6bcea-1b20-252e-4819-eb5699a9b1a1",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          }
+        ]
+      },
+      "torch": "2.6.0+cu124",
+      "cuda": "12.4",
+      "nccl": [
+        2,
+        21,
+        5
+      ],
+      "python": "/workspace/conda-envs/tempname-h100/bin/python",
+      "initial_parameters_sha256": "280a74554c814072ee9307073b4c9970cd2b09d8c14e304afec57fda077dc401",
+      "initial_rng_sha256": "38c3cb573d464853a5bad59524131695ba5aed411568238c0fc26505e8a7a817",
+      "tokens_sha256": "76bccbfe59a3a7e94f23af97e92c0803b36a1deeeabc796fdebd0ccbb2d1f114"
+    },
+    {
+      "hardware": {
+        "host": "10-118-122-131",
+        "devices": [
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "26e67438-f877-3123-29e0-d33d473c8141",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          },
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "7f7217aa-30c6-c324-7a2a-47b3da64ed90",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          },
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "aea7e493-405c-304c-b5c5-28cd9624699e",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          },
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "3e7023fb-d34e-400f-6e3e-666145b657cf",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          },
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "00c0a7d8-cbb2-4acb-3fa0-5a7d4e0f899d",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          },
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "7f399bc6-8077-f309-92c7-538dccc06f42",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          },
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "0d74eef5-ceef-e92e-242e-36ee582fac83",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          },
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "9da6bcea-1b20-252e-4819-eb5699a9b1a1",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          }
+        ]
+      },
+      "torch": "2.6.0+cu124",
+      "cuda": "12.4",
+      "nccl": [
+        2,
+        21,
+        5
+      ],
+      "python": "/workspace/conda-envs/tempname-h100/bin/python",
+      "initial_parameters_sha256": "d4fcf2ebd835a4da92305aa0299baab68ce0f54e12e29832413323501e96f94a",
+      "initial_rng_sha256": "3f5aa95913eff14cc922509876b371be3a7c763376cfa834a0019e8583bf9714",
+      "tokens_sha256": "76bccbfe59a3a7e94f23af97e92c0803b36a1deeeabc796fdebd0ccbb2d1f114"
+    },
+    {
+      "hardware": {
+        "host": "10-118-122-131",
+        "devices": [
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "26e67438-f877-3123-29e0-d33d473c8141",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          },
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "7f7217aa-30c6-c324-7a2a-47b3da64ed90",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          },
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "aea7e493-405c-304c-b5c5-28cd9624699e",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          },
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "3e7023fb-d34e-400f-6e3e-666145b657cf",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          },
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "00c0a7d8-cbb2-4acb-3fa0-5a7d4e0f899d",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          },
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "7f399bc6-8077-f309-92c7-538dccc06f42",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          },
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "0d74eef5-ceef-e92e-242e-36ee582fac83",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          },
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "9da6bcea-1b20-252e-4819-eb5699a9b1a1",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          }
+        ]
+      },
+      "torch": "2.6.0+cu124",
+      "cuda": "12.4",
+      "nccl": [
+        2,
+        21,
+        5
+      ],
+      "python": "/workspace/conda-envs/tempname-h100/bin/python",
+      "initial_parameters_sha256": "aa9c3c033206694c2bdd90afc21e1c893cc543e3c1eb877de9aa452b62413ff0",
+      "initial_rng_sha256": "3f650fd1a9619edd0245269fe42b9bc220bbe3ad675522c35d9c50b911013c24",
+      "tokens_sha256": "76bccbfe59a3a7e94f23af97e92c0803b36a1deeeabc796fdebd0ccbb2d1f114"
+    },
+    {
+      "hardware": {
+        "host": "10-118-122-131",
+        "devices": [
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "26e67438-f877-3123-29e0-d33d473c8141",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          },
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "7f7217aa-30c6-c324-7a2a-47b3da64ed90",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          },
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "aea7e493-405c-304c-b5c5-28cd9624699e",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          },
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "3e7023fb-d34e-400f-6e3e-666145b657cf",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          },
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "00c0a7d8-cbb2-4acb-3fa0-5a7d4e0f899d",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          },
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "7f399bc6-8077-f309-92c7-538dccc06f42",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          },
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "0d74eef5-ceef-e92e-242e-36ee582fac83",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          },
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "9da6bcea-1b20-252e-4819-eb5699a9b1a1",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          }
+        ]
+      },
+      "torch": "2.6.0+cu124",
+      "cuda": "12.4",
+      "nccl": [
+        2,
+        21,
+        5
+      ],
+      "python": "/workspace/conda-envs/tempname-h100/bin/python",
+      "initial_parameters_sha256": "c7049a00afa0156962af2d6886f0863d0f0a9fc4393927bcce26478032bfc2f2",
+      "initial_rng_sha256": "ead0461a0ef2ac3d371e278e0e9e5857a3a0a60d5da3f63aedc8e39d89544fd2",
+      "tokens_sha256": "76bccbfe59a3a7e94f23af97e92c0803b36a1deeeabc796fdebd0ccbb2d1f114"
+    },
+    {
+      "hardware": {
+        "host": "10-118-122-131",
+        "devices": [
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "26e67438-f877-3123-29e0-d33d473c8141",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          },
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "7f7217aa-30c6-c324-7a2a-47b3da64ed90",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          },
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "aea7e493-405c-304c-b5c5-28cd9624699e",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          },
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "3e7023fb-d34e-400f-6e3e-666145b657cf",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          },
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "00c0a7d8-cbb2-4acb-3fa0-5a7d4e0f899d",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          },
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "7f399bc6-8077-f309-92c7-538dccc06f42",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          },
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "0d74eef5-ceef-e92e-242e-36ee582fac83",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          },
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "9da6bcea-1b20-252e-4819-eb5699a9b1a1",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          }
+        ]
+      },
+      "torch": "2.6.0+cu124",
+      "cuda": "12.4",
+      "nccl": [
+        2,
+        21,
+        5
+      ],
+      "python": "/workspace/conda-envs/tempname-h100/bin/python",
+      "initial_parameters_sha256": "c3aa37b7e10bc44e0e9330e9bbe542baf91c4ea6b38abf580d22cd27a3114ecd",
+      "initial_rng_sha256": "3354e964b28f2c3951a481253061bc9da93f0b639f030aa77efcbb05ce243e40",
+      "tokens_sha256": "76bccbfe59a3a7e94f23af97e92c0803b36a1deeeabc796fdebd0ccbb2d1f114"
+    },
+    {
+      "hardware": {
+        "host": "10-118-122-131",
+        "devices": [
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "26e67438-f877-3123-29e0-d33d473c8141",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          },
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "7f7217aa-30c6-c324-7a2a-47b3da64ed90",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          },
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "aea7e493-405c-304c-b5c5-28cd9624699e",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          },
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "3e7023fb-d34e-400f-6e3e-666145b657cf",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          },
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "00c0a7d8-cbb2-4acb-3fa0-5a7d4e0f899d",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          },
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "7f399bc6-8077-f309-92c7-538dccc06f42",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          },
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "0d74eef5-ceef-e92e-242e-36ee582fac83",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          },
+          {
+            "name": "NVIDIA H100 80GB HBM3",
+            "uuid": "9da6bcea-1b20-252e-4819-eb5699a9b1a1",
+            "sm_count": 132,
+            "capability": [
+              9,
+              0
+            ]
+          }
+        ]
+      },
+      "torch": "2.6.0+cu124",
+      "cuda": "12.4",
+      "nccl": [
+        2,
+        21,
+        5
+      ],
+      "python": "/workspace/conda-envs/tempname-h100/bin/python",
+      "initial_parameters_sha256": "4f2adbf1ecd24d298053b40fe47532097e449681233663934dff60aab29fcc23",
+      "initial_rng_sha256": "f640050bd6686e49d57d7c0d58e09253258cfda2d4cee4f6b7b1c0413161be96",
+      "tokens_sha256": "76bccbfe59a3a7e94f23af97e92c0803b36a1deeeabc796fdebd0ccbb2d1f114"
+    }
+  ],
+  "identical_trajectories_within_pairs": true,
+  "equivalence_pairs": [
+    [
+      "F4-cache-zcount-csoftmax-agraph",
+      "F4-cache-zcount-csoftmax"
+    ]
+  ],
+  "files": {
+    "results/smoke-F4-cache-zcount-csoftmax/rank0.json": "f4c61f4e9085548dceaa1e4dbb369461932307a2e4025869b9873cfa41f11e7c",
+    "results/smoke-F4-cache-zcount-csoftmax/rank1.json": "beb856397e2f2b646abcf14e3ae003ba17c04e9b681b45ed0201bee02a10d82c",
+    "results/smoke-F4-cache-zcount-csoftmax/rank2.json": "a945cd679c35dd0ca58bf2a625380f14314f0b450308839f093a7175aa12310f",
+    "results/smoke-F4-cache-zcount-csoftmax/rank3.json": "fca2e8835fc7aa05f2e8239ac27139876e7920443416c4f0a092b812a29bc49f",
+    "results/smoke-F4-cache-zcount-csoftmax/rank4.json": "7711aa39f186d4651a0157f15abe1f988abed8f056c3ad3834c2b9bd2e04a25b",
+    "results/smoke-F4-cache-zcount-csoftmax/rank5.json": "fe9f3fff427dafd04c34d92171f906f055f99e700aa96762c2ea143f1eb0529f",
+    "results/smoke-F4-cache-zcount-csoftmax/rank6.json": "17b172e2b7454406f46c1800d51700cf53994690f04dc0eab4f1c15b6c257ba9",
+    "results/smoke-F4-cache-zcount-csoftmax/rank7.json": "378ca1bc84c6c2701617390104b6f24cdf6b54ee94a0bbd46a3d98a4b0a8453b",
+    "results/smoke-F4-cache-zcount-csoftmax-agraph/rank0.json": "f108520820562592b0520d78f4fc2ba0401f9ef6851c918b8bba4ab70423dcf4",
+    "results/smoke-F4-cache-zcount-csoftmax-agraph/rank1.json": "155509cb90d04ad4e54eb66c5c7caa60095d8efc53e389486b38d20a6f928fcb",
+    "results/smoke-F4-cache-zcount-csoftmax-agraph/rank2.json": "d838146fd31ced172214ecf101b83dee27653c86140ea3b767a421949f5c667a",
+    "results/smoke-F4-cache-zcount-csoftmax-agraph/rank3.json": "62c0a6390f33b4088b68130851a1defaa8a9273acf67d84d8335829371301684",
+    "results/smoke-F4-cache-zcount-csoftmax-agraph/rank4.json": "bba5f100936ffb1a20576e8267539e6ebab875adf74cb45e7736efed682fc61e",
+    "results/smoke-F4-cache-zcount-csoftmax-agraph/rank5.json": "64b9392674e78c0f979ccccee03ba5fb0fd549392d2b45117e7496de8c54f4f8",
+    "results/smoke-F4-cache-zcount-csoftmax-agraph/rank6.json": "0ccf843d7d6e60555e258100ca5d2d669a53bd00800e7c9bad058b65bdbb608a",
+    "results/smoke-F4-cache-zcount-csoftmax-agraph/rank7.json": "16707d2c19fae23d2748e9d1896def88a0d059d263df754a5b4699ca0fab892d"
+  },
+  "historical_hardware_reused": false
+}

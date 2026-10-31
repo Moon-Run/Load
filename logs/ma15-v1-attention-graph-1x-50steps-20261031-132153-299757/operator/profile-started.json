@@ -1,0 +1,17 @@
+{
+  "run_id": "76a513bb4b2d46229272b335bc28caaa",
+  "jobs": [
+    {
+      "arm": "F4-cache-zcount-csoftmax",
+      "block": -1,
+      "index": 0,
+      "directory": "profile-F4-cache-zcount-csoftmax"
+    },
+    {
+      "arm": "F4-cache-zcount-csoftmax-agraph",
+      "block": -1,
+      "index": 1,
+      "directory": "profile-F4-cache-zcount-csoftmax-agraph"
+    }
+  ]
+}

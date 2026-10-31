@@ -1,2 +1,50 @@
-/logs/ma0-layer-20261029-014750-669435/
-*.pyc
+# RTX 5090 result transfer repository.
+# Keep process logs, JSON/CSV/Markdown reports, compressed profile traces,
+# worker scripts and controller snapshots as experiment evidence.
+# In particular, do not ignore logs/, outputs/, *.log, *.json or *.json.gz.
+
+# CUDA compilation intermediates.
+*.i
+*.ii
+*.gpu
+*.ptx
+*.cubin
+*.fatbin
+
+# Native builds are machine-local; transfer their recorded identities/results.
+build/
+cmake-build-*/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+compile_commands*.json
+build.ninja
+.ninja_deps
+.ninja_log
+*.o
+*.obj
+*.a
+*.so
+*.so.*
+
+# Python caches, packaging products and local environments.
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.cache/
+dist/
+*.egg-info/
+*.whl
+.venv/
+venv/
+venvs/
+
+# Runtime locks and unfinished/editor temporary files.
+.baseline.lock
+*.tmp
+*.swp
+*.swo
+*~
+.DS_Store

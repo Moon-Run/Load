@@ -1,0 +1,20 @@
+{
+  "command": [
+    "/workspace/conda-envs/tempname-h100/bin/python",
+    "-m",
+    "torch.distributed.run",
+    "--standalone",
+    "--nproc_per_node=8",
+    "/workspace/TempName-New/logs/h100/phase6/ma15-v1-attention-graph-1x-50steps-20261031-132153-299757/operator/scripts/bench.py",
+    "worker",
+    "/workspace/TempName-New/logs/h100/phase6/ma15-v1-attention-graph-1x-50steps-20261031-132153-299757/operator",
+    "--job",
+    "{\"arm\": \"F4-cache-zcount-csoftmax-agraph\", \"block\": 6, \"directory\": \"block06-F4-cache-zcount-csoftmax-agraph\", \"index\": 13}"
+  ],
+  "job": {
+    "block": 6,
+    "arm": "F4-cache-zcount-csoftmax-agraph",
+    "index": 13,
+    "directory": "block06-F4-cache-zcount-csoftmax-agraph"
+  }
+}
